@@ -9,13 +9,14 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       <?
         foreach ($slider as $slider) {
           ?>
-            <div class="item" style="width:1349px; height: 540px;">
+            <div class="item" style="width:1349px; height: 540px; object-fit: cover;">
               <h4><img src="../images/<?=$slider->slider_img?>"></h4>
             </div>
           <?
         }
       ?>
     </div>
+    
       <!-- ======= Services Section ======= -->
  <!--    <section id="services" class="services mt-5 mb-5">
       <div class="container">

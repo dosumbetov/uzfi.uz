@@ -214,7 +214,7 @@ h1, h2, h3, h4 {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 200%;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -1977,7 +1977,7 @@ h1, h2, h3, h4 {
 }
 .block_havola .box .name {
     position: absolute;
-    font-size: 30px;  
+    font-size: 150%;  
     font-weight: 900;
     top: 0px;
     left: 0px;

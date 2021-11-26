@@ -7,13 +7,14 @@ foreach ($menu_sub as $menu_sub) {
 ?>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
-		<div class="col-md-9 col-12 middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub->name_uz?></h2>
+		<div class="col-md-8 col-12">
+			<div class="middle">
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub->name_uz?></h2>
 			<div class="row">
 				<?
 					foreach ($allmaktab as $allmaktab) {
 						?>
-							<div class="col-md-4 d-flex align-items-stretch">
+							<div class="col-md-6 d-flex align-items-stretch">
 			                   <div class="card mb-5" style="width: 100%;">
 								  <img src="../images/<?=$allmaktab->img?>" class="card-img-top" alt="...">
 								  <div class="card-body">
@@ -35,14 +36,14 @@ foreach ($menu_sub as $menu_sub) {
                 ]);
             ?>
         </div>
-			
+			</div>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
 </div>
 <style type="text/css">
 	.btnmak {
-		margin-left: 25%;
+		margin-left: 35%;
 	}
 	.card-text {
 		text-align: left !important;
@@ -66,9 +67,7 @@ foreach ($menu_sub as $menu_sub) {
 		border-radius: 10px;
 		padding: 40px;
 		box-shadow: 2px 10px 15px #888888;
-		margin-left: -20px;
-		margin-right: 40px;
-		width: 830px;
+		width: 99%;
 		margin-bottom: 30px;
 	}
 	

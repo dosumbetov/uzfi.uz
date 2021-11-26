@@ -14,10 +14,11 @@ use yii\helpers\Url;
 ?>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
-		<div class="col-md-9 col-12 middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab->name_uz?></h2>
-			<img src="../images/<?=$allmaktab->img?>" height="300px;" style="display: block;
-  			margin-left: auto;margin-right: auto;border-radius: 20px;">
+		<div class="col-md-8 col-12">
+			<div class="middle">
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab->name_uz?></h2>
+			<img src="../images/<?=$allmaktab->img?>" style="display: block;
+  			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<hr style="margin: 0px; margin-top: 40px">
 		  	<table class="table table-bordered mt-4">
 			  <tbody>
@@ -50,6 +51,7 @@ use yii\helpers\Url;
 			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub->name_uz?> Ma'lumot</h3>
  			<hr style="margin: 0px;">
  			<p class="mt-5"><?=$maktab->content_uz?></p>
+			</div>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
@@ -71,9 +73,7 @@ use yii\helpers\Url;
 		border-radius: 10px;
 		padding: 40px;
 		box-shadow: 2px 10px 15px #888888;
-		margin-left: -20px;
-		margin-right: 40px;
-		width: 830px;
+		width: 99%;
 		margin-bottom: 30px;
 	}
 	

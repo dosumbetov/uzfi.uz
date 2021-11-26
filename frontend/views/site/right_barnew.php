@@ -5,8 +5,8 @@
 
 ?>
 	
-		<div class="col-md-3 col-12 ">
-			<div class="container right1" style="margin-left: -30px;">
+		<div class="col-md-4 col-12 ">
+			<div class="container right1">
 				<nav>
 					<ul class="mcd-menu1">
 						<h3 style="color: black; text-align: center;">So'ngi yangiliklar</h3>
@@ -46,7 +46,7 @@
 	border-radius: 10px;
 	padding: 20px;
 	box-shadow: 2px 10px 15px #888888;
-	width: 280px;
+	width: 99%;
 }
 
 .mcd-menu1 {
@@ -77,7 +77,7 @@
   
 }
 .mcd-menu1 li a {
-	width: 250px !important;
+	width: 100%;
 
 }
 

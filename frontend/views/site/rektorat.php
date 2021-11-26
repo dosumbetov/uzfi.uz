@@ -8,78 +8,80 @@
 ?>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
-		<div class="col-md-8 col-12 middle">
-			<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub->name_uz?></h3>
-			<img src="../images/<?=$rektorat->img?>" height="300px;" style="  display: block;
-  margin-left: auto;margin-right: auto;border-radius: 20px;">
-  <h4 style="text-align: center;" class="mt-4"><?=$rektorat->name_uz?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat->lavozim_uz?></i></span></h4>
-  <a href="">Profilega otish</a>
-  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
-		  	<table class="table table-bordered mt-4">
-			  <tbody>
-			    <tr>
-			      <th scope="row" class="table_first">Qabul vaqti</th>
-			      <td><?=$rektorat->qabul_vaqti_uz?></td>
-			    </tr>
-			    <tr>
-			      <th scope="row" class="table_first">Tel:</th>
-			      <td colspan="2"><?=$rektorat->tel?></td>
-			    </tr>
-			    <tr>
-			      <th scope="row" class="table_first">Fax:</th>
-			      <td colspan="2"><?=$rektorat->fax?></td>
-			    </tr>
-			    <tr>
-			      <th scope="row" class="table_first">E-mail:</th>
-			      <td colspan="2"><?=$rektorat->email?></td>
-			    </tr>
-			     <tr>
-			      <th scope="row" class="table_first">Telegram:</th>
-			      <td colspan="2"><?=$rektorat->telegram?></td>
-			    </tr>
-			     <tr>
-			      <th scope="row" class="table_first">Manzil:</th>
-			      <td colspan="2"><?=$rektorat->manzil_uz?></td>
-			    </tr>
-			  </tbody>
-			</table>
-			<hr style="margin: 0px; margin-bottom: 20px;">
-			<p><?=$rektorat->content_uz?></p>
-			<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
-			<div class="row">
-				<div class="col-md-3 col-6 mt-4">
-					<section>
-				      <div class="book">
-				        <img src="../images/cover.jpg">
-				      </div>
-				    </section>
-				<h5 style="text-align: center; margin-bottom: 40px;" class="mt-4"><a href="">Sahifa</a></h5>
-				</div>
-				<div class="col-md-3 col-6 mt-4">
-					<section>
-				      <div class="book">
-				        <img src="../images/cover.jpg">
-				      </div>
-				    </section>
-				    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-				</div>
-				<div class="col-md-3 col-6 mt-4">
-					<section>
-				      <div class="book">
-				        <img src="../images/cover.jpg">
-				      </div>
-				    </section>
-				    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-				</div>	
-				<div class="col-md-3 col-6 mt-4">
-					<section>
-				      <div class="book">
-				        <img src="../images/cover.jpg">
-				      </div>
-				    </section>
-				    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-				</div>	
-			</div> -->
+		<div class="col-md-8 col-12">
+			<div class="middle">
+				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub->name_uz?></h3>
+				<img src="../images/<?=$rektorat->img?>" style="display: block;
+			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat->name_uz?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat->lavozim_uz?></i></span></h4>
+			  <a href="">Profilega otish</a>
+			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
+			  	<table class="table table-bordered mt-4">
+				  <tbody>
+				    <tr>
+				      <th scope="row" class="table_first">Qabul vaqti</th>
+				      <td><?=$rektorat->qabul_vaqti_uz?></td>
+				    </tr>
+				    <tr>
+				      <th scope="row" class="table_first">Tel:</th>
+				      <td colspan="2"><?=$rektorat->tel?></td>
+				    </tr>
+				    <tr>
+				      <th scope="row" class="table_first">Fax:</th>
+				      <td colspan="2"><?=$rektorat->fax?></td>
+				    </tr>
+				    <tr>
+				      <th scope="row" class="table_first">E-mail:</th>
+				      <td colspan="2"><?=$rektorat->email?></td>
+				    </tr>
+				     <tr>
+				      <th scope="row" class="table_first">Telegram:</th>
+				      <td colspan="2"><?=$rektorat->telegram?></td>
+				    </tr>
+				     <tr>
+				      <th scope="row" class="table_first">Manzil:</th>
+				      <td colspan="2"><?=$rektorat->manzil_uz?></td>
+				    </tr>
+				  </tbody>
+				</table>
+				<hr style="margin: 0px; margin-bottom: 20px;">
+				<p><?=$rektorat->content_uz?></p>
+				<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
+				<div class="row">
+					<div class="col-md-3 col-6 mt-4">
+						<section>
+					      <div class="book">
+					        <img src="../images/cover.jpg">
+					      </div>
+					    </section>
+					<h5 style="text-align: center; margin-bottom: 40px;" class="mt-4"><a href="">Sahifa</a></h5>
+					</div>
+					<div class="col-md-3 col-6 mt-4">
+						<section>
+					      <div class="book">
+					        <img src="../images/cover.jpg">
+					      </div>
+					    </section>
+					    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
+					</div>
+					<div class="col-md-3 col-6 mt-4">
+						<section>
+					      <div class="book">
+					        <img src="../images/cover.jpg">
+					      </div>
+					    </section>
+					    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
+					</div>	
+					<div class="col-md-3 col-6 mt-4">
+						<section>
+					      <div class="book">
+					        <img src="../images/cover.jpg">
+					      </div>
+					    </section>
+					    <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
+					</div>	
+				</div> -->
+			</div>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
@@ -92,12 +94,14 @@
 
 	.middle {
 		background-color: white;
+		position: relative;
+		display: block;
 		border-radius: 10px;
 		padding: 40px;
 		box-shadow: 2px 10px 15px #888888;
-		margin-left: -20px;
-		margin-right: 40px;
-		width: 830px;
+		/*margin-left: -20px;*/
+		/*margin-right: 40px;*/
+		width: 99%;
 		margin-bottom: 30px;
 	}
 	
