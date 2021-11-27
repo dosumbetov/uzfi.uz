@@ -11,7 +11,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           foreach ($slider as $slider) {
             ?>
               <div class="item">
-                <h4><img src="<?=$slider->slider_img?>"></h4>
+                <h4><img src="<?=$slider->slider_img?>" clss="rasm"></h4>
               </div>
             <?
           }
@@ -19,19 +19,21 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       </div>
     </div>
     <style type="text/css">
-      .contain {
-        margin: 0 auto;
-        /*max-width: 100%;*/
-        width: 100%;
+      .rasm {
+          /*display: block;*/
+        object-fit: cover;
+        /*background-size: cover;*/
+        /*overflow:hidden;*/
+         width: 100%;
+         height: 100%;
       }
       .item {
-      display: flex;
-      object-fit: cover;
       height: 540px;
       width: 1349px;
-      background-size: cover;
+    
     }
     </style>
+    
     
       <!-- ======= Services Section ======= -->
  <!--    <section id="services" class="services mt-5 mb-5">
