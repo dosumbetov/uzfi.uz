@@ -39,8 +39,8 @@ class Pages extends \yii\db\ActiveRecord
         return [
             [['name_uz', 'name_ru', 'name_en', 'date', 'content_uz', 'content_ru', 'content_en', 'page_menu_sub_id'], 'required'],
             [['views', 'page_menu_sub_id'], 'integer'],
-            [['content_uz', 'content_ru', 'content_en'], 'string'],
-            [['name_uz', 'name_ru', 'name_en', 'date', 'img'], 'string', 'max' => 255],
+            [['content_uz', 'content_ru', 'content_en', 'name_uz', 'name_ru', 'name_en'], 'string'],
+            [['date', 'img'], 'string', 'max' => 255],
             [['page_menu_sub_id'], 'exist', 'skipOnError' => true, 'targetClass' => MenuSub::className(), 'targetAttribute' => ['page_menu_sub_id' => 'id']],
         ];
     }
