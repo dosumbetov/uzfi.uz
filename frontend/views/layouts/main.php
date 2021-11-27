@@ -122,7 +122,6 @@ AppAsset::register($this);
           </div>
           <div class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
-              <a href="./index.html"><img src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" /></a>
               <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
             </div>
            <ul class="navbar-nav">
@@ -138,7 +137,7 @@ AppAsset::register($this);
             }
             ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="!#"><?=$menu->name_uz?></a>
+                <a class="nav-link dropdown-toggle" href=""><?=$menu->name_uz?></a>
                 <ul class="dropdown-menu">
               <?
               $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();

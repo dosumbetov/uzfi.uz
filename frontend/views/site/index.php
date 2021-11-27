@@ -5,17 +5,32 @@ use yii\helpers\Url;
 
 $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOGIKA INSTITUTI";
 ?>
-    <div class="owl-carousel owl-theme">
-      <?
-        foreach ($slider as $slider) {
-          ?>
-            <div class="item" style="width:1349px; height: 540px; object-fit: cover;">
-              <h4><img src="../images/<?=$slider->slider_img?>"></h4>
-            </div>
-          <?
-        }
-      ?>
+    <div class="contain">
+      <div class="owl-carousel owl-theme">
+        <?
+          foreach ($slider as $slider) {
+            ?>
+              <div class="item">
+                <h4><img src="../images/<?=$slider->slider_img?>"></h4>
+              </div>
+            <?
+          }
+        ?>
+      </div>
     </div>
+    <style type="text/css">
+      .contain {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+      }
+      .item {
+      display: flex;
+      object-fit: cover;
+      height: 540px;
+      width: 1349px;
+    }
+    </style>
     
       <!-- ======= Services Section ======= -->
  <!--    <section id="services" class="services mt-5 mb-5">
@@ -288,7 +303,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     </style> -->
     <!-- Yangiliklar -->
     <div class="">
-      <section id="more-services" class="more-services orqafon1" style="padding-top: 80px; padding-bottom: 80px;">
+      <section id="more-services" class="more-services orqafon1" style="padding-top: 80px; padding-bottom: 40px;">
         <div class="container">
 
           <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
@@ -314,8 +329,8 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           }
         ?>
          </div>
-         <div style="text-align: center; font-size: 20px;">
-           barchasini korish
+         <div style="text-align: center; font-size: 20px; margin-top: 40px;">
+           <a href="<?=Url::to(['site/allpages', 'id'=>3])?>" class="btn btn-sm btn-primary rounded-pill">Barchasi</a>
          </div>
         </div>    
       </section>
@@ -353,7 +368,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     </section>
 
      <!-- Events -->
-    <section id="more-services" class="more-services mb-5 orqafon1" style="padding-top: 80px; padding-bottom: 80px;">
+    <section id="more-services" class="more-services mb-5 orqafon1" style="padding-top: 80px; padding-bottom: 40px;">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -378,6 +393,9 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         }
     ?>
         </div>
+         <div style="text-align: center; font-size: 20px; margin-top: 40px;">
+           <a href="<?=Url::to(['site/allpages', 'id'=>4])?>" class="btn btn-sm btn-primary rounded-pill">Barchasi</a>
+         </div>
       </div>
     </section>
 
