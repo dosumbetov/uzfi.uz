@@ -38,8 +38,8 @@
                         'url' => '#',
                         'items' => [
                             ['label' => 'Menu', 'icon' => 'file-code-o', 'url' => ['/menu'],],
-                            ['label' => 'Menu Title', 'icon' => 'file-code-o', 'url' => ['/menu_title'],],
-                            ['label' => 'Menu Sub', 'icon' => 'file-code-o', 'url' => ['/menu_sub'],],
+                            ['label' => 'Menu Title', 'icon' => 'file-code-o', 'url' => ['/menu-title'],],
+                            ['label' => 'Menu Sub', 'icon' => 'file-code-o', 'url' => ['/menu-sub'],],
                             ['label' => 'Yangiliklar va Elonlar', 'icon' => 'file-code-o', 'url' => ['/pages'],],
                             ['label' => 'Slider', 'icon' => 'file-code-o', 'url' => ['/slider'],],
                             ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
@@ -51,7 +51,7 @@
                                 'url' => '#',
                                 'items' => [
                                     ['label' => 'Fakultetlar', 'icon' => 'circle-o', 'url' => ['/fakultet'],],
-                                    ['label' => 'Fakultetga tegishli domlalar', 'icon' => 'circle-o', 'url' => ['/fakultet_staff'],],
+                                    ['label' => 'Fakultetga tegishli domlalar', 'icon' => 'circle-o', 'url' => ['/fakultet-staff'],],
                                     ['label' => "O'qituvchilar", 'icon' => 'circle-o', 'url' => ['/teacher'],],
                                     ['label' => 'Kitoblar', 'icon' => 'circle-o', 'url' => ['/books'],],
                                     ['label' => 'Maqolalar', 'icon' => 'circle-o', 'url' => ['/articles'],],
