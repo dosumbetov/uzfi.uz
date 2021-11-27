@@ -440,7 +440,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
               ?>
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="supporter-logo">
-                    <a href=""><img src="<?=$supporters ? $supporters->img : ''?>" class="img-fluid" alt=""></a>
+                    <a target="_blank" href="<?=$supporters ? $supporters->link : ''?>"><img src="<?=$supporters ? $supporters->img : ''?>" class="img-fluid" alt=""></a>
                   </div>
                 </div>
               <?
