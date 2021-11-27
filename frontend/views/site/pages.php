@@ -11,7 +11,7 @@
 	              <i class="fa fa-calendar"><?=$pages->date?></i>
 	              <i class="fa fa-eye"><?=$pages->views?></i>
 	            </div>
-				<img src="../images/<?=$pages->img?>" height="250px;" style="  display: block;
+				<img src="../images/<?=$pages->img?>" width="100%" style="  display: block;
 	  			margin-left: auto;margin-right: auto;border-radius: 20px;">
 			  	<p class="mt-5 mb-5" style="font-size: 18px;"><?=$pages->content_uz?></p>
 			</div>
