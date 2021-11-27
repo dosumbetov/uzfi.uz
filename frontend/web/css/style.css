@@ -58,8 +58,8 @@ h1, h2, h3, h4 {
   display: block;
   position: absolute;
   overflow: hidden;
-  margin-top: 250px;
-  margin-left: 500px;
+  margin-top: 15%;
+  margin-left: 40%;
 }
 
 .play-btn::after {

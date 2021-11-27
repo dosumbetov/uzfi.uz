@@ -5,13 +5,13 @@ use yii\helpers\Url;
 
 $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOGIKA INSTITUTI";
 ?>
-    <div class="contain">
+    <div class="section">
       <div class="owl-carousel owl-theme">
         <?
           foreach ($slider as $slider) {
             ?>
               <div class="item">
-                <h4><img src="../images/<?=$slider->slider_img?>"></h4>
+                <h4><img src="<?=$slider->slider_img?>"></h4>
               </div>
             <?
           }
@@ -21,7 +21,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     <style type="text/css">
       .contain {
         margin: 0 auto;
-        max-width: 100%;
+        /*max-width: 100%;*/
         width: 100%;
       }
       .item {
@@ -29,6 +29,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       object-fit: cover;
       height: 540px;
       width: 1349px;
+      background-size: cover;
     }
     </style>
     
@@ -313,7 +314,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         <?
           foreach ($news as $news) {
               ?>
-                  <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="col-md-4 d-flex align-items-stretch mb-4">
                       <div class="new_date">
                         <i class="fa fa-calendar"><?=$news->date?></i>
                         <div><i class="fa fa-eye"><?=$news->views?></i></div>
@@ -378,7 +379,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     <?
         foreach ($event as $event) {
             ?>
-                <div class="col-md-4 d-flex align-items-stretch">
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
                     <div class="new_date">
                       <i class="fa fa-calendar"><?=$event->date?></i>
                       <div><i class="fa fa-eye"><?=$event->views?></i></div>
@@ -407,17 +408,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           <h2 style="text-align: center;">Video Lavha
         </div>
               <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
-              <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=fLeJJPxua3E"></a>
-              <!-- <a href="#inline-content" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
+             
               <div class="row videonew">
-                    <img src="../images/harvard.jpg">
+                 <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=fLeJJPxua3E"></a>
+              <!-- <a href="#inline-content" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
+                    <img src="../images/videorasm.jpg">
               </div>
        </div>
-        <div id="inline-content" style="display:none; margin-bottom: 30px;">
-        <video controls width="100%" height="100%">
-          <source src="../images/best.mp4" type="video/mp4">
-        </video>
-    </div>
+       <!--  <div id="inline-content" style="display:none; margin-bottom: 30px;">
+            <video controls width="100%" height="100%">
+              <source src="../images/best.mp4" type="video/mp4">
+            </video>
+        </div> -->
      </section>
    
    
