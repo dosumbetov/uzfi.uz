@@ -31,12 +31,12 @@ foreach ($teacherinfo as $teacherinfo) {
     <div class="row">
         <div class="col-md-3 col-12 left_bar_tea">
             <img src="../images/<?=$teacherinfo->img?>" class="img_teacher">
-            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo->name_uz?></h3>
-            <p style="text-align: center;"><?=$teacherinfo->lavozim_uz?>, <br><?=$teacherinfo->rank_uz?></p>
+            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo->name_uz : ''?></h3>
+            <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo->rank_uz : ''?></p>
             <hr style="margin: 0px; margin-bottom: 20px;">
-            <p><i class="fa fa-telegram"></i><?=$teacherinfo->telegram?></p>
-            <p><i class="fa fa-facebook"></i> <?=$teacherinfo->facebook?></p>
-            <p><i class="fa fa-instagram"></i><?=$teacherinfo->instagram?></p>
+            <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo->telegram : ''?></p>
+            <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo->facebook : ''?></p>
+            <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo->instagram : ''?></p>
         </div>
         <div class="col-md-9 col-6 middle_bar_tea">
            <h4 style="color: black;"><img src="../images/icon/db2.png" alt="" /> Book</h4>
@@ -55,10 +55,10 @@ foreach ($teacherinfo as $teacherinfo) {
                   foreach ($books as $books) {
                     ?>
                       <tr>
-                        <th scope="row"><?=$books->number?></th>
-                        <td><?=$books->name_uz?></td>
-                        <td><?=$books->chop_etilgan_joy_uz?></td>
-                        <td><?=$books->date?></td>
+                        <th scope="row"><?=$books ? $books->number : ''?></th>
+                        <td><?=$books ? $books->name_uz : ''?></td>
+                        <td><?=$books ? $books->chop_etilgan_joy_uz : ''?></td>
+                        <td><?=$books ? $books->date : ''?></td>
                       </tr>
                     <?
                   }
@@ -81,10 +81,10 @@ foreach ($teacherinfo as $teacherinfo) {
                   foreach ($articles as $articles) {
                     ?>
                       <tr>
-                        <th scope="row"><?=$articles->number?></th>
-                        <td><?=$articles->name_uz?></td>
-                        <td><?=$articles->article_degree_uz?></td>
-                        <td><?=$articles->date?></td>
+                        <th scope="row"><?=$articles ? $articles->number : ''?></th>
+                        <td><?=$articles ? $articles->name_uz : ''?></td>
+                        <td><?=$articles ? $articles->article_degree_uz : ''?></td>
+                        <td><?=$articles ? $articles->date : ''?></td>
                       </tr>
                     <?
                   }

@@ -11,41 +11,41 @@
 		<div class="col-md-8 col-12">
 			<div class="middle">
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub->name_uz?></h3>
-				<img src="../images/<?=$rektorat->img?>" style="display: block;
+				<img src="<?=$rektorat ? $rektorat->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat->name_uz?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat->lavozim_uz?></i></span></h4>
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat ? $rektorat->name_uz : ''?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat ? $rektorat->lavozim_uz : ''?></i></span></h4>
 			  <a href="">Profilega otish</a>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
 			  	<table class="table table-bordered mt-4">
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first">Qabul vaqti</th>
-				      <td><?=$rektorat->qabul_vaqti_uz?></td>
+				      <td><?=$rektorat ? $rektorat->qabul_vaqti_uz : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Tel:</th>
-				      <td colspan="2"><?=$rektorat->tel?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->tel : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Fax:</th>
-				      <td colspan="2"><?=$rektorat->fax?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->fax : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">E-mail:</th>
-				      <td colspan="2"><?=$rektorat->email?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->email : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Telegram:</th>
-				      <td colspan="2"><?=$rektorat->telegram?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->telegram : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Manzil:</th>
-				      <td colspan="2"><?=$rektorat->manzil_uz?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->manzil_uz : ''?></td>
 				    </tr>
 				  </tbody>
 				</table>
 				<hr style="margin: 0px; margin-bottom: 20px;">
-				<p><?=$rektorat->content_uz?></p>
+				<p><?=$rektorat ? $rektorat->content_uz : ''?></p>
 				<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
 				<div class="row">
 					<div class="col-md-3 col-6 mt-4">

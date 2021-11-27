@@ -35,6 +35,7 @@ use backend\models\Articles;
 use backend\models\EmbPages;
 use backend\models\Allmaktab;
 use backend\models\Maktab;
+use backend\models\Supporters;
 /**
  * Site controller
  */
@@ -100,6 +101,7 @@ class SiteController extends Controller
         $slider_on_icon = SliderOnIcon::find()->all();
         $dr_slider_img = DirektorSlider::find()->all();
         $tezkor_havolalar = TezkorHavolalar::find()->orderBy(['id'=>SORT_DESC])->limit(9)->all();
+        $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
         return $this->render('index',[
             'slider'=>$slider,
             'slider_on_icon'=>$slider_on_icon,
@@ -107,6 +109,7 @@ class SiteController extends Controller
             'tezkor_havolalar'=> $tezkor_havolalar,
             'news' => $news,
             'event' => $event,
+            'supporters' => $supporters,
         ]);
     }
      public function actionAloqa()
@@ -218,20 +221,6 @@ class SiteController extends Controller
 
     }
 
-    public function actionCommonteacher()
-    {
-        $teacher = Teacher::find()->all();
-        $tchmenu = TchMenu::find()->all();
-        $tchmenu1 = TchMenu::find()->all();
-        $tchmenutitle = TchMenuTitle::find()->Where(['tch_menu_id' => $menu->id])->all();
-        return $this->render('commonteacher', [
-            'tchmenu'=>$tchmenu,
-            'tchmenu1'=>$tchmenu1,
-            'tchmenutitle'=>$tchmenutitle,
-            'teacher'=>$teacher,
-        ]);
-        
-    }
      public function actionRektorat($id)
     {
       $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
