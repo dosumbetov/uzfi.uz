@@ -31,17 +31,46 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Some tools',
                         'icon' => 'share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
+                            ['label' => 'Menu', 'icon' => 'file-code-o', 'url' => ['/menu'],],
+                            ['label' => 'Menu Title', 'icon' => 'file-code-o', 'url' => ['/menu_title'],],
+                            ['label' => 'Menu Sub', 'icon' => 'file-code-o', 'url' => ['/menu_sub'],],
+                            ['label' => 'Yangiliklar va Elonlar', 'icon' => 'file-code-o', 'url' => ['/pages'],],
+                            ['label' => 'Slider', 'icon' => 'file-code-o', 'url' => ['/slider'],],
+                            ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
+                            ['label' => 'Rektorat', 'icon' => 'file-code-o', 'url' => ['/rektorat'],],
+                       
                             [
+                                'label' => 'Fakultetlar',
+                                'icon' => 'circle-o',
+                                'url' => '#',
+                                'items' => [
+                                    ['label' => 'Fakultetlar', 'icon' => 'circle-o', 'url' => ['/fakultet'],],
+                                    ['label' => 'Fakultetga tegishli domlalar', 'icon' => 'circle-o', 'url' => ['/fakultet_staff'],],
+                                    ['label' => "O'qituvchilar", 'icon' => 'circle-o', 'url' => ['/teacher'],],
+                                    ['label' => 'Kitoblar', 'icon' => 'circle-o', 'url' => ['/books'],],
+                                    ['label' => 'Maqolalar', 'icon' => 'circle-o', 'url' => ['/articles'],],
+                                   
+                                ],
+                            ], 
+                        ],
+                    ],
+                ],
+            ]
+        ) ?>
+
+    </section>
+
+</aside>
+
+
+<!-- 
+                             [
                                 'label' => 'Level One',
                                 'icon' => 'circle-o',
                                 'url' => '#',
@@ -57,13 +86,4 @@
                                         ],
                                     ],
                                 ],
-                            ],
-                        ],
-                    ],
-                ],
-            ]
-        ) ?>
-
-    </section>
-
-</aside>
+                            ], -->
