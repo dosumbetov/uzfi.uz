@@ -468,11 +468,11 @@ OwlCarouselWidget::begin([
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
           <?
-            foreach ($supporters as $supporters) {
+            foreach ($supporters as $supporter) {
               ?>
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="supporter-logo">
-                    <a target="_blank" href="<?=$supporters ? $supporters->link : ''?>"><img src="<?=$supporters ? $supporters->img : ''?>" class="img-fluid" alt=""></a>
+                    <a target="_blank" href="<?=$supporter ? $supporter->link : ''?>"><img src="<?=$supporter ? $supporter->img : ''?>" class="img-fluid" alt=""></a>
                   </div>
                 </div>
               <?
