@@ -1,38 +1,70 @@
 <?php
+
+use yii\bootstrap4\Carousel;
 use yii\helpers\Url;
+
 
 /* @var $this yii\web\View */
 
 $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOGIKA INSTITUTI";
 ?>
-    <div class="section">
-      <div class="owl-carousel owl-theme">
-        <?
-          foreach ($slider as $slider) {
-            ?>
-              <div class="item">
-                <h4><img src="<?=$slider ? $slider->slider_img : ''?>" class="rasm"></h4>
-              </div>
-            <?
-          }
-        ?>
-      </div>
-    </div>
-    <style type="text/css">
-      .rasm {
-          /*display: block;*/
-        object-fit: cover;
-        /*background-size: cover;*/
-        /*overflow:hidden;*/
-         width: 100%;
-         height: 100%;
-      }
-      .item {
-      height: 540px;
-      width: 1349px;
-    
-    }
-    </style>
+
+<?php
+use kv4nt\owlcarousel\OwlCarouselWidget;
+
+OwlCarouselWidget::begin([
+    'container' => 'div',
+    'containerOptions' => [
+        'id' => 'container-id',
+        'class' => 'container-class'
+    ],
+    'pluginOptions'    => [
+        'autoplay'          => true,
+        'autoplayTimeout'   => 5000,
+        'items'             => 1,
+        'nav' => true,
+        'loop'              => true,
+        'itemsDesktop'      => [1199, 3],
+        'itemsDesktopSmall' => [979, 3]
+    ]
+]);
+?>
+
+<?php $i = 1; foreach ($slider as $slide) :?>
+<div class="item-class"><img src="<?=$slide ? $slide->slider_img : ''?>" alt="<?= 'Image '.$i++ ?>"></div>
+<?php endforeach;?>
+
+
+<?php OwlCarouselWidget::end(); ?>
+
+<!--    <div class="section">-->
+<!--      <div class="owl-carousel owl-theme">-->
+<!--        --><?//
+//          foreach ($slider as $slider) {
+//            ?>
+<!--              <div class="item">-->
+<!--                <h4><img src="--><?//=$slider ? $slider->slider_img : ''?><!--" class="rasm"></h4>-->
+<!--              </div>-->
+<!--            --><?//
+//          }
+//        ?>
+<!--      </div>-->
+<!--    </div>-->
+<!--    <style type="text/css">-->
+<!--      .rasm {-->
+<!--          /*display: block;*/-->
+<!--        object-fit: cover;-->
+<!--        /*background-size: cover;*/-->
+<!--        /*overflow:hidden;*/-->
+<!--         width: 100%;-->
+<!--         height: 100%;-->
+<!--      }-->
+<!--      .item {-->
+<!--      height: 540px;-->
+<!--      width: 1349px;-->
+<!---->
+<!--    }-->
+<!--    </style>-->
     
     
       <!-- ======= Services Section ======= -->
