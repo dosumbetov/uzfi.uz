@@ -36,7 +36,7 @@ class AppAsset extends AssetBundle
         '/newasset/js/plugins.js',
         '/newasset/js/theme.js',
         'https://unpkg.com/aos@2.3.1/dist/aos.js',
-//        '/js/custom.js',
+        '/js/custom.js',
         '/venobox/venobox.min.js',
         '/js/vanilla-tilt.min.js',
       
