@@ -14,7 +14,7 @@ use backend\models\Menu;
 use backend\models\MenuSub;
 use backend\models\MenuTitle;
 use backend\models\Emblems;
-// use cinghie\multilanguage\widgets\MultilanguageWidget; 
+use cinghie\multilanguage\widgets\MultilanguageWidget; 
 
 $emblems = Emblems::find()->all();
 // use yii\helpers\Html;
@@ -84,20 +84,20 @@ AppAsset::register($this);
                 if ($emblems->link_type == 1) {
                   ?>
                     <a href="<?=Url::to(["site/".$emblems->link, 'id'=>$emblems->id])?>">
-                      <img src="../images/emblems/<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
+                      <img src="../<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
                     </a>
                   <?
                 }else{
                   ?>
                     <a target="_blank" href="<?=$emblems->link?>">
-                      <img src="../images/emblems/<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
+                      <img src="../<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
                     </a>
                   <?
                 }
               }
                 ?>
               <a href="">
-                <img src="../images/emblems/sitemap.png" height="20px;" width="20px;">
+                <img src="../../images/emblems/sitemap.png" height="20px;" width="20px;">
               </a>
           </div>
           <div class="d-flex flex-row me-6 ms-auto">
@@ -106,7 +106,15 @@ AppAsset::register($this);
                   <input type="text" name="search" class="input-search" placeholder="Qidiruv tizimi...">
                 </div>
                 <!-- <img src="../images/login.png" height="25px;"> -->
-                <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 30px;"></i>
+                <?= MultiLanguageWidget::widget([
+                  'addCurrentLang' => true, // add current lang
+                  'calling_controller' => $this->context,
+                  'image_type'  => 'rounded', // classic or rounded
+                  'link_home'   => true, // true or false
+                  'widget_type' => 'classic', // classic or selector
+                  'width'       => '28'
+                ]); ?>
+                <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 28px;"></i>
           </div>
         </div>
         <!-- /.container -->
@@ -116,7 +124,7 @@ AppAsset::register($this);
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
             <a href="<?=Url::home()?>">
-              <img src="../images/uzfi.png" height="70px;" srcset="../images/uzfi.png" alt="eas" />
+              <img src="../../images/uzfi.png" height="70px;" srcset="../../images/uzfi.png" alt="eas" />
             </a>
             <span style="color: #212121;font-family: 'Roboto', sans-serif, Arial;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 16px;">SAMARQAND DAVLAT UNIVERSITETINING<br>"O'ZBEKISTON-FINLANDIYA"<br>"PEDAGOGIKA INSTITUTI"</span>
           </div>
@@ -137,7 +145,7 @@ AppAsset::register($this);
             }
             ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href=""><?=$menu->name_uz?></a>
+                <a class="nav-link dropdown-toggle" href=""><?=$cmmenu?></a>
                 <ul class="dropdown-menu">
               <?
               $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
@@ -199,7 +207,7 @@ AppAsset::register($this);
           <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
               <li class="nav-item dropdown language-select text-uppercase">
-          
+                
               </li>
               <li class="nav-item d-none d-md-block">
                 <a href="<?=Url::to(['site/aloqa'])?>" class="btn btn-sm btn-primary rounded-pill">Contact</a>

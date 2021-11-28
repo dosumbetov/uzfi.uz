@@ -150,7 +150,7 @@ OwlCarouselWidget::begin([
                         }
                       ?>
                       <div class="circle"></div>
-                      <img src="<?=$tezkor_havolalar->img?>" height="60px;" class="product">
+                      <img src="../<?=$tezkor_havolalar->img?>" height="60px;" class="product">
                   </div>
                 </div>
               </div>
@@ -190,22 +190,22 @@ OwlCarouselWidget::begin([
        <div class="container">
          <div class="row" style="text-align: center; padding: 25px;">
              <div class="col-md-3">
-                 <img src="../images/cap.png" height="100px;">
+                 <img src="../../images/cap.png" height="100px;">
                  <p class="natija1" data-toggle="counter-up">5</p>
                  <p class="natija1">Fakultetlar</p>
              </div>
              <div class="col-md-3">
-                <img src="../images/graduates.png" height="100px;">
+                <img src="../../images/graduates.png" height="100px;">
                 <p class="natija1" data-toggle="counter-up">2925</p>
                  <p class="natija1">Talabalar</p>
              </div>
              <div class="col-md-3">
-                 <img src="../images/teacher.png" height="100px;">
+                 <img src="../../images/teacher.png" height="100px;">
                  <p class="natija1" data-toggle="counter-up">209</p>
                  <p class="natija1">O'qituvchilar</p>
              </div>
              <div class="col-md-3">
-                 <img src="../images/suit.png" height="100px;">
+                 <img src="../../images/suit.png" height="100px;">
                  <p class="natija1" data-toggle="counter-up">2</p>
                  <p class="natija1">Hamkorlar</p>
              </div>
@@ -446,7 +446,7 @@ OwlCarouselWidget::begin([
               <div class="row videonew">
                  <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=fLeJJPxua3E"></a>
               <!-- <a href="#inline-content" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
-                    <img src="../images/videorasm.jpg">
+                    <img src="../../images/videorasm.jpg">
               </div>
        </div>
        <!--  <div id="inline-content" style="display:none; margin-bottom: 30px;">
