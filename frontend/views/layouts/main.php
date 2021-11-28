@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use cinghie\multilanguage\widgets\MultiLanguageWidget;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\bootstrap4\Breadcrumbs;
@@ -14,7 +15,7 @@ use backend\models\Menu;
 use backend\models\MenuSub;
 use backend\models\MenuTitle;
 use backend\models\Emblems;
-use cinghie\multilanguage\widgets\MultilanguageWidget; 
+
 
 $emblems = Emblems::find()->all();
 // use yii\helpers\Html;
