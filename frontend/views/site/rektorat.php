@@ -1,8 +1,8 @@
 <?
-	foreach ($menu_sub as $menu_sub) {
+	foreach ($menu_sub as $menu_sub_item) {
 		# code...
 	}
-	foreach ($rektorat as $rektorat) {
+	foreach ($rektorat as $rektorat_item) {
 		# code...
 	}
 ?>
@@ -10,42 +10,42 @@
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub->name_uz?></h3>
-				<img src="<?=$rektorat ? $rektorat->img : ''?>" style="display: block;
+				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_item->name_uz?></h3>
+				<img src="<?=$rektorat_item ? $rektorat_item->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat ? $rektorat->name_uz : ''?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat ? $rektorat->lavozim_uz : ''?></i></span></h4>
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat_item ? $rektorat_item->name_uz : ''?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat_item ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
 			  <a href="">Profilega otish</a>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
 			  	<table class="table table-bordered mt-4">
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first">Qabul vaqti</th>
-				      <td><?=$rektorat ? $rektorat->qabul_vaqti_uz : ''?></td>
+				      <td><?=$rektorat_item ? $rektorat_item->qabul_vaqti_uz : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Tel:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat->tel : ''?></td>
+				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->tel : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Fax:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat->fax : ''?></td>
+				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->fax : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">E-mail:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat->email : ''?></td>
+				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->email : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Telegram:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat->telegram : ''?></td>
+				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->telegram : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Manzil:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat->manzil_uz : ''?></td>
+				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->manzil_uz : ''?></td>
 				    </tr>
 				  </tbody>
 				</table>
 				<hr style="margin: 0px; margin-bottom: 20px;">
-				<p><?=$rektorat ? $rektorat->content_uz : ''?></p>
+				<p><?=$rektorat_item ? $rektorat_item->content_uz : ''?></p>
 				<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
 				<div class="row">
 					<div class="col-md-3 col-6 mt-4">

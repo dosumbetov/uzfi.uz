@@ -11,12 +11,12 @@
 					<ul class="mcd-menu1">
 						<h3 style="color: black; text-align: center;">So'ngi yangiliklar</h3>
 						<?
-							foreach ($news as $news) {
+							foreach ($news as $news_item) {
 								?>
 									<li>
-										<a href="<?=Url::to(['site/pages', 'id'=>$news->id])?>" style="min-height: 75px;">
-											<i class="fa fa-calendar" style="font-size: 12px;"><?=$news ? $news->date : ''?></i><br>
-											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news ? $news->name_uz : '', 40, '...')?></strong>
+										<a href="<?=Url::to(['site/pages', 'id'=>$news_item->id])?>" style="min-height: 75px;">
+											<i class="fa fa-calendar" style="font-size: 12px;"><?=$news_item ? $news_item->date : ''?></i><br>
+											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news_item ? $news_item->name_uz : '', 40, '...')?></strong>
 										</a>
 									</li>
 								<?

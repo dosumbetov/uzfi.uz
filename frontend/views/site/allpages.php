@@ -2,7 +2,7 @@
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-foreach ($menu_sub as $menu_sub) {
+foreach ($menu_sub as $menu_sub_item) {
   # code...
 }
 
@@ -84,21 +84,21 @@ foreach ($menu_sub as $menu_sub) {
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;"><?=$menu_sub->name_uz?></h2>
+          <h2 style="text-align: center;"><?=$menu_sub_item->name_uz?></h2>
         </div>
         <div class="row">
     <?
-        foreach ($news as $news) {
+        foreach ($news as $new) {
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-5">
                     <div class="new_date">
-                      <i class="fa fa-calendar"><?=$news ? $news->date : ''?></i>
-                      <div><i class="fa fa-eye"><?=$news ? $news->views : ''?></i></div>
+                      <i class="fa fa-calendar"><?=$new ? $new->date : ''?></i>
+                      <div><i class="fa fa-eye"><?=$new ? $new->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$news ? $news->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("<?=$new ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <p class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $news->name_uz : '', 60, '...')?></p>
-                        <div class="read-more"><a href="<?=Url::to(['site/pages', 'id'=>$news->id])?>"><i class="icofont-arrow-right"></i>Batafsil</a></div>
+                        <p class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></p>
+                        <div class="read-more"><a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>"><i class="icofont-arrow-right"></i>Batafsil</a></div>
                       </div>
                     </div>
                 </div>

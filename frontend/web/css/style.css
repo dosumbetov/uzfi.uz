@@ -1981,6 +1981,7 @@ h1, h2, h3, h4 {
     font-weight: 400;
     top: 12px;
     left: 0px;
+    text-decoration: none;
     text-align: center;
     color: #232323;
     width: 100%;

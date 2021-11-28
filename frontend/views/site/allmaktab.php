@@ -1,6 +1,6 @@
 <?
 use yii\helpers\Url;
-foreach ($menu_sub as $menu_sub) {
+foreach ($menu_sub as $menu_sub_item) {
 	# code...
 }
 
@@ -9,19 +9,19 @@ foreach ($menu_sub as $menu_sub) {
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub->name_uz?></h2>
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub_item->name_uz?></h2>
 			<div class="row">
 				<?
-					foreach ($allmaktab as $allmaktab) {
+					foreach ($allmaktab as $allmaktabs) {
 						?>
 							<div class="col-md-6 d-flex align-items-stretch">
 			                   <div class="card mb-5" style="width: 100%;">
-								  <img src="<?=$allmaktab ? $allmaktab->img : ''?>" class="card-img-top" alt="...">
+								  <img src="<?=$allmaktabs ? $allmaktabs->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
-								    <h5 class="card-title"><?=$allmaktab ? $allmaktab->name_uz : ''?></h5>
-								    <p class="card-text"><?=$allmaktab ? $allmaktab->opisaniya_uz : ''?></p>
+								    <h5 class="card-title"><?=$allmaktabs ? $allmaktabs->name_uz : ''?></h5>
+								    <p class="card-text"><?=$allmaktabs ? $allmaktabs->opisaniya_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktab->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Batafsil</a>
+								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktabs->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Batafsil</a>
 								  </div>
 								</div>
 			                </div>

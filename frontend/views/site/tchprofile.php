@@ -1,6 +1,6 @@
  <?
 use yii\helpers\Url;
-foreach ($teacherinfo as $teacherinfo) {
+foreach ($teacherinfo as $teacherinfo_item) {
   # code...
 }
 
@@ -15,10 +15,10 @@ foreach ($teacherinfo as $teacherinfo) {
                     </div>
                     <div class="col-md-9 col-md-offset-3">
                          <ul>
-                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo->staff_id])?>" class="pro-act">Dashboard</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo->staff_id])?>">Profile</a></li>
-                            <li><a href="<?=Url::to(['site/tchprofile', 'id'=>$teacherinfo->staff_id])?>">Galeriya</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo->staff_id])?>">Kitoblar</a></li>
+                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Dashboard</a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Profile</a></li>
+                            <li><a href="<?=Url::to(['site/tchprofile', 'id'=>$teacherinfo_item->staff_id])?>">Galeriya</a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Kitoblar</a></li>
                         </ul> 
                     </div>
                 </div>
@@ -30,13 +30,13 @@ foreach ($teacherinfo as $teacherinfo) {
 <div class="container ortafon">
     <div class="row">
         <div class="col-md-3 col-6 left_bar_tea">
-            <img src="../images/<?=$teacherinfo->img?>" class="img_teacher">
-            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo->name_uz : ''?></h3>
-            <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo->rank_uz : ''?></p>
+            <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
+            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h3>
+            <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
             <hr style="margin: 0px; margin-bottom: 20px;">
-            <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo->telegram : ''?></p>
-            <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo->facebook : ''?></p>
-            <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo->instagram : ''?></p>
+            <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
+            <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
+            <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
         </div>
         <div class="col-md-9 col-6 middle_bar_tea">
            <h4 style="color: black;"><img src="../images/icon/gallery.ico" alt="" /> Gallery</h4>

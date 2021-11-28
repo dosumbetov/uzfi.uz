@@ -133,24 +133,24 @@ OwlCarouselWidget::begin([
         </div>
         <div class="row">
           <?
-            foreach ($tezkor_havolalar as $tezkor_havolalar) {
+            foreach ($tezkor_havolalar as $tezkor_havola) {
               ?>
               <div class="col-md-4 col-12">
                 <div class="block_havola">
                   <div class="box">
                       <?
-                        if ($tezkor_havolalar->link_type == 1) {
+                        if ($tezkor_havola->link_type == 1) {
                           ?>
-                             <a href="<?=Url::to(["site/".$tezkor_havolalar->link, 'id'=>$tezkor_havolalar->id])?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar->name_uz : ''?></a>
+                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->id])?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }else{
                           ?>
-                             <a href="<?=$tezkor_havolalar ? $tezkor_havolalar->link : ''?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar->name_uz : ''?></a>
+                             <a href="<?=$tezkor_havola ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }
                       ?>
                       <div class="circle"></div>
-                      <img src="../<?=$tezkor_havolalar->img?>" height="60px;" class="product">
+                      <img src="../<?=$tezkor_havola->img?>" height="60px;" class="product">
                   </div>
                 </div>
               </div>
@@ -346,16 +346,16 @@ OwlCarouselWidget::begin([
           </div>
           <div class="row">
         <?
-          foreach ($news as $news) {
+          foreach ($news as $new) {
               ?>
                   <div class="col-md-4 d-flex align-items-stretch mb-4">
                       <div class="new_date">
-                        <i class="fa fa-calendar"><?=$news ? $news->date : ''?></i>
-                        <div><i class="fa fa-eye"><?=$news ? $news->views : ''?></i></div>
+                        <i class="fa fa-calendar"><?=$new ? $new->date : ''?></i>
+                        <div><i class="fa fa-eye"><?=$new ? $new->views : ''?></i></div>
                       </div>
-                      <div class="card" style='background-image: url("<?=$news ? $news->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                      <div class="card" style='background-image: url("<?=$new ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
-                          <a href="<?=Url::to(['site/pages', 'id'=>$news->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $news->name_uz : '', 60, '...')?></a>
+                          <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></a>
                           <!-- <div class="read-more"><a href=""><i class="icofont-arrow-right"></i>Batafsil</a></div> -->
                         </div>
                       </div>
@@ -385,14 +385,14 @@ OwlCarouselWidget::begin([
           <div style="margin-top: 40px; margin-bottom: 20px;">
                <div class="row">
                    <?
-                    foreach ($dr_slider_img as $dr_slider_img) {
+                    foreach ($dr_slider_img as $dr_slider) {
                         ?>
                             <div class="col-md-8" style="font-size: 28px !important;text-align: center; color: white !important;vertical-align: middle;">
-                          <?=$dr_slider_img ? $dr_slider_img->content_uz : ''?>
-                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider_img->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider_img->field_uz : ''?></span></p>
+                          <?=$dr_slider ? $dr_slider->content_uz : ''?>
+                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider ? $dr_slider->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider ? $dr_slider->field_uz : ''?></span></p>
                            </div>
                            <div class="col-md-4">
-                                <img src="<?=$dr_slider_img ? $dr_slider_img->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
+                                <img src="<?=$dr_slider ? $dr_slider->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
                            </div>
                         <?
                     }
@@ -411,16 +411,16 @@ OwlCarouselWidget::begin([
         </div>
         <div class="row">
     <?
-        foreach ($event as $event) {
+        foreach ($event as $events) {
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-4">
                     <div class="new_date">
-                      <i class="fa fa-calendar"><?=$event ? $event->date : ''?></i>
-                      <div><i class="fa fa-eye"><?=$event ? $event->views : ''?></i></div>
+                      <i class="fa fa-calendar"><?=$events ? $events->date : ''?></i>
+                      <div><i class="fa fa-eye"><?=$events ? $events->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$event ? $event->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("<?=$events ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$event->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $event->name_uz : '', 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($events ? $events->name_uz : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>

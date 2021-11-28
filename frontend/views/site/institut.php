@@ -1,9 +1,9 @@
 <?
-	foreach ($menu_sub as $menu_sub) {
+	foreach ($menu_sub as $menu_sub_item) {
 		# code...
 	}
 
-	foreach ($institut as $institut) {
+	foreach ($institut as $institut_item) {
 		# code...
 	}
 
@@ -12,9 +12,9 @@
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">
-				<h1 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub->name_uz?></h1>
+				<h1 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h1>
 				<hr style="margin: 0px;margin-bottom: 30px;">
-				<p><?=$institut ? $institut->content_uz : ''?></p>
+				<p><?=$institut_item ? $institut_item->content_uz : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

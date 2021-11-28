@@ -1,13 +1,13 @@
 <?
 use yii\helpers\Url;
-	foreach ($allmaktab as $allmaktab) {
+	foreach ($allmaktab as $allmaktab_item) {
 		# code...
 	}
 
-	foreach ($maktab as $maktab) {
+	foreach ($maktab as $maktab_item) {
 		# code...
 	}
-	foreach ($menu_sub as $menu_sub) {
+	foreach ($menu_sub as $menu_sub_item) {
 		# code...
 	}
 
@@ -16,41 +16,41 @@ use yii\helpers\Url;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab->name_uz?></h2>
-			<img src="../images/<?=$allmaktab ? $allmaktab->img : ''?>" style="display: block;
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab_item->name_uz?></h2>
+			<img src="../<?=$allmaktab_item ? $allmaktab_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<hr style="margin: 0px; margin-top: 40px">
 		  	<table class="table table-bordered mt-4">
 			  <tbody>
 			    <tr>
 			      <th scope="row" class="table_first">Qabul vaqti</th>
-			      <td><?=$maktab ? $maktab->ishkunlari_uz : ''?></td>
+			      <td><?=$maktab_item ? $maktab_item->ishkunlari_uz : ''?></td>
 			    </tr>
 			     <tr>
 			      <th scope="row" class="table_first">Biriktirlgan:</th>
-			      <td colspan="2"><?=$maktab ? $maktab->biriktirilgan_uz : ''?></td>
+			      <td colspan="2"><?=$maktab_item ? $maktab_item->biriktirilgan_uz : ''?></td>
 			    </tr>
 			    <tr>
 			      <th scope="row" class="table_first">Tel:</th>
-			      <td colspan="2"><?=$maktab ? $maktab->tel : ''?></td>
+			      <td colspan="2"><?=$maktab_item ? $maktab_item->tel : ''?></td>
 			    </tr>
 			    <tr>
 			      <th scope="row" class="table_first">Fax:</th>
-			      <td colspan="2"><?=$maktab ? $maktab->fax : ''?></td>
+			      <td colspan="2"><?=$maktab_item ? $maktab_item->fax : ''?></td>
 			    </tr>
 
 			     <tr>
 			      <th scope="row" class="table_first">Manzil:</th>
-			      <td colspan="2"><?=$maktab ? $maktab->manzil_uz : ''?></td>
+			      <td colspan="2"><?=$maktab_item ? $maktab_item->manzil_uz : ''?></td>
 			    </tr>
 			    
 			  </tbody>
 			</table>
 			<hr style="margin: 0px;">
 			
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub->name_uz?> Ma'lumot</h3>
+			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub_item->name_uz?> Ma'lumot</h3>
  			<hr style="margin: 0px;">
- 			<p class="mt-5"><?=$maktab ? $maktab->content_uz : ''?></p>
+ 			<p class="mt-5"><?=$maktab_item ? $maktab_item->content_uz : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>
