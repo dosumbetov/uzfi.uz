@@ -43,21 +43,21 @@ return [
                 ],
             ],
         ],
-        // 'i18n'=>[
-        //     'translations'=>[
-        //         'common*'=>[
-        //             'class'=>'yii\i18n\PhpMessageSource',
-        //             'basePath'=>'@app/messages',
-        //         ],
-        //     ],
-        // ],
+        'i18n'=>[
+            'translations'=>[
+                'common*'=>[
+                    'class'=>'yii\i18n\PhpMessageSource',
+                    'basePath'=>'@app/messages',
+                ],
+            ],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
         
         'urlManager' => [
-            // 'class'=>'codemix\localeurls\UrlManager',
-            // 'languages'=>['uz', 'ru', 'en'], 
+            'class'=>'codemix\localeurls\UrlManager',
+            'languages'=>['uz', 'ru', 'en'], 
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
