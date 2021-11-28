@@ -1,38 +1,70 @@
 <?php
+
+use yii\bootstrap4\Carousel;
 use yii\helpers\Url;
+
 
 /* @var $this yii\web\View */
 
 $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOGIKA INSTITUTI";
 ?>
-    <div class="section">
-      <div class="owl-carousel owl-theme">
-        <?
-          foreach ($slider as $slider) {
-            ?>
-              <div class="item">
-                <h4><img src="<?=$slider->slider_img?>" clss="rasm"></h4>
-              </div>
-            <?
-          }
-        ?>
-      </div>
-    </div>
-    <style type="text/css">
-      .rasm {
-          /*display: block;*/
-        object-fit: cover;
-        /*background-size: cover;*/
-        /*overflow:hidden;*/
-         width: 100%;
-         height: 100%;
-      }
-      .item {
-      height: 540px;
-      width: 1349px;
-    
-    }
-    </style>
+
+<?php
+use kv4nt\owlcarousel\OwlCarouselWidget;
+
+OwlCarouselWidget::begin([
+    'container' => 'div',
+    'containerOptions' => [
+        'id' => 'container-id',
+        'class' => 'container-class'
+    ],
+    'pluginOptions'    => [
+        'autoplay'          => true,
+        'autoplayTimeout'   => 5000,
+        'items'             => 1,
+        'nav' => true,
+        'loop'              => true,
+        'itemsDesktop'      => [1199, 3],
+        'itemsDesktopSmall' => [979, 3]
+    ]
+]);
+?>
+
+<?php $i = 1; foreach ($slider as $slide) :?>
+<div class="item-class"><img src="<?=$slide ? $slide->slider_img : ''?>" alt="<?= 'Image '.$i++ ?>"></div>
+<?php endforeach;?>
+
+
+<?php OwlCarouselWidget::end(); ?>
+
+<!--    <div class="section">-->
+<!--      <div class="owl-carousel owl-theme">-->
+<!--        --><?//
+//          foreach ($slider as $slider) {
+//            ?>
+<!--              <div class="item">-->
+<!--                <h4><img src="--><?//=$slider ? $slider->slider_img : ''?><!--" class="rasm"></h4>-->
+<!--              </div>-->
+<!--            --><?//
+//          }
+//        ?>
+<!--      </div>-->
+<!--    </div>-->
+<!--    <style type="text/css">-->
+<!--      .rasm {-->
+<!--          /*display: block;*/-->
+<!--        object-fit: cover;-->
+<!--        /*background-size: cover;*/-->
+<!--        /*overflow:hidden;*/-->
+<!--         width: 100%;-->
+<!--         height: 100%;-->
+<!--      }-->
+<!--      .item {-->
+<!--      height: 540px;-->
+<!--      width: 1349px;-->
+<!---->
+<!--    }-->
+<!--    </style>-->
     
     
       <!-- ======= Services Section ======= -->
@@ -109,16 +141,16 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                       <?
                         if ($tezkor_havolalar->link_type == 1) {
                           ?>
-                             <a href="<?=Url::to(["site/".$tezkor_havolalar->link, 'id'=>$tezkor_havolalar->id])?>" class="name"><?=$tezkor_havolalar->name_uz?></a>
+                             <a href="<?=Url::to(["site/".$tezkor_havolalar->link, 'id'=>$tezkor_havolalar->id])?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar->name_uz : ''?></a>
                           <?
                         }else{
                           ?>
-                             <a href="<?=$tezkor_havolalar->link?>" class="name"><?=$tezkor_havolalar->name_uz?></a>
+                             <a href="<?=$tezkor_havolalar ? $tezkor_havolalar->link : ''?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar->name_uz : ''?></a>
                           <?
                         }
                       ?>
                       <div class="circle"></div>
-                      <img src="../images/<?=$tezkor_havolalar->img?>" height="60px;" class="product">
+                      <img src="<?=$tezkor_havolalar->img?>" height="60px;" class="product">
                   </div>
                 </div>
               </div>
@@ -318,12 +350,12 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
               ?>
                   <div class="col-md-4 d-flex align-items-stretch mb-4">
                       <div class="new_date">
-                        <i class="fa fa-calendar"><?=$news->date?></i>
-                        <div><i class="fa fa-eye"><?=$news->views?></i></div>
+                        <i class="fa fa-calendar"><?=$news ? $news->date : ''?></i>
+                        <div><i class="fa fa-eye"><?=$news ? $news->views : ''?></i></div>
                       </div>
-                      <div class="card" style='background-image: url("<?=$news->img?>");' data-aos="fade-up" data-aos-delay="100">
+                      <div class="card" style='background-image: url("<?=$news ? $news->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
-                          <a href="<?=Url::to(['site/pages', 'id'=>$news->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news->name_uz, 60, '...')?></a>
+                          <a href="<?=Url::to(['site/pages', 'id'=>$news->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $news->name_uz : '', 60, '...')?></a>
                           <!-- <div class="read-more"><a href=""><i class="icofont-arrow-right"></i>Batafsil</a></div> -->
                         </div>
                       </div>
@@ -356,11 +388,11 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                     foreach ($dr_slider_img as $dr_slider_img) {
                         ?>
                             <div class="col-md-8" style="font-size: 28px !important;text-align: center; color: white !important;vertical-align: middle;">
-                          <?=$dr_slider_img->content_uz?>
-                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img->name_uz?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img->field_uz?></span></p>
+                          <?=$dr_slider_img ? $dr_slider_img->content_uz : ''?>
+                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider_img->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider_img->field_uz : ''?></span></p>
                            </div>
                            <div class="col-md-4">
-                                <img src="../images/<?=$dr_slider_img->img?>" style="border-radius: 50%;" height="200px;" width ="200px;">
+                                <img src="<?=$dr_slider_img ? $dr_slider_img->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
                            </div>
                         <?
                     }
@@ -383,12 +415,12 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-4">
                     <div class="new_date">
-                      <i class="fa fa-calendar"><?=$event->date?></i>
-                      <div><i class="fa fa-eye"><?=$event->views?></i></div>
+                      <i class="fa fa-calendar"><?=$event ? $event->date : ''?></i>
+                      <div><i class="fa fa-eye"><?=$event ? $event->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$event->img?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("<?=$event ? $event->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$event->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event->name_uz, 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$event->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $event->name_uz : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>
@@ -435,57 +467,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       </div>
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="../images/resurslar/8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
+          <?
+            foreach ($supporters as $supporters) {
+              ?>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="supporter-logo">
+                    <a target="_blank" href="<?=$supporters ? $supporters->link : ''?>"><img src="<?=$supporters ? $supporters->img : ''?>" class="img-fluid" alt=""></a>
+                  </div>
+                </div>
+              <?
+            }
+          ?>
         </div>
-
       </div>
     </section>
     <!-- End Sponsors Section -->

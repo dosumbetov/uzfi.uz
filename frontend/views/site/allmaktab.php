@@ -16,10 +16,10 @@ foreach ($menu_sub as $menu_sub) {
 						?>
 							<div class="col-md-6 d-flex align-items-stretch">
 			                   <div class="card mb-5" style="width: 100%;">
-								  <img src="../images/<?=$allmaktab->img?>" class="card-img-top" alt="...">
+								  <img src="<?=$allmaktab ? $allmaktab->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
-								    <h5 class="card-title"><?=$allmaktab->name_uz?></h5>
-								    <p class="card-text"><?=$allmaktab->opisaniya_uz?></p>
+								    <h5 class="card-title"><?=$allmaktab ? $allmaktab->name_uz : ''?></h5>
+								    <p class="card-text"><?=$allmaktab ? $allmaktab->opisaniya_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktab->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Batafsil</a>
 								  </div>

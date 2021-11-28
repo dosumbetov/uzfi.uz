@@ -31,12 +31,12 @@ foreach ($teacherinfo as $teacherinfo) {
     <div class="row">
         <div class="col-md-3 col-6 left_bar_tea">
             <img src="../images/<?=$teacherinfo->img?>" class="img_teacher">
-            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo->name_uz?></h3>
-            <p style="text-align: center;"><?=$teacherinfo->lavozim_uz?>, <br><?=$teacherinfo->rank_uz?></p>
+            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo->name_uz : ''?></h3>
+            <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo->rank_uz : ''?></p>
             <hr style="margin: 0px; margin-bottom: 20px;">
-            <p><i class="fa fa-telegram"></i><?=$teacherinfo->telegram?></p>
-            <p><i class="fa fa-facebook"></i> <?=$teacherinfo->facebook?></p>
-            <p><i class="fa fa-instagram"></i><?=$teacherinfo->instagram?></p>
+            <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo->telegram : ''?></p>
+            <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo->facebook : ''?></p>
+            <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo->instagram : ''?></p>
         </div>
         <div class="col-md-9 col-6 middle_bar_tea">
            <h4 style="color: black;"><img src="../images/icon/gallery.ico" alt="" /> Gallery</h4>

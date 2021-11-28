@@ -14,7 +14,7 @@
 			<div class="middle mb-5">
 				<h1 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub->name_uz?></h1>
 				<hr style="margin: 0px;margin-bottom: 30px;">
-				<p><?=$institut->content_uz?></p>
+				<p><?=$institut ? $institut->content_uz : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

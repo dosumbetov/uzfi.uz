@@ -8,8 +8,8 @@ foreach ($emblems as $emblems) {
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-9 col-12 middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems->name_uz?></h2>
-			<?=$emblems->content_uz?>
+			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $emblems->name_uz : ''?></h2>
+			<?=$emblems ? $emblems->content_uz : ''?>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
