@@ -23,7 +23,7 @@ use yii\helpers\Url;
 			  	}
 			  ?>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
-			  	<table class="table table-bordered mt-4">
+			  	<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first">Qabul vaqti</th>
@@ -51,8 +51,14 @@ use yii\helpers\Url;
 				    </tr>
 				  </tbody>
 				</table>
+				<style type="text/css">
+					table, tr, td, th {
+						font-size: 18px;
+						color: black;
+					}
+				</style>
 				<hr style="margin: 0px; margin-bottom: 20px;">
-				<p><?=$rektorat_item ? $rektorat_item->content_uz : ''?></p>
+				<p style="color: black;"><?=$rektorat_item ? $rektorat_item->content_uz : ''?></p>
 				<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
 				<div class="row">
 					<div class="col-md-3 col-6 mt-4">
