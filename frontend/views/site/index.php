@@ -145,7 +145,7 @@ OwlCarouselWidget::begin([
                           <?
                         }else{
                           ?>
-                             <a target="_blank"> href="<?=$tezkor_havola ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
+                             <a target="_blank" href="<?=$tezkor_havola ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }
                       ?>
