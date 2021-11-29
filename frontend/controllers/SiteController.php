@@ -100,7 +100,7 @@ class SiteController extends Controller
         $slider = Slider::find()->orderBy(['id'=>SORT_DESC])->limit(4)->all();
         $slider_on_icon = SliderOnIcon::find()->all();
         $dr_slider_img = DirektorSlider::find()->all();
-        $tezkor_havolalar = TezkorHavolalar::find()->Where(['tez_men__sub_id'=>[13, 14, 15, 16, 17, 18, 19, 20, 22]])->orderBy(['id'=>SORT_DESC])->limit(9)->all();
+        $tezkor_havolalar = TezkorHavolalar::find()->Where(['tez_men__sub_id'=>[13, 14, 15, 16, 17, 18]])->orderBy(['id'=>SORT_DESC])->limit(9)->all();
         $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
         return $this->render('index',[
             'slider'=>$slider,
