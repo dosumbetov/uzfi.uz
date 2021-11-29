@@ -129,7 +129,7 @@ OwlCarouselWidget::begin([
     <div class="orqafon pt-5">
       <div class="container" style="padding-bottom: 20px;">
           <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;">Tezkor ilovalar</h2>
+          <h1 style="text-align: center;">Tezkor ilovalar</h1>
         </div>
         <div class="row">
           <?
@@ -184,7 +184,7 @@ OwlCarouselWidget::begin([
       }
     </style>
     <div class="section-title mt-5" data-aos="fade-up">
-      <h2 style="text-align: center;">Asosiy ko'rsatkichlar</h2>
+      <h1 style="text-align: center;">Asosiy ko'rsatkichlar</h1>
     </div>
     <section class="pop-cour">
        <div class="container">
@@ -342,7 +342,7 @@ OwlCarouselWidget::begin([
         <div class="container">
 
           <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
-            <h2 style="text-align: center;" data-aos="fade-up">Yangiliklar</h2>
+            <h1 style="text-align: center;" data-aos="fade-up">Yangiliklar</h1>
           </div>
           <div class="row">
         <?
@@ -408,7 +408,7 @@ OwlCarouselWidget::begin([
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;" data-aos="fade-up">E'lonlar</h2>
+          <h1 style="text-align: center;" data-aos="fade-up">E'lonlar</h1>
         </div>
         <div class="row">
     <?
@@ -440,7 +440,7 @@ OwlCarouselWidget::begin([
      <section class="orqafon">
        <div class="container">
         <div class="section-title mt-5" data-aos="fade-up">
-          <h2 style="text-align: center;">Video Lavha
+          <h1 style="text-align: center;">Video Lavha </h1>
         </div>
               <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
              
@@ -464,7 +464,7 @@ OwlCarouselWidget::begin([
 
       <div class="container" data-aos="fade-up">
         <div class="section-title" data-aos="fade-up">
-        <h2 style="text-align: center;">Sponsor
+        <h1 style="text-align: center;">Foydali saytlar </h1>
       </div>
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">

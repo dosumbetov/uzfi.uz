@@ -9,10 +9,10 @@
 
 ?>
 <div class="container">
-	<div class="row" style="padding: 30px 0px;">
+	<div class="row" style="padding: 15px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">
-				<h1 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h1>
+				<h2 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h2>
 				<hr style="margin: 0px;margin-bottom: 30px;">
 				<p><?=$institut_item ? $institut_item->content_uz : ''?></p>
 			</div>
