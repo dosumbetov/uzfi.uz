@@ -2055,7 +2055,7 @@ h1, h2, h3, h4 {
     font-weight: 550;
 }
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
 }
 a {
@@ -2078,4 +2078,57 @@ a {
 .banner--stick.transparent, .banner--stick:not(.navbar-dark) {
     box-shadow: 0 0 1.25rem rgb(30 34 40 / 4%);
     background: #fff;
+}
+
+.scrollup {
+    font-size: 20px;
+    color: black;
+    background-color: #3f78e0;
+    padding: 3px 6px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.scrollup:hover {
+    background: #3a5bb8;
+    color: #fff;
+}
+
+.scrollup path {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: black;
+}
+
+.scrollup path {
+  stroke-dasharray: 1680;
+  stroke-dashoffset: 0;
+}
+.scrollup:hover path{
+  animation: animate_scrollup 2s; 
+}
+@keyframes animate_scrollup 
+{
+  0% 
+  {
+    stroke-dashoffset: 1680;
+    stroke: white;
+  }
+  100% 
+  {
+    stroke-dashoffset: 0;
+    stroke-width:10
+    stroke: white;
+    ;
+  }
+}
+svg {
+  margin-left: 20px;
+}
+.scrollup svg {
+  margin-left: 0px !important;
 }

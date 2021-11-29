@@ -28,7 +28,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
 </section>
 <div class="container ortafon">
     <div class="row">
-        <div class="col-md-3 col-6">
+        <div class="col-md-3 col-12">
             <div class="left_bar_tea">
                 <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
                 <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h2>
@@ -39,7 +39,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
                 <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
             </div>
         </div>
-        <div class="col-md-9 col-6">
+        <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /> Bo'lim haqida</h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
@@ -50,12 +50,23 @@ foreach ($teacherinfo as $teacherinfo_item) {
 </div>
 
 <style type="text/css">
+     table, tr, td, th {
+      font-size: 18px;
+      color: black;
+    }
+      ul li a {
+      font-size: 18px;
+    }
     .left_bar_tea p i {
         margin-right: 20px;
         font-size: 20px;
+        font-size: 18px;
+        color: black;
     } 
        .left_bar_tea p {
         padding: 0px 20px;
+        font-size: 18px;
+        color: black;
     } 
     .img_teacher {
         position: relative;

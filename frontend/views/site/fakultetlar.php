@@ -18,7 +18,7 @@ use yii\helpers\Url;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet_item ? $fakultet_item->name_uz : ''?><br><i style="text-transform: capitalize;"><?=$fakultet_item ? $fakultet_item->faculty_uz : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet_item ? $fakultet_item->rank_uz : ''?></i></h3>
   			<hr style="margin: 0px;">
-		  	<table class="table table-bordered mt-4">
+		  	<table class="table table-bordered mt-4" style="color: black;">
 			  <tbody>
 			    <tr>
 			      <th scope="row" class="table_first">Qabul vaqti</th>
@@ -46,6 +46,12 @@ use yii\helpers\Url;
 			    </tr>
 			  </tbody>
 			</table>
+			<style type="text/css">
+					table, tr, td, th {
+						font-size: 18px;
+						color: black;
+					}
+				</style>
 			<hr style="margin: 0px;">
 			<h3 style="text-align: center;color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub_item ? $menu_sub_item->name_uz : ''?> <?=$fakultet_item ? $fakultet_item->staff_uz : ''?></h3>
 			<hr style="margin: 0px;">

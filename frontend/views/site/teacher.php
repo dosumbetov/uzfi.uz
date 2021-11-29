@@ -42,7 +42,7 @@ use yii\helpers\Url;
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /> My Profile</h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
-            <table class="table caption-top">
+            <table class="table caption-top" style="color: black;">
               <thead>
                 <tr>
                   <th scope="col">Ismi</th>
@@ -87,12 +87,23 @@ use yii\helpers\Url;
 
 
 <style type="text/css">
+    table, tr, td, th {
+      font-size: 18px;
+      color: black;
+    }
+    ul li a {
+      font-size: 18px;
+    }
     .left_bar_tea p i {
         margin-right: 20px;
         font-size: 20px;
+        font-size: 18px;
+        color: black;
     } 
     .left_bar_tea p {
         padding: 0px 20px;
+        color: black;
+        font-size: 18px;
     } 
     .img_teacher {
         position: relative;
@@ -115,7 +126,7 @@ use yii\helpers\Url;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        min-height: 96% !important;
+        min-height: 100% !important;
     }
     .middle_bar_tea {
         position: relative;

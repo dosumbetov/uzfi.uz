@@ -23,5 +23,21 @@ $(document).ready(function(){
 AOS.init({
   duration: 1200,
 })
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {
+        $('.scrollup').fadeIn();
+    } else {
+        $('.scrollup').fadeOut();
+    }
+});
+$('.scrollup').click(function (){
+    $("html,body").animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
+});
 
-
+$('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});

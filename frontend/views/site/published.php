@@ -138,15 +138,26 @@ foreach ($teacherinfo as $teacherinfo_item) {
 
 
 <style type="text/css">
+   table, tr, td, th {
+      font-size: 18px;
+      color: black;
+    }
+    ul li a {
+      font-size: 18px;
+    } 
   .table thead tr th {
     font-weight: bold;
   }
     .left_bar_tea p i {
         margin-right: 20px;
         font-size: 20px;
+        font-size: 18px;
+        color: black;
     } 
      .left_bar_tea p {
         padding: 0px 20px;
+        font-size: 18px;
+        color: black;
     } 
     .img_teacher {
         position: relative;

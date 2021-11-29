@@ -39,6 +39,8 @@ class AppAsset extends AssetBundle
         '../../../js/custom.js',
         '../../../venobox/venobox.min.js',
         '../../../../js/vanilla-tilt.min.js',
+         'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js',
       
         // 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
     ];

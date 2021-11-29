@@ -182,6 +182,17 @@ OwlCarouselWidget::begin([
         font-size: 20px;
         font-weight: bold;
       }
+      .natija1 {
+        font-size: 50px !important;
+      }
+      .natija2 {
+        font-size: 25px !important;
+      }
+      .pop-cour .container .row .col-md-3 i {
+        color: white;
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
     </style>
     <div class="section-title mt-5" data-aos="fade-up">
       <h1 style="text-align: center;">Asosiy ko'rsatkichlar</h1>
@@ -190,24 +201,24 @@ OwlCarouselWidget::begin([
        <div class="container">
          <div class="row" style="text-align: center; padding: 25px;">
              <div class="col-md-3">
-                 <img src="../../images/cap.png" height="100px;">
-                 <p class="natija1" data-toggle="counter-up">5</p>
-                 <p class="natija1">Fakultetlar</p>
+                 <i class="fa fa-graduation-cap"></i>
+                 <p class="natija1 counter">5</p>
+                 <p class="natija2">Fakultetlar</p>
              </div>
              <div class="col-md-3">
-                <img src="../../images/graduates.png" height="100px;">
-                <p class="natija1" data-toggle="counter-up">2925</p>
-                 <p class="natija1">Talabalar</p>
+                <i class="fas fa-users"></i>
+                <p class="natija1 counter">2925</p>
+                 <p class="natija2">Talabalar</p>
              </div>
              <div class="col-md-3">
-                 <img src="../../images/teacher.png" height="100px;">
-                 <p class="natija1" data-toggle="counter-up">209</p>
-                 <p class="natija1">O'qituvchilar</p>
+                 <i class="fas fa-chalkboard-teacher"></i>
+                 <p class="natija1 counter">209</p>
+                 <p class="natija2">O'qituvchilar</p>
              </div>
              <div class="col-md-3">
-                 <img src="../../images/suit.png" height="100px;">
-                 <p class="natija1" data-toggle="counter-up">2</p>
-                 <p class="natija1">Hamkorlar</p>
+                 <i class="fa fa-briefcase" aria-hidden="true"></i>
+                 <p class="natija1 counter">2</p>
+                 <p class="natija2">Hamkorlar</p>
              </div>
          </div>
        </div>
