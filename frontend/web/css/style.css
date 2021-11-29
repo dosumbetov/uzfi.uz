@@ -1977,9 +1977,9 @@ h1, h2, h3, h4 {
 }
 .block_havola .box .name {
     position: absolute;
-    font-size: 130%;  
-    font-weight: 400;
-    top: 12px;
+    font-size: 120%;  
+    font-weight: 600;
+    bottom: 12px;
     left: 0px;
     text-decoration: none;
     text-align: center;
@@ -1990,6 +1990,9 @@ h1, h2, h3, h4 {
     transition: 0.5s;
     opacity: 1; 
     z-index: 10;
+}
+.block_havola .box .name::first-letter {
+    text-transform: capitalize;
 }
 /*.block_havola .box:hover .name {
     top: 12px;
@@ -2002,8 +2005,8 @@ h1, h2, h3, h4 {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 93px;
-    width: 93px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     transition: 0.5s;
     background-color: #0d6efd;
@@ -2052,6 +2055,10 @@ h1, h2, h3, h4 {
 }
 body {
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
 }
 .owl-carousel .owl-dots {
     /* text-align: center; */

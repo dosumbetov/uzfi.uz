@@ -29,7 +29,7 @@ use backend\models\MenuSub;
 
     <?= $form->field($model, 'width')->textInput(['maxlength' => true]) ?>
 
-     <?= $form->field($model, 'link_type')->dropDownList(['1' => 'ichki', '2' => "Tashqi"],['prompt' => 'link turini tanlang']) ?>
+    <?= $form->field($model, 'link_type')->dropDownList(['1' => 'ichki', '2' => "tashqi"],['prompt' => 'Bar turini tanlang']) ?>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
@@ -44,6 +44,12 @@ use backend\models\MenuSub;
         <?
          } 
     ?>
+
+      <?= $form->field($model, 'tez_men__sub_id')->dropDownList(
+        ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'),
+        [
+            'prompt' => "Menu Subni tanlang",
+        ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

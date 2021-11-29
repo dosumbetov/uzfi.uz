@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 use yii\bootstrap4\Carousel;
 use yii\helpers\Url;
@@ -141,7 +141,7 @@ OwlCarouselWidget::begin([
                       <?
                         if ($tezkor_havola->link_type == 1) {
                           ?>
-                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->id])?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
+                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->tez_men__sub_id])?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }else{
                           ?>
@@ -373,6 +373,7 @@ OwlCarouselWidget::begin([
     <!-- End More Services Section -->
 
 <style type="text/css">
+
   .back {
     background-color: blue;
     min-height: 700px;

@@ -15,7 +15,10 @@ use Yii;
  * @property string $width
  * @property int $link_type
  * @property string $link
- * @property int|null $img
+ * @property string|null $img
+ * @property int $tez_men__sub_id
+ *
+ * @property MenuSub $tezMenSub
  */
 class TezkorHavolalar extends \yii\db\ActiveRecord
 {
@@ -33,9 +36,10 @@ class TezkorHavolalar extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name_uz', 'name_ru', 'name_en', 'height', 'width', 'link_type', 'link'], 'required'],
-            [['link_type'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en', 'height', 'width', 'link_type', 'link', 'tez_men__sub_id'], 'required'],
+            [['link_type', 'tez_men__sub_id'], 'integer'],
             [['name_uz', 'name_ru', 'name_en', 'height', 'width', 'link', 'img'], 'string', 'max' => 255],
+            [['tez_men__sub_id'], 'exist', 'skipOnError' => true, 'targetClass' => MenuSub::className(), 'targetAttribute' => ['tez_men__sub_id' => 'id']],
         ];
     }
 
@@ -54,6 +58,17 @@ class TezkorHavolalar extends \yii\db\ActiveRecord
             'link_type' => 'Link Type',
             'link' => 'Link',
             'img' => 'Img',
+            'tez_men__sub_id' => 'Tez Men  Sub ID',
         ];
+    }
+
+    /**
+     * Gets query for [[TezMenSub]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTezMenSub()
+    {
+        return $this->hasOne(MenuSub::className(), ['id' => 'tez_men__sub_id']);
     }
 }

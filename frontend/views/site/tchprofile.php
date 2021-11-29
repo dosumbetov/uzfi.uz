@@ -1,4 +1,4 @@
- <?
+<!--  <?
 use yii\helpers\Url;
 foreach ($teacherinfo as $teacherinfo_item) {
   # code...
@@ -7,7 +7,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
  ?>
 
 <section class="orqarasm">
-    <img src="../images/pro-bg.jpg" width="100%;">
+    <img src="../../images/pro-bg.jpg" width="100%;">
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
@@ -29,41 +29,43 @@ foreach ($teacherinfo as $teacherinfo_item) {
 </section>
 <div class="container ortafon">
     <div class="row">
-        <div class="col-md-3 col-6 left_bar_tea">
-            <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
-            <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h3>
-            <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
-            <hr style="margin: 0px; margin-bottom: 20px;">
-            <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
-            <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
-            <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+        <div class="col-md-3 col-12">
+            <div class="left_bar_tea">
+              <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
+              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h3>
+              <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+              <hr style="margin: 0px; margin-bottom: 20px;">
+              <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
+              <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
+              <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+            </div>
         </div>
-        <div class="col-md-9 col-6 middle_bar_tea">
-           <h4 style="color: black;"><img src="../images/icon/gallery.ico" alt="" /> Gallery</h4>
-           <hr style="margin: 0px; margin-bottom: 20px;">
-
-<div class="items">
-    <div class="item active">
-      <img src="../images/placeholder.jpg" data-action="zoom">
-    </div>
-    <div class=" item next">
-      <img src="../images/sharof.jpg" data-action="zoom">
-    </div>
-    <div class="item">
-      <img src="../images/bg-1.jpg" data-action="zoom">
-    </div>
-    <div class="item">
-      <img src="../images/4.jpg" data-action="zoom">
-    </div>
-    <div class="item prev">
-      <img src="../images/saylov.jpg" data-action="zoom">
-    </div>
-    <div class="button-container">
-      <div class="button"><i class="fas fa-angle-left"></i></div>
-      <div class="button"><i class="fas fa-angle-right"></i></div>
-    </div>
-  </div>
-         
+        <div class="col-md-9 col-12">
+           <div class="middle_bar_tea">
+             <h4 style="color: black;"><img src="../../images/icon/gallery.ico" alt="" /> Gallery</h4>
+             <hr style="margin: 0px; margin-bottom: 20px;">
+              <div class="items">
+                <div class="item active">
+                  <img src="../../images/placeholder.jpg" data-action="zoom">
+                </div>
+                <div class=" item next">
+                  <img src="../../images/sharof.jpg" data-action="zoom">
+                </div>
+                <div class="item">
+                  <img src="../../images/bg-1.jpg" data-action="zoom">
+                </div>
+                <div class="item">
+                  <img src="../../images/4.jpg" data-action="zoom">
+                </div>
+                <div class="item prev">
+                  <img src="../../images/saylov.jpg" data-action="zoom">
+                </div>
+                <div class="button-container">
+                  <div class="button"><i class="fas fa-angle-left"></i></div>
+                  <div class="button"><i class="fas fa-angle-right"></i></div>
+                </div>
+              </div>
+           </div>
         </div>
     </div>
         </div>
@@ -166,32 +168,31 @@ foreach ($teacherinfo as $teacherinfo_item) {
         font-size: 20px;
 
     } 
+     .left_bar_tea p {
+        padding: 0px 20px;
+    } 
     .img_teacher {
         position: relative;
-        width: 250px;
-        height: 280px;
+        width: 100%;
        /* border: 2px solid #fff;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
         border: 1px solid #F3F2F2;
-        margin-top: -160px;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border-width: 3px 3px 3px;
         border-style: solid solid none;
         border-color: #F3F2F2 #F3F2F2 -moz-use-text-color;
         border-image: none;
         z-index: 2; 
-        margin-left: -20px;
     }
     .left_bar_tea {
         margin-left: 30px;
         width: 250px;
         background-color: #fff;
-        padding: 20px;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
         margin-bottom: 80px;
-        max-height: 450px !important;
+        min-height: 96% !important; 
     }
     .middle_bar_tea {
         position: relative;
@@ -292,4 +293,4 @@ const gotoNum = number => {
 }
 
 update();
-  </script>
+  </script> -->

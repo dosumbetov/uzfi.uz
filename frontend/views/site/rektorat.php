@@ -1,4 +1,5 @@
 <?
+use yii\helpers\Url;
 	foreach ($menu_sub as $menu_sub_item) {
 		# code...
 	}
@@ -11,10 +12,16 @@
 		<div class="col-md-8 col-12">
 			<div class="middle">
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_item->name_uz?></h3>
-				<img src="<?=$rektorat_item ? $rektorat_item->img : ''?>" style="display: block;
+				<img src="../<?=$rektorat_item ? $rektorat_item->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
 			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat_item ? $rektorat_item->name_uz : ''?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat_item ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
-			  <a href="">Profilega otish</a>
+			  <?
+			  	foreach ($fakultet_staff as $fakultet_staff_item) {
+			  		?>
+			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>">Profilga o'tish</a>
+			  		<?
+			  	}
+			  ?>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
 			  	<table class="table table-bordered mt-4">
 				  <tbody>

@@ -7,7 +7,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
  ?>
 
 <section class="orqarasm">
-    <img src="../images/pro-bg.jpg" width="100%;">
+    <img src="../../images/pro-bg.jpg" width="100%;">
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
@@ -17,7 +17,6 @@ foreach ($teacherinfo as $teacherinfo_item) {
                          <ul>
                            <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Dashboard</a></li>
                             <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Profile</a></li>
-                            <li><a href="<?=Url::to(['site/tchprofile', 'id'=>$teacherinfo_item->staff_id])?>">Galeriya</a></li>
                             <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Kitoblar</a></li>
                         </ul>
                     </div>
@@ -29,19 +28,23 @@ foreach ($teacherinfo as $teacherinfo_item) {
 </section>
 <div class="container ortafon">
     <div class="row">
-        <div class="col-md-3 col-6 left_bar_tea">
-            <img src="../images/<?=$teacherinfo_item->img?>" class="img_teacher">
-            <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h2>
-            <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
-            <hr style="margin: 0px; margin-bottom: 20px;">
-            <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
-            <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
-            <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+        <div class="col-md-3 col-6">
+            <div class="left_bar_tea">
+                <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
+                <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h2>
+                <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+                <hr style="margin: 0px; margin-bottom: 20px;">
+                <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
+                <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
+                <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+            </div>
         </div>
-        <div class="col-md-9 col-6 middle_bar_tea">
-          <h4 style="color: black;"><img src="../images/icon/db1.png" alt="" /> Bo'lim haqida</h4>
-           <hr style="margin: 0px; margin-bottom: 20px;">
-           <?=$teacherinfo_item ? $teacherinfo_item->content_uz : ''?>
+        <div class="col-md-9 col-6">
+          <div class="middle_bar_tea">
+              <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /> Bo'lim haqida</h4>
+               <hr style="margin: 0px; margin-bottom: 20px;">
+               <?=$teacherinfo_item ? $teacherinfo_item->content_uz : ''?>
+          </div>
         </div>
     </div>
 </div>
@@ -50,46 +53,41 @@ foreach ($teacherinfo as $teacherinfo_item) {
     .left_bar_tea p i {
         margin-right: 20px;
         font-size: 20px;
-
+    } 
+       .left_bar_tea p {
+        padding: 0px 20px;
     } 
     .img_teacher {
         position: relative;
-        width: 250px;
-        height: 280px;
+        width: 100%;
        /* border: 2px solid #fff;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
         border: 1px solid #F3F2F2;
-        margin-top: -160px;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border-width: 3px 3px 3px;
         border-style: solid solid none;
         border-color: #F3F2F2 #F3F2F2 -moz-use-text-color;
         border-image: none;
         z-index: 2; 
-        margin-left: -20px;
     }
-    .left_bar_tea {
-        margin-left: 30px;
-        width: 250px;
+   .left_bar_tea {
+        width: 98%;
         background-color: #fff;
-        padding: 20px;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        margin-bottom: 80px;
-        max-height: 450px !important;
+        max-height: 96% !important;
     }
     .middle_bar_tea {
         position: relative;
-        width: 750px;
+        width: 98%;
         padding: 20px;
         background-color: #fff;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        margin-left: 50px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        margin-top: 35px;
     }
     .orqarasm {
         position: relative;

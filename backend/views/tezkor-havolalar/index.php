@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'link_type',
             //'link',
             //'img',
+            //'tez_men__sub_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

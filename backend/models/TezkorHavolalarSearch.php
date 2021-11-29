@@ -17,8 +17,8 @@ class TezkorHavolalarSearch extends TezkorHavolalar
     public function rules()
     {
         return [
-            [['id', 'link_type', 'img'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'height', 'width', 'link'], 'safe'],
+            [['id', 'link_type', 'tez_men__sub_id'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en', 'height', 'width', 'link', 'img'], 'safe'],
         ];
     }
 
@@ -60,7 +60,7 @@ class TezkorHavolalarSearch extends TezkorHavolalar
         $query->andFilterWhere([
             'id' => $this->id,
             'link_type' => $this->link_type,
-            'img' => $this->img,
+            'tez_men__sub_id' => $this->tez_men__sub_id,
         ]);
 
         $query->andFilterWhere(['like', 'name_uz', $this->name_uz])
@@ -68,7 +68,8 @@ class TezkorHavolalarSearch extends TezkorHavolalar
             ->andFilterWhere(['like', 'name_en', $this->name_en])
             ->andFilterWhere(['like', 'height', $this->height])
             ->andFilterWhere(['like', 'width', $this->width])
-            ->andFilterWhere(['like', 'link', $this->link]);
+            ->andFilterWhere(['like', 'link', $this->link])
+            ->andFilterWhere(['like', 'img', $this->img]);
 
         return $dataProvider;
     }

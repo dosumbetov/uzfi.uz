@@ -100,7 +100,7 @@ class SiteController extends Controller
         $slider = Slider::find()->orderBy(['id'=>SORT_DESC])->limit(4)->all();
         $slider_on_icon = SliderOnIcon::find()->all();
         $dr_slider_img = DirektorSlider::find()->all();
-        $tezkor_havolalar = TezkorHavolalar::find()->orderBy(['id'=>SORT_DESC])->limit(9)->all();
+        $tezkor_havolalar = TezkorHavolalar::find()->Where(['tez_men__sub_id'=>[13, 14, 15, 16, 17, 18, 19, 20, 22]])->orderBy(['id'=>SORT_DESC])->limit(9)->all();
         $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
         return $this->render('index',[
             'slider'=>$slider,
@@ -223,11 +223,13 @@ class SiteController extends Controller
 
      public function actionRektorat($id)
     {
-      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
+        $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
         $rektorat = Rektorat::find()->Where(['rek_menu_sub_id'=>$id])->all();
+        $fakultet_staff = FakultetStaff::find()->Where(['staff_menu_sub_id'=>$id])->all();
         return $this->render('rektorat',[
           'menu_sub'=>$menu_sub,
           'rektorat'=>$rektorat,
+          'fakultet_staff'=>$fakultet_staff,
         ]);
         
     }
@@ -251,14 +253,14 @@ class SiteController extends Controller
             'fakultet_staff'=>$fakultet_staff,
         ]);
     }
-    public function actionTchprofile($id)
-    {
-        $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
-        return $this->render('tchprofile',[
-            'teacherinfo'=>$teacherinfo,
-        ]);
+    // public function actionTchprofile($id)
+    // {
+    //     $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
+    //     return $this->render('tchprofile',[
+    //         'teacherinfo'=>$teacherinfo,
+    //     ]);
         
-    }
+    // }
 
     /**
      * Logs in a user.
