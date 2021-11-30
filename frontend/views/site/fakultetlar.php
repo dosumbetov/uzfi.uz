@@ -69,7 +69,7 @@ use yii\helpers\Url;
 								    <div class="card-body">
 								      <h4 class="card-title"><?=$fakultet_staff_item ? $fakultet_staff_item->staff_name_uz : ''?></h4>
 								      <p class="card-text"><?=$fakultet_staff_item ? $fakultet_staff_item->staff_rank_uz : ''?></p>
-								      <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-primary mt-2 fakultet_btn">See Profile</a>
+								      <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-primary mt-2 fakultet_btn">Shaxsiy kabinet</a>
 								    </div>
 							    </div>
 							</div>
