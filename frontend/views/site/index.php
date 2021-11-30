@@ -31,7 +31,7 @@ OwlCarouselWidget::begin([
 ?>
 
 <?php $i = 1; foreach ($slider as $slide) :?>
-<div class="item-class"><img src="<?=$slide ? $slide->slider_img : ''?>" alt="<?= 'Image '.$i++ ?>"></div>
+<div class="item-class"><img src="<?=$slider ? $slide->slider_img : ''?>" alt="<?= 'Image '.$i++ ?>"></div>
 <?php endforeach;?>
 
 
@@ -141,11 +141,11 @@ OwlCarouselWidget::begin([
                       <?
                         if ($tezkor_havola->link_type == 1) {
                           ?>
-                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->tez_men__sub_id])?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
+                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->tez_men__sub_id])?>" class="name"><?=$tezkor_havolalar ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }else{
                           ?>
-                             <a target="_blank" href="<?=$tezkor_havola ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havola ? $tezkor_havola->name_uz : ''?></a>
+                             <a target="_blank" href="<?=$tezkor_havolalar ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havolalar ? $tezkor_havola->name_uz : ''?></a>
                           <?
                         }
                       ?>
@@ -361,12 +361,12 @@ OwlCarouselWidget::begin([
               ?>
                   <div class="col-md-4 d-flex align-items-stretch mb-4">
                       <div class="new_date">
-                        <i class="fa fa-calendar"><?=$new ? $new->date : ''?></i>
-                        <div><i class="fa fa-eye"><?=$new ? $new->views : ''?></i></div>
+                        <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
+                        <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
                       </div>
-                      <div class="card" style='background-image: url("<?=$new ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                      <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
-                          <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></a>
+                          <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $new->name_uz : '', 60, '...')?></a>
                           <!-- <div class="read-more"><a href=""><i class="icofont-arrow-right"></i>Batafsil</a></div> -->
                         </div>
                       </div>
@@ -403,11 +403,11 @@ OwlCarouselWidget::begin([
                     foreach ($dr_slider_img as $dr_slider) {
                         ?>
                             <div class="col-md-8" style="font-size: 28px !important;text-align: center; color: white !important;vertical-align: middle;">
-                          <?=$dr_slider ? $dr_slider->content_uz : ''?>
-                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider ? $dr_slider->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider ? $dr_slider->field_uz : ''?></span></p>
+                          <?=$dr_slider_img ? $dr_slider->content_uz : ''?>
+                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider->field_uz : ''?></span></p>
                            </div>
                            <div class="col-md-4">
-                                <img src="<?=$dr_slider ? $dr_slider->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
+                                <img src="<?=$dr_slider_img ? $dr_slider->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
                            </div>
                         <?
                     }
@@ -430,12 +430,12 @@ OwlCarouselWidget::begin([
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-4">
                     <div class="new_date">
-                      <i class="fa fa-calendar"><?=$events ? $events->date : ''?></i>
-                      <div><i class="fa fa-eye"><?=$events ? $events->views : ''?></i></div>
+                      <i class="fa fa-calendar"><?=$event ? $events->date : ''?></i>
+                      <div><i class="fa fa-eye"><?=$event ? $events->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$events ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("<?=$event ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($events ? $events->name_uz : '', 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $events->name_uz : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>
@@ -487,7 +487,7 @@ OwlCarouselWidget::begin([
               ?>
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="supporter-logo">
-                    <a target="_blank" href="<?=$supporter ? $supporter->link : ''?>"><img src="<?=$supporter ? $supporter->img : ''?>" class="img-fluid" alt=""></a>
+                    <a target="_blank" href="<?=$supporters ? $supporter->link : ''?>"><img src="<?=$supporters ? $supporter->img : ''?>" class="img-fluid" alt=""></a>
                   </div>
                 </div>
               <?

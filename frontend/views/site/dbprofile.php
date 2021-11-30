@@ -31,19 +31,19 @@ foreach ($teacherinfo as $teacherinfo_item) {
         <div class="col-md-3 col-12">
             <div class="left_bar_tea">
                 <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
-                <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h2>
-                <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+                <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></h2>
+                <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo_item->rank_uz : ''?></p>
                 <hr style="margin: 0px; margin-bottom: 20px;">
-                <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
-                <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
-                <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+                <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo_item->telegram : ''?></p>
+                <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo_item->facebook : ''?></p>
+                <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo_item->instagram : ''?></p>
             </div>
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" />Tarjimai hol</h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
-               <?=$teacherinfo_item ? $teacherinfo_item->content_uz : ''?>
+               <?=$teacherinfo ? $teacherinfo_item->content_uz : ''?>
           </div>
         </div>
     </div>

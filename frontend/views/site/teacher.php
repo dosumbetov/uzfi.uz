@@ -30,12 +30,12 @@ use yii\helpers\Url;
         <div class="col-md-3 col-12">
             <div class="left_bar_tea">
                 <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></h3>
+              <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo_item->rank_uz : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
-              <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
-              <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
-              <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>
+              <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo_item->telegram : ''?></p>
+              <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo_item->facebook : ''?></p>
+              <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo_item->instagram : ''?></p>
             </div>
         </div>
         <div class="col-md-9 col-12">
@@ -46,7 +46,7 @@ use yii\helpers\Url;
               <thead>
                 <tr>
                   <th scope="col">Ismi</th>
-                  <th scope="col"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></th>
+                  <th scope="col"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></th>
                   <th scope="col"></th>
                   <th scope="col"></th>
                 </tr>
@@ -54,25 +54,25 @@ use yii\helpers\Url;
               <tbody>
                 <tr>
                   <th scope="row">Email</th>
-                  <td><?=$teacherinfo_item ? $teacherinfo_item->email : ''?></td>
+                  <td><?=$teacherinfo ? $teacherinfo_item->email : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <th scope="row">Telefon raqami</th>
-                  <td><?=$teacherinfo_item ? $teacherinfo_item->phone : ''?></td>
+                  <td><?=$teacherinfo ? $teacherinfo_item->phone : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <th scope="row">Tug'ilgan sanasi</th>
-                  <td><?=$teacherinfo_item ? $teacherinfo_item->birth : ''?></td>
+                  <td><?=$teacherinfo ? $teacherinfo_item->birth : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                  <tr>
                   <th scope="row">Manzil</th>
-                  <td><?=$teacherinfo_item ? $teacherinfo_item->address_uz : ''?></td>
+                  <td><?=$teacherinfo ? $teacherinfo_item->address_uz : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>

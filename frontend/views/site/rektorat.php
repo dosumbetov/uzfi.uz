@@ -12,9 +12,9 @@ use yii\helpers\Url;
 		<div class="col-md-8 col-12">
 			<div class="middle">
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_item->name_uz?></h3>
-				<img src="../<?=$rektorat_item ? $rektorat_item->img : ''?>" style="display: block;
+				<img src="../<?=$rektorat ? $rektorat_item->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat_item ? $rektorat_item->name_uz : ''?><br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat_item ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat ? $rektorat_item->name_uz : ''?><br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
@@ -27,27 +27,27 @@ use yii\helpers\Url;
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first">Qabul vaqti</th>
-				      <td><?=$rektorat_item ? $rektorat_item->qabul_vaqti_uz : ''?></td>
+				      <td><?=$rektorat ? $rektorat_item->qabul_vaqti_uz : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Tel:</th>
-				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->tel : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat_item->tel : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">Fax:</th>
-				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->fax : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat_item->fax : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first">E-mail:</th>
-				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->email : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat_item->email : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Telegram:</th>
-				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->telegram : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat_item->telegram : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first">Manzil:</th>
-				      <td colspan="2"><?=$rektorat_item ? $rektorat_item->manzil_uz : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat_item->manzil_uz : ''?></td>
 				    </tr>
 				  </tbody>
 				</table>
@@ -61,7 +61,7 @@ use yii\helpers\Url;
 					}
 				</style>
 				<hr style="margin: 0px; margin-bottom: 20px;">
-				<p style="color: black;"><?=$rektorat_item ? $rektorat_item->content_uz : ''?></p>
+				<p style="color: black;"><?=$rektorat ? $rektorat_item->content_uz : ''?></p>
 				<!-- <h3 style="text-align: center; margin-bottom: 40px;" class="mt-4">Chop etilgan kitoblar</h3>
 				<div class="row">
 					<div class="col-md-3 col-6 mt-4">

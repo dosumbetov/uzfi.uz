@@ -9,8 +9,8 @@ foreach ($emblems as $emblems_item) {
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems_item ? $emblems_item->name_uz : ''?></h2>
-				<?=$emblems_item ? $emblems_item->content_uz : ''?>
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $emblems_item->name_uz : ''?></h2>
+				<?=$emblems ? $emblems_item->content_uz : ''?>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

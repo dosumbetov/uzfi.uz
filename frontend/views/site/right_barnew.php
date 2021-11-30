@@ -15,8 +15,8 @@
 								?>
 									<li>
 										<a href="<?=Url::to(['site/pages', 'id'=>$news_item->id])?>" style="min-height: 75px;">
-											<i class="fa fa-calendar" style="font-size: 12px;"><?=$news_item ? $news_item->date : ''?></i><br>
-											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news_item ? $news_item->name_uz : '', 40, '...')?></strong>
+											<i class="fa fa-calendar" style="font-size: 12px;"><?=$news ? $news_item->date : ''?></i><br>
+											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news ? $news_item->name_uz : '', 40, '...')?></strong>
 										</a>
 									</li>
 								<?

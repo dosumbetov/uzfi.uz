@@ -99,12 +99,12 @@ foreach ($menu_sub as $menu_sub_item) {
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-5">
                     <div class="new_date">
-                      <i class="fa fa-calendar"><?=$new ? $new->date : ''?></i>
-                      <div><i class="fa fa-eye"><?=$new ? $new->views : ''?></i></div>
+                      <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
+                      <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$new ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $new->name_uz : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>
