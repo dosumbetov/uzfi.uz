@@ -78,6 +78,13 @@ foreach ($menu_sub as $menu_sub_item) {
   background-color: #fff;
   border-color: #dee2e6;
 } 
+.card-body a{
+  color: black;
+}
+.card-body a:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
 </style>
 
 <section id="more-services" class="more-services mb-5">
@@ -97,8 +104,7 @@ foreach ($menu_sub as $menu_sub_item) {
                     </div>
                     <div class="card" style='background-image: url("<?=$new ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <p class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></p>
-                        <div class="read-more"><a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>"><i class="icofont-arrow-right"></i>Batafsil</a></div>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($new ? $new->name_uz : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>

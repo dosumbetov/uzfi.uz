@@ -12,8 +12,8 @@
 	<div class="row" style="padding: 15px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">
-				<h2 style="text-transform: uppercase; padding: 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h2>
-				<hr style="margin: 0px;margin-bottom: 30px;">
+				<h2 style="text-transform: uppercase; padding: 0px 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h2>
+				<hr style="margin: 0px;margin-bottom: 20px;">
 				<p><?=$institut_item ? $institut_item->content_uz : ''?></p>
 			</div>
 		</div>
@@ -21,7 +21,13 @@
 	</div>
 </div>
 <style type="text/css">
-
+	p, li, a, span, table, tr, td, th, label {
+    font-size: 18px;
+     color: black; 
+    font-weight: 400;
+    line-height: 24px;
+    list-style-type: none;
+}
 	
 	.fakultet_btn {
 		padding: 5px;

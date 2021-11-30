@@ -183,7 +183,7 @@ AppAsset::register($this);
                                 <?
                               }else {
                                 ?>
-                                  <a class="dropdown-item" href="<?=$menusub->link?>"><?=$menusub->name_uz?></a>
+                                  <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$menusub->name_uz?></a>
                                 <?
                               }
                             ?>

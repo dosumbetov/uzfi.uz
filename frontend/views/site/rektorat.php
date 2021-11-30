@@ -14,7 +14,7 @@ use yii\helpers\Url;
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_item->name_uz?></h3>
 				<img src="../<?=$rektorat_item ? $rektorat_item->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat_item ? $rektorat_item->name_uz : ''?>,<br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat_item ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat_item ? $rektorat_item->name_uz : ''?><br><span style="font-size: 18px; text-transform: lowercase;"><i><?=$rektorat_item ? $rektorat_item->lavozim_uz : ''?></i></span></h4>
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
@@ -52,9 +52,12 @@ use yii\helpers\Url;
 				  </tbody>
 				</table>
 				<style type="text/css">
-					table, tr, td, th {
-						font-size: 18px;
-						color: black;
+					p, li, a, span, table, tr, td, th, label {
+				   		 font-size: 18px;
+				   		 color: black; 
+				   		 font-weight: 400;
+				   		line-height: 12px;
+				    	list-style-type: none;
 					}
 				</style>
 				<hr style="margin: 0px; margin-bottom: 20px;">
