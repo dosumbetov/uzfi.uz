@@ -127,10 +127,10 @@ OwlCarouselWidget::begin([
     </section> -->
 
     <div class="orqafon pt-5">
-      <div class="container" style="padding-bottom: 20px;">
-          <div class="section-title" data-aos="fade-up">
-          <h1 style="text-align: center;">Tezkor ilovalar</h1>
-        </div>
+      <div class="container" style="padding-bottom: 50px;">
+          <div class="section-title mb-5" data-aos="fade-up">
+            <h1 style="text-align: center;">Tezkor ilovalar</h1>
+          </div>
         <div class="row">
           <?
             foreach ($tezkor_havolalar as $tezkor_havola) {
@@ -150,7 +150,7 @@ OwlCarouselWidget::begin([
                         }
                       ?>
                       <div class="circle"></div>
-                      <img src="../<?=$tezkor_havola->img?>" height="60px;" class="product">
+                      <img src="../<?=$tezkor_havola->img?>" height="<?=$tezkor_havola->height?>px;" class="product">
                   </div>
                 </div>
               </div>

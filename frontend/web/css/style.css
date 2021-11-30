@@ -1938,20 +1938,20 @@ h1, h2, h3, h4 {
  .orqafon {
         top: 0px;
           display: flex;
-          background-color: #fbfafa;
+          background-color: #f6fbff;
 
       }
      .orqafon1 {
         top: 0px;
           display: flex;
-          background-color: #fff;
+          background-color: #fbfafa;
 
       }
 .block_havola .box {
     position: relative;
     width: 100%;
     height: 170px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     background-color: #fff;
     border-radius: 20px;
     transform-style: preserve-3d;

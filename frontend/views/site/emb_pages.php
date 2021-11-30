@@ -7,15 +7,23 @@ foreach ($emblems as $emblems_item) {
 ?>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
-		<div class="col-md-9 col-12 middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems_item ? $emblems_item->name_uz : ''?></h2>
-			<?=$emblems_item ? $emblems_item->content_uz : ''?>
+		<div class="col-md-8 col-12">
+			<div class="middle">
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems_item ? $emblems_item->name_uz : ''?></h2>
+				<?=$emblems_item ? $emblems_item->content_uz : ''?>
+			</div>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
 </div>
 <style type="text/css">
-
+	p, li, a, span, table, tr, td, th, label {
+			 font-size: 18px;
+			 color: black; 
+			 font-weight: 400;
+			line-height: 24px;
+		list-style-type: none;
+	}
 	
 	.fakultet_btn {
 		padding: 5px;
@@ -31,9 +39,7 @@ foreach ($emblems as $emblems_item) {
 		border-radius: 10px;
 		padding: 40px;
 		box-shadow: 2px 10px 15px #888888;
-		margin-left: -20px;
-		margin-right: 40px;
-		width: 830px;
+		width: 99%;
 		margin-bottom: 30px;
 	}
 	
