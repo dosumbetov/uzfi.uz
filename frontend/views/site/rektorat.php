@@ -52,11 +52,14 @@ use yii\helpers\Url;
 				  </tbody>
 				</table>
 				<style type="text/css">
+					p, table tbody tr, th, td {
+						line-height: 8px !important;
+					}
 					p, li, a, span, table, tr, td, th, label {
 				   		 font-size: 18px;
 				   		 color: black; 
 				   		 font-weight: 400;
-				   		line-height: 12px;
+				   		line-height: 24px;
 				    	list-style-type: none;
 					}
 				</style>

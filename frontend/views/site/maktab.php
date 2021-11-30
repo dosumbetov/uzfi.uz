@@ -57,7 +57,13 @@ use yii\helpers\Url;
 	</div>
 </div>
 <style type="text/css">
-
+p, li, a, span, table, tr, td, th, label {
+	font-size: 18px;
+	color: black; 
+	font-weight: 400;
+	line-height: 24px;
+	list-style-type: none;
+}
 	
 	.fakultet_btn {
 		padding: 5px;

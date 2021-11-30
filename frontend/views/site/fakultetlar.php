@@ -47,11 +47,14 @@ use yii\helpers\Url;
 			  </tbody>
 			</table>
 			<style type="text/css">
-					table, tr, td, th {
-						font-size: 18px;
-						color: black;
-					}
-				</style>
+				p, li, a, span, table, tr, td, th, label {
+			   		 font-size: 18px;
+			   		 color: black; 
+			   		 font-weight: 400;
+			   		line-height: 24px;
+			    	list-style-type: none;
+				}
+			</style>
 			<hr style="margin: 0px;">
 			<h3 style="text-align: center;color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub_item ? $menu_sub_item->name_uz : ''?> <?=$fakultet_item ? $fakultet_item->staff_uz : ''?></h3>
 			<hr style="margin: 0px;">
