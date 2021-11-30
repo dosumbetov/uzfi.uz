@@ -389,6 +389,9 @@ OwlCarouselWidget::begin([
     background-color: blue;
     min-height: 700px;
   }
+  .card-body a .card-text{
+    line-height: 12px;
+  }
   
 </style>
 <!-- little slider -->
