@@ -53,7 +53,7 @@ use yii\helpers\Url;
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Eamil</th>
+                  <th scope="row">Email</th>
                   <td><?=$teacherinfo_item ? $teacherinfo_item->email : ''?></td>
                   <td></td>
                   <td></td>
