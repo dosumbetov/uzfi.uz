@@ -16,9 +16,9 @@ use yii\helpers\Url;
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-12">
                         <ul>
-                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Dashboard</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Profile</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Kitoblar</a></li>
+                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Shaxsiy kabinet</a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Umumiy ma'lumot</a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Ilmiy ishlar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ use yii\helpers\Url;
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /> My Profile</h4>
+              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" />Shaxsiy kabinet</h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
             <table class="table caption-top" style="color: black;">
               <thead>
@@ -168,7 +168,6 @@ use yii\helpers\Url;
      display: inline-block;
 }
  .pro-act{
-     background: #225fd0;
      color: #fff !important;
 }
  .pro-menu ul li a{
@@ -176,11 +175,13 @@ use yii\helpers\Url;
      line-height: 53px;
      color: #fff;
      font-weight: 500;
+     text-decoration: none;
      border-right: 1px solid #405d7d;
 }
  .pro-menu ul li a:hover{
      background: #225fd0;
      color: #fff;
+     cursor: pointer;
 }
 </style>
 

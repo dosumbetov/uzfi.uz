@@ -15,9 +15,9 @@ foreach ($teacherinfo as $teacherinfo_item) {
                     </div>
                     <div class="col-md-9 col-md-offset-3">
                          <ul>
-                           <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Dashboard</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Profile</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Kitoblar</a></li>
+                           <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo_item->staff_id])?>" class="pro-act">Shaxsiy kabinet</a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo_item->staff_id])?>">Umumiy ma'lumot</a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo_item->staff_id])?>">Ilmiy ishlar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /> Bo'lim haqida</h4>
+              <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" />Tarjimai hol</h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
                <?=$teacherinfo_item ? $teacherinfo_item->content_uz : ''?>
           </div>
@@ -130,7 +130,6 @@ foreach ($teacherinfo as $teacherinfo_item) {
      display: inline-block;
 }
  .pro-act{
-     background: #225fd0;
      color: #fff !important;
 }
  .pro-menu ul li a{
@@ -138,6 +137,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
      line-height: 53px;
      color: #fff;
      font-weight: 500;
+     text-decoration: none;
      border-right: 1px solid #405d7d;
 }
  .pro-menu ul li a:hover{
