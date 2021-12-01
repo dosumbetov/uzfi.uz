@@ -64,7 +64,7 @@ use yii\helpers\Url;
 						foreach ($fakultet_staff as $fakultet_staff_item) {
 							?>
 							<div class="col-md-4 col-6 mb-5">
-								<div class="card">
+								<div class="card" style="text-align: center;">
 								    <img class="card-img-top" src="../images/<?=$fakultet_staff_item->staff_img?>" alt="Card image">
 								    <div class="card-body">
 								      <h4 class="card-title"><?=$fakultet_staff ? $fakultet_staff_item->staff_name_uz : ''?></h4>
@@ -105,7 +105,9 @@ use yii\helpers\Url;
 		width: 99%;
 		margin-bottom: 30px;
 	}
-	
+	.card-text {
+		text-align: center;
+	}
 	.table_first {
 		font-weight: bold;
 	}
