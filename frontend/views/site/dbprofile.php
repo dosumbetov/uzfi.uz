@@ -30,7 +30,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
     <div class="row">
         <div class="col-md-3 col-12">
             <div class="left_bar_tea">
-                <img src="../<?=$teacherinfo_item->img?>" class="img_teacher">
+                <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
                 <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></h2>
                 <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo_item->rank_uz : ''?></p>
                 <hr style="margin: 0px; margin-bottom: 20px;">
