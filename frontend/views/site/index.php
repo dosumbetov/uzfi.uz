@@ -392,15 +392,15 @@ OwlCarouselWidget::begin([
   .card-body a .card-text{
     line-height: 12px;
   }
-  .back-to-top i:hover {
+/*  .back-to-top i:hover {
   background: #3e9bdd;
   color: #fff;
 }
-
+*/
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/*#preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -443,15 +443,15 @@ OwlCarouselWidget::begin([
     transform: rotate(360deg);
   }
 }
-
+*/
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
-}
+}*/
 </style>
 <!-- little slider -->
  <section class="pop-cour mt-5">
@@ -557,4 +557,4 @@ OwlCarouselWidget::begin([
     </section>
     <!-- End Sponsors Section -->
 
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
