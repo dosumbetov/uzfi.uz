@@ -15,7 +15,7 @@ foreach ($menu_sub as $menu_sub_item) {
 					foreach ($allmaktab as $allmaktabs) {
 						?>
 							<div class="col-md-6 d-flex align-items-stretch">
-			                   <div class="card mb-5" style="width: 100%;">
+			                   <div class="card mb-5" style="width: 80%; text-align: center;">
 								  <img src="<?=$allmaktabs ? $allmaktabs->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
 								    <h5 class="card-title"><?=$allmaktab ? $allmaktabs->name_uz : ''?></h5>
@@ -42,11 +42,9 @@ foreach ($menu_sub as $menu_sub_item) {
 	</div>
 </div>
 <style type="text/css">
-	.btnmak {
-		margin-left: 35%;
-	}
+	
 	.card-text {
-		text-align: left !important;
+		text-align: center;
 	}
 	.card-img-top {
 		height: 70%;
