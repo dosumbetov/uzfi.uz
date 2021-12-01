@@ -63,16 +63,17 @@ use yii\helpers\Url;
 					<?
 						foreach ($fakultet_staff as $fakultet_staff_item) {
 							?>
-							<div class="col-md-4 col-6 mb-5">
-								<div class="card" style="text-align: center;">
-								    <img class="card-img-top" src="../images/<?=$fakultet_staff_item->staff_img?>" alt="Card image">
-								    <div class="card-body">
-								      <h4 class="card-title"><?=$fakultet_staff ? $fakultet_staff_item->staff_name_uz : ''?></h4>
-								      <p class="card-text"><?=$fakultet_staff ? $fakultet_staff_item->staff_rank_uz : ''?></p>
-								      <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-primary mt-2 fakultet_btn">Shaxsiy kabinet</a>
-								    </div>
-							    </div>
-							</div>
+							<div class="col-md-4 d-flex align-items-stretch">
+			                   <div class="card mb-5" style="width: 100%; text-align: center;">
+								  <img src="<?=$allmaktabs ? $allmaktabs->img : ''?>" class="card-img-top" alt="...">
+								  <div class="card-body">
+								    <h5 class="card-title"><?=$fakultet_staff ? $fakultet_staff_item->staff_name_uz : ''?></h5>
+								    <p class="card-text"><?=$fakultet_staff ? $fakultet_staff_item->staff_rank_uz : ''?></p>
+								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+								    <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Shaxsiy kabinet</a>
+								  </div>
+								</div>
+			                </div>
 							<?
 						}
 					?>
