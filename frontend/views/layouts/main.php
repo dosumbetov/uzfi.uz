@@ -73,6 +73,66 @@ AppAsset::register($this);
     .input-search {
       margin-top: -10px;
     }
+.back-to-top i:hover {
+  background: #3e9bdd;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #2487ce;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
 
   </style>
       <div class="content-wrapper">
@@ -490,6 +550,7 @@ AppAsset::register($this);
                 <path style="fill:url(#SVGID_1_);" d="M346.001,114c-5.147,0-10.29-1.973-14.201-5.916l-61.653-62.162  C266.358,42.103,261.335,40,256,40s-10.358,2.103-14.146,5.922L180.2,108.084c-7.778,7.842-20.44,7.895-28.284,0.116  c-7.843-7.778-7.895-20.442-0.116-28.284l61.653-62.162C224.809,6.305,239.919,0,256,0s31.191,6.305,42.547,17.754L360.2,79.916  c7.778,7.842,7.727,20.506-0.116,28.284C356.185,112.068,351.091,114,346.001,114z M298.547,494.246l61.653-62.162  c7.778-7.842,7.727-20.506-0.116-28.284c-7.844-7.778-20.506-7.726-28.284,0.116l-61.653,62.162  C266.358,469.897,261.335,472,256,472s-10.358-2.103-14.146-5.922L180.2,403.916c-7.778-7.841-20.44-7.895-28.284-0.116  c-7.843,7.778-7.895,20.442-0.116,28.284l61.653,62.162C224.809,505.695,239.919,512,256,512S287.191,505.695,298.547,494.246z   M325,255c0-38.598-31.402-70-70-70s-70,31.402-70,70s31.402,70,70,70S325,293.598,325,255z M285,255c0,16.542-13.458,30-30,30  s-30-13.458-30-30s13.458-30,30-30S285,238.458,285,255z"/>
                 </svg>
     </div>
+  <div id="preloader"></div>
 <?php $this->endBody() ?>
 </body>
 </html>

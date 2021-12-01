@@ -14,7 +14,7 @@ use yii\helpers\Url;
 		<div class="col-md-8 col-12">
 			<div class="middle">
 							<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub_item->name_uz?></h2>
-			<img src="../<?=$fakultet_item ? $fakultet_item->img : ''?>" style="display: block;
+			<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_item->name_uz : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_item->faculty_uz : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_item->rank_uz : ''?></i></h3>
   			<hr style="margin: 0px;">
@@ -63,7 +63,7 @@ use yii\helpers\Url;
 					<?
 						foreach ($fakultet_staff as $fakultet_staff_item) {
 							?>
-							<div class="col-md-6 col-12 mb-5">
+							<div class="col-md-4 col-6 mb-5">
 								<div class="card">
 								    <img class="card-img-top" src="../images/<?=$fakultet_staff_item->staff_img?>" alt="Card image">
 								    <div class="card-body">
@@ -88,8 +88,6 @@ use yii\helpers\Url;
 	</div>
 </div>
 <style type="text/css">
-
-	
 	.fakultet_btn {
 		padding: 5px;
 		text-align: center;

@@ -41,3 +41,12 @@ $('.counter').counterUp({
     delay: 10,
     time: 1000
 });
+
+
+  $(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(1000).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  });
