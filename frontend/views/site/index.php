@@ -207,17 +207,17 @@ OwlCarouselWidget::begin([
              </div>
              <div class="col-md-3">
                 <i class="fas fa-users"></i>
-                <p class="natija1 counter">2925</p>
+                <p class="natija1 counter">3169</p>
                  <p class="natija2">Talabalar</p>
              </div>
              <div class="col-md-3">
                  <i class="fas fa-chalkboard-teacher"></i>
-                 <p class="natija1 counter">209</p>
+                 <p class="natija1 counter">235</p>
                  <p class="natija2">O'qituvchilar</p>
              </div>
              <div class="col-md-3">
                  <i class="fa fa-briefcase" aria-hidden="true"></i>
-                 <p class="natija1 counter">2</p>
+                 <p class="natija1 counter">3</p>
                  <p class="natija2">Hamkorlar</p>
              </div>
          </div>

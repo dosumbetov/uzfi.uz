@@ -50,9 +50,12 @@ foreach ($teacherinfo as $teacherinfo_item) {
 </div>
 
 <style type="text/css">
-     table, tr, td, th {
-      font-size: 18px;
-      color: black;
+    p, li, a, span, table, tr, td, th, label {
+         font-size: 18px;
+         color: black; 
+         font-weight: 400;
+        line-height: 24px;
+        list-style-type: none;
     }
       ul li a {
       font-size: 18px;
