@@ -105,7 +105,6 @@ class SiteController extends Controller
         $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
         return $this->render('index',[
             'slider'=>$slider,
-            'slider_on_icon'=>$slider_on_icon,
             'dr_slider_img'=>$dr_slider_img,
             'tezkor_havolalar'=> $tezkor_havolalar,
             'news' => $news,
