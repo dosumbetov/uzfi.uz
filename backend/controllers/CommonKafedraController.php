@@ -2,16 +2,17 @@
 
 namespace backend\controllers;
 use Yii;
-use backend\models\SliderOnIcon;
-use backend\models\SliderOnIconSearch;
+use backend\models\CommonKafedra;
+use backend\models\CommonKafedraSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+
 /**
- * SliderOnIconController implements the CRUD actions for SliderOnIcon model.
+ * CommonKafedraController implements the CRUD actions for CommonKafedra model.
  */
-class SliderOnIconController extends Controller
+class CommonKafedraController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,12 +33,12 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Lists all SliderOnIcon models.
+     * Lists all CommonKafedra models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new SliderOnIconSearch();
+        $searchModel = new CommonKafedraSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -47,7 +48,7 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Displays a single SliderOnIcon model.
+     * Displays a single CommonKafedra model.
      * @param int $id ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,21 +61,21 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Creates a new SliderOnIcon model.
+     * Creates a new CommonKafedra model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-     public function actionCreate()
+   public function actionCreate()
     {
-        $model = new SliderOnIcon();
-        $slider_on_icon_name = uniqid();
-        $slider_on_icon_path = '../../frontend/web/arguments/slider_on_icon/img_';
+        $model = new CommonKafedra();
+        $dir_sl_img_name = uniqid();
+        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/img';
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->img =UploadedFile::getInstance($model, 'img');
             if(!empty($model->img))
             {
-                $model->img->SaveAs($slider_on_icon_path.$slider_on_icon_name.'.'.$model->img->extension);
-                $model->img = $slider_on_icon_path.$slider_on_icon_name.'.'.$model->img->extension;
+                $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
+                $model->img = $dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension;
                 $model->save();
             }
 
@@ -87,7 +88,7 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Updates an existing SliderOnIcon model.
+     * Updates an existing CommonKafedra model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return mixed
@@ -107,7 +108,7 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Deletes an existing SliderOnIcon model.
+     * Deletes an existing CommonKafedra model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return mixed
@@ -121,15 +122,15 @@ class SliderOnIconController extends Controller
     }
 
     /**
-     * Finds the SliderOnIcon model based on its primary key value.
+     * Finds the CommonKafedra model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return SliderOnIcon the loaded model
+     * @return CommonKafedra the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = SliderOnIcon::findOne($id)) !== null) {
+        if (($model = CommonKafedra::findOne($id)) !== null) {
             return $model;
         }
 

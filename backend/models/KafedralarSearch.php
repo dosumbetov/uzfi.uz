@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\SliderOnIcon;
+use backend\models\Kafedralar;
 
 /**
- * SliderOnIconSearch represents the model behind the search form of `backend\models\SliderOnIcon`.
+ * KafedralarSearch represents the model behind the search form of `backend\models\Kafedralar`.
  */
-class SliderOnIconSearch extends SliderOnIcon
+class KafedralarSearch extends Kafedralar
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class SliderOnIconSearch extends SliderOnIcon
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'img', 'link'], 'safe'],
+            [['id', 'kafedra_menu_sub_id'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class SliderOnIconSearch extends SliderOnIcon
      */
     public function search($params)
     {
-        $query = SliderOnIcon::find();
+        $query = Kafedralar::find();
 
         // add conditions that should always apply here
 
@@ -59,13 +59,12 @@ class SliderOnIconSearch extends SliderOnIcon
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'kafedra_menu_sub_id' => $this->kafedra_menu_sub_id,
         ]);
 
         $query->andFilterWhere(['like', 'name_uz', $this->name_uz])
             ->andFilterWhere(['like', 'name_ru', $this->name_ru])
-            ->andFilterWhere(['like', 'name_en', $this->name_en])
-            ->andFilterWhere(['like', 'img', $this->img])
-            ->andFilterWhere(['like', 'link', $this->link]);
+            ->andFilterWhere(['like', 'name_en', $this->name_en]);
 
         return $dataProvider;
     }

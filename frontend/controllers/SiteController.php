@@ -16,7 +16,6 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Slider;
-use backend\models\SliderOnIcon;
 use backend\models\DirektorSlider;
 use backend\models\TezHavola;
 use backend\models\TezkorHavolalar;
@@ -36,6 +35,9 @@ use backend\models\EmbPages;
 use backend\models\Allmaktab;
 use backend\models\Maktab;
 use backend\models\Supporters;
+use backend\models\CommonKafedra;
+use backend\models\Kafedralar;
+use backend\models\KafedraOqituvchilari;
 /**
  * Site controller
  */
@@ -98,7 +100,6 @@ class SiteController extends Controller
         $news = Pages::find()->Where(['page_menu_sub_id'=>3])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $event = Pages::find()->Where(['page_menu_sub_id'=>4])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $slider = Slider::find()->orderBy(['id'=>SORT_DESC])->limit(4)->all();
-        $slider_on_icon = SliderOnIcon::find()->all();
         $dr_slider_img = DirektorSlider::find()->all();
         $tezkor_havolalar = TezkorHavolalar::find()->Where(['tez_men__sub_id'=>[13, 14, 15, 16, 17, 18]])->orderBy(['id'=>SORT_DESC])->limit(9)->all();
         $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
@@ -115,6 +116,29 @@ class SiteController extends Controller
      public function actionAloqa()
     {
         return $this->render('aloqa');
+    }
+     public function actionAllkafedralar($id)
+    {
+      $kafedralar = Kafedralar::find()->Where(['kafedra_menu_sub_id'=>$id])->All();
+      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
+      // $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
+        return $this->render('allkafedralar', [
+          'menu_sub'=>$menu_sub,
+          'com_kafedra'=>$com_kafedra,
+          'kafedralar'=>$kafedralar,
+        ]);
+    }
+     public function actionComma_kafedra($id)
+    {
+      // $kafedralar = Kafedralar::find()->Where(['kafedra_menu_sub_id'=>$id])->All();
+      $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->all();
+      $kafedra_oqituvchilari = KafedraOqituvchilari::find()->Where(['comm_kafedra_id'=>$id])->all();
+        return $this->render('comma_kafedra', [
+          // 'menu_sub'=>$menu_sub,
+          'com_kafedra'=>$com_kafedra,
+          'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
+          // 'kafedralar'=>$kafedralar,
+        ]);
     }
      public function actionDbprofile($id)
     {
