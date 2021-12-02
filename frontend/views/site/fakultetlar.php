@@ -65,7 +65,7 @@ use yii\helpers\Url;
 							?>
 							<div class="col-md-4 d-flex align-items-stretch">
 			                   <div class="card mb-5" style="width: 100%; text-align: center;">
-								  <img src="<?=$fakultet_staff ? $fakultet_staff_item->img : ''?>" class="card-img-top" alt="...">
+								  <img src="<?=$fakultet_staff ? $fakultet_staff_item->staff_img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
 								    <h5 class="card-title"><?=$fakultet_staff ? $fakultet_staff_item->staff_name_uz : ''?></h5>
 								    <p class="card-text"><?=$fakultet_staff ? $fakultet_staff_item->staff_rank_uz : ''?></p>
