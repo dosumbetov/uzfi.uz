@@ -126,7 +126,7 @@ class SiteController extends Controller
       // $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         return $this->render('allkafedralar', [
           'menu_sub'=>$menu_sub,
-          'com_kafedra'=>$com_kafedra,
+          // 'com_kafedra'=>$com_kafedra,
           'kafedralar'=>$kafedralar,
         ]);
     }
