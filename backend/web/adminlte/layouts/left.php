@@ -65,6 +65,7 @@
                                 'url' => '#',
                                 'items' => [
                                     ['label' => 'Kafedralar', 'icon' => 'circle-o', 'url' => ['/kafedralar'],],
+                                     ['label' => 'Kafedra malumoti', 'icon' => 'circle-o', 'url' => ['/common-kafedra'],],
                                     ['label' => 'Kafedraga tegishli domlalar', 'icon' => 'circle-o', 'url' => ['/kafedra-oqituvchilari'],],
                                     ['label' => 'Kitoblar', 'icon' => 'circle-o', 'url' => ['/kafedra-books'],],
                                     ['label' => 'Maqolalar', 'icon' => 'circle-o', 'url' => ['/kafedra-articles'],],
