@@ -1,8 +1,8 @@
 <?
 use yii\helpers\Url;
-	// foreach ($kafedralar as $kafedralar_item) {
-	// 	# code...
-	// }
+	foreach ($kafedralar as $kafedralar_item) {
+		# code...
+	}
 
 	foreach ($com_kafedra as $com_kafedra_item) {
 		# code...
@@ -14,7 +14,7 @@ use yii\helpers\Url;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-2 text-center" style="color: black; text-transform: uppercase;">sad</h3>
+				<h3 class="mb-2 text-center" style="color: black; text-transform: uppercase;"><?=$kafedralar ? $kafedralar_item->name_uz : ''?></h3>
  				<hr style="margin: 0px; margin-bottom: 20px;">
  				<img src="../<?=$com_kafedra ? $com_kafedra_item->img : ''?>" style="display: block;
   				margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
@@ -54,14 +54,14 @@ use yii\helpers\Url;
 				<?
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
 						?>
-							<div class="col-md-4 d-flex align-items-stretch">
+							<div class="col-md-6 d-flex align-items-stretch">
 			                   <div class="card mb-5" style="width: 100%; text-align: center;">
-								  <img src="../../images/asd.jpg" class="card-img-top" alt="...">
+								  <img src="<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
-								    <h5 class="card-title">asd</h5>
-								    <p class="card-text">asd as fa  a</p>
+								    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h5>
+								    <p class="card-text"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="" class="btn btn-sm btn-primary rounded-pill btnmak">Shaxsiy kabinet</a>
+								    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Shaxsiy kabinet</a>
 								  </div>
 								</div>
 			                </div>

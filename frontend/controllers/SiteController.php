@@ -38,6 +38,9 @@ use backend\models\Supporters;
 use backend\models\CommonKafedra;
 use backend\models\Kafedralar;
 use backend\models\KafedraOqituvchilari;
+use backend\models\KafedraArticles;
+use backend\models\KafedraBooks;
+
 /**
  * Site controller
  */
@@ -129,14 +132,54 @@ class SiteController extends Controller
     }
      public function actionComma_kafedra($id)
     {
-      // $kafedralar = Kafedralar::find()->Where(['kafedra_menu_sub_id'=>$id])->All();
+      $kafedralar = Kafedralar::find()->Where(['id'=>$id])->All();
       $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->all();
       $kafedra_oqituvchilari = KafedraOqituvchilari::find()->Where(['comm_kafedra_id'=>$id])->all();
         return $this->render('comma_kafedra', [
           // 'menu_sub'=>$menu_sub,
           'com_kafedra'=>$com_kafedra,
           'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
-          // 'kafedralar'=>$kafedralar,
+          'kafedralar'=>$kafedralar,
+        ]);
+    }
+     public function actionKafedra($id)
+    {
+      $kafedralar = Kafedralar::find()->Where(['id'=>$id])->All();
+      $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->all();
+      $kafedra_oqituvchilari = KafedraOqituvchilari::find()->Where(['id'=>$id])->all();
+        return $this->render('kafedra', [
+          // 'menu_sub'=>$menu_sub,
+          'com_kafedra'=>$com_kafedra,
+          'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
+          'kafedralar'=>$kafedralar,
+        ]);
+    }
+     public function actionKafedra_info($id)
+    {
+      $kafedralar = Kafedralar::find()->Where(['id'=>$id])->All();
+      $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->all();
+      $kafedra_oqituvchilari = KafedraOqituvchilari::find()->Where(['id'=>$id])->all();
+        return $this->render('kafedra_info', [
+          // 'menu_sub'=>$menu_sub,
+          'com_kafedra'=>$com_kafedra,
+          'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
+          'kafedralar'=>$kafedralar,
+        ]);
+    }
+      public function actionKafedra_book($id)
+    {
+      $kafedralar = Kafedralar::find()->Where(['id'=>$id])->All();
+      $com_kafedra = CommonKafedra::find()->Where(['kafedra_id'=>$id])->all();
+      $kafedra_oqituvchilari = KafedraOqituvchilari::find()->Where(['id'=>$id])->all();
+      $books = KafedraBooks::find()->Where(['book_kafedra_oqituvchilari_id'=>$id])->all();
+      $articles = KafedraArticles::find()->Where(['art_kafedra_oqituvchilari_id'=>$id])->all();
+        return $this->render('kafedra_book', [
+          // 'menu_sub'=>$menu_sub,
+          'com_kafedra'=>$com_kafedra,
+          'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
+          'kafedralar'=>$kafedralar,
+          'books'=>$books,
+          'articles'=>$articles,
         ]);
     }
      public function actionDbprofile($id)

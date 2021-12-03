@@ -32,7 +32,7 @@ use Yii;
  * @property string $qabul_en
  * @property int $comm_kafedra_id
  *
- * @property CommonKafedra $commKafedra
+ * @property Kafedralar $commKafedra
  */
 class KafedraOqituvchilari extends \yii\db\ActiveRecord
 {
@@ -54,7 +54,7 @@ class KafedraOqituvchilari extends \yii\db\ActiveRecord
             [['content_uz', 'content_ru', 'content_en'], 'string'],
             [['comm_kafedra_id'], 'integer'],
             [['name_uz', 'name_ru', 'name_en', 'img', 'lavozimi_uz', 'lavozimi_ru', 'lavozimi_en', 'darajasi_uz', 'darajasi_ru', 'darajasi_en', 'telegram', 'email', 'tel', 'manzil_uz', 'manzil_ru', 'manzil_en', 'qabul_uz', 'qabul_ru', 'qabul_en'], 'string', 'max' => 255],
-            [['comm_kafedra_id'], 'exist', 'skipOnError' => true, 'targetClass' => CommonKafedra::className(), 'targetAttribute' => ['comm_kafedra_id' => 'id']],
+            [['comm_kafedra_id'], 'exist', 'skipOnError' => true, 'targetClass' => Kafedralar::className(), 'targetAttribute' => ['comm_kafedra_id' => 'id']],
         ];
     }
 
@@ -98,6 +98,6 @@ class KafedraOqituvchilari extends \yii\db\ActiveRecord
      */
     public function getCommKafedra()
     {
-        return $this->hasOne(CommonKafedra::className(), ['id' => 'comm_kafedra_id']);
+        return $this->hasOne(Kafedralar::className(), ['id' => 'comm_kafedra_id']);
     }
 }

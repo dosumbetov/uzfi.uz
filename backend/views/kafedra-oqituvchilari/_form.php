@@ -8,7 +8,7 @@ use mihaildev\elfinder\ElFinder;
 use mihaildev\ckeditor\CKEditor;
 use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
-use backend\models\CommonKafedra;
+use backend\models\Kafedralar;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\KafedraOqituvchilari */
@@ -100,7 +100,7 @@ use backend\models\CommonKafedra;
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
      <?= $form->field($model, 'comm_kafedra_id')->dropDownList(
-        ArrayHelper::map(CommonKafedra::find()->all(), 'id', 'name_uz'),
+        ArrayHelper::map(Kafedralar::find()->all(), 'id', 'name_uz'),
         [
             'prompt' => "Menu Subni tanlang",
         ]); ?>

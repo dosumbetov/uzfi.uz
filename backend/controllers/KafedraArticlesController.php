@@ -1,18 +1,17 @@
 <?php
 
 namespace backend\controllers;
-use Yii;
-use backend\models\KafedraOqituvchilari;
-use backend\models\KafedraOqituvchilariSearch;
+
+use backend\models\KafedraArticles;
+use backend\models\KafedraArticlesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
- * KafedraOqituvchilariController implements the CRUD actions for KafedraOqituvchilari model.
+ * KafedraArticlesController implements the CRUD actions for KafedraArticles model.
  */
-class KafedraOqituvchilariController extends Controller
+class KafedraArticlesController extends Controller
 {
     /**
      * @inheritDoc
@@ -33,12 +32,12 @@ class KafedraOqituvchilariController extends Controller
     }
 
     /**
-     * Lists all KafedraOqituvchilari models.
+     * Lists all KafedraArticles models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new KafedraOqituvchilariSearch();
+        $searchModel = new KafedraArticlesSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +47,7 @@ class KafedraOqituvchilariController extends Controller
     }
 
     /**
-     * Displays a single KafedraOqituvchilari model.
+     * Displays a single KafedraArticles model.
      * @param int $id ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,33 +60,29 @@ class KafedraOqituvchilariController extends Controller
     }
 
     /**
-     * Creates a new KafedraOqituvchilari model.
+     * Creates a new KafedraArticles model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-   public function actionCreate()
+    public function actionCreate()
     {
-        $model = new KafedraOqituvchilari();
-        $dir_sl_img_name = uniqid();
-        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/img';
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->img =UploadedFile::getInstance($model, 'img');
-            if(!empty($model->img))
-            {
-                $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
-                $model->img = $dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension;
-                $model->save();
-            }
+        $model = new KafedraArticles();
 
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        } else {
+            $model->loadDefaultValues();
         }
 
         return $this->render('create', [
             'model' => $model,
         ]);
     }
+
     /**
-     * Updates an existing KafedraOqituvchilari model.
+     * Updates an existing KafedraArticles model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return mixed
@@ -107,7 +102,7 @@ class KafedraOqituvchilariController extends Controller
     }
 
     /**
-     * Deletes an existing KafedraOqituvchilari model.
+     * Deletes an existing KafedraArticles model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return mixed
@@ -121,15 +116,15 @@ class KafedraOqituvchilariController extends Controller
     }
 
     /**
-     * Finds the KafedraOqituvchilari model based on its primary key value.
+     * Finds the KafedraArticles model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return KafedraOqituvchilari the loaded model
+     * @return KafedraArticles the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = KafedraOqituvchilari::findOne($id)) !== null) {
+        if (($model = KafedraArticles::findOne($id)) !== null) {
             return $model;
         }
 
