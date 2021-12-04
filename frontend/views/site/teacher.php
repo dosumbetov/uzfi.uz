@@ -18,7 +18,7 @@ use yii\helpers\Url;
                         <ul>
                              <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Ilmiy ishlar</a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Ilmiy faoliyat</a></li>
                         </ul>
                     </div>
                 </div>

@@ -18,7 +18,7 @@ use yii\helpers\Url;
                         <ul>
                             <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Ilmiy ishlar</a></li>
+                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Ilmiy faoliyat</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,33 +42,23 @@ use yii\helpers\Url;
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" />Shaxsiy kabinet</h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
-            <table class="table caption-top" style="color: black;">
-              <thead>
-                <tr>
-                  <th scope="col">Ismi</th>
-                  <th scope="col"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
+            <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>
-                  <th scope="row">Email</th>
-                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first">Ism</th>
+                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></td>
                 </tr>
                 <tr>
-                  <th scope="row">Telefon raqami</th>
-                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->tel : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first">E-mail:</th>
+                  <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></td>
                 </tr>
                  <tr>
-                  <th scope="row">Manzil</th>
-                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->manzil_uz : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first">Tel:</th>
+                  <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->tel : ''?></td>
+                </tr>
+                 <tr>
+                  <th scope="row" class="table_first">Manzil:</th>
+                  <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->manzil_uz : ''?></td>
                 </tr>
               </tbody>
             </table>
