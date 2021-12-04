@@ -27,10 +27,10 @@ use yii\helpers\Url;
 </section>
 <div class="container ortafon">
     <div class="row">
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h3>
+              <h4 class="mt-3" style="text-align: center; text-transform: uppercase;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h4>
               <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->darajasi_uz : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->telegram : ''?></p>
@@ -103,6 +103,9 @@ use yii\helpers\Url;
         border-color: #F3F2F2 #F3F2F2 -moz-use-text-color;
         border-image: none;
         z-index: 2; 
+    }
+    .table-bordered>:not(caption)>*>* {
+      padding: 8px;
     }
     .left_bar_tea {
         width: 98%;
