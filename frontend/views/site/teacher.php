@@ -14,7 +14,7 @@ use yii\helpers\Url;
                 <div class="row">
                     <div class="col-md-3">
                     </div>
-                    <div class="col-md-9 col-md-offset-3 col-12">
+                    <div class="col-md-9 col-md-offset-3 col-6">
                         <ul>
                              <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Umumiy ma'lumot</a></li>
@@ -176,7 +176,7 @@ use yii\helpers\Url;
      color: #fff;
      font-weight: 500;
      text-decoration: none;
-     border-right: 1px solid #405d7d;
+     border-left: 1px solid #405d7d;
 }
  .pro-menu ul li a:hover{
      background: #225fd0;

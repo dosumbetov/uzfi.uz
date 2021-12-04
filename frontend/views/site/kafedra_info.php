@@ -13,7 +13,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
                 <div class="row">
                     <div class="col-md-3">
                     </div>
-                    <div class="col-md-9 col-md-offset-3">
+                    <div class="col-md-9 col-md-offset-3 col-8">
                          <ul>
                             <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Umumiy ma'lumot</a></li>
@@ -141,7 +141,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
      color: #fff;
      font-weight: 500;
      text-decoration: none;
-     border-right: 1px solid #405d7d;
+     border-left: 1px solid #405d7d;
 }
  .pro-menu ul li a:hover{
      background: #225fd0;
