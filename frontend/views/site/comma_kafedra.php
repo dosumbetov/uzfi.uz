@@ -109,6 +109,7 @@ use yii\helpers\Url;
 	.card-title {
 		color: black;
 		padding: 0px;
+		text-transform: uppercase;
 	}
 	.card-text {
 		text-align: center;

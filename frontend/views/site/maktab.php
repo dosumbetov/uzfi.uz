@@ -48,8 +48,77 @@ use yii\helpers\Url;
 			</table>
 			<hr style="margin: 0px;">
 			
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub_item->name_uz?> Ma'lumot</h3>
+			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">Umumiy ma'lumot</h3>
  			<hr style="margin: 0px;">
+ 			<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">103-guruh</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">104-guruh</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" id="oga-tab" data-bs-toggle="tab" data-bs-target="#oga" type="button" role="tab" aria-controls="oga" aria-selected="false">105-guruh</button>
+			  </li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+			  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			  	<div class="card mb-3" style="max-width: 100%;">
+				  <div class="row g-0">
+				    <div class="col-md-2 col-2">
+				      <img src="../../images/4.jpg" class="img-fluid rounded-start" alt="...">
+				    </div>
+				    <div class="col-md-10 col-10">
+				      <div class="card-body">
+				        <span style="float: left;">Sanatshunoslik fakulteti Tasviriy sanat yonalishi 107-guruh talabasi Dosumbetov Ogabek</span>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+							  	<div class="card mb-3" style="max-width: 100%;">
+				  <div class="row g-0">
+				    <div class="col-md-2 col-2">
+				      <img src="../../images/4.jpg" class="img-fluid rounded-start" alt="...">
+				    </div>
+				    <div class="col-md-10 col-10">
+				      <div class="card-body">
+				        <span style="float: left;">Sanatshunoslik fakulteti Tasviriy sanat yonalishi 107-guruh talabasi Dosumbetov Ogabek</span>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+							  	<div class="card mb-3" style="max-width: 100%;">
+				  <div class="row g-0">
+				    <div class="col-md-2 col-2">
+				      <img src="../../images/4.jpg" class="img-fluid rounded-start" alt="...">
+				    </div>
+				    <div class="col-md-10 col-10">
+				      <div class="card-body">
+				        <span style="float: left;">Sanatshunoslik fakulteti Tasviriy sanat yonalishi 107-guruh talabasi Dosumbetov Ogabek</span>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+							  	<div class="card mb-3" style="max-width: 100%;">
+				  <div class="row g-0">
+				    <div class="col-md-2 col-2">
+				      <img src="../../images/4.jpg" class="img-fluid rounded-start" alt="...">
+				    </div>
+				    <div class="col-md-10 col-10">
+				      <div class="card-body">
+				        <span style="float: left;">Sanatshunoslik fakulteti Tasviriy sanat yonalishi 107-guruh talabasi Dosumbetov Ogabek</span>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+			  	
+			  </div>
+			  <div class="tab-pane fade" id="oga" role="tabpanel" aria-labelledby="oga-tab">
+			  	
+			  </div>
+			</div> -->
  			<p class="mt-5"><?=$maktab ? $maktab_item->content_uz : ''?></p>
 			</div>
 		</div>
