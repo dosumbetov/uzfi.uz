@@ -28,7 +28,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
 </section>
 <div class="container ortafon">
     <div class="row">
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
               <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
               <h3 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->name_uz : ''?></h3>
