@@ -1,8 +1,14 @@
 <?
 use yii\helpers\Url;
-
+$lang = Yii::$app->language;
 foreach ($menu_sub as $menu_sub_item) {
-	# code...
+    if ($lang == 'uz') {
+      $cmmenu_sub_item = $menu_sub_item->name_uz;
+    }elseif ($lang == 'en') {
+      $cmmenu_sub_item = $menu_sub_item->name_en;
+    }elseif ($lang == 'ru') {
+      $cmmenu_sub_item = $menu_sub_item->name_ru;
+    }
 }
 
 ?>
@@ -10,18 +16,26 @@ foreach ($menu_sub as $menu_sub_item) {
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $menu_sub_item->name_uz : ''?></h3>
+				<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub_item : ''?></h3>
   			<hr style="margin: 0px;">
 			<div class="container mt-5">
 				<nav>
 		          <ul class="mcd-menu2">
 		            <?
+                  $lang = Yii::$app->language;
 		              foreach ($kafedralar as $kafedralar_item) {
+                    if ($lang == 'uz') {
+                      $cmkafedralar_item = $kafedralar_item->name_uz;
+                    }elseif ($lang == 'en') {
+                      $cmkafedralar_item = $kafedralar_item->name_en;
+                    }elseif ($lang == 'ru') {
+                      $cmkafedralar_item = $kafedralar_item->name_ru;
+                    }
 		                ?>
 		                  <li>
 		                    <a href="<?=Url::to(['site/comma_kafedra', 'id'=>$kafedralar_item->id])?>" class="active">
 		                      <i class="fa fa-users"></i>
-		                      <strong><?=$kafedralar ? $kafedralar_item->name_uz : ''?></strong>
+		                      <strong><?=$kafedralar ? $cmkafedralar_item : ''?></strong>
 		                    </a>
 		                  </li>
 		                <?

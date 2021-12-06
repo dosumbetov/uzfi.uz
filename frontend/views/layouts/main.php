@@ -79,7 +79,7 @@ AppAsset::register($this);
       <div class="content-wrapper">
     <header class="wrapper bg-light">
       <div class="bg-primary text-white fw-bold fs-15">
-        <div class="row" style="padding-top: 5px; padding-left: 10%;">
+        <div class="row" style="padding-top: 5px; padding-left: 6%;">
           <div class="col-md-9 emblem col-7">
             <?
               foreach ($emblems as $emblems) {
@@ -98,9 +98,9 @@ AppAsset::register($this);
                 }
               }
                 ?>
-              <a href="">
+             <!--  <a href="">
                 <img src="../../images/emblems/sitemap.png" height="20px;" width="20px;">
-              </a>
+              </a> -->
           </div>
           <div class="col-md-3 col-5">
                <!--  <div class="search-box">
@@ -116,12 +116,12 @@ AppAsset::register($this);
                   'widget_type' => 'classic', // classic or selector
                   'width'       => '28'
                 ]); ?>
-                <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 28px;"></i>
+                <!-- <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 28px;"></i> -->
           </div>
         </div>
         <!-- /.container -->
       </div>
-   
+  
       <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">

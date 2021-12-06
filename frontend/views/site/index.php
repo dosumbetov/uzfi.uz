@@ -129,7 +129,7 @@ OwlCarouselWidget::begin([
     <div class="orqafon pt-5">
       <div class="container" style="padding-bottom: 50px;">
           <div class="section-title mb-5" data-aos="fade-up">
-            <h1 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h1>
+            <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2>
           </div>
         <div class="row">
           <?
@@ -195,7 +195,7 @@ OwlCarouselWidget::begin([
       }
     </style>
     <div class="section-title mt-5" data-aos="fade-up">
-      <h1 style="text-align: center;"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></h1>
+      <h2 style="text-align: center;"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></h2>
     </div>
     <section class="pop-cour">
        <div class="container">
@@ -353,7 +353,7 @@ OwlCarouselWidget::begin([
         <div class="container">
 
           <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
-            <h1 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app','Yangiliklar')?></h1>
+            <h2 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app','Yangiliklar')?></h2>
           </div>
           <div class="row">
         <?
@@ -481,7 +481,7 @@ OwlCarouselWidget::begin([
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h1 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app',"E'lonlar")?></h1>
+          <h2 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app',"E'lonlar")?></h2>
         </div>
         <div class="row">
     <?
@@ -513,7 +513,7 @@ OwlCarouselWidget::begin([
      <section class="orqafon">
        <div class="container">
         <div class="section-title mt-5" data-aos="fade-up">
-          <h1 style="text-align: center;"><?=Yii::t('app', 'Video Lavha')?></h1>
+          <h2 style="text-align: center;"><?=Yii::t('app', 'Video Lavha')?></h2>
         </div>
               <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
              
@@ -537,7 +537,7 @@ OwlCarouselWidget::begin([
 
       <div class="container" data-aos="fade-up">
         <div class="section-title" data-aos="fade-up">
-        <h1 style="text-align: center;"><?=Yii::t('app','Foydali saytlar')?></h1>
+        <h2 style="text-align: center;"><?=Yii::t('app','Foydali saytlar')?></h2>
       </div>
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
