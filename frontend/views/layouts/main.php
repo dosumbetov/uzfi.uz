@@ -30,7 +30,7 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="../images/uzfi.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../images/uzfi.ico" type="image/x-icon">
    <!--  <link rel="stylesheet" href="../newasset/css/plugins.css">
     <link rel="stylesheet" href="owl/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
@@ -55,8 +55,8 @@ AppAsset::register($this);
     .emblem a {
       cursor: pointer;
       border-right: 1px solid grey;
-      padding-right: 12px;
-      margin-right: 15px;
+      padding-right: 5px;
+      margin-right: 5px;
     } .emblem a span {
       font-size: 12px;
       cursor: pointer;
@@ -78,9 +78,9 @@ AppAsset::register($this);
   </style>
       <div class="content-wrapper">
     <header class="wrapper bg-light">
-      <div class="bg-primary text-white fw-bold fs-15 mb-2">
-        <div class="container py-2 d-md-flex flex-md-row">
-          <div class="d-flex flex-row emblem">
+      <div class="bg-primary text-white fw-bold fs-15">
+        <div class="row" style="padding: 5px; padding-left: 5%;">
+          <div class="col-md-9 emblem col-7">
             <?
               foreach ($emblems as $emblems) {
                 if ($emblems->link_type == 1) {
@@ -102,11 +102,11 @@ AppAsset::register($this);
                 <img src="../../images/emblems/sitemap.png" height="20px;" width="20px;">
               </a>
           </div>
-          <div class="d-flex flex-row me-6 ms-auto">
-                <div class="search-box">
+          <div class="col-md-3 col-5">
+               <!--  <div class="search-box">
                   <button class="btn-search"><i class="fas fa-search"></i></button>
                   <input type="text" name="search" class="input-search" placeholder="Qidiruv tizimi...">
-                </div>
+                </div> -->
                 <!-- <img src="../images/login.png" height="25px;"> -->
                 <?= MultiLanguageWidget::widget([
                   'addCurrentLang' => true, // add current lang
@@ -128,7 +128,7 @@ AppAsset::register($this);
             <a href="<?=Url::home()?>">
               <img src="../../images/uzfi.png" height="70px;" srcset="../../images/uzfi.png" alt="eas" />
             </a>
-            <span style="color: #212121;font-family: 'Times New Roman', Times, serif;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 16px;">SAMARQAND DAVLAT UNIVERSITETINING<br>"O'ZBEKISTON-FINLANDIYA"<br>"PEDAGOGIKA INSTITUTI"</span>
+            <span style="color: #212121;font-family: 'Times New Roman', Times, serif;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 16px;"><?=Yii::t('app', 'SAMARQAND DAVLAT UNIVERSITETINING')?><br><?=Yii::t('app', "O'ZBEKISTON-FINLANDIYA")?><br><?=Yii::t('app', 'PEDAGOGIKA INSTITUTI')?></span>
           </div>
           <div class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
@@ -162,7 +162,7 @@ AppAsset::register($this);
                     }
                   ?>
                     <li class="dropdown">
-                      <a class="dropdown-item dropdown-toggle" href=""><?=$menutitle->name_uz?></a>
+                      <a class="dropdown-item dropdown-toggle" href=""><?=$cmmenutitle?></a>
                       <ul class="dropdown-menu">
                     <?
                     $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
@@ -180,11 +180,11 @@ AppAsset::register($this);
                             <?
                               if ($menusub->link_type == 1) {
                                 ?>
-                                  <a class="dropdown-item" href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menusub->name_uz?></a>
+                                  <a class="dropdown-item" href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$cmmenusub?></a>
                                 <?
                               }else {
                                 ?>
-                                  <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$menusub->name_uz?></a>
+                                  <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$cmmenusub?></a>
                                 <?
                               }
                             ?>
@@ -212,7 +212,7 @@ AppAsset::register($this);
                 
               </li>
               <li class="nav-item d-none d-md-block">
-                <a href="<?=Url::to(['site/aloqa'])?>" class="btn btn-sm btn-primary rounded-pill">Contact</a>
+                <a href="<?=Url::to(['site/aloqa'])?>" class="btn btn-sm btn-primary rounded-pill"><?=Yii::t('app', 'Aloqa')?></a>
               </li>
               <li class="nav-item d-lg-none">
                 <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
@@ -297,10 +297,10 @@ AppAsset::register($this);
                     <p>Email: <a href="#!">uzfi@.com</a></p>
                 </div>
                 <div class="col-md-6">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.0442617391855!2d66.92115311473631!3d39.67121890856542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192d50c43d2d%3A0xb165c3020cfe3714!2sSamDU%20O&#39;zbekiston-Finlandiya%20Pedagogika%20instituti!5e0!3m2!1sen!2s!4v1635831688417!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.0442617391855!2d66.92115311473631!3d39.67121890856542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192d50c43d2d%3A0xb165c3020cfe3714!2sSamDU%20O&#39;zbekiston-Finlandiya%20Pedagogika%20instituti!5e0!3m2!1sen!2s!4v1635831688417!5m2!1sen!2s" width="80%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-md-3">
-                    <h4>SOCIAL MEDIA</h4>
+                    <h4><?=Yii::t('app', 'Bizning ijtimoiy tarmoqlar')?></h4>
                   <ul style="margin: 0px;padding: 0px;">
                     <li style="padding: 0px;">
                       <div class="block">

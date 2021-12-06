@@ -21,7 +21,7 @@ foreach ($menu_sub as $menu_sub_item) {
 								    <h5 class="card-title"><?=$allmaktab ? $allmaktabs->name_uz : ''?></h5>
 								    <p class="card-text"><?=$allmaktab ? $allmaktabs->opisaniya_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktabs->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Batafsil</a>
+								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktabs->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
 								  </div>
 								</div>
 			                </div>

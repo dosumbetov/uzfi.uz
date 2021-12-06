@@ -15,9 +15,9 @@ foreach ($teacherinfo as $teacherinfo_item) {
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-8">
                          <ul>
-                           <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Ilmiy faoliyat</a></li>
+                           <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" />Tarjimai hol</h4>
+              <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /><?=Yii::t('app','Tarjimai hol')?></h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
                <?=$teacherinfo ? $teacherinfo_item->content_uz : ''?>
           </div>

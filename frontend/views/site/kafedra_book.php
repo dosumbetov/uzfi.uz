@@ -15,9 +15,9 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-8">
                         <ul>
-                            <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Ilmiy faoliyat</a></li>
+                            <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,8 +47,8 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Kitob nomi</th>
-                  <th scope="col">Chop etilgan joy</th>
+                  <th scope="col"><?=Yii::t('app','Kitob nomi')?></th>
+                  <th scope="col"><?=Yii::t('app','Chop etilgan joy')?></th>
                   <th scope="col">Chop etilgan sana</th>
                 </tr>
               </thead>

@@ -27,23 +27,23 @@ use yii\helpers\Url;
 	  			<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
-				      <th scope="row" class="table_first">Qabul vaqti</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Qabul vaqti')?></th>
 				      <td><?=$com_kafedra ? $com_kafedra_item->qabul_uz : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first">E-mail:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
 				      <td colspan="2"><?=$com_kafedra ? $com_kafedra_item->email_uz : ''?></td>
 				    </tr>
 				     <tr>
-				      <th scope="row" class="table_first">Tel:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Tel')?>:</th>
 				      <td colspan="2"><?=$com_kafedra ? $com_kafedra_item->tel : ''?></td>
 				    </tr>
 				     <tr>
-				      <th scope="row" class="table_first">Telegram:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Telegram')?>:</th>
 				      <td colspan="2"><?=$com_kafedra ? $com_kafedra_item->telegram : ''?></td>
 				    </tr>
 				     <tr>
-				      <th scope="row" class="table_first">Manzil:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Manzil')?>:</th>
 				      <td colspan="2"><?=$com_kafedra ? $com_kafedra_item->manzil_uz : ''?></td>
 				    </tr>
 				  </tbody>
@@ -61,7 +61,7 @@ use yii\helpers\Url;
 								    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h5>
 								    <p class="card-text"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Shaxsiy kabinet</a>
+								    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
 								  </div>
 								</div>
 			                </div>
@@ -69,7 +69,7 @@ use yii\helpers\Url;
 					}
 				?>
 				</div>
-				<h3 style="text-align: center; text-transform: uppercase;">kafedra tarixi haqida</h3>
+				<h3 style="text-align: center; text-transform: uppercase;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h3>
 				<hr style="margin: 0px; margin-bottom: 20px;">
 				<p><?=$com_kafedra ? $com_kafedra_item->content_uz : ''?></p>
 			</div>

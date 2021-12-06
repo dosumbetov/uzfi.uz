@@ -16,9 +16,9 @@ use yii\helpers\Url;
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-6">
                         <ul>
-                            <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>">Ilmiy faoliyat</a></li>
+                            <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/kafedra_book', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,24 +40,24 @@ use yii\helpers\Url;
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" />Shaxsiy kabinet</h4>
+              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /><?=Yii::t('app','Shaxsiy kabinet')?></h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
             <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>
-                  <th scope="row" class="table_first">Ism</th>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Ism')?></th>
                   <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></td>
                 </tr>
                 <tr>
-                  <th scope="row" class="table_first">E-mail:</th>
+                  <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
                   <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></td>
                 </tr>
                  <tr>
-                  <th scope="row" class="table_first">Tel:</th>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
                   <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->tel : ''?></td>
                 </tr>
                  <tr>
-                  <th scope="row" class="table_first">Manzil:</th>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
                   <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->manzil_uz : ''?></td>
                 </tr>
               </tbody>

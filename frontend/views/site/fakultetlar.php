@@ -21,27 +21,27 @@ use yii\helpers\Url;
 		  	<table class="table table-bordered mt-4" style="color: black;">
 			  <tbody>
 			    <tr>
-			      <th scope="row" class="table_first">Qabul vaqti</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app', 'Qabul vaqti')?></th>
 			      <td><?=$fakultet ? $fakultet_item->qabul_date_uz : ''?></td>
 			    </tr>
 			    <tr>
-			      <th scope="row" class="table_first">Tel:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
 			      <td colspan="2"><?=$fakultet ? $fakultet_item->tel : ''?></td>
 			    </tr>
 			    <tr>
-			      <th scope="row" class="table_first">Fax:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app', 'Fax')?>:</th>
 			      <td colspan="2"><?=$fakultet ? $fakultet_item->fax : ''?></td>
 			    </tr>
 			    <tr>
-			      <th scope="row" class="table_first">E-mail:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app', 'E-mail')?>:</th>
 			      <td colspan="2"><?=$fakultet ? $fakultet_item->email : ''?></td>
 			    </tr>
 			     <tr>
-			      <th scope="row" class="table_first">Telegram:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Telegram')?>:</th>
 			      <td colspan="2"><?=$fakultet ? $fakultet_item->telegram : ''?></td>
 			    </tr>
 			     <tr>
-			      <th scope="row" class="table_first">Manzil:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
 			      <td colspan="2"><?=$fakultet ? $fakultet_item->address_uz : ''?></td>
 			    </tr>
 			  </tbody>
@@ -70,7 +70,7 @@ use yii\helpers\Url;
 								    <h5 class="card-title"><?=$fakultet_staff ? $fakultet_staff_item->staff_name_uz : ''?></h5>
 								    <p class="card-text"><?=$fakultet_staff ? $fakultet_staff_item->staff_rank_uz : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak">Shaxsiy kabinet</a>
+								    <a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
 								  </div>
 								</div>
 			                </div>
@@ -80,7 +80,7 @@ use yii\helpers\Url;
 				
 			</div>
 			<hr style="margin: 0px;">
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $menu_sub_item->name_uz : ''?> Fakulteti haqida</h3>
+			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $menu_sub_item->name_uz : ''?> <?=Yii::t('app', 'Fakulteti haqida')?></h3>
  			<hr style="margin: 0px;">
  			<p class="mt-5"><?=$fakultet ? $fakultet_item->content_uz : ''?></p>
 			</div>

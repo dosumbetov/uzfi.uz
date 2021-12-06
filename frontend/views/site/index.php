@@ -129,7 +129,7 @@ OwlCarouselWidget::begin([
     <div class="orqafon pt-5">
       <div class="container" style="padding-bottom: 50px;">
           <div class="section-title mb-5" data-aos="fade-up">
-            <h1 style="text-align: center;">Tezkor ilovalar</h1>
+            <h1 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h1>
           </div>
         <div class="row">
           <?
@@ -160,7 +160,7 @@ OwlCarouselWidget::begin([
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="../images/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="../../images/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelector(".box"), {
         max: 25,
@@ -195,7 +195,7 @@ OwlCarouselWidget::begin([
       }
     </style>
     <div class="section-title mt-5" data-aos="fade-up">
-      <h1 style="text-align: center;">Asosiy ko'rsatkichlar</h1>
+      <h1 style="text-align: center;"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></h1>
     </div>
     <section class="pop-cour">
        <div class="container">
@@ -203,22 +203,22 @@ OwlCarouselWidget::begin([
              <div class="col-md-3">
                  <i class="fa fa-graduation-cap"></i>
                  <p class="natija1 counter">5</p>
-                 <p class="natija2">Fakultetlar</p>
+                 <p class="natija2"><?=Yii::t('app', 'Fakultetlar')?></p>
              </div>
              <div class="col-md-3">
                 <i class="fas fa-users"></i>
                 <p class="natija1 counter">3169</p>
-                 <p class="natija2">Talabalar</p>
+                 <p class="natija2"><?=Yii::t('app','Talabalar')?></p>
              </div>
              <div class="col-md-3">
                  <i class="fas fa-chalkboard-teacher"></i>
                  <p class="natija1 counter">235</p>
-                 <p class="natija2">O'qituvchilar</p>
+                 <p class="natija2"><?=Yii::t('app', "O'qituvchilar")?></p>
              </div>
              <div class="col-md-3">
                  <i class="fa fa-briefcase" aria-hidden="true"></i>
                  <p class="natija1 counter">3</p>
-                 <p class="natija2">Hamkorlar</p>
+                 <p class="natija2"><?=Yii::t('app','Hamkorlar')?></p>
              </div>
          </div>
        </div>
@@ -353,7 +353,7 @@ OwlCarouselWidget::begin([
         <div class="container">
 
           <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
-            <h1 style="text-align: center;" data-aos="fade-up">Yangiliklar</h1>
+            <h1 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app','Yangiliklar')?></h1>
           </div>
           <div class="row">
         <?
@@ -376,7 +376,7 @@ OwlCarouselWidget::begin([
         ?>
          </div>
          <div style="text-align: center; font-size: 20px; margin-top: 40px;">
-           <a href="<?=Url::to(['site/allpages', 'id'=>3])?>" class="btn btn-sm btn-primary rounded-pill">Barchasi</a>
+           <a href="<?=Url::to(['site/allpages', 'id'=>3])?>" class="btn btn-sm btn-primary rounded-pill"><?=Yii::t('app','Barchasi')?></a>
          </div>
         </div>    
       </section>
@@ -481,7 +481,7 @@ OwlCarouselWidget::begin([
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h1 style="text-align: center;" data-aos="fade-up">E'lonlar</h1>
+          <h1 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app',"E'lonlar")?></h1>
         </div>
         <div class="row">
     <?
@@ -503,7 +503,7 @@ OwlCarouselWidget::begin([
     ?>
         </div>
          <div style="text-align: center; font-size: 20px; margin-top: 40px;">
-           <a href="<?=Url::to(['site/allpages', 'id'=>4])?>" class="btn btn-sm btn-primary rounded-pill">Barchasi</a>
+           <a href="<?=Url::to(['site/allpages', 'id'=>4])?>" class="btn btn-sm btn-primary rounded-pill"><?=Yii::t('app','Barchasi')?></a>
          </div>
       </div>
     </section>
@@ -513,7 +513,7 @@ OwlCarouselWidget::begin([
      <section class="orqafon">
        <div class="container">
         <div class="section-title mt-5" data-aos="fade-up">
-          <h1 style="text-align: center;">Video Lavha </h1>
+          <h1 style="text-align: center;"><?=Yii::t('app', 'Video Lavha')?></h1>
         </div>
               <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
              
@@ -537,7 +537,7 @@ OwlCarouselWidget::begin([
 
       <div class="container" data-aos="fade-up">
         <div class="section-title" data-aos="fade-up">
-        <h1 style="text-align: center;">Foydali saytlar </h1>
+        <h1 style="text-align: center;"><?=Yii::t('app','Foydali saytlar')?></h1>
       </div>
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
