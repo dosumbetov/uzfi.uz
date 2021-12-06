@@ -23,10 +23,10 @@ use yii\helpers\Url;
 			  	}
 			  ?>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
-			  	<table class="table table-bordered mt-4" style="color: black;">
+				<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
-				      <th scope="row" class="table_first"><?=Yii::t('app','Qabul vaqti')?></th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Qabul vaqti')?></th>
 				      <td><?=$rektorat ? $rektorat_item->qabul_vaqti_uz : ''?></td>
 				    </tr>
 				    <tr>
@@ -34,11 +34,11 @@ use yii\helpers\Url;
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->tel : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first"><?=Yii::t('app','Fax')?>:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'Fax')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->fax : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app', 'E-mail')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->email : ''?></td>
 				    </tr>
 				     <tr>

@@ -42,39 +42,23 @@ use yii\helpers\Url;
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /><?=Yii::t('app','Shaxsiy kabinet')?></h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
-            <table class="table caption-top" style="color: black;">
-              <thead>
-                <tr>
-                  <th scope="col"><?=Yii::t('app','Ism')?></th>
-                  <th scope="col"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
+             <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>
-                  <th scope="row"><?=Yii::t('app','E-mail')?></th>
-                  <td><?=$teacherinfo ? $teacherinfo_item->email : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Ism')?></th>
+                  <td><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?=Yii::t('app','Tel')?></th>
-                  <td><?=$teacherinfo ? $teacherinfo_item->phone : ''?></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row"><?Yii::t('app',"Tug'ilgan sanasi")?></th>
-                  <td><?=$teacherinfo ? $teacherinfo_item->birth : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
+                  <td colspan="2"><?=$teacherinfo ? $teacherinfo_item->email : ''?></td>
                 </tr>
                  <tr>
-                  <th scope="row"><?=Yii::t('app','Manzil')?>:</th>
-                  <td><?=$teacherinfo ? $teacherinfo_item->address_uz : ''?></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
+                  <td colspan="2"><?=$teacherinfo ? $teacherinfo_item->phone : ''?></td>
+                </tr>
+                 <tr>
+                  <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
+                  <td colspan="2"><?=$teacherinfo ? $teacherinfo_item->address_uz : ''?></td>
                 </tr>
               </tbody>
             </table>
