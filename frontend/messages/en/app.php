@@ -31,6 +31,22 @@
 		'Foydali saytlar'=>'Useful sites',
 		'Ism'=>'Name',
 		'Kitob nomi'=>'Name of the book',
+		'Chop etilgan joy'=>'Place of publication',
+		'Chop etilgan sana'=>'Date of publication',
+		'Chop etilgan kitoblar'=>'Published books',
+		'Maqolalar'=>'Articles',
+		'Maqola nomi'=>'Article title',
+		'Maqola darajasi'=>'Article level',
+		'Biriktirlgan'=>'Attached',
+		"Profilga o'tish"=>'Go to profile',
+		'Interaktiv xizmatlar'=>'Interactive services',
+		"bo'sh ish o'rni"=>'vacancy',
+		"Markaz va bo'limlar"=>'Center and departments',
+		"Masofaviy ta'lim"=>'Distance learning',
+		'virtual qabulxona'=>'virtual reception',
+		'kutubxona'=>'Library',
+		"So'ngi yangiliklar"=>'Latest news',
+		"Tug'ilgan sanasi"=>'Birth date',
 	]
 		
 ?>

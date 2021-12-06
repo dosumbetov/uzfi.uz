@@ -79,7 +79,7 @@ AppAsset::register($this);
       <div class="content-wrapper">
     <header class="wrapper bg-light">
       <div class="bg-primary text-white fw-bold fs-15">
-        <div class="row" style="padding: 5px; padding-left: 5%;">
+        <div class="row" style="padding-top: 5px; padding-left: 10%;">
           <div class="col-md-9 emblem col-7">
             <?
               foreach ($emblems as $emblems) {
@@ -291,7 +291,7 @@ AppAsset::register($this);
             </div>
             <div class="row wed-foot-link-1">
                 <div class="col-md-3 foot-tc-mar-t-o">
-                    <h4>Manzil</h4>
+                    <h4><?=Yii::t('app','Manzil')?></h4>
                     <p>Manzil: Samarqand sh., Spitamen shoh ko‘chasi, 166-uy</p>
                     <p>Phone: <a href="#!">(66) 222-37-54</a></p>
                     <p>Email: <a href="#!">uzfi@.com</a></p>

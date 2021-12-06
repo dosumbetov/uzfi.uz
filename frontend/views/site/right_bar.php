@@ -9,41 +9,41 @@
 			<div class="container right">
 				<nav>
 					<ul class="mcd-menu">
-						<h3 style="color: black; text-align: center;">Tezkor ilovalar</h3>
+						<h3 style="color: black; text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h3>
 						<li>
 							<a href="" class="active">
 								<i class="fa fa-file"></i>
-								<strong>Interaktiv xizmatlar</strong>
+								<strong><?=Yii::t('app','Interaktiv xizmatlar')?></strong>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<i class="fa fa-briefcase"></i>
-								<strong>bo'sh ish o'rni</strong>
+								<strong><?=Yii::t('app',"bo'sh ish o'rni")?></strong>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<i class="fas fa-chalkboard-teacher"></i>
-								<strong>Markaz va bo'limlar</strong>
+								<strong><?=Yii::t('app',"Markaz va bo'limlar")?></strong>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<i class="fa fa-graduation-cap"></i>
-								<strong>Masofaviy ta'lim</strong>
+								<strong><?=Yii::t('app',"Masofaviy ta'lim")?></strong>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<i class="fas fa-laptop-code"></i>
-								<strong>virtual qabulxona</strong>
+								<strong><?=Yii::t('app','virtual qabulxona')?></strong>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<i class="fas fa-book-reader"></i>
-								<strong>kutubxona</strong>
+								<strong><?=Yii::t('app','kutubxona')?></strong>
 							</a>
 						</li>
 						
@@ -53,7 +53,7 @@
 			<div class="container right1" style="margin-top: 30px;">
 				<nav>
 					<ul class="mcd-menu1">
-						<h3 style="color: black; text-align: center;">So'ngi yangiliklar</h3>
+						<h3 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h3>
 						<?
 							foreach ($news as $news_item) {
 								?>

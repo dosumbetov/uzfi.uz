@@ -18,7 +18,7 @@ use yii\helpers\Url;
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
-			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>">Profilga o'tish</a>
+			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a>
 			  		<?
 			  	}
 			  ?>
@@ -26,27 +26,27 @@ use yii\helpers\Url;
 			  	<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
-				      <th scope="row" class="table_first">Qabul vaqti</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','Qabul vaqti')?></th>
 				      <td><?=$rektorat ? $rektorat_item->qabul_vaqti_uz : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first">Tel:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->tel : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first">Fax:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','Fax')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->fax : ''?></td>
 				    </tr>
 				    <tr>
-				      <th scope="row" class="table_first">E-mail:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->email : ''?></td>
 				    </tr>
 				     <tr>
-				      <th scope="row" class="table_first">Telegram:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','Telegram')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->telegram : ''?></td>
 				    </tr>
 				     <tr>
-				      <th scope="row" class="table_first">Manzil:</th>
+				      <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
 				      <td colspan="2"><?=$rektorat ? $rektorat_item->manzil_uz : ''?></td>
 				    </tr>
 				  </tbody>

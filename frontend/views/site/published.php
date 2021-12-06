@@ -15,9 +15,9 @@ foreach ($teacherinfo as $teacherinfo_item) {
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-8">
                         <ul>
-                            <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Ilmiy faoliyat</a></li>
+                            <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,15 +41,15 @@ foreach ($teacherinfo as $teacherinfo_item) {
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-                     <h4 style="color: black;"><img src="../../images/icon/db2.png" alt="" />Chop etilgan kitoblar</h4>
+                     <h4 style="color: black;"><img src="../../images/icon/db2.png" alt="" /><?=Yii::t('app','Chop etilgan kitoblar')?></h4>
            <hr style="margin: 0px; margin-bottom: 20px;">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Kitob nomi</th>
-                  <th scope="col">Chop etilgan joy</th>
-                  <th scope="col">Chop etilgan sana</th>
+                  <th scope="col"><?=Yii::t('app','Kitob nomi')?></th>
+                  <th scope="col"><?=Yii::t('app','Chop etilgan joy')?></th>
+                  <th scope="col"><?=Yii::t('app','Chop etilgan sana')?></th>
                 </tr>
               </thead>
               <tbody>
@@ -67,15 +67,15 @@ foreach ($teacherinfo as $teacherinfo_item) {
                 ?>
               </tbody>
             </table>
-            <h4 style="color: black;"><img src="../../images/icon/article.ico" alt="" /> Maqolalar</h4>
+            <h4 style="color: black;"><img src="../../images/icon/article.ico" alt="" /><?=Yii::t('app','Maqolalar')?></h4>
            <hr style="margin: 0px; margin-bottom: 20px;">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Maqola nomi</th>
-                  <th scope="col">Maqola darajasi</th>
-                  <th scope="col">Chop etilgan sana</th>
+                  <th scope="col"><?=Yii::t('app','Maqola nomi')?></th>
+                  <th scope="col"><?=Yii::t('app','Maqola darajasi')?></th>
+                  <th scope="col"><?=Yii::t('app','Chop etilgan sana')?></th>
                 </tr>
               </thead>
               <tbody>

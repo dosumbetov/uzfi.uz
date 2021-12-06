@@ -23,24 +23,24 @@ use yii\helpers\Url;
 		  	<table class="table table-bordered mt-4">
 			  <tbody>
 			    <tr>
-			      <th scope="row" class="table_first">Qabul vaqti</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Qabul vaqti')?></th>
 			      <td><?=$maktab ? $maktab_item->ishkunlari_uz : ''?></td>
 			    </tr>
 			     <tr>
-			      <th scope="row" class="table_first">Biriktirlgan:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Biriktirlgan')?>:</th>
 			      <td colspan="2"><?=$maktab ? $maktab_item->biriktirilgan_uz : ''?></td>
 			    </tr>
 			    <tr>
-			      <th scope="row" class="table_first">Tel:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
 			      <td colspan="2"><?=$maktab ? $maktab_item->tel : ''?></td>
 			    </tr>
 			    <tr>
-			      <th scope="row" class="table_first">Fax:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Fax')?>:</th>
 			      <td colspan="2"><?=$maktab ? $maktab_item->fax : ''?></td>
 			    </tr>
 
 			     <tr>
-			      <th scope="row" class="table_first">Manzil:</th>
+			      <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
 			      <td colspan="2"><?=$maktab ? $maktab_item->manzil_uz : ''?></td>
 			    </tr>
 			    
@@ -48,7 +48,7 @@ use yii\helpers\Url;
 			</table>
 			<hr style="margin: 0px;">
 			
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">Umumiy ma'lumot</h3>
+			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=Yii::t('app',"Umumiy ma'lumot")?></h3>
  			<hr style="margin: 0px;">
  			<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item" role="presentation">

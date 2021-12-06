@@ -16,9 +16,9 @@ use yii\helpers\Url;
                     </div>
                     <div class="col-md-9 col-md-offset-3 col-6">
                         <ul>
-                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Umumiy ma'lumot</a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>">Ilmiy faoliyat</a></li>
+                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,12 +40,12 @@ use yii\helpers\Url;
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" />Shaxsiy kabinet</h4>
+              <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /><?=Yii::t('app','Shaxsiy kabinet')?></h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
             <table class="table caption-top" style="color: black;">
               <thead>
                 <tr>
-                  <th scope="col">Ismi</th>
+                  <th scope="col"><?=Yii::t('app','Ism')?></th>
                   <th scope="col"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></th>
                   <th scope="col"></th>
                   <th scope="col"></th>
@@ -53,25 +53,25 @@ use yii\helpers\Url;
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Email</th>
+                  <th scope="row"><?=Yii::t('app','E-mail')?></th>
                   <td><?=$teacherinfo ? $teacherinfo_item->email : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <th scope="row">Telefon raqami</th>
+                  <th scope="row"><?=Yii::t('app','Tel')?></th>
                   <td><?=$teacherinfo ? $teacherinfo_item->phone : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <th scope="row">Tug'ilgan sanasi</th>
+                  <th scope="row"><?Yii::t('app',"Tug'ilgan sanasi")?></th>
                   <td><?=$teacherinfo ? $teacherinfo_item->birth : ''?></td>
                   <td></td>
                   <td></td>
                 </tr>
                  <tr>
-                  <th scope="row">Manzil</th>
+                  <th scope="row"><?=Yii::t('app','Manzil')?>:</th>
                   <td><?=$teacherinfo ? $teacherinfo_item->address_uz : ''?></td>
                   <td></td>
                   <td></td>
