@@ -126,8 +126,8 @@ OwlCarouselWidget::begin([
       </div>
     </section> -->
 
-    <div class="orqafon pt-5">
-      <div class="container" style="padding-bottom: 50px;">
+    <div class="orqafon1 pt-5">
+      <div class="container" style="padding-bottom: 7.5%;">
           <div class="section-title mb-5" data-aos="fade-up">
             <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2>
           </div>
@@ -349,7 +349,7 @@ OwlCarouselWidget::begin([
     </style> -->
     <!-- Yangiliklar -->
     <div class="">
-      <section id="more-services" class="more-services orqafon1" style="padding-top: 80px; padding-bottom: 40px;">
+      <section id="more-services" class="more-services orqafon1" style="padding-top: 2.5%; padding-bottom: 2.5%;">
         <div class="container">
 
           <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
@@ -454,7 +454,7 @@ OwlCarouselWidget::begin([
 }*/
 </style>
 <!-- little slider -->
- <section class="pop-cour mt-5">
+ <section class="pop-cour">
        <div class="container">
           <div style="margin-top: 40px; margin-bottom: 20px;">
                <div class="row">
@@ -477,7 +477,7 @@ OwlCarouselWidget::begin([
     </section>
 
      <!-- Events -->
-    <section id="more-services" class="more-services mb-5 orqafon1" style="padding-top: 80px; padding-bottom: 40px;">
+    <section id="more-services" class="more-services orqafon1" style="padding-top: 3%; padding-bottom: 3%;">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -510,7 +510,7 @@ OwlCarouselWidget::begin([
 
    
  <!-- video -->
-     <section class="orqafon">
+     <section class="orqafon1">
        <div class="container">
         <div class="section-title mt-5" data-aos="fade-up">
           <h2 style="text-align: center;"><?=Yii::t('app', 'Video Lavha')?></h2>
@@ -533,7 +533,7 @@ OwlCarouselWidget::begin([
    
 
   <!-- ======= Supporters Section ======= -->
-    <section id="supporters" class="section-with-bg">
+    <section id="supporters" class="section-with-bg orqafon1">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title" data-aos="fade-up">
