@@ -7,7 +7,7 @@ use yii\helpers\Url;
 		# code...
 	}
 ?>
-<div class="container">
+<div class="container salyt">
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
@@ -52,12 +52,19 @@ use yii\helpers\Url;
 				  </tbody>
 				</table>
 				<style type="text/css">
-					p, li, a, span, table, tr, td, th, label {
+					.salyt li, a, span, table, tr, td, th, label {
 				   		 font-size: 18px;
 				   		 color: black; 
 				   		 font-weight: 400;
 				   		line-height: 24px;
-				    	/*list-style-type: none;*/
+				    	/*list-style-type: circle !important;*/
+					}
+					.row .col-md-8 .middle ul li{
+				   		 font-size: 18px;
+				   		 color: black; 
+				   		 font-weight: 400;
+				   		line-height: 24px;
+				    	list-style-type: disc !important;
 					}
 				</style>
 				<hr style="margin: 0px; margin-bottom: 20px;">

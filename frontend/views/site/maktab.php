@@ -133,6 +133,13 @@ p, li, a, span, table, tr, td, th, label {
 	line-height: 24px;
 	list-style-type: none;
 }
+	.row .col-md-9 .middle ul li{
+	     font-size: 18px;
+	     color: black; 
+	     font-weight: 400;
+	    line-height: 24px;
+	    list-style-type: disc !important;
+	}
 	
 	.fakultet_btn {
 		padding: 5px;

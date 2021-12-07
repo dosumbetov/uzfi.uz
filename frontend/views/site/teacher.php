@@ -78,6 +78,7 @@ use yii\helpers\Url;
     ul li a {
       font-size: 18px;
     }
+    
     .left_bar_tea p i {
         margin-right: 20px;
         font-size: 20px;

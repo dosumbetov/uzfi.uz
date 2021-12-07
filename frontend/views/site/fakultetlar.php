@@ -106,6 +106,13 @@ use yii\helpers\Url;
 		margin-left: 35%;
 
 	}
+	.row .col-md-8 .middle ul li{
+         font-size: 18px;
+         color: black; 
+         font-weight: 400;
+        line-height: 24px;
+        list-style-type: disc !important;
+    }
 	.table-bordered>:not(caption)>*>* {
 		padding: 8px;
 	}

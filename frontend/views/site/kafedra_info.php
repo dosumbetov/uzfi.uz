@@ -57,6 +57,13 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
         line-height: 24px;
         list-style-type: none;
     }
+    .row .col-md-9 .middle_bar_tea ul li{
+         font-size: 18px;
+         color: black; 
+         font-weight: 400;
+        line-height: 24px;
+        list-style-type: disc !important;
+    }
       ul li a {
       font-size: 18px;
     }
