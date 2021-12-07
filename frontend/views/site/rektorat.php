@@ -57,7 +57,7 @@ use yii\helpers\Url;
 				   		 color: black; 
 				   		 font-weight: 400;
 				   		line-height: 24px;
-				    	list-style-type: none;
+				    	/*list-style-type: none;*/
 					}
 				</style>
 				<hr style="margin: 0px; margin-bottom: 20px;">
