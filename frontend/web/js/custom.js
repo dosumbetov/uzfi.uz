@@ -37,10 +37,10 @@ $('.scrollup').click(function (){
     return false;
 });
 
-$('.counter').counterUp({
-    delay: 10,
-    time: 1000
-});
+// $('.counter').counterUp({
+//     delay: 10,
+//     time: 1000
+// });
 
 
   $(window).on('load', function() {
