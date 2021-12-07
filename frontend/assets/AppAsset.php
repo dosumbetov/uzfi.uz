@@ -38,8 +38,8 @@ class AppAsset extends AssetBundle
         'https://unpkg.com/aos@2.3.1/dist/aos.js',
         '/venobox/venobox.min.js',
         '/js/vanilla-tilt.min.js',
-         '/js/waypoints.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js',
+        //  '/js/waypoints.min.js',
+        // 'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js',
         '/js/custom.js',
       
         // 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
