@@ -23,6 +23,15 @@ use yii\helpers\Url;
 	  				<i style="text-transform: capitalize;"><?=$com_kafedra ? $com_kafedra_item->lavozim_uz : ''?></i><br>
 	  				<i style="text-transform: lowercase;"><?=$com_kafedra ? $com_kafedra_item->darajasi_uz : ''?></i>
 	  			</h3>
+	  			<?
+					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
+						if ($kafedra_oqituvchilari_item->name_uz==$com_kafedra_item->name_uz) {
+							?>
+							<a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" ><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
+							<?
+						}
+					}
+				?>
   				<hr style="margin: 0px;">
 	  			<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
@@ -53,19 +62,21 @@ use yii\helpers\Url;
 				<div class="row mb-5 mt-5">
 				<?
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-						?>
-							<div class="col-md-6 d-flex align-items-stretch">
-			                   <div class="card mb-5" style="width: 100%; text-align: center;">
-								  <img src="<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="card-img-top" alt="...">
-								  <div class="card-body">
-								    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h5>
-								    <p class="card-text"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?></p>
-								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
-								  </div>
-								</div>
-			                </div>
-						<?
+						if ($kafedra_oqituvchilari_item->name_uz!=$com_kafedra_item->name_uz) {
+							?>
+								<div class="col-md-6 d-flex align-items-stretch">
+				                   <div class="card mb-5" style="width: 100%; text-align: center;">
+									  <img src="<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h5>
+									    <p class="card-text"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?></p>
+									    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+									    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
+									  </div>
+									</div>
+				                </div>
+							<?
+						}
 					}
 				?>
 				</div>
