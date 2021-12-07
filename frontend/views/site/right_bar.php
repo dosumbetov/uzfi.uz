@@ -108,7 +108,7 @@
 .mcd-menu li a {
   display: block;
   text-decoration: none;
-  color: #777;
+  color: #3547ea;
   
   text-align: left;
   height: 36px;
@@ -250,7 +250,7 @@
 .mcd-menu1 li a {
   display: block;
   text-decoration: none;
-  color: #777;
+  color: #3547ea;
   
   text-align: left;
   height: 36px;
