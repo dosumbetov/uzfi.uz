@@ -18,10 +18,55 @@ use yii\helpers\Url;
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
+			  		<div class="arrow">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
 			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a>
 			  		<?
 			  	}
 			  ?>
+			  <style type="text/css">
+.arrow {
+	position: absolute;
+	top: 23.2%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+}
+.arrow ul li {
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-bottom: 5px solid #06A8FF;
+	border-right: 5px solid #06A8FF;
+	transform: rotate(360deg);
+	margin: -5px;
+	animation: scroll 2s infinite;
+}
+.arrow ul li:nth-child(2) {
+	animation-delay: -.2s;
+}
+.arrow ul li:nth-child(3) {
+	animation-delay: -.4s;
+}
+@keyframes scroll {
+	0% {
+		opacity: 0;
+		transform: rotate(320deg) translate(-20px, -20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(320deg) translate(20px, 20px);
+	}
+}
+			  </style>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
 				<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>

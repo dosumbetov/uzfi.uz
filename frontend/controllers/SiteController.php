@@ -256,7 +256,7 @@ class SiteController extends Controller
     {
 
         $query = Pages::find()->Where(['page_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC]);
-        $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>3, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
+        $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>6, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
          $news = $query->offset($pages->offset)->limit($pages->limit)->all();
 
 

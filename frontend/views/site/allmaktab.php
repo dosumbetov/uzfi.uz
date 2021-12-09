@@ -23,10 +23,13 @@ foreach ($menu_sub as $menu_sub_item) {
 					foreach ($allmaktab as $allmaktabs) {
 						if ($lang == 'uz') {
 			              $cmallmaktabs = $allmaktabs->name_uz;
+			              $cmopisaniya = $allmaktabs->opisaniya_uz;
 			            }elseif ($lang == 'en') {
 			              $cmallmaktabs = $allmaktabs->name_en;
+			              $cmopisaniya = $allmaktabs->opisaniya_en;
 			            }elseif ($lang == 'ru') {
 			              $cmallmaktabs = $allmaktabs->name_ru;
+			              $cmopisaniya = $allmaktabs->opisaniya_ru;
 			            }
 						?>
 							<div class="col-md-6 d-flex align-items-stretch">
@@ -34,7 +37,7 @@ foreach ($menu_sub as $menu_sub_item) {
 								  <img src="<?=$allmaktabs ? $allmaktabs->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
 								    <h5 class="card-title"><?=$allmaktab ? $cmallmaktabs : ''?></h5>
-								    <p class="card-text"><?=$allmaktab ? $allmaktabs->opisaniya_uz : ''?></p>
+								    <p class="card-text"><?=$allmaktab ? $cmopisaniya : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktabs->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
 								  </div>

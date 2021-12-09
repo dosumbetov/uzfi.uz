@@ -1,11 +1,42 @@
 <?
 use yii\helpers\Url;
+$lang = Yii::$app->language;
 	foreach ($kafedralar as $kafedralar_item) {
-		# code...
+		if ($lang == 'uz') {
+          $cmkafedralar = $kafedralar_item->name_uz;
+        }elseif ($lang == 'en') {
+          $cmkafedralar = $kafedralar_item->name_en;
+        }elseif ($lang == 'ru') {
+          $cmkafedralar = $kafedralar_item->name_ru;
+        }
 	}
-
+$lang = Yii::$app->language;
 	foreach ($com_kafedra as $com_kafedra_item) {
-		# code...
+		if ($lang == 'uz') {
+          $cmcom_kafedra_name = $com_kafedra_item->name_uz;
+          $cmcom_kafedra_lavozim = $com_kafedra_item->lavozim_uz;
+          $cmcom_kafedra_daraja = $com_kafedra_item->darajasi_uz;
+          $cmcom_kafedra_qabul = $com_kafedra_item->qabul_uz;
+          $cmcom_kafedra_manzil = $com_kafedra_item->manzil_uz;
+          $cmcom_kafedra_hodim = $com_kafedra_item->kafedra_hodim_uz;
+          $cmcom_kafedra_content = $com_kafedra_item->content_uz;
+        }elseif ($lang == 'en') {
+          $cmcom_kafedra_name = $com_kafedra_item->name_en;
+          $cmcom_kafedra_lavozim = $com_kafedra_item->lavozim_en;
+          $cmcom_kafedra_daraja = $com_kafedra_item->darajasi_en;
+          $cmcom_kafedra_qabul = $com_kafedra_item->qabul_en;
+          $cmcom_kafedra_manzil = $com_kafedra_item->manzil_en;
+          $cmcom_kafedra_hodim = $com_kafedra_item->kafedra_hodim_en;
+          $cmcom_kafedra_content = $com_kafedra_item->content_en;
+        }elseif ($lang == 'ru') {
+          $cmcom_kafedra_name = $com_kafedra_item->name_ru;
+          $cmcom_kafedra_lavozim = $com_kafedra_item->lavozim_ru;
+          $cmcom_kafedra_daraja = $com_kafedra_item->darajasi_ru;
+          $cmcom_kafedra_qabul = $com_kafedra_item->qabul_ru;
+          $cmcom_kafedra_manzil = $com_kafedra_item->manzil_ru;
+          $cmcom_kafedra_hodim = $com_kafedra_item->kafedra_hodim_ru;
+          $cmcom_kafedra_content = $com_kafedra_item->content_ru;
+        }
 	}
 
 
@@ -14,22 +45,19 @@ use yii\helpers\Url;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-2 text-center" style="color: black; text-transform: uppercase;"><?=$kafedralar ? $kafedralar_item->name_uz : ''?></h3>
+				<h3 class="mb-2 text-center" style="color: black; text-transform: uppercase;"><?=$kafedralar ? $cmkafedralar : ''?></h3>
  				<hr style="margin: 0px; margin-bottom: 20px;">
  				<img src="../<?=$com_kafedra ? $com_kafedra_item->img : ''?>" style="display: block;
   				margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
 	  			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">
-	  				<?=$com_kafedra ? $com_kafedra_item->name_uz : ''?><br>
-	  				<i style="text-transform: capitalize;"><?=$com_kafedra ? $com_kafedra_item->lavozim_uz : ''?></i><br>
-	  				<i style="text-transform: lowercase;"><?=$com_kafedra ? $com_kafedra_item->darajasi_uz : ''?></i>
+	  				<?=$com_kafedra ? $cmcom_kafedra_name : ''?><br>
+	  				<i style="text-transform: capitalize;"><?=$com_kafedra ? $cmcom_kafedra_lavozim : ''?></i><br>
+	  				<i style="text-transform: lowercase;"><?=$com_kafedra ? $cmcom_kafedra_daraja : ''?></i>
 	  			</h3>
 	  			<?
+	  			
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-						if ($kafedra_oqituvchilari_item->name_uz==$com_kafedra_item->name_uz) {
-							?>
-							<a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" ><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
-							<?
-						}
+						
 					}
 				?>
   				<hr style="margin: 0px;">
@@ -37,7 +65,7 @@ use yii\helpers\Url;
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app', 'Qabul vaqti')?></th>
-				      <td><?=$com_kafedra ? $com_kafedra_item->qabul_uz : ''?></td>
+				      <td><?=$com_kafedra ? $cmcom_kafedra_qabul : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
@@ -53,23 +81,39 @@ use yii\helpers\Url;
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app', 'Manzil')?>:</th>
-				      <td colspan="2"><?=$com_kafedra ? $com_kafedra_item->manzil_uz : ''?></td>
+				      <td colspan="2"><?=$com_kafedra ? $cmcom_kafedra_manzil : ''?></td>
 				    </tr>
 				  </tbody>
 				</table>
-				<h3 style="text-align: center; text-transform: uppercase;"><?=$com_kafedra ? $com_kafedra_item->kafedra_hodim_uz : ''?></h3>
+				<h3 style="text-align: center; text-transform: uppercase;"><?=$com_kafedra ? $cmcom_kafedra_hodim : ''?></h3>
 				<hr style="margin: 0px;">
 				<div class="row mb-5 mt-5">
 				<?
+				$lang = Yii::$app->language;
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
+						if ($lang == 'uz') {
+				          $cmkafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
+				          $cmkafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
+				        }elseif ($lang == 'en') {
+				          $cmkafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
+				          $cmkafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
+				        }elseif ($lang == 'ru') {
+				          $cmkafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
+				          $cmkafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
+				        }
+						if ($kafedra_oqituvchilari_item->name_uz==$com_kafedra_item->name_uz) {
+							?>
+							<a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" ><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
+							<?
+						}
 						if ($kafedra_oqituvchilari_item->name_uz!=$com_kafedra_item->name_uz) {
 							?>
 								<div class="col-md-6 d-flex align-items-stretch">
 				                   <div class="card mb-5" style="width: 100%; text-align: center;">
 									  <img src="<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="card-img-top" alt="...">
 									  <div class="card-body">
-									    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h5>
-									    <p class="card-text"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?></p>
+									    <h5 class="card-title"><?=$kafedra_oqituvchilari ? $cmkafedra_oqituvchilari_name : ''?></h5>
+									    <p class="card-text"><?=$kafedra_oqituvchilari ? $cmkafedra_oqituvchilari_lavozim : ''?></p>
 									    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 									    <a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
 									  </div>
@@ -82,7 +126,7 @@ use yii\helpers\Url;
 				</div>
 				<h3 style="text-align: center; text-transform: uppercase;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h3>
 				<hr style="margin: 0px; margin-bottom: 20px;">
-				<p><?=$com_kafedra ? $com_kafedra_item->content_uz : ''?></p>
+				<p><?=$com_kafedra ? $cmcom_kafedra_content : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

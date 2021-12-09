@@ -1,7 +1,17 @@
 <?
 use yii\helpers\Url;
+$lang = Yii::$app->language;
 foreach ($emblems as $emblems_item) {
-	# code...
+	if ($lang == 'uz') {
+      $cmemblems_name = $emblems_item->name_uz;
+      $cmemblems_content = $emblems_item->content_uz;
+    }elseif ($lang == 'en') {
+    	$cmemblems_name = $emblems_item->name_en;
+    	$cmemblems_content = $emblems_item->content_en;
+    }elseif ($lang == 'ru') {
+    	$cmemblems_name = $emblems_item->name_ru;
+    	$cmemblems_content = $emblems_item->content_ru;
+    }
 }
 
 ?>
@@ -9,8 +19,8 @@ foreach ($emblems as $emblems_item) {
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $emblems_item->name_uz : ''?></h2>
-				<?=$emblems ? $emblems_item->content_uz : ''?>
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $cmemblems_name : ''?></h2>
+				<?=$emblems ? $cmemblems_content : ''?>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

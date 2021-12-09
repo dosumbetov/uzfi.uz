@@ -2,8 +2,15 @@
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
+$lang = Yii::$app->language;
 foreach ($menu_sub as $menu_sub_item) {
-  # code...
+  if ($lang == 'uz') {
+    $cmmenu_sub = $menu_sub_item->name_uz;
+  }elseif ($lang == 'en') {
+    $cmmenu_sub = $menu_sub_item->name_en;
+  }elseif ($lang == 'ru') {
+    $cmmenu_sub = $menu_sub_item->name_ru;
+  }
 }
 
 ?>
@@ -91,11 +98,19 @@ foreach ($menu_sub as $menu_sub_item) {
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;"><?=$menu_sub_item->name_uz?></h2>
+          <h2 style="text-align: center;"><?=$cmmenu_sub?></h2>
         </div>
         <div class="row">
     <?
+      $lang = Yii::$app->language;
         foreach ($news as $new) {
+           if ($lang == 'uz') {
+            $cmnew = $new->name_uz;
+          }elseif ($lang == 'en') {
+            $cmnew = $new->name_en;
+          }elseif ($lang == 'ru') {
+            $cmnew = $new->name_ru;
+          }
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-5">
                     <div class="new_date">
@@ -104,7 +119,7 @@ foreach ($menu_sub as $menu_sub_item) {
                     </div>
                     <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $new->name_uz : '', 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $cmnew : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>

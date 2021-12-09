@@ -1,7 +1,23 @@
  <?
 use yii\helpers\Url;
+$lang = Yii::$app->language;
 foreach ($teacherinfo as $teacherinfo_item) {
-    # code...
+    if ($lang == 'uz') {
+      $cmteacherinfo = $teacherinfo_item->name_uz;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_uz;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_uz;
+      $cmteacherinfo_content = $teacherinfo_item->content_uz;
+    }elseif ($lang == 'en') {
+      $cmteacherinfo = $teacherinfo_item->name_en;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_en;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_en;
+      $cmteacherinfo_content = $teacherinfo_item->content_en;
+    }elseif ($lang == 'ru') {
+      $cmteacherinfo = $teacherinfo_item->name_ru;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_ru;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_ru;
+      $cmteacherinfo_content = $teacherinfo_item->content_ru;
+    }
 }
 
  ?>
@@ -31,8 +47,8 @@ foreach ($teacherinfo as $teacherinfo_item) {
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
-                <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></h2>
-                <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo_item->rank_uz : ''?></p>
+                <h2 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo : ''?></h2>
+                <p style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo_lavozim : ''?>, <br><?=$teacherinfo ? $cmteacherinfo_rank : ''?></p>
                 <hr style="margin: 0px; margin-bottom: 20px;">
                 <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo_item->telegram : ''?></p>
                 <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo_item->facebook : ''?></p>
@@ -43,7 +59,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /><?=Yii::t('app','Tarjimai hol')?></h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
-               <?=$teacherinfo ? $teacherinfo_item->content_uz : ''?>
+               <?=$teacherinfo ? $cmteacherinfo_content : ''?>
           </div>
         </div>
     </div>
