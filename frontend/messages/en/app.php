@@ -1,7 +1,7 @@
 <?
 	return [
 		'SAMARQAND DAVLAT UNIVERSITETINING'=>'SAMARKAND STATE UNIVERSITY',
-		"O'ZBEKISTON-FINLANDIYA"=>'UZBEKISTAN-FINLAND',
+		"O'ZBEKISTON - FINLANDIYA"=>'UZBEKISTAN-FINLAND',
 		'PEDAGOGIKA INSTITUTI'=>'PEDAGOGICAL INSTITUTE',
 		'Aloqa'=>'Contact',
 		'Bizning ijtimoiy tarmoqlar'=>'Our social media',
@@ -47,6 +47,7 @@
 		'kutubxona'=>'Library',
 		"So'ngi yangiliklar"=>'Latest news',
 		"Tug'ilgan sanasi"=>'Birth date',
+		'Aloqa'=>'Contact',
 	]
 		
 ?>

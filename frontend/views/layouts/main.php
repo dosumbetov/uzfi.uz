@@ -124,102 +124,111 @@ AppAsset::register($this);
   
       <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
-          <div class="navbar-brand w-100">
+          <div class="col-md-0.8">
             <a href="<?=Url::home()?>">
               <img src="../../images/uzfi.png" height="70px;" srcset="../../images/uzfi.png" alt="eas" />
             </a>
-            <span style="color: #212121;font-family: 'Times New Roman', Times, serif;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 16px;"><?=Yii::t('app', 'SAMARQAND DAVLAT UNIVERSITETINING')?><br><?=Yii::t('app', "O'ZBEKISTON-FINLANDIYA")?><br><?=Yii::t('app', 'PEDAGOGIKA INSTITUTI')?></span>
           </div>
-          <div class="navbar-collapse offcanvas-nav">
+          <div class="col-md-3.2">
+             <span style="color: #212121;font-family: 'Times New Roman', Times, serif;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 18px;"><?=Yii::t('app', 'SAMARQAND DAVLAT UNIVERSITETINING')?> <?=Yii::t('app', "O'ZBEKISTON - FINLANDIYA")?> <?=Yii::t('app', 'PEDAGOGIKA INSTITUTI')?></span>
+          </div>
+          <div class="col-md-8">
+               <div class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
               <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
             </div>
            <ul class="navbar-nav">
-          <?
-          $lang = Yii::$app->language;
-          foreach ($menu as $menu) {
-            if ($lang == 'uz') {
-              $cmmenu = $menu->name_uz;
-            }elseif ($lang == 'en') {
-              $cmmenu = $menu->name_en;
-            }elseif ($lang == 'ru') {
-              $cmmenu = $menu->name_ru;
-            }
-            ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href=""><?=$cmmenu?></a>
-                <ul class="dropdown-menu">
-              <?
-              $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
-                foreach ($menutitle as $menutitle) {
-                   $lang = Yii::$app->language;
-                   if ($lang == 'uz') {
-                      $cmmenutitle = $menutitle->name_uz;
-                    }elseif ($lang == 'en') {
-                      $cmmenutitle = $menutitle->name_en;
-                    }elseif ($lang == 'ru') {
-                      $cmmenutitle = $menutitle->name_ru;
-                    }
-                  ?>
-                    <li class="dropdown">
-                      <a class="dropdown-item dropdown-toggle" href=""><?=$cmmenutitle?></a>
-                      <ul class="dropdown-menu">
-                    <?
-                    $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
-                      foreach ($menusub as $menusub) {
-                        $lang = Yii::$app->language;
-                        if ($lang == 'uz') {
-                          $cmmenusub = $menusub->name_uz;
-                        }elseif ($lang == 'en') {
-                          $cmmenusub = $menusub->name_en;
-                        }elseif ($lang == 'ru') {
-                          $cmmenusub = $menusub->name_ru;
-                        }
-                        ?>
-                          <li class="nav-item">
-                            <?
-                              if ($menusub->link_type == 1) {
-                                ?>
-                                  <a class="dropdown-item" href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$cmmenusub?></a>
-                                <?
-                              }else {
-                                ?>
-                                  <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$cmmenusub?></a>
-                                <?
-                              }
-                            ?>
-                          </li>
-                        <?
-                      }
-                    ?>
-                      </ul>
-                    </li>
-                  <?
-                }
-                  ?>
-                </ul>
+             <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="<?=Url::home()?>">Home</a>
               </li>
-            <?
-          }
-         ?>
+              <?
+              $lang = Yii::$app->language;
+              foreach ($menu as $menu) {
+                if ($lang == 'uz') {
+                  $cmmenu = $menu->name_uz;
+                }elseif ($lang == 'en') {
+                  $cmmenu = $menu->name_en;
+                }elseif ($lang == 'ru') {
+                  $cmmenu = $menu->name_ru;
+                }
+                ?>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href=""><?=$cmmenu?></a>
+                    <ul class="dropdown-menu">
+                  <?
+                  $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
+                    foreach ($menutitle as $menutitle) {
+                       $lang = Yii::$app->language;
+                       if ($lang == 'uz') {
+                          $cmmenutitle = $menutitle->name_uz;
+                        }elseif ($lang == 'en') {
+                          $cmmenutitle = $menutitle->name_en;
+                        }elseif ($lang == 'ru') {
+                          $cmmenutitle = $menutitle->name_ru;
+                        }
+                      ?>
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href=""><?=$cmmenutitle?></a>
+                          <ul class="dropdown-menu">
+                        <?
+                        $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
+                          foreach ($menusub as $menusub) {
+                            $lang = Yii::$app->language;
+                            if ($lang == 'uz') {
+                              $cmmenusub = $menusub->name_uz;
+                            }elseif ($lang == 'en') {
+                              $cmmenusub = $menusub->name_en;
+                            }elseif ($lang == 'ru') {
+                              $cmmenusub = $menusub->name_ru;
+                            }
+                            ?>
+                              <li class="nav-item">
+                                <?
+                                  if ($menusub->link_type == 1) {
+                                    ?>
+                                      <a class="dropdown-item" href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$cmmenusub?></a>
+                                    <?
+                                  }else {
+                                    ?>
+                                      <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$cmmenusub?></a>
+                                    <?
+                                  }
+                                ?>
+                              </li>
+                            <?
+                          }
+                        ?>
+                          </ul>
+                        </li>
+                      <?
+                    }
+                      ?>
+                    </ul>
+                  </li>
+                <?
+              }
+             ?>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="<?=Url::to(['site/aloqa'])?>"><?=Yii::t('app', "Aloqa")?></a>
+              </li>
             </ul>
             <!-- /.navbar-nav -->
           </div>
           <!-- /.navbar-collapse -->
           <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
-              <li class="nav-item dropdown language-select text-uppercase">
-                
-              </li>
-              <li class="nav-item d-none d-md-block">
+             
+             <!--  <li class="nav-item d-none d-md-block">
                 <a href="<?=Url::to(['site/aloqa'])?>" class="btn btn-sm btn-primary rounded-pill"><?=Yii::t('app', 'Aloqa')?></a>
-              </li>
+              </li> -->
               <li class="nav-item d-lg-none">
                 <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
               </li>
             </ul>
             <!-- /.navbar-nav -->
           </div>
+          </div>
+       
           <!-- /.navbar-other -->
         </div>
         <!-- /.container -->
