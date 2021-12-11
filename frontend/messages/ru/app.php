@@ -48,6 +48,7 @@
 		"So'ngi yangiliklar"=>'Последние новости',
 		"Tug'ilgan sanasi"=>'Дата рождения',
 		'Aloqa'=>'Контакт',
+		'Bosh sahifa'=>'Главная',
 	]
 	
 ?>
