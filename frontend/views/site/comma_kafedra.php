@@ -57,7 +57,11 @@ $lang = Yii::$app->language;
 	  			<?
 	  			
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-						
+						if ($kafedra_oqituvchilari_item->name_uz==$com_kafedra_item->name_uz) {
+							?>
+							<a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" ><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
+							<?
+						}
 					}
 				?>
   				<hr style="margin: 0px;">
@@ -101,11 +105,7 @@ $lang = Yii::$app->language;
 				          $cmkafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
 				          $cmkafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
 				        }
-						if ($kafedra_oqituvchilari_item->name_uz==$com_kafedra_item->name_uz) {
-							?>
-							<a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari_item->id])?>" ><?=Yii::t('app', 'Shaxsiy kabinet')?></a>
-							<?
-						}
+						
 						if ($kafedra_oqituvchilari_item->name_uz!=$com_kafedra_item->name_uz) {
 							?>
 								<div class="col-md-6 d-flex align-items-stretch">
