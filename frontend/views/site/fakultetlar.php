@@ -1,5 +1,6 @@
 <?
 use yii\helpers\Url;
+$lang = Yii::$app->language;
 	foreach ($menu_sub as $menu_sub_item) {
 		# code...
 	}

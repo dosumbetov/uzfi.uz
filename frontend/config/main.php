@@ -59,11 +59,11 @@ return [
             'class'=>'codemix\localeurls\UrlManager',
             'languages'=>['uz', 'ru', 'en'], 
             'enablePrettyUrl' => true,
-            'enableDefaultLanguageUrlCode' => true,     
+            // 'enableDefaultLanguageUrlCode' => true,     
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
-                '<controller:\w+>/<action:\w+>/'=>'<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>/'=>'<controller>/<action>',
             ],
         ],
         

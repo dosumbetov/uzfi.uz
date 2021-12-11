@@ -139,7 +139,7 @@ AppAsset::register($this);
             </div>
            <ul class="navbar-nav">
              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?=Url::home()?>">Home</a>
+                <a class="nav-link" aria-current="page" href="<?=Url::home()?>"><?=Yii::t('app', "Bosh sahifa")?></a>
               </li>
               <?
               $lang = Yii::$app->language;
