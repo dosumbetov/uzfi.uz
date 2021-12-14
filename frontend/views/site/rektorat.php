@@ -60,21 +60,28 @@ use yii\helpers\Url;
 	</div>
 </div>
 <style type="text/css">
-.salyt li, a, span, table, tr, td, th, label {
+ li, a, span, table, tr, td, th, label {
    		 font-size: 18px;
    		 color: black; 
    		 font-weight: 400;
    		line-height: 24px;
     	/*list-style-type: circle !important;*/
 	}
-	.row .col-md-8 .middle ul li{
+	/*.row .col-md-8 .middle ul li{
 		float: left;
    		 font-size: 18px;
    		 color: black; 
    		 font-weight: 400;
    		line-height: 24px;
     	list-style-type: disc !important;
-	}
+	}*/
+		.row .col-md-8 .middle ul li{
+         font-size: 18px;
+         color: black; 
+         font-weight: 400;
+        line-height: 24px;
+        list-style-type: disc !important;
+    }
 	.middle {
 		background-color: white;
 		position: relative;
@@ -93,77 +100,3 @@ use yii\helpers\Url;
 	}
 
 
-
-section .book {
-  position: relative;
-  width: 157px;
-  height: 190px;
-  box-shadow: 20px 20px 20px rgba(0,0,0,0.2);
-  transform-style: preserve-3d;
-  transition: 0.5s;
-
-}
-section .book:hover {
-  transform: rotateY(35deg);
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.2);
-
-}
-section .book:active {
-  transform: rotateY(180deg);
-  
-}
-section .book:before {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 100%;
-  transform-origin: left;
-  background: url(../images/side.jpg);
-  background-position: center;
-  transform: rotateY(90deg);
-}
-section .book:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  background: url(../images/back.jpg);
-  background-position: center;
-  transform: rotateY(180deg) translateZ(60px);
-}
-section .book img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-</style>
-<script type="text/javascript">
-	const book = document.querySelector(".book");
-	const firstHalf = document.querySelector(".first-half");
-	const secondHalf = document.querySelector(".second-half");
-
-	book.addEventListener("click", () => {
-	  book.classList.toggle("flip");
-	});
-
-	firstHalf.addEventListener("mouseenter", () => {
-	  book.classList.add("rotateLeft");
-	});
-
-	firstHalf.addEventListener("mouseout", () => {
-	  book.classList.remove("rotateLeft");
-	});
-
-	secondHalf.addEventListener("mouseenter", () => {
-	  book.classList.add("rotateRight");
-	});
-
-	secondHalf.addEventListener("mouseout", () => {
-	  book.classList.remove("rotateRight");
-	});
-</script>

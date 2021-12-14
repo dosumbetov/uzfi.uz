@@ -14,10 +14,10 @@ $lang = Yii::$app->language;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub_item->name_uz?></h2>
+			<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub_item->name_uz?></h3>
 			<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-  			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_item->name_uz : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_item->faculty_uz : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_item->rank_uz : ''?></i></h3>
+  			<h4 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_item->name_uz : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_item->faculty_uz : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_item->rank_uz : ''?></i></h4>
   			<?
 				foreach ($fakultet_staff as $fakultet_staff_item) {
 					if ($fakultet_staff_item->staff_name_uz==$fakultet_item->name_uz) {
@@ -89,7 +89,6 @@ $lang = Yii::$app->language;
 							}
 						}
 					?>
-				
 			</div>
 			<hr style="margin: 0px;">
 			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $menu_sub_item->name_uz : ''?> <?=Yii::t('app', 'Fakulteti haqida')?></h3>
