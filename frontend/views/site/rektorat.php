@@ -18,71 +18,85 @@ use yii\helpers\Url;
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
-			  		<div id="arrowAnim">
-					  <div class="arrowSliding">
-					    <div class="arrow"></div>
-					  </div>
-					  <div class="arrowSliding delay1">
-					    <div class="arrow"></div>
-					  </div>
-					  <div class="arrowSliding delay2">
-					    <div class="arrow"></div>
-					  </div>
-					  <div class="arrowSliding delay3">
-					    <div class="arrow"></div>
-					  </div>
-					</div>
-			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a>
+			  		<ul style="list-style-type: none !important;">
+			  			<li style="list-style-type: none !important;">
+			  				<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a>
+			  			</li>
+			  			<li style="list-style-type: none !important; margin-top: 10px; margin-left: 20px;">
+			  				<div id="wrapper">
+							  <div id="wrapper-inner">
+								<div id="scroll-down">
+								  <span class="arrow-down">
+								  <!-- css generated icon -->
+								  </span>
+								<!--   <span id="scroll-title">
+								 
+								  </span> -->
+								</div>
+							  </div>
+							</div>
+			  			</li>
+			  		</ul>
 			  		<?
 			  	}
 			  ?>
-			  <style type="text/css">
-#arrowAnim {
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style type="text/css">
+
+#scroll-down {
+    display: block;
+    position: relative;
+    /*padding-top: 79px;*/
+  text-align:center;
+}
+.arrow-down {
+    display: block;
+    margin: 0 auto;
+    width: 10px;
+    height: 38px;
+}
+.arrow-down:after {
+    content: '';
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid blue;
+    border-right: 2px solid blue;
+    /*behavior: url(-ms-transform.htc);*/
+   
+    transform: rotate(225deg);
 }
 
-.arrow {
-  border: 0.5vw solid;
-  border-color: black transparent transparent black;
-  transform: rotate(-45deg);
+#scroll-down::before {
+    animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    position: absolute;
+    top: 2px;
+    width: 90px;
+    height: 2px;
+    background: blue;
+    content: ' ';
+}
+@keyframes elasticus {
+    0% {
+        transform-origin: 0% 0%;
+        transform: scale(1, 0);
+    }
+    50% {
+        transform-origin: 0% 0%;
+        transform: scale(1, 1);
+    }
+    50.1% {
+        transform-origin: 0% 100%;
+        transform: scale(1, 1);
+    }
+    100% {
+        transform-origin: 0% 100%;
+        transform: scale(1, 0);
+    }
 }
 
-
-.arrowSliding {
-  position: absolute;
-  -webkit-animation: slide 4s linear infinite; 
-          animation: slide 4s linear infinite;
-}
-
-.delay1 {
-  -webkit-animation-delay: 1s; 
-    animation-delay: 1s;
-}
-.delay2 {
-  -webkit-animation-delay: 2s; 
-    animation-delay: 2s;
-}
-.delay3 {
-  -webkit-animation-delay: 3s; 
-    animation-delay: 3s;
-}
-
-@-webkit-keyframes slide {
-    0% { opacity:0; transform: translateX(1vw); }	
-   20% { opacity:1; transform: translateX(1vw); }	
-   80% { opacity:1; transform: translateX(-0vw); }	
-  100% { opacity:0; transform: translateX(-10vw); }	
-}
-@keyframes slide {
-    0% { opacity:0; transform: translateX(10vw); }	
-   20% { opacity:1; transform: translateX(0vw); }	
-   80% { opacity:1; transform: translateX(-0vw); }	
-  100% { opacity:0; transform: translateX(-10vw); }	
-}
-			  </style>
+</style>
 			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
 				<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
@@ -121,6 +135,7 @@ use yii\helpers\Url;
 				    	/*list-style-type: circle !important;*/
 					}
 					.row .col-md-8 .middle ul li{
+						float: left;
 				   		 font-size: 18px;
 				   		 color: black; 
 				   		 font-weight: 400;

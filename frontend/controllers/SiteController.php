@@ -40,6 +40,7 @@ use backend\models\Kafedralar;
 use backend\models\KafedraOqituvchilari;
 use backend\models\KafedraArticles;
 use backend\models\KafedraBooks;
+use backend\models\TutorInfo;
 
 /**
  * Site controller
@@ -140,6 +141,52 @@ class SiteController extends Controller
           'com_kafedra'=>$com_kafedra,
           'kafedra_oqituvchilari'=>$kafedra_oqituvchilari,
           'kafedralar'=>$kafedralar,
+        ]);
+    }
+     public function actionTutor($id)
+    {
+      // $tutor_info = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->all();
+      $query = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC]);
+      $tutor_info_number = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>6, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
+      $tutor_info = $query->offset($tutor_info_number->offset)->limit($tutor_info_number->limit)->all();
+        return $this->render('tutor', [
+          'tutor_info'=>$tutor_info,
+          'tutor_info_number'=>$tutor_info_number,
+        ]);
+    }
+     public function actionTutor_profile($id)
+    {
+      $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('tutor_profile', [
+          'tutor_info'=>$tutor_info,
+        ]);
+    }
+     public function actionTutor_vazifa($id)
+    {
+      $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('tutor_vazifa', [
+          'tutor_info'=>$tutor_info,
+        ]);
+    }
+     public function actionTutor_info($id)
+    {
+      $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('tutor_info', [
+          'tutor_info'=>$tutor_info,
+        ]);
+    }
+      public function actionTutor_pupils($id)
+    {
+      $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('tutor_pupils', [
+          'tutor_info'=>$tutor_info,
+        ]);
+    }
+     public function actionTutor_dars_jadvali($id)
+    {
+      $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('tutor_dars_jadvali', [
+          'tutor_info'=>$tutor_info,
         ]);
     }
      public function actionKafedra($id)

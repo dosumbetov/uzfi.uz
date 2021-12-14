@@ -23,6 +23,7 @@ class AppAsset extends AssetBundle
         '/css/font-awesome.min.css',
         '/newasset/css/style.css',
         '/css/style.css',
+        '/css/style-mob.css',
         'https://unpkg.com/aos@2.3.1/dist/aos.css',
     ];
     public $js = [

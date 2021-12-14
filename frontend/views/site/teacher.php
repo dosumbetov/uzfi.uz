@@ -12,9 +12,9 @@ use yii\helpers\Url;
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                     </div>
-                    <div class="col-md-9 col-md-offset-3 col-6">
+                    <div class="col-md-10">
                         <ul>
                              <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
                             <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
@@ -136,8 +136,8 @@ use yii\helpers\Url;
          border: 1px solid #F3F2F2;
         transform-style: preserve-3d;
         margin-bottom: 40px;
-    }
-    .pro-menu{
+      }
+     .pro-menu{
      background: #3f78e0;
      box-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.08);
      position: relative;
@@ -148,6 +148,7 @@ use yii\helpers\Url;
     /* margin: 0 auto;
      */
      display: table;
+     /*margin-left: 25px;*/
 }
  .pro-menu ul li{
      display: inline-block;
@@ -156,8 +157,8 @@ use yii\helpers\Url;
      color: #fff !important;
 }
  .pro-menu ul li a{
-     padding: 17px 14px;
-     line-height: 53px;
+     padding: 10px 14px;
+     line-height: 40px;
      color: #fff;
      font-weight: 500;
      text-decoration: none;
@@ -166,7 +167,6 @@ use yii\helpers\Url;
  .pro-menu ul li a:hover{
      background: #225fd0;
      color: #fff;
-     cursor: pointer;
 }
 </style>
 

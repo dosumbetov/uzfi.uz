@@ -48,12 +48,12 @@ foreach ($menu_sub as $menu_sub_item) {
 				?>
 			</div>
 			<div class="row">
-            <?
-                echo \yii\widgets\LinkPager::Widget([
-                    'pagination'=>$mak,
-                ]);
-            ?>
-        </div>
+	            <?
+	                echo \yii\widgets\LinkPager::Widget([
+	                    'pagination'=>$mak,
+	                ]);
+	            ?>
+	        </div>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>
