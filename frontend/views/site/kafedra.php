@@ -12,9 +12,9 @@ use yii\helpers\Url;
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                     </div>
-                    <div class="col-md-9 col-md-offset-3 col-6">
+                    <div class="col-md-10">
                         <ul>
                             <li><a href="<?=Url::to(['site/kafedra', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
                             <li><a href="<?=Url::to(['site/kafedra_info', 'id'=>$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
@@ -158,8 +158,8 @@ use yii\helpers\Url;
      color: #fff !important;
 }
  .pro-menu ul li a{
-     padding: 17px 14px;
-     line-height: 53px;
+     padding: 10px 14px;
+     line-height: 40px;
      color: #fff;
      font-weight: 500;
      text-decoration: none;

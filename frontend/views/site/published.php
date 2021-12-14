@@ -11,20 +11,18 @@ foreach ($teacherinfo as $teacherinfo_item) {
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-2">
                     </div>
-                    <div class="col-md-9 col-md-offset-3 col-8">
+                    <div class="col-md-10">
                         <ul>
-                            <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
                             <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
                             <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
-               
             </div>
         </div>
-            
 </section>
 <div class="container ortafon">
     <div class="row">
@@ -215,7 +213,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
     /* margin: 0 auto;
      */
      display: table;
-     margin-left: 25px;
+     /*margin-left: 25px;*/
 }
  .pro-menu ul li{
      display: inline-block;
@@ -224,8 +222,8 @@ foreach ($teacherinfo as $teacherinfo_item) {
      color: #fff !important;
 }
  .pro-menu ul li a{
-     padding: 17px 14px;
-     line-height: 53px;
+     padding: 10px 14px;
+     line-height: 40px;
      color: #fff;
      font-weight: 500;
      text-decoration: none;
