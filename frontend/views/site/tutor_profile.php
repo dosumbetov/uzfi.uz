@@ -37,8 +37,8 @@ use yii\helpers\Url;
               <p style="text-align: center;"><?=$tutor_info ? $tutor_info_item->biriktirilgan_uz : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
-              <p><i class="fa fa-facebook"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
-              <p><i class="fa fa-instagram"></i><?=$tutor_info ? $tutor_info_item->email : ''?></p>
+              <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
+              <p><i class="fa fa-envelope"></i><?=$tutor_info ? $tutor_info_item->email : ''?></p>
             </div>
         </div>
         <div class="col-md-9 col-12">
