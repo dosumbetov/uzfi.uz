@@ -154,7 +154,7 @@ AppAsset::register($this);
                 }
                 ?>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href=""><?=$cmmenu?></a>
+                    <a class="nav-link dropdown-toggle" href="#"><?=$cmmenu?></a>
                     <ul class="dropdown-menu">
                   <?
                   $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
@@ -169,7 +169,7 @@ AppAsset::register($this);
                         }
                       ?>
                         <li class="dropdown">
-                          <a class="dropdown-item dropdown-toggle" href=""><?=$cmmenutitle?></a>
+                          <a class="dropdown-item dropdown-toggle" href="#"><?=$cmmenutitle?></a>
                           <ul class="dropdown-menu">
                         <?
                         $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
