@@ -51,9 +51,9 @@ class TutorInfo extends \yii\db\ActiveRecord
     {
         return [
             [['name_uz', 'name_ru', 'name_en', 'biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en', 'tel', 'telegram', 'email', 'manzil_uz', 'manzil_ru', 'manzil_en', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en', 'tutor_menu_sub_id'], 'required'],
-            [['manzil_uz', 'manzil_ru', 'manzil_en', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en'], 'string'],
+            [['manzil_uz', 'manzil_ru', 'manzil_en', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en','biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en'], 'string'],
             [['tutor_menu_sub_id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en', 'tel', 'telegram', 'email', 'img'], 'string', 'max' => 255],
+            [['name_uz', 'name_ru', 'name_en', 'tel', 'telegram', 'email', 'img'], 'string', 'max' => 255],
             [['tutor_menu_sub_id'], 'exist', 'skipOnError' => true, 'targetClass' => MenuSub::className(), 'targetAttribute' => ['tutor_menu_sub_id' => 'id']],
         ];
     }
