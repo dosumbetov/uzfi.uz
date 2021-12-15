@@ -1580,7 +1580,7 @@ h1, h2, h3, h4 {
   color: white !important;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #343f52;
+    /*color: #343f52;*/
     font-family: "Times New Roman", Times, serif;
     font-size: 18px;
 }

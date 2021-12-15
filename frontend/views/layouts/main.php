@@ -218,10 +218,6 @@ AppAsset::register($this);
           <!-- /.navbar-collapse -->
           <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
-             
-             <!--  <li class="nav-item d-none d-md-block">
-                <a href="<?=Url::to(['site/aloqa'])?>" class="btn btn-sm btn-primary rounded-pill"><?=Yii::t('app', 'Aloqa')?></a>
-              </li> -->
               <li class="nav-item d-lg-none">
                 <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
               </li>
