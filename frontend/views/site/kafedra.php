@@ -1,9 +1,25 @@
+
  <?
 use yii\helpers\Url;
 
-
+$lang = Yii::$app->language;
   foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-    # code...
+    if ($lang == 'uz') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_uz;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_uz;
+      }elseif ($lang == 'en') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_en;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_en;
+      }elseif ($lang == 'ru') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_ru;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_ru;
+      }
   }
  ?>
 
@@ -30,8 +46,8 @@ use yii\helpers\Url;
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
-              <h4 class="mt-3" style="text-align: center; text-transform: uppercase;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h4>
-              <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->darajasi_uz : ''?></p>
+              <h4 class="mt-3" style="text-align: center; text-transform: uppercase;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_name : ''?></h4>
+              <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_lavozim : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_daraja : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->telegram : ''?></p>
               <p><i class="fa fa-envelope"></i> <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></p>
@@ -46,7 +62,7 @@ use yii\helpers\Url;
               <tbody>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Ism')?></th>
-                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></td>
+                  <td><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_name : ''?></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
@@ -58,7 +74,7 @@ use yii\helpers\Url;
                 </tr>
                  <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
-                  <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->manzil_uz : ''?></td>
+                  <td colspan="2"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_manzil : ''?></td>
                 </tr>
               </tbody>
             </table>

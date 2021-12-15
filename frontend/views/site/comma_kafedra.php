@@ -52,8 +52,7 @@ $lang = Yii::$app->language;
 	  			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">
 	  				<?=$com_kafedra ? $cmcom_kafedra_name : ''?><br>
 	  			</h3>
-	  			<i><?=$com_kafedra ? $cmcom_kafedra_lavozim : ''?></i><br>
-	  			<i><?=$com_kafedra ? $cmcom_kafedra_daraja : ''?></i>
+	  			<p style="text-align: center;"><i><?=$com_kafedra ? $cmcom_kafedra_lavozim : ''?></i><br><i><?=$com_kafedra ? $cmcom_kafedra_daraja : ''?></i></p>
 	  			<?
 	  			
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {

@@ -1,8 +1,17 @@
  <?
 use yii\helpers\Url;
-
+$lang = Yii::$app->language;
 foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-    # code...
+   if ($lang == 'uz') {
+      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
+      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
+    }elseif ($lang == 'en') {
+      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
+      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
+    }elseif ($lang == 'ru') {
+      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
+      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
+    }
 }
  ?>
 
@@ -31,12 +40,12 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
               <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?>, <br><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->darajasi_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_name : ''?></h3>
+              <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_lavozim : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_daraja : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
-              <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->telegram : ''?></p>
-              <p><i class="fa fa-facebook"></i> <?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->email : ''?></p>
-              <p><i class="fa fa-instagram"></i><?=$kafedra_oqituvchilari_item ? $kafedra_oqituvchilari_item->tel : ''?></p>                  
+              <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->telegram : ''?></p>
+              <p><i class="fa fa-facebook"></i> <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></p>
+              <p><i class="fa fa-instagram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->tel : ''?></p>                  
             </div>
         </div>
         <div class="col-md-9 col-12">
@@ -54,13 +63,24 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
               </thead>
               <tbody>
                  <?
+                 $lang = Yii::$app->language;
                   foreach ($books as $books_item) {
+                      if ($lang == 'uz') {
+                        $books_name = $books_item->name_uz;
+                        $books_chop_etilgan_joy = $books_item->chop_etilgan_joy_uz;
+                      }elseif ($lang == 'en') {
+                        $books_name = $books_item->name_en;
+                        $books_chop_etilgan_joy = $books_item->chop_etilgan_joy_en;
+                      }elseif ($lang == 'ru') {
+                        $books_name = $books_item->name_ru;
+                        $books_chop_etilgan_joy = $books_item->chop_etilgan_joy_ru;
+                      }
                     ?>
                       <tr>
-                        <th scope="row"><?=$books_item ? $books_item->number : ''?></th>
-                        <td><?=$books_item ? $books_item->name_uz : ''?></td>
-                        <td><?=$books_item ? $books_item->chop_etilgan_joy_uz : ''?></td>
-                        <td><?=$books_item ? $books_item->date : ''?></td>
+                        <th scope="row"><?=$books ? $books_item->number : ''?></th>
+                        <td><?=$books ? $books_name : ''?></td>
+                        <td><?=$books ? $books_chop_etilgan_joy : ''?></td>
+                        <td><?=$books ? $books_item->date : ''?></td>
                       </tr>
                     <?
                   }
@@ -80,53 +100,30 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
               </thead>
               <tbody>
                 <?
+                 $lang = Yii::$app->language;
                   foreach ($articles as $articles_item) {
+                      if ($lang == 'uz') {
+                        $articles_name = $articles_item->name_uz;
+                        $articles_degree = $articles_item->article_degree_uz;
+                      }elseif ($lang == 'en') {
+                        $articles_name = $articles_item->name_en;
+                        $articles_degree = $articles_item->article_degree_en;
+                      }elseif ($lang == 'ru') {
+                        $articles_name = $articles_item->name_ru;
+                        $articles_degree = $articles_item->article_degree_ru;
+                      }
                     ?>
                       <tr>
-                        <th scope="row"><?=$articles_item ? $articles_item->number : ''?></th>
-                        <td><?=$articles_item ? $articles_item->name_uz : ''?></td>
-                        <td><?=$articles_item ? $articles_item->article_degree_uz : ''?></td>
-                        <td><?=$articles_item ? $articles_item->date : ''?></td>
+                        <th scope="row"><?=$articles ? $articles_item->number : ''?></th>
+                        <td><?=$articles ? $articles_name : ''?></td>
+                        <td><?=$articles ? $articles_degree : ''?></td>
+                        <td><?=$articles ? $articles_item->date : ''?></td>
                       </tr>
                     <?
                   }
                 ?>
               </tbody>
             </table>
-            <!-- <div class="row">
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-              <h5 style="text-align: center; margin-bottom: 40px;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>  
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>  
-            </div> -->
           </div>
         </div>
     </div>
@@ -233,80 +230,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
      background: #225fd0;
      color: #fff;
 }
-section .book {
-  position: relative;
-  width: 157px;
-  height: 190px;
-  box-shadow: 20px 20px 20px rgba(0,0,0,0.2);
-  transform-style: preserve-3d;
-  transition: 0.5s;
-
-}
-section .book:hover {
-  transform: rotateY(35deg);
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.2);
-
-}
-section .book:active {
-  transform: rotateY(180deg);
-  
-}
-section .book:before {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 100%;
-  transform-origin: left;
-  background: url(../images/side.jpg);
-  background-position: center;
-  transform: rotateY(90deg);
-}
-section .book:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  background: url(../images/back.jpg);
-  background-position: center;
-  transform: rotateY(180deg) translateZ(60px);
-}
-section .book img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 </style>
 
 
  
-  <script type="text/javascript">
-    // IMPROVED JAVASCRIPT & ADDED A FEW CHANGES
-const book = document.querySelector(".book");
-  const firstHalf = document.querySelector(".first-half");
-  const secondHalf = document.querySelector(".second-half");
-
-  book.addEventListener("click", () => {
-    book.classList.toggle("flip");
-  });
-
-  firstHalf.addEventListener("mouseenter", () => {
-    book.classList.add("rotateLeft");
-  });
-
-  firstHalf.addEventListener("mouseout", () => {
-    book.classList.remove("rotateLeft");
-  });
-
-  secondHalf.addEventListener("mouseenter", () => {
-    book.classList.add("rotateRight");
-  });
-
-  secondHalf.addEventListener("mouseout", () => {
-    book.classList.remove("rotateRight");
-  });
-  </script>

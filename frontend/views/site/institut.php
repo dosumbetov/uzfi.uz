@@ -1,10 +1,23 @@
 <?
+$lang = Yii::$app->language;
 	foreach ($menu_sub as $menu_sub_item) {
-		# code...
+		if ($lang == 'uz') {
+	      $cmmenu_sub = $menu_sub_item->name_uz;
+	    }elseif ($lang == 'en') {
+	    	$cmmenu_sub = $menu_sub_item->name_en;
+	    }elseif ($lang == 'ru') {
+	    	$cmmenu_sub = $menu_sub_item->name_ru;
+	    }
 	}
 
 	foreach ($institut as $institut_item) {
-		# code...
+		if ($lang == 'uz') {
+	      $institut_content = $institut_item->content_uz;
+	    }elseif ($lang == 'en') {
+	    	$institut_content = $institut_item->content_en;
+	    }elseif ($lang == 'ru') {
+	    	$institut_content = $institut_item->content_ru;
+	    }
 	}
 
 ?>
@@ -12,9 +25,9 @@
 	<div class="row" style="padding: 15px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">
-				<h2 style="text-transform: uppercase; padding: 0px 20px; text-align: center;"><?=$menu_sub_item->name_uz?></h2>
+				<h2 style="text-transform: uppercase; padding: 0px 20px; text-align: center;"><?=$cmmenu_sub?></h2>
 				<hr style="margin: 0px;margin-bottom: 20px;">
-				<p><?=$institut ? $institut_item->content_uz : ''?></p>
+				<p><?=$institut ? $institut_content : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

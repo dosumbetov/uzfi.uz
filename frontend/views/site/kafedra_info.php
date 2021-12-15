@@ -1,9 +1,27 @@
  <?
 use yii\helpers\Url;
-foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-    # code...
-}
-
+$lang = Yii::$app->language;
+  foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
+    if ($lang == 'uz') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_uz;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_uz;
+        $kafedra_oqituvchilari_content = $kafedra_oqituvchilari_item->content_uz;
+      }elseif ($lang == 'en') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_en;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_en;
+        $kafedra_oqituvchilari_content = $kafedra_oqituvchilari_item->content_en;
+      }elseif ($lang == 'ru') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_ru;
+        $kafedra_oqituvchilari_manzil = $kafedra_oqituvchilari_item->manzil_ru;
+        $kafedra_oqituvchilari_content = $kafedra_oqituvchilari_item->content_ru;
+      }
+  }
  ?>
 
 <section class="orqarasm">
@@ -31,8 +49,8 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
-                <h2 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->name_uz : ''?></h2>
-                <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->lavozimi_uz : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->darajasi_uz : ''?></p>
+                <h2 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_name : ''?></h2>
+                <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_lavozim : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_daraja : ''?></p>
                 <hr style="margin: 0px; margin-bottom: 20px;">
                 <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->telegram : ''?></p>
                 <p><i class="fa fa-envelope"></i> <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></p>
@@ -43,7 +61,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /><?=Yii::t('app','Tarjimai hol')?></h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
-               <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->content_uz : ''?>
+               <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_content : ''?>
           </div>
         </div>
     </div>

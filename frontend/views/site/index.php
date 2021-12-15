@@ -133,7 +133,15 @@ OwlCarouselWidget::begin([
           </div>
         <div class="row">
           <?
+          $lang = Yii::$app->language;
             foreach ($tezkor_havolalar as $tezkor_havola) {
+              if ($lang == 'uz') {
+                $tezkor_havolalar_name = $tezkor_havola->name_uz;
+              }elseif ($lang == 'en') {
+                $tezkor_havolalar_name = $tezkor_havola->name_en;
+              }elseif ($lang == 'ru') {
+                $tezkor_havolalar_name = $tezkor_havola->name_ru;
+              }
               ?>
               <div class="col-md-4 col-12">
                 <div class="block_havola">
@@ -141,11 +149,11 @@ OwlCarouselWidget::begin([
                       <?
                         if ($tezkor_havola->link_type == 1) {
                           ?>
-                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->tez_men__sub_id])?>" class="name"><?=$tezkor_havolalar ? $tezkor_havola->name_uz : ''?></a>
+                             <a href="<?=Url::to(["site/".$tezkor_havola->link, 'id'=>$tezkor_havola->tez_men__sub_id])?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar_name : ''?></a>
                           <?
                         }else{
                           ?>
-                             <a target="_blank" href="<?=$tezkor_havolalar ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havolalar ? $tezkor_havola->name_uz : ''?></a>
+                             <a target="_blank" href="<?=$tezkor_havolalar ? $tezkor_havola->link : ''?>" class="name"><?=$tezkor_havolalar ? $tezkor_havolalar_name : ''?></a>
                           <?
                         }
                       ?>
@@ -357,7 +365,15 @@ OwlCarouselWidget::begin([
           </div>
           <div class="row">
         <?
+        $lang = Yii::$app->language;
           foreach ($news as $new) {
+            if ($lang == 'uz') {
+                $news_name = $new->name_uz;
+              }elseif ($lang == 'en') {
+                $news_name = $new->name_en;
+              }elseif ($lang == 'ru') {
+                $news_name = $new->name_ru;
+              }
               ?>
                   <div class="col-md-4 d-flex align-items-stretch mb-4">
                       <div class="new_date">
@@ -366,7 +382,7 @@ OwlCarouselWidget::begin([
                       </div>
                       <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
-                          <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $new->name_uz : '', 60, '...')?></a>
+                          <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $news_name : '', 60, '...')?></a>
                           <!-- <div class="read-more"><a href=""><i class="icofont-arrow-right"></i>Batafsil</a></div> -->
                         </div>
                       </div>
@@ -392,66 +408,7 @@ OwlCarouselWidget::begin([
   .card-body a .card-text{
     line-height: 12px;
   }
-/*  .back-to-top i:hover {
-  background: #3e9bdd;
-  color: #fff;
-}
-*/
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-/*#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #2487ce;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-*/
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-/*@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}*/
 </style>
 <!-- little slider -->
  <section class="pop-cour">
@@ -459,11 +416,25 @@ OwlCarouselWidget::begin([
           <div style="margin-top: 40px; margin-bottom: 20px;">
                <div class="row">
                    <?
+                    $lang = Yii::$app->language;
                     foreach ($dr_slider_img as $dr_slider) {
+                       if ($lang == 'uz') {
+                          $dr_slider_img_name = $dr_slider->name_uz;
+                          $dr_slider_img_content = $dr_slider->content_uz;
+                          $dr_slider_img_field = $dr_slider->field_uz;
+                        }elseif ($lang == 'en') {
+                          $dr_slider_img_name = $dr_slider->name_en;
+                          $dr_slider_img_content = $dr_slider->content_en;
+                          $dr_slider_img_field = $dr_slider->field_en;
+                        }elseif ($lang == 'ru') {
+                          $dr_slider_img_name = $dr_slider->name_ru;
+                          $dr_slider_img_content = $dr_slider->content_ru;
+                          $dr_slider_img_field = $dr_slider->field_ru;
+                        }
                         ?>
                             <div class="col-md-8" style="font-size: 28px !important;text-align: center; color: white !important;vertical-align: middle;">
-                          <?=$dr_slider_img ? $dr_slider->content_uz : ''?>
-                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider->name_uz : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider->field_uz : ''?></span></p>
+                          <?=$dr_slider_img ? $dr_slider_img_content : ''?>
+                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider_img_name : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider_img_field : ''?></span></p>
                            </div>
                            <div class="col-md-4">
                                 <img src="<?=$dr_slider_img ? $dr_slider->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
@@ -485,7 +456,15 @@ OwlCarouselWidget::begin([
         </div>
         <div class="row">
     <?
+    $lang = Yii::$app->language;
         foreach ($event as $events) {
+           if ($lang == 'uz') {
+              $event_name = $events->name_uz;
+            }elseif ($lang == 'en') {
+              $event_name = $events->name_en;
+            }elseif ($lang == 'ru') {
+              $event_name = $events->name_ru;
+            }
             ?>
                 <div class="col-md-4 d-flex align-items-stretch mb-4">
                     <div class="new_date">
@@ -494,7 +473,7 @@ OwlCarouselWidget::begin([
                     </div>
                     <div class="card" style='background-image: url("<?=$event ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
-                        <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $events->name_uz : '', 60, '...')?></a>
+                        <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $event_name : '', 60, '...')?></a>
                       </div>
                     </div>
                 </div>
