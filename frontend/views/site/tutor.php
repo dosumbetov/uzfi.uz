@@ -45,6 +45,7 @@ $lang = Yii::$app->language;
 	}
 	.card-text {
 		text-align: center;
+		color: black;
 	}
 	.card-img-top {
 		height: 70%;
