@@ -108,6 +108,7 @@ AppAsset::register($this);
                   <input type="text" name="search" class="input-search" placeholder="Qidiruv tizimi...">
                 </div> -->
                 <!-- <img src="../images/login.png" height="25px;"> -->
+                
                 <?= MultiLanguageWidget::widget([
                   'addCurrentLang' => true, // add current lang
                   'calling_controller' => $this->context,

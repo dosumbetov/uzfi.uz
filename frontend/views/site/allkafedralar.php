@@ -74,7 +74,7 @@ foreach ($menu_sub as $menu_sub_item) {
   padding-bottom: 10px;
 }
 .mcd-menu2 li a {
-  display: block;
+  display: table-header-group;
   text-decoration: none;
   color: blue;
   text-align: left;
