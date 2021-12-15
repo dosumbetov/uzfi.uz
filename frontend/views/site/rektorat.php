@@ -61,7 +61,7 @@ use yii\helpers\Url;
 </div>
 <style type="text/css">
  li, a, span, table, tr, td, th, label {
-   		 font-size: 18px;
+   		 /*font-size: 18px;*/
    		 color: black; 
    		 font-weight: 400;
    		line-height: 24px;
@@ -76,7 +76,7 @@ use yii\helpers\Url;
     	list-style-type: disc !important;
 	}*/
 		.row .col-md-8 .middle ul li{
-         font-size: 18px;
+         /*font-size: 18px;*/
          color: black; 
          font-weight: 400;
         line-height: 24px;

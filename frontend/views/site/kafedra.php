@@ -88,22 +88,22 @@ $lang = Yii::$app->language;
 
 <style type="text/css">
     table, tr, td, th {
-      font-size: 18px;
+      /*font-size: 18px;*/
       color: black;
     }
     ul li a {
-      font-size: 18px;
+      /*font-size: 18px;*/
     }
     .left_bar_tea p i {
         margin-right: 20px;
-        font-size: 20px;
-        font-size: 18px;
+        /*font-size: 20px;*/
+        /*font-size: 18px;*/
         color: black;
     } 
     .left_bar_tea p {
         padding: 0px 20px;
         color: black;
-        font-size: 18px;
+        /*font-size: 18px;*/
     } 
     .img_teacher {
         position: relative;

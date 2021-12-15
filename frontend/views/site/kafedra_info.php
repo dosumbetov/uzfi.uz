@@ -69,14 +69,14 @@ $lang = Yii::$app->language;
 
 <style type="text/css">
     p, li, a, span, table, tr, td, th, label {
-         font-size: 18px;
+         /*font-size: 18px;*/
          color: black; 
          font-weight: 400;
         line-height: 24px;
         list-style-type: none;
     }
     .row .col-md-9 .middle_bar_tea ul li{
-         font-size: 18px;
+         /*font-size: 18px;*/
          color: black; 
          font-weight: 400;
         line-height: 24px;
@@ -87,13 +87,13 @@ $lang = Yii::$app->language;
     }
     .left_bar_tea p i {
         margin-right: 20px;
-        font-size: 20px;
-        font-size: 18px;
+        /*font-size: 20px;*/
+        /*font-size: 18px;*/
         color: black;
     } 
        .left_bar_tea p {
         padding: 0px 20px;
-        font-size: 18px;
+        /*font-size: 18px;*/
         color: black;
     } 
     .img_teacher {
