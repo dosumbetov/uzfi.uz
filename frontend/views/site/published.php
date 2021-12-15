@@ -176,7 +176,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        min-height: 96% !important;
+        max-height: 100% !important;
     }
     .middle_bar_tea {
         position: relative;
