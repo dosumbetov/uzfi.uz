@@ -72,15 +72,16 @@ foreach ($menu_sub as $menu_sub_item) {
 .mcd-menu2 li {
   position: relative;
   padding-bottom: 10px;
+  border-bottom: 1px solid #EEE;
 }
 .mcd-menu2 li a {
-  display: table-header-group;
+  display: inline-block;
   text-decoration: none;
   color: blue;
-  text-align: left;
+  /*text-align: left;*/
   height: 36px;
   position: relative;
-  border-bottom: 1px solid #EEE;
+  
 }
 .mcd-menu2 li a i {
   float: left;
@@ -95,7 +96,7 @@ foreach ($menu_sub as $menu_sub_item) {
 .mcd-menu2 li a strong {
   display: block;
   font-size: 15px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   padding: 10px;
 }
 
@@ -114,14 +115,13 @@ foreach ($menu_sub as $menu_sub_item) {
 }
 
 
-.mcd-menu2 li:hover > a {
-  color: #777;
-}
-.mcd-menu2 li a:hover {
+
+.mcd-menu2 li:hover {
   position: relative;
   color: #777;
   border:0;
   box-shadow: 0 0 15px #DDD;
+  border-bottom: 1px solid blue;;
   /* == */
  
 }
