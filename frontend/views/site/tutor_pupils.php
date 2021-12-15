@@ -44,7 +44,7 @@ use yii\helpers\Url;
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/tutor.ico" alt="" />Biriktirilgan talabalar</h4>
                <hr style="margin: 0px; margin-bottom: 20px;">
-               <?=$tutor_info ? $tutor_info_item->content_uz : ''?>
+               <?=$tutor_info ? $tutor_info_item->birik_talaba_royxati_uz : ''?>
           </div>
         </div>
     </div>
