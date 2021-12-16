@@ -1,8 +1,17 @@
  <?
 use yii\helpers\Url;
-
+$lang = Yii::$app->language;
 foreach ($teacherinfo as $teacherinfo_item) {
-    # code...
+  if ($lang == 'uz') {
+      $teacherinfo_name = $teacherinfo_item->name_uz;
+      $teacherinfo_lavozim = $teacherinfo_item->lavozim_uz;
+    }elseif ($lang == 'en') {
+      $teacherinfo_name = $teacherinfo_item->name_en;
+      $teacherinfo_lavozim = $teacherinfo_item->lavozim_en;
+    }elseif ($lang == 'ru') {
+      $teacherinfo_name = $teacherinfo_item->name_ru;
+      $teacherinfo_lavozim = $teacherinfo_item->lavozim_ru;
+    }
 }
  ?>
 
@@ -29,8 +38,8 @@ foreach ($teacherinfo as $teacherinfo_item) {
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
               <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_name : ''?></h3>
+              <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_lavozim : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
               <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
@@ -52,12 +61,23 @@ foreach ($teacherinfo as $teacherinfo_item) {
               </thead>
               <tbody>
                 <?
+                $lang = Yii::$app->language;
                   foreach ($books as $books_item) {
+                     if ($lang == 'uz') {
+                        $books_name = $books_item->name_uz;
+                        $books_chopetilgan = $books_item->chop_etilgan_joy_uz;
+                      }elseif ($lang == 'en') {
+                        $books_name = $books_item->name_en;
+                        $books_chopetilgan = $books_item->chop_etilgan_joy_en;
+                      }elseif ($lang == 'ru') {
+                        $books_name = $books_item->name_ru;
+                        $books_chopetilgan = $books_item->chop_etilgan_joy_ru;
+                      }
                     ?>
                       <tr>
                         <th scope="row"><?=$books_item ? $books_item->number : ''?></th>
-                        <td><?=$books_item ? $books_item->name_uz : ''?></td>
-                        <td><?=$books_item ? $books_item->chop_etilgan_joy_uz : ''?></td>
+                        <td><?=$books_item ? $books_name : ''?></td>
+                        <td><?=$books_item ? $books_chopetilgan : ''?></td>
                         <td><?=$books_item ? $books_item->date : ''?></td>
                       </tr>
                     <?
@@ -78,12 +98,23 @@ foreach ($teacherinfo as $teacherinfo_item) {
               </thead>
               <tbody>
                 <?
+                $lang = Yii::$app->language;
                   foreach ($articles as $articles_item) {
+                     if ($lang == 'uz') {
+                        $articles_name = $articles_item->name_uz;
+                        $articles_art_degree = $articles_item->article_degree_uz;
+                      }elseif ($lang == 'en') {
+                        $articles_name = $articles_item->name_en;
+                        $articles_art_degree = $articles_item->article_degree_en;
+                      }elseif ($lang == 'ru') {
+                        $articles_name = $articles_item->name_ru;
+                        $articles_art_degree = $articles_item->article_degree_ru;
+                      }
                     ?>
                       <tr>
                         <th scope="row"><?=$articles_item ? $articles_item->number : ''?></th>
-                        <td><?=$articles_item ? $articles_item->name_uz : ''?></td>
-                        <td><?=$articles_item ? $articles_item->article_degree_uz : ''?></td>
+                        <td><?=$articles_item ? $articles_name : ''?></td>
+                        <td><?=$articles_item ? $articles_art_degree : ''?></td>
                         <td><?=$articles_item ? $articles_item->date : ''?></td>
                       </tr>
                     <?

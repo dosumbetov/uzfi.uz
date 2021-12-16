@@ -49,6 +49,10 @@
 		"Tug'ilgan sanasi"=>'Birth date',
 		'Aloqa'=>'Contact',
 		'Bosh sahifa'=>'Home',
+		'Tyutorlar'=>'Tutors',
+		'Tyutorlar vazifasi'=>'The function of tutors',
+		'Kun tartibi'=>'Daily routine',
+		'Biriktirilgan talabalari'=>'Attached students',
 	]
 		
 ?>

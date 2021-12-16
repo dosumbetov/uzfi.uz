@@ -10,13 +10,21 @@
 				<nav>
 					<ul class="mcd-menu1">
 						<h3 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h3>
-						<?
-							foreach ($news as $news_item) {
-								?>
+					<?
+              $lang = Yii::$app->language;
+              foreach ($news as $news_item) {
+                  if ($lang == 'uz') {
+                    $news_name = $news_item->name_uz;
+                  }elseif ($lang == 'en') {
+                    $news_name = $news_item->name_en;
+                  }elseif ($lang == 'ru') {
+                    $news_name = $news_item->name_ru;
+                  }
+                ?>
 									<li>
 										<a href="<?=Url::to(['site/pages', 'id'=>$news_item->id])?>" style="min-height: 75px;">
 											<i class="fa fa-calendar" style="font-size: 12px;"><?=$news ? $news_item->date : ''?></i><br>
-											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news ? $news_item->name_uz : '', 40, '...')?></strong>
+											<strong style="margin-top: -10px; text-transform: none;"><?=yii\helpers\StringHelper::truncate($news ? $news_name : '', 40, '...')?></strong>
 										</a>
 									</li>
 								<?

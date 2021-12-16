@@ -1,9 +1,24 @@
  <?
 use yii\helpers\Url;
 
-
+$lang = Yii::$app->language;
   foreach ($teacherinfo as $teacherinfo_item) {
-    # code...
+     if ($lang == 'uz') {
+      $cmteacherinfo = $teacherinfo_item->name_uz;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_uz;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_uz;
+      $cmteacherinfo_address = $teacherinfo_item->address_uz;
+    }elseif ($lang == 'en') {
+      $cmteacherinfo = $teacherinfo_item->name_en;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_en;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_en;
+      $cmteacherinfo_address = $teacherinfo_item->address_en;
+    }elseif ($lang == 'ru') {
+      $cmteacherinfo = $teacherinfo_item->name_ru;
+      $cmteacherinfo_lavozim = $teacherinfo_item->lavozim_ru;
+      $cmteacherinfo_rank = $teacherinfo_item->rank_ru;
+      $cmteacherinfo_address = $teacherinfo_item->address_ru;
+    }
   }
  ?>
 
@@ -30,8 +45,8 @@ use yii\helpers\Url;
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$teacherinfo ? $teacherinfo_item->lavozim_uz : ''?>, <br><?=$teacherinfo ? $teacherinfo_item->rank_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo : ''?></h3>
+              <p style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo_lavozim : ''?>, <br><?=$teacherinfo ? $cmteacherinfo_rank : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo_item->telegram : ''?></p>
               <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo_item->facebook : ''?></p>
@@ -46,7 +61,7 @@ use yii\helpers\Url;
               <tbody>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Ism')?></th>
-                  <td><?=$teacherinfo ? $teacherinfo_item->name_uz : ''?></td>
+                  <td><?=$teacherinfo ? $cmteacherinfo : ''?></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
@@ -58,7 +73,7 @@ use yii\helpers\Url;
                 </tr>
                  <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
-                  <td colspan="2"><?=$teacherinfo ? $teacherinfo_item->address_uz : ''?></td>
+                  <td colspan="2"><?=$teacherinfo ? $cmteacherinfo_address : ''?></td>
                 </tr>
               </tbody>
             </table>

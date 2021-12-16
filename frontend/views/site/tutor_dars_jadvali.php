@@ -1,9 +1,18 @@
  <?
 use yii\helpers\Url;
 
-
+$lang = Yii::$app->language;
   foreach ($tutor_info as $tutor_info_item) {
-    # code...
+    if ($lang == 'uz') {
+        $tutor_info_name = $tutor_info_item->name_uz;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_uz;
+      }elseif ($lang == 'en') {
+        $tutor_info_name = $tutor_info_item->name_en;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_en;
+      }elseif ($lang == 'ru') {
+        $tutor_info_name = $tutor_info_item->name_ru;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_ru;
+      }
   }
  ?>
 
@@ -16,11 +25,11 @@ use yii\helpers\Url;
                     </div>
                     <div class="col-md-10">
                         <ul>
-                            <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>">Umumiy malumot</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tyutorlar vazifasi</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>">Kun tartibi</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>">Biriktirilgan talabalari</a></li>
+                            <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app',"Tyutorlar vazifasi")?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app','Kun tartibi')?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app','Biriktirilgan talabalari')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,8 +42,8 @@ use yii\helpers\Url;
              <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$tutor_info ? $tutor_info_item->biriktirilgan_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_name : ''?></h3>
+              <p style="text-align: center;"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
               <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
@@ -45,7 +54,7 @@ use yii\helpers\Url;
           <div class="middle_bar_tea">
            <div class="udb">
                         <div class="udb-sec udb-time">
-                            <h4><img src="../../images/icon/db4.png" alt="" /> Kun tartibi</h4>
+                            <h4><img src="../../images/icon/db4.png" alt="" /> <?=Yii::t('app','Kun tartibi')?></h4>
                             <div class="tour_head1 udb-time-line days">
                                 <ul>
                                     <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -62,7 +71,7 @@ use yii\helpers\Url;
                                                             <!-- <span>.</span> -->
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Institutga kelish <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Institutga kelish <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">Fakultetga kelish</span>
                                                         </div>
                                                     </li>
@@ -72,7 +81,7 @@ use yii\helpers\Url;
                                                             <span>09:30 am</span>
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Davomat <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Davomat <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">Talabalarni davomatini taxlil qilish</span>
                                                         </div>
                                                     </li>
@@ -82,7 +91,7 @@ use yii\helpers\Url;
                                                             <span>12:20 am</span>
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Dars jarayoni <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Dars jarayoni <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">3-para dars mashg'ulotida ishtirok etish</span>
                                                         </div>
                                                     </li>
@@ -92,7 +101,7 @@ use yii\helpers\Url;
                                                             <span>14:00 pm</span>
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Leksiya <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Leksiya <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">Talabalar kundalik faoliyati bilan tanishish, mavjud muammolar bo'yicha suxbat o'tkazish</span>
                                                         </div>
                                                     </li>
@@ -102,7 +111,7 @@ use yii\helpers\Url;
                                                             <span>16:30 pm</span>
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Talabalar turar joyiga tashrif buyirish <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Talabalar turar joyiga tashrif buyirish <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">Talabalar turar joyiga tashrif buyirish va ma'naviy dunyoqarashni boyitish yuzasida suxbat o'tkazish </span>
                                                         </div>
                                                     </li>
@@ -112,7 +121,7 @@ use yii\helpers\Url;
                                                             <span>17:00 pm</span>
                                                         </div>
                                                         <div class="sdb-cl-class-name">
-                                                            <h5>Kunlik sarxisob <span><?=$tutor_info ? $tutor_info_item->name_uz : ''?></span></h5>
+                                                            <h5>Kunlik sarxisob <span><?=$tutor_info ? $tutor_info_name : ''?></span></h5>
                                                             <span class="sdn-hall-na">Kun davomida qilingan ishlarni sarhisob qilish va malumotlar bazasiga yuklash</span>
                                                         </div>
                                                     </li>

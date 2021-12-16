@@ -1,11 +1,33 @@
 <?
 use yii\helpers\Url;
+$lang = Yii::$app->language;
 	foreach ($allmaktab as $allmaktab_item) {
-		# code...
+		if ($lang == 'uz') {
+        $allmaktab_name = $allmaktab_item->name_uz;
+      }elseif ($lang == 'en') {
+        $allmaktab_name = $allmaktab_item->name_en;
+      }elseif ($lang == 'ru') {
+        $allmaktab_name = $allmaktab_item->name_ru;
+      }
 	}
 
 	foreach ($maktab as $maktab_item) {
-		# code...
+		if ($lang == 'uz') {
+        $maktab_ishkunlari = $maktab_item->ishkunlari_uz;
+        $maktab_biriktirilgan = $maktab_item->biriktirilgan_uz;
+        $maktab_manzil = $maktab_item->manzil_uz;
+        $maktab_content = $maktab_item->content_uz;
+      }elseif ($lang == 'en') {
+        $maktab_ishkunlari = $maktab_item->ishkunlari_en;
+        $maktab_biriktirilgan = $maktab_item->biriktirilgan_en;
+        $maktab_manzil = $maktab_item->manzil_en;
+        $maktab_content = $maktab_item->content_en;
+      }elseif ($lang == 'ru') {
+        $maktab_ishkunlari = $maktab_item->ishkunlari_ru;
+        $maktab_biriktirilgan = $maktab_item->biriktirilgan_ru;
+        $maktab_manzil = $maktab_item->manzil_ru;
+        $maktab_content = $maktab_item->content_ru;
+      }
 	}
 	foreach ($menu_sub as $menu_sub_item) {
 		# code...
@@ -16,7 +38,7 @@ use yii\helpers\Url;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab_item->name_uz?></h2>
+				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$allmaktab_name?></h2>
 			<img src="../<?=$allmaktab ? $allmaktab_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<hr style="margin: 0px; margin-top: 40px">
@@ -24,11 +46,11 @@ use yii\helpers\Url;
 			  <tbody>
 			    <tr>
 			      <th scope="row" class="table_first"><?=Yii::t('app','Qabul vaqti')?></th>
-			      <td><?=$maktab ? $maktab_item->ishkunlari_uz : ''?></td>
+			      <td><?=$maktab ? $maktab_ishkunlari : ''?></td>
 			    </tr>
 			     <tr>
 			      <th scope="row" class="table_first"><?=Yii::t('app','Biriktirlgan')?>:</th>
-			      <td colspan="2"><?=$maktab ? $maktab_item->biriktirilgan_uz : ''?></td>
+			      <td colspan="2"><?=$maktab ? $maktab_biriktirilgan : ''?></td>
 			    </tr>
 			    <tr>
 			      <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
@@ -41,7 +63,7 @@ use yii\helpers\Url;
 
 			     <tr>
 			      <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
-			      <td colspan="2"><?=$maktab ? $maktab_item->manzil_uz : ''?></td>
+			      <td colspan="2"><?=$maktab ? $maktab_manzil : ''?></td>
 			    </tr>
 			    
 			  </tbody>
@@ -119,7 +141,7 @@ use yii\helpers\Url;
 			  	
 			  </div>
 			</div> -->
- 			<p class="mt-5"><?=$maktab ? $maktab_item->content_uz : ''?></p>
+ 			<p class="mt-5"><?=$maktab ? $maktab_content : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>

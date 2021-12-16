@@ -1,9 +1,21 @@
  <?
 use yii\helpers\Url;
 
-
+$lang = Yii::$app->language;
   foreach ($tutor_info as $tutor_info_item) {
-    # code...
+     if ($lang == 'uz') {
+        $tutor_info_name = $tutor_info_item->name_uz;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_uz;
+        $tutor_info_manzil = $tutor_info_item->manzil_uz;
+      }elseif ($lang == 'en') {
+        $tutor_info_name = $tutor_info_item->name_en;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_en;
+        $tutor_info_manzil = $tutor_info_item->manzil_en;
+      }elseif ($lang == 'ru') {
+        $tutor_info_name = $tutor_info_item->name_ru;
+        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_ru;
+        $tutor_info_manzil = $tutor_info_item->manzil_ru;
+      }
   }
  ?>
 
@@ -16,11 +28,11 @@ use yii\helpers\Url;
                     </div>
                     <div class="col-md-10">
                         <ul>
-                            <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act">Shaxsiy kabinet</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>">Umumiy malumot</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tyutorlar vazifasi</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>">Kun tartibi</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>">Biriktirilgan talabalari</a></li>
+                            <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app',"Tyutorlar vazifasi")?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app','Kun tartibi')?></a></li>
+                            <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>"><?=Yii::t('app','Biriktirilgan talabalari')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,8 +45,8 @@ use yii\helpers\Url;
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_item->name_uz : ''?></h3>
-              <p style="text-align: center;"><?=$tutor_info ? $tutor_info_item->biriktirilgan_uz : ''?></p>
+              <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_name : ''?></h3>
+              <p style="text-align: center;"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
               <hr style="margin: 0px; margin-bottom: 20px;">
               <p><i class="fa fa-telegram"></i><?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
               <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
@@ -49,7 +61,7 @@ use yii\helpers\Url;
               <tbody>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Ism')?></th>
-                  <td><?=$tutor_info ? $tutor_info_item->name_uz : ''?></td>
+                  <td><?=$tutor_info ? $tutor_info_name : ''?></td>
                 </tr>
                 <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','E-mail')?>:</th>
@@ -61,7 +73,7 @@ use yii\helpers\Url;
                 </tr>
                  <tr>
                   <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
-                  <td colspan="2"><?=$tutor_info ? $tutor_info_item->manzil_uz : ''?></td>
+                  <td colspan="2"><?=$tutor_info ? $tutor_info_manzil : ''?></td>
                 </tr>
               </tbody>
             </table>

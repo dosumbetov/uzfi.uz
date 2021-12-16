@@ -5,17 +5,28 @@ $lang = Yii::$app->language;
 ?>
 <div class="container">
 		<div class="middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Tyutorlar</h2>
+			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Tyutorlar')?></h2>
 			<div class="row">
 				<?
+					$lang = Yii::$app->language;
 					foreach ($tutor_info as $tutor_info_item) {
+						if ($lang == 'uz') {
+					        $tutor_info_name = $tutor_info_item->name_uz;
+					        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_uz;
+					      }elseif ($lang == 'en') {
+					        $tutor_info_name = $tutor_info_item->name_en;
+					        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_en;
+					      }elseif ($lang == 'ru') {
+					        $tutor_info_name = $tutor_info_item->name_ru;
+					        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_ru;
+					      }
 						?>
 							<div class="col-md-4 d-flex align-items-stretch">
 				               <div class="card mb-5" style="width: 100%; text-align: center;">
 								  <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
-								    <h5 class="card-title"><?=$tutor_info ? $tutor_info_item->name_uz : ''?></h5>
-								    <p class="card-text"><?=$tutor_info ? $tutor_info_item->biriktirilgan_uz : ''?></p>
+								    <h5 class="card-title"><?=$tutor_info ? $tutor_info_name : ''?></h5>
+								    <p class="card-text"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
 								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
 								  </div>
