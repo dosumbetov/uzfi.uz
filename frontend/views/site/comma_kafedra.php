@@ -133,14 +133,14 @@ $lang = Yii::$app->language;
 </div>
 <style type="text/css">
 	p, li, a, span, table, tr, td, th, label {
-   		 font-size: 18px;
+   		 /*font-size: 18px;*/
    		 color: black; 
    		 font-weight: 400;
    		line-height: 24px;
     	list-style-type: none;
 	}
 	.row .col-md-8 .middle ul li{
-   		 font-size: 18px;
+   		 /*font-size: 18px;*/
    		 color: black; 
    		 font-weight: 400;
    		line-height: 24px;

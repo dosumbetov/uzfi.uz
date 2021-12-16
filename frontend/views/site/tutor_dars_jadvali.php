@@ -18,7 +18,7 @@ use yii\helpers\Url;
                         <ul>
                             <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>">Umumiy malumot</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tutorlar vazifasi</a></li>
+                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tyutorlar vazifasi</a></li>
                             <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>">Kun tartibi</a></li>
                             <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>">Biriktirilgan talabalari</a></li>
                         </ul>
@@ -175,7 +175,7 @@ use yii\helpers\Url;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        min-height: 100% !important;
+        max-height: 100% !important;
     }
     .middle_bar_tea {
         position: relative;

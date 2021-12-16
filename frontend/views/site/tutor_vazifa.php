@@ -18,7 +18,7 @@ use yii\helpers\Url;
                         <ul>
                             <li><a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_item->id])?>" class="pro-act">Shaxsiy kabinet</a></li>
                             <li><a href="<?=Url::to(['site/tutor_info', 'id'=>$tutor_info_item->id])?>">Umumiy malumot</a></li>
-                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tutorlar vazifasi</a></li>
+                            <li><a href="<?=Url::to(['site/tutor_vazifa', 'id'=>$tutor_info_item->id])?>">Tyutorlar vazifasi</a></li>
                             <li><a href="<?=Url::to(['site/tutor_dars_jadvali', 'id'=>$tutor_info_item->id])?>">Kun tartibi</a></li>
                             <li><a href="<?=Url::to(['site/tutor_pupils', 'id'=>$tutor_info_item->id])?>">Biriktirilgan talabalari</a></li>
                         </ul>
@@ -53,31 +53,31 @@ use yii\helpers\Url;
 
 <style type="text/css">
     p, li, a, span, table, tr, td, th, label {
-         font-size: 18px;
+         /*font-size: 18px;*/
          color: black; 
          font-weight: 400;
         line-height: 24px;
         list-style-type: none;
     }
     .row .col-md-9 .middle_bar_tea ul li{
-         font-size: 18px;
+         /*font-size: 18px;*/
          color: black; 
          font-weight: 400;
         line-height: 24px;
         list-style-type: disc !important;
     }
       ul li a {
-      font-size: 18px;
+      /*font-size: 18px;*/
     }
     .left_bar_tea p i {
         margin-right: 20px;
-        font-size: 20px;
-        font-size: 18px;
+        /*font-size: 20px;*/
+        /*font-size: 18px;*/
         color: black;
     } 
        .left_bar_tea p {
         padding: 0px 20px;
-        font-size: 18px;
+        /*font-size: 18px;*/
         color: black;
     } 
     .img_teacher {
@@ -99,7 +99,7 @@ use yii\helpers\Url;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        min-height: 100% !important;
+        max-height: 100% !important;
     }
     .middle_bar_tea {
         position: relative;

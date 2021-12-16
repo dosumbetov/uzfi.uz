@@ -5,7 +5,7 @@ $lang = Yii::$app->language;
 ?>
 <div class="container">
 		<div class="middle">
-			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Tutorlar</h2>
+			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Tyutorlar</h2>
 			<div class="row">
 				<?
 					foreach ($tutor_info as $tutor_info_item) {
