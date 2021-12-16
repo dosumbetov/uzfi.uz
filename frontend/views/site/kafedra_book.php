@@ -2,16 +2,19 @@
 use yii\helpers\Url;
 $lang = Yii::$app->language;
 foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
-   if ($lang == 'uz') {
-      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
-      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
-    }elseif ($lang == 'en') {
-      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
-      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
-    }elseif ($lang == 'ru') {
-      $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
-      $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
-    }
+  if ($lang == 'uz') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_uz;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_uz;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_uz;
+      }elseif ($lang == 'en') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_en;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_en;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_en;
+      }elseif ($lang == 'ru') {
+        $kafedra_oqituvchilari_name = $kafedra_oqituvchilari_item->name_ru;
+        $kafedra_oqituvchilari_lavozim = $kafedra_oqituvchilari_item->lavozimi_ru;
+        $kafedra_oqituvchilari_daraja = $kafedra_oqituvchilari_item->darajasi_ru;
+      }
 }
  ?>
 
@@ -138,7 +141,7 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
       color: black;
     }
     ul li a {
-      font-size: 18px;
+      /*font-size: 18px;*/
     } 
   .table thead tr th {
     font-weight: bold;
