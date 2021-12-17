@@ -19,7 +19,7 @@ foreach ($maktab as $maktab_item) {
                             <li><a href="<?=Url::to(['site/maktab_passpord', 'id'=>$maktab_item->id])?>">Maktab passporti</a></li>
                             <li><a href="<?=Url::to(['site/maktab_togaraklari', 'id'=>$maktab_item->id])?>">Maktab to'garaklari</a></li>
                             <li><a href="<?=Url::to(['site/maktab_oqituvchilari', 'id'=>$maktab_item->id])?>">Maktab o'qituvchilari</a></li>
-                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>">Maktab talabalari</a></li>
+                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>">Maktab o'quvchilari</a></li>
                         </ul>
                     </div>
                 </div>

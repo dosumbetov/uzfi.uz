@@ -13,13 +13,13 @@ foreach ($maktab as $maktab_item) {
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-10">
-                         <ul>
+                          <ul>
                             <li><a href="<?=Url::to(['site/maktab', 'id'=>$maktab_item->id])?>" class="pro-act"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
                             <li><a href="<?=Url::to(['site/maktab_profile', 'id'=>$maktab_item->id])?>">Maktab tarixi</a></li>
                             <li><a href="<?=Url::to(['site/maktab_passpord', 'id'=>$maktab_item->id])?>">Maktab passporti</a></li>
                             <li><a href="<?=Url::to(['site/maktab_togaraklari', 'id'=>$maktab_item->id])?>">Maktab to'garaklari</a></li>
                             <li><a href="<?=Url::to(['site/maktab_oqituvchilari', 'id'=>$maktab_item->id])?>">Maktab o'qituvchilari</a></li>
-                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>">Maktab talabalari</a></li>
+                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>">Maktab o'quvchilari</a></li>
                         </ul>
                     </div>
                 </div>
