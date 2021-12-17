@@ -44,7 +44,7 @@ foreach ($maktab as $maktab_item) {
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/pupil.ico" alt="" />Maktab talabalari</h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
-            <?=$maktab ? $maktab_item->maktab_pasporti_uz : ''?>
+            <?=$maktab ? $maktab_item->maktab_pupil_uz : ''?>
           </div>
         </div>
     </div>
