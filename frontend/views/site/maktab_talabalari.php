@@ -42,7 +42,7 @@ foreach ($maktab as $maktab_item) {
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/pupil.ico" alt="" />Maktab talabalari</h4>
+              <h4 style="color: black;"><img src="../../images/icon/pupil.ico" alt="" />Maktab o'qituvchilar</h4>
              <hr style="margin: 0px; margin-bottom: 20px;">
             <?=$maktab ? $maktab_item->maktab_pupil_uz : ''?>
           </div>
