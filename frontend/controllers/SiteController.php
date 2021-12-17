@@ -41,6 +41,7 @@ use backend\models\KafedraOqituvchilari;
 use backend\models\KafedraArticles;
 use backend\models\KafedraBooks;
 use backend\models\TutorInfo;
+use backend\models\MaktablarInfo;
 
 /**
  * Site controller
@@ -270,27 +271,55 @@ class SiteController extends Controller
      public function actionAllmaktab($id)
     {
         $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
-        $query = TezHavola::find()->Where(['tez_men__sub_id'=>$id])->orderBy(['id'=>SORT_DESC]);
-        $mak = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>3, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
-         $allmaktab = $query->offset($mak->offset)->limit($mak->limit)->all();
-       
+        $maktablar_info = MaktablarInfo::find()->Where(['maktab_info_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC])->all();
         return $this->render('allmaktab',[
-           'allmaktab'=>$allmaktab,
            'menu_sub'=>$menu_sub,
-           'mak'=>$mak,
+           'maktablar_info'=>$maktablar_info,
         ]);
     }
     public function actionMaktab($id)
     {
-      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
-      $allmaktab = TezHavola::find()->Where(['id'=>$id])->all();
-      $maktab = Maktab::find()->Where(['allmk_id'=>$id])->all();
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
         return $this->render('maktab',[
            'maktab'=>$maktab,
-           'allmaktab'=>$allmaktab,
-           'menu_sub'=>$menu_sub,
         ]);
     }
+     public function actionMaktab_profile($id)
+    {
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('maktab_profile',[
+           'maktab'=>$maktab,
+        ]);
+    }
+    public function actionMaktab_passpord($id)
+    {
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('maktab_passpord',[
+           'maktab'=>$maktab,
+        ]);
+    }
+    public function actionMaktab_togaraklari($id)
+    {
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('maktab_togaraklari',[
+           'maktab'=>$maktab,
+        ]);
+    }
+    public function actionMaktab_oqituvchilari($id)
+    {
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('maktab_oqituvchilari',[
+           'maktab'=>$maktab,
+        ]);
+    }
+    public function actionMaktab_talabalari($id)
+    {
+      $maktab = MaktablarInfo::find()->Where(['id'=>$id])->all();
+        return $this->render('maktab_talabalari',[
+           'maktab'=>$maktab,
+        ]);
+    }
+    
 
     public function actionEmb_pages($id)
     {

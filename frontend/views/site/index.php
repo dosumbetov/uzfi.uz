@@ -432,7 +432,7 @@ OwlCarouselWidget::begin([
                           $dr_slider_img_field = $dr_slider->field_ru;
                         }
                         ?>
-                            <div class="col-md-8" style="font-size: 28px !important;text-align: center; color: white !important;vertical-align: middle;">
+                            <div class="col-md-8 direktor_slider">
                           <?=$dr_slider_img ? $dr_slider_img_content : ''?>
                            <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider_img_name : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider_img_field : ''?></span></p>
                            </div>
@@ -537,3 +537,12 @@ OwlCarouselWidget::begin([
     <!-- End Sponsors Section -->
 
   <!-- <div id="preloader"></div> -->
+  <style type="text/css">
+    .direktor_slider p span>span {
+      font-size: 20px;
+      background-color: #3f78e0 !important;
+      color: white;
+      /*text-align: center !important;*/
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>

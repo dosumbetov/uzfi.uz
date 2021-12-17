@@ -1,83 +1,33 @@
 <?
 use yii\helpers\Url;
 $lang = Yii::$app->language;
-foreach ($menu_sub as $menu_sub_item) {
-	if ($lang == 'uz') {
-      $cmmenu_sub_item = $menu_sub_item->name_uz;
-    }elseif ($lang == 'en') {
-      $cmmenu_sub_item = $menu_sub_item->name_en;
-    }elseif ($lang == 'ru') {
-      $cmmenu_sub_item = $menu_sub_item->name_ru;
-    }
-}
 
 ?>
 <div class="container">
-	<div class="row" style="padding: 30px 0px;">
-		<div class="col-md-8 col-12">
-			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$cmmenu_sub_item?></h2>
+		<div class="middle">
+			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Maktablar</h2>
 			<div class="row">
-				<?
-					$lang = Yii::$app->language;
-					foreach ($allmaktab as $allmaktabs) {
-						if ($lang == 'uz') {
-			              $cmallmaktabs = $allmaktabs->name_uz;
-			              $cmopisaniya = $allmaktabs->opisaniya_uz;
-			            }elseif ($lang == 'en') {
-			              $cmallmaktabs = $allmaktabs->name_en;
-			              $cmopisaniya = $allmaktabs->opisaniya_en;
-			            }elseif ($lang == 'ru') {
-			              $cmallmaktabs = $allmaktabs->name_ru;
-			              $cmopisaniya = $allmaktabs->opisaniya_ru;
-			            }
-						?>
-							<div class="col-md-6 d-flex align-items-stretch">
-			                   <div class="card mb-5" style="width: 80%; text-align: center;">
-								  <img src="<?=$allmaktabs ? $allmaktabs->img : ''?>" class="card-img-top" alt="...">
-								  <div class="card-body">
-								    <h5 class="card-title"><?=$allmaktab ? $cmallmaktabs : ''?></h5>
-								    <p class="card-text"><?=$allmaktab ? $cmopisaniya : ''?></p>
-								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/maktab', 'id'=>$allmaktabs->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-								  </div>
-								</div>
-			                </div>
-						<?
-					}
-				?>
-			</div>
-			<div class="row">
-	            <?
-	                echo \yii\widgets\LinkPager::Widget([
-	                    'pagination'=>$mak,
-	                ]);
-	            ?>
-	        </div>
-			</div>
+			<?
+				foreach ($maktablar_info as $maktablar_info_item) {
+					?>
+						<div class="col-md-4 d-flex align-items-stretch">
+			               <div class="card mb-5" style="width: 100%; text-align: center;">
+							  <img src="<?=$maktablar_info ? $maktablar_info_item->img : ''?>" class="card-img-top" alt="...">
+							  <div class="card-body">
+							    <h5 class="card-title"><?=$maktablar_info ? $maktablar_info_item->name_uz : ''?></h5>
+							    <p class="card-text"><?=$maktablar_info ? $maktablar_info_item->kimga_biriktirilgan_uz : ''?></p>
+							    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+							    <a href="<?=Url::to(['site/maktab', 'id'=>$maktablar_info_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
+							  </div>
+							</div>
+						</div>
+					<?
+				}
+			?>
 		</div>
-		<?=include 'right_bar.php';?>
-	</div>
+</div>
 </div>
 <style type="text/css">
-	
-	.card-text {
-		text-align: center;
-	}
-	.card-img-top {
-		height: 70%;
-	}
-
-	
-	.fakultet_btn {
-		padding: 5px;
-		text-align: center;
-		margin-left: 65px;
-
-	}
-	.table-bordered>:not(caption)>*>* {
-		padding: 8px;
-	}
 	.middle {
 		background-color: white;
 		border-radius: 10px;
@@ -86,10 +36,13 @@ foreach ($menu_sub as $menu_sub_item) {
 		width: 99%;
 		margin-bottom: 30px;
 	}
-	
-	.table_first {
-		font-weight: bold;
+	.card-text {
+		text-align: center;
+		color: black;
 	}
+	/*.card-img-top {
+		height: 70%;
+	}*/
 	.card-body {
 		padding: 10px !important;
 	}
@@ -98,6 +51,7 @@ foreach ($menu_sub as $menu_sub_item) {
 		padding: 0px;
 	}
 	.card-text {
+		margin-top: -10px;
 		text-align: center;
 	}
 
