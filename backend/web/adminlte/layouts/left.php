@@ -45,6 +45,7 @@
                             ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
                             ['label' => 'Rektorat', 'icon' => 'file-code-o', 'url' => ['/rektorat'],],
                             ['label' => 'Tutorlar', 'icon' => 'file-code-o', 'url' => ['/tutor-info'],],
+                             ['label' => 'Maktablar', 'icon' => 'file-code-o', 'url' => ['/maktablar-info'],],
                        
                             [
                                 'label' => 'Fakultetlar',
