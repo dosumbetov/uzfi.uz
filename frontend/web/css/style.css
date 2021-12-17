@@ -48,6 +48,9 @@
 h1, h2, h3, h4 {
   color: black !important;
 }
+hr {
+  margin: 0px !important;
+}
 
 /*video*/
  .play-btn {
