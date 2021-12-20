@@ -40,6 +40,7 @@ class AppAsset extends AssetBundle
         '/venobox/venobox.min.js',
         '/js/vanilla-tilt.min.js',
         
+        
         //  '/js/waypoints.min.js',
         // 'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js',
         '/js/custom.js',

@@ -43,7 +43,16 @@ $lang = Yii::$app->language;
 			  <?
 			  	foreach ($fakultet_staff as $fakultet_staff_item) {
 			  		?>
-			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a>
+			  		<div class="profile">
+			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>">
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <?=Yii::t('app',"Profilga o'tish")?>
+					    </a>
+			  		</div>
+			  		<!-- 	<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a> -->
 			  		<?
 			  	}
 			  ?>
@@ -123,5 +132,109 @@ $lang = Yii::$app->language;
 	.table_first {
 		font-weight: bold;
 	}
+
+
+.profile a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: blue;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    /*margin-right: 50px;*/
+   
+}
+.profile a:hover{
+    background: #3f78e0;
+    color: white;
+    box-shadow: 0 0 5px #3f78e0,
+                0 0 25px #3f78e0,
+                0 0 30px #3f78e0,
+                0 0 500px #3f78e0;
+}
+.profile a:nth-child(1){
+    filter: hue-rotate(10deg);
+}
+.profile a:nth-child(2){
+    filter: hue-rotate(10deg);
+}
+.profile a span{
+    position: absolute;
+    display: block;
+}
+.profile a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#3f78e0);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.profile a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#3f78e0);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.profile a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#3f78e0);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.profile a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+}
 
 

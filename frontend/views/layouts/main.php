@@ -77,7 +77,7 @@ AppAsset::register($this);
 
   </style>
       <div class="content-wrapper">
-    <header class="wrapper bg-light">
+    <header class="wrapper bg-light js-sticky-header">
       <div class="bg-primary text-white fw-bold fs-15">
         <div class="row" style="padding-top: 5px; padding-left: 6%;">
           <div class="col-md-9 emblem col-7">
@@ -123,7 +123,7 @@ AppAsset::register($this);
         <!-- /.container -->
       </div>
   
-      <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+      <nav class="navbar navbar-expand-lg center-nav transparent navbar-light js-sticky-header">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="col-md-0.8">
             <a href="<?=Url::home()?>">
