@@ -9,128 +9,107 @@ use yii\helpers\Url;
 $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOGIKA INSTITUTI";
 ?>
 
-<?php
-use kv4nt\owlcarousel\OwlCarouselWidget;
-
-OwlCarouselWidget::begin([
-    'container' => 'div',
-    'containerOptions' => [
-        'id' => 'container-id',
-        'class' => 'container-class'
-    ],
-    'pluginOptions'    => [
-        'autoplay'          => true,
-        'autoplayTimeout'   => 5000,
-        'items'             => 1,
-        'nav' => true,
-        'loop'              => true,
-        'itemsDesktop'      => [1199, 3],
-        'itemsDesktopSmall' => [979, 3]
-    ]
-]);
-?>
-
-<?php $i = 1; foreach ($slider as $slide) :?>
-<div class="item-class"><img src="<?=$slider ? $slide->slider_img : ''?>" alt="<?= 'Image '.$i++ ?>"></div>
-<?php endforeach;?>
-
-
-<?php OwlCarouselWidget::end(); ?>
-
-<!--    <div class="section">-->
-<!--      <div class="owl-carousel owl-theme">-->
-<!--        --><?//
-//          foreach ($slider as $slider) {
-//            ?>
-<!--              <div class="item">-->
-<!--                <h4><img src="--><?//=$slider ? $slider->slider_img : ''?><!--" class="rasm"></h4>-->
-<!--              </div>-->
-<!--            --><?//
-//          }
-//        ?>
-<!--      </div>-->
-<!--    </div>-->
-<!--    <style type="text/css">-->
-<!--      .rasm {-->
-<!--          /*display: block;*/-->
-<!--        object-fit: cover;-->
-<!--        /*background-size: cover;*/-->
-<!--        /*overflow:hidden;*/-->
-<!--         width: 100%;-->
-<!--         height: 100%;-->
-<!--      }-->
-<!--      .item {-->
-<!--      height: 540px;-->
-<!--      width: 1349px;-->
-<!---->
-<!--    }-->
-<!--    </style>-->
-    
-    
-      <!-- ======= Services Section ======= -->
- <!--    <section id="services" class="services mt-5 mb-5">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;">Tezkor ilovalar</h2>
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/menu/images/sli1.jpg" class="d-block w-100" alt="...">
         </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="fa fa-file"></i></div>
-              <h4 class="title"><a href="">Interaktiv xizmatlar</a></h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fas fa-book-reader"></i></div>
-              <h4 class="title"><a href="">Kutubxona</a></h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
-              <h4 class="title"><a href="">Markaz va bo'limlar</a></h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-              <h4 class="title"><a href="">Masofaviy ta'lim</a></h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="fas fa-laptop-code"></i></div>
-              <h4 class="title"><a href="">Virtual qabulxona</a></h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fa fa-briefcase"></i></div>
-              <h4 class="title"><a href="">Bo'sh ish o'rni</a></h4>
-            </div>
-          </div>
-
-          
-        </div>
-
+       <?
+        foreach ($slider as $slide) {
+          ?>
+             <div class="carousel-item">
+                <img src="<?=$slide->slider_img?>" class="d-block w-100" alt="...">
+              </div>
+          <?
+        }
+       ?>
       </div>
-    </section> -->
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <style type="text/css">
+      /*section {
+        background-color: grey;
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }*/
+      .sect-title {
+        text-align: center;
+      }
+      .sect-title .qwert{
+        line-height: 104px !important;
+        color: white;
+        font-size: 3em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      .sect-title .qwert:nth-child(1){
+        color: transparent;
+        -webkit-text-stroke:1px #0d6efd;
+      }
+      .sect-title .qwert:nth-child(2){
+        color: #0d6efd;
+        animation: wave 2s infinite;
 
+      }
+      @keyframes wave{
+        0%, 100% {
+          clip-path: polygon(
+            0% 45%,
+            41% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+          );
+        }
+        50% {
+          clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+          );  
+        }
+      }
+      @media all and (max-width: 992px) {
+        .sect-title .qwert {
+          font-size: 1.7em;
+          line-height: 25px !important;
+        }
+        .sticky-wrapper {
+          height: 35.14px !important;
+        }
+      } 
+    </style>
     <div class="orqafon1 pt-5">
       <div class="container" style="padding-bottom: 7.5%;">
-          <div class="section-title mb-5" data-aos="fade-up">
-            <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2>
-          </div>
+          <section class="sect-title mb-5" data-aos="fade-up">
+            <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+            <span class="qwert"><?=Yii::t('app','Tezkor ilovalar')?></span>
+            <span class="qwert"><?=Yii::t('app','Tezkor ilovalar')?></span>
+          </section>
         <div class="row">
           <?
           $lang = Yii::$app->language;
@@ -202,9 +181,11 @@ OwlCarouselWidget::begin([
         margin-bottom: 15px;
       }
     </style>
-    <div class="section-title mt-5" data-aos="fade-up">
-      <h2 style="text-align: center;"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></h2>
-    </div>
+    <section class="sect-title mb-5 mt-5" data-aos="fade-up">
+      <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+      <span class="qwert"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></span>
+      <span class="qwert"><?=Yii::t('app',"Asosiy ko'rsatkichlar")?></span>
+    </section>
     <section class="pop-cour">
        <div class="container">
          <div class="row" style="text-align: center; padding: 25px;">
@@ -359,10 +340,11 @@ OwlCarouselWidget::begin([
     <div class="">
       <section id="more-services" class="more-services orqafon1" style="padding-top: 2.5%; padding-bottom: 2.5%;">
         <div class="container">
-
-          <div class="section-title" data-aos="fade-up" style="padding-bottom: 30px;">
-            <h2 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app','Yangiliklar')?></h2>
-          </div>
+          <section class="sect-title mb-5 mt-3" data-aos="fade-up" style="padding-bottom: 30px;">
+            <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+            <span class="qwert"><?=Yii::t('app',"Yangiliklar")?></span>
+            <span class="qwert"><?=Yii::t('app',"Yangiliklar")?></span>
+          </section>
           <div class="row">
         <?
         $lang = Yii::$app->language;
@@ -450,10 +432,11 @@ OwlCarouselWidget::begin([
      <!-- Events -->
     <section id="more-services" class="more-services orqafon1" style="padding-top: 3%; padding-bottom: 3%;">
       <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2 style="text-align: center;" data-aos="fade-up"><?=Yii::t('app',"E'lonlar")?></h2>
-        </div>
+        <section class="sect-title mb-5 mt-3" data-aos="fade-up" style="padding-bottom: 30px;">
+          <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+          <span class="qwert"><?=Yii::t('app',"E'lonlar")?></span>
+          <span class="qwert"><?=Yii::t('app',"E'lonlar")?></span>
+        </section>
         <div class="row">
     <?
     $lang = Yii::$app->language;
@@ -491,9 +474,11 @@ OwlCarouselWidget::begin([
  <!-- video -->
      <section class="orqafon1">
        <div class="container">
-        <div class="section-title mt-5" data-aos="fade-up">
-          <h2 style="text-align: center;"><?=Yii::t('app', 'Video Lavha')?></h2>
-        </div>
+         <section class="sect-title mb-5" data-aos="fade-up" style="padding-bottom: 30px;">
+          <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+          <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
+          <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
+        </section>
               <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
              
               <div class="row videonew">
@@ -515,10 +500,11 @@ OwlCarouselWidget::begin([
     <section id="supporters" class="section-with-bg orqafon1">
 
       <div class="container" data-aos="fade-up">
-        <div class="section-title" data-aos="fade-up">
-        <h2 style="text-align: center;"><?=Yii::t('app','Foydali saytlar')?></h2>
-      </div>
-
+       <section class="sect-title mb-5" data-aos="fade-up" style="padding-bottom: 30px;">
+        <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
+        <span class="qwert"><?=Yii::t('app',"Foydali saytlar")?></span>
+        <span class="qwert"><?=Yii::t('app',"Foydali saytlar")?></span>
+      </section>
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
           <?
             foreach ($supporters as $supporter) {

@@ -21,7 +21,7 @@ $lang = Yii::$app->language;
 	}
 
 ?>
-<div class="container">
+<div class="container mt-4">
 	<div class="row" style="padding: 15px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">

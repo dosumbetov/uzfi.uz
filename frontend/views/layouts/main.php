@@ -76,176 +76,122 @@ AppAsset::register($this);
 
 
   </style>
-      <div class="content-wrapper">
-    <header class="wrapper bg-light js-sticky-header">
-      <div class="bg-primary text-white fw-bold fs-15">
-        <div class="row" style="padding-top: 5px; padding-left: 6%;">
-          <div class="col-md-9 emblem col-7">
-            <?
+   
+    <!-- /header -->
+    <section>
+      <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+      
+    <div class="site-navbar-wrap js-sticky-header">
+      <div class="site-navbar-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-8">
+               <?
               foreach ($emblems as $emblems) {
                 if ($emblems->link_type == 1) {
                   ?>
-                    <a href="<?=Url::to(["site/".$emblems->link, 'id'=>$emblems->id])?>">
+                    <a style="margin-right: 10px;" href="<?=Url::to(["site/".$emblems->link, 'id'=>$emblems->id])?>">
                       <img src="../<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
                     </a>
                   <?
                 }else{
                   ?>
-                    <a target="_blank" href="<?=$emblems->link?>">
+                    <a style="margin-right: 10px;" target="_blank" href="<?=$emblems->link?>">
                       <img src="../<?=$emblems->img?>" height="<?=$emblems->height?>px;" width="<?=$emblems->width?>px;">
                     </a>
                   <?
                 }
               }
                 ?>
-             <!--  <a href="">
-                <img src="../../images/emblems/sitemap.png" height="20px;" width="20px;">
-              </a> -->
-          </div>
-          <div class="col-md-3 col-5">
-               <!--  <div class="search-box">
-                  <button class="btn-search"><i class="fas fa-search"></i></button>
-                  <input type="text" name="search" class="input-search" placeholder="Qidiruv tizimi...">
-                </div> -->
-                <!-- <img src="../images/login.png" height="25px;"> -->
-                
-                <?= MultiLanguageWidget::widget([
-                  'addCurrentLang' => true, // add current lang
-                  'calling_controller' => $this->context,
-                  'image_type'  => 'rounded', // classic or rounded
-                  'link_home'   => true, // true or false
-                  'widget_type' => 'classic', // classic or selector
-                  'width'       => '28'
-                ]); ?>
-                <!-- <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 28px;"></i> -->
+            </div>
+            <div class="col-4 text-right">
+              <div class="mr-auto" style="float: right;">
+                 <a href="ru">sad</a>
+                <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
+                  <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-        <!-- /.container -->
       </div>
-  
-      <nav class="navbar navbar-expand-lg center-nav transparent navbar-light js-sticky-header">
-        <div class="container flex-lg-row flex-nowrap align-items-center">
-          <div class="col-md-0.8">
-            <a href="<?=Url::home()?>">
-              <img src="../../images/uzfi.png" height="70px;" srcset="../../images/uzfi.png" alt="eas" />
-            </a>
-          </div>
-          <div class="col-md-3.2">
-             <span style="color: #212121;font-family: 'Times New Roman', Times, serif;font-size: 12px;display: inline-block;vertical-align: middle;line-height: 18px;"><?=Yii::t('app', 'SAMARQAND DAVLAT UNIVERSITETINING')?> <?=Yii::t('app', "O'ZBEKISTON - FINLANDIYA")?> <?=Yii::t('app', 'PEDAGOGIKA INSTITUTI')?></span>
-          </div>
-          <div class="col-md-8">
-               <div class="navbar-collapse offcanvas-nav">
-            <div class="offcanvas-header d-lg-none d-xl-none">
-              <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+      <div class="site-navbar site-navbar-target d-none d-md-inline-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-1 d-none d-md-inline-block">
+              <a href="<?=Url::home()?>"><img src="../../menu/images/uzfi.ico" height="65px;"></a>
             </div>
-           <ul class="navbar-nav">
-             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?=Url::home()?>"><?=Yii::t('app', "Bosh sahifa")?></a>
-              </li>
-              <?
-              $lang = Yii::$app->language;
-              foreach ($menu as $menu) {
-                if ($lang == 'uz') {
-                  $cmmenu = $menu->name_uz;
-                }elseif ($lang == 'en') {
-                  $cmmenu = $menu->name_en;
-                }elseif ($lang == 'ru') {
-                  $cmmenu = $menu->name_ru;
-                }
-                ?>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#"><?=$cmmenu?></a>
-                    <ul class="dropdown-menu">
-                  <?
-                  $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
-                    foreach ($menutitle as $menutitle) {
-                       $lang = Yii::$app->language;
-                       if ($lang == 'uz') {
-                          $cmmenutitle = $menutitle->name_uz;
-                        }elseif ($lang == 'en') {
-                          $cmmenutitle = $menutitle->name_en;
-                        }elseif ($lang == 'ru') {
-                          $cmmenutitle = $menutitle->name_ru;
-                        }
-                      ?>
-                        <li class="dropdown">
-                          <a class="dropdown-item dropdown-toggle" href="#"><?=$cmmenutitle?></a>
-                          <ul class="dropdown-menu">
-                        <?
-                        $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
-                          foreach ($menusub as $menusub) {
-                            $lang = Yii::$app->language;
-                            if ($lang == 'uz') {
-                              $cmmenusub = $menusub->name_uz;
-                            }elseif ($lang == 'en') {
-                              $cmmenusub = $menusub->name_en;
-                            }elseif ($lang == 'ru') {
-                              $cmmenusub = $menusub->name_ru;
-                            }
-                            ?>
-                              <li class="nav-item">
+            <div class="col-2 d-none d-md-inline-block" style="padding: 0px; margin: 0px; line-height: 15px !important;">
+              <span class="my-0 site-logo" style="line-height: 15px;">SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI</span>
+            </div>
+            <div class="col-9">
+              <nav class="site-navigation text-left" role="navigation">
+                <div class="container">
+                  <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+                    <li class="active"><a href="<?=Url::home()?>" class="nav-link">Home</a></li>
+                    <?
+                      foreach ($menu as $menu) {
+                        ?>
+                          <li class="has-children">
+                            <a href="#" class="nav-link"><?=$menu->name_uz?></a>
+                              <ul class="dropdown arrow-top">
                                 <?
-                                  if ($menusub->link_type == 1) {
+                                $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
+                                  foreach ($menutitle as $menutitle) {
                                     ?>
-                                      <a class="dropdown-item" href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$cmmenusub?></a>
-                                    <?
-                                  }else {
-                                    ?>
-                                      <a target="_blank" class="dropdown-item" href="<?=$menusub->link?>"><?=$cmmenusub?></a>
+                                    <li class="has-children">
+                                      <a href="#"><?=$menutitle->name_uz?></a>
+                                      <ul class="dropdown">
+                                        <?
+                                        $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
+                                          foreach ($menusub as $menusub) {
+
+                                            ?>
+                                            <?
+                                                if ($menusub->link_type == 1) {
+                                                  ?>
+                                                    <li style="display: block;min-width: 450px !important;"><a href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menusub->name_uz?></a></li>
+                                                  <?
+                                                }else {
+                                                  ?>
+                                                    <li><a href="<?=$menusub->link?>"><?=$menusub->name_uz?></a></li>
+                                                  <?
+                                                }
+                                              ?>
+                                            <?
+                                          }
+                                        ?>
+                                      </ul>
+                                    </li>
                                     <?
                                   }
                                 ?>
-                              </li>
-                            <?
-                          }
-                        ?>
-                          </ul>
-                        </li>
-                      <?
-                    }
-                      ?>
-                    </ul>
-                  </li>
-                <?
-              }
-             ?>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?=Url::to(['site/aloqa'])?>"><?=Yii::t('app', "Aloqa")?></a>
-              </li>
-            </ul>
-            <!-- /.navbar-nav -->
+                              </ul>
+                          </li>
+                        <?
+                      }
+                    ?>
+                    <li class="active"><a href="<?=Url::to(['site/aloqa'])?>" class="nav-link">Aloqa</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            
           </div>
-          <!-- /.navbar-collapse -->
-          <div class="navbar-other w-100 d-flex ms-auto">
-            <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
-              <li class="nav-item d-lg-none">
-                <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
-              </li>
-            </ul>
-            <!-- /.navbar-nav -->
-          </div>
-          </div>
-       
-          <!-- /.navbar-other -->
         </div>
-        <!-- /.container -->
-      </nav>
-      <!-- /.navbar -->
-    </header>
-    <!-- /header -->
-<style type="text/css">
-  .navbar.transparent:not(.fixed) {
-     padding-top: 0px !important;
-  }
-  .carousel-inner {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      height: 600px;
-  }
-</style>
+      </div>
+    </div>
+    </section>
+
     <!-- /section -->
-  </div>
   <!-- ##### Hero Area Start ##### -->
 
 
