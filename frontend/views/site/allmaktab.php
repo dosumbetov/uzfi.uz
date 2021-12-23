@@ -3,7 +3,7 @@ use yii\helpers\Url;
 $lang = Yii::$app->language;
 
 ?>
-<div class="container">
+<div class="container mt-4">
 		<div class="middle">
 			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Maktablar</h2>
 			<div class="row">

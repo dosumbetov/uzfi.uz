@@ -19,7 +19,7 @@ foreach ($emblems as $emblems_item) {
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $cmemblems_name : ''?></h2>
+				<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$emblems ? $cmemblems_name : ''?></h3>
 				<?=$emblems ? $cmemblems_content : ''?>
 			</div>
 		</div>
