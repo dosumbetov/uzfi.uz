@@ -238,3 +238,4 @@ $lang = Yii::$app->language;
 }
 
 
+</style>

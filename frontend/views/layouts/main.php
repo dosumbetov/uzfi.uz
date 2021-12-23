@@ -113,7 +113,6 @@ AppAsset::register($this);
             </div>
             <div class="col-4 text-right">
               <div class="mr-auto" style="float: right;">
-                 <a href="ru">sad</a>
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
                   <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
                 </div>
