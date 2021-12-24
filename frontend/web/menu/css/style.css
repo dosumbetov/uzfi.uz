@@ -197,12 +197,13 @@ a {
           opacity: 1; }
 
 .site-mobile-menu {
+  background: url("../../menu/images/uzfiopacity.png");
   width: 300px;
   position: fixed;
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: #fff;
+  background: blue;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);

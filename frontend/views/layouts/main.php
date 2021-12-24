@@ -85,7 +85,9 @@ AppAsset::register($this);
           <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
+      <div class="site-mobile-menu-body">
+        <img src="../../menu/images/uzfiopacity.png" height="200px; opacity">
+      </div>
     </div> <!-- .site-mobile-menu -->
       
     <div class="site-navbar-wrap js-sticky-header">
@@ -110,10 +112,19 @@ AppAsset::register($this);
                 }
               }
                 ?>
+                  <?= MultiLanguageWidget::widget([
+                    'addCurrentLang' => true, // add current lang
+                    'calling_controller' => $this->context,
+                    'image_type'  => 'classic', // classic or rounded
+                    'link_home'   => false, // true or false
+                    'widget_type' => 'classic', // classic or selector
+                    'width'       => '28'
+                  ]); ?>
             </div>
             <div class="col-4 text-right">
               <div class="mr-auto" style="float: right;">
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
+
                   <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
                 </div>
               </div>
@@ -179,6 +190,7 @@ AppAsset::register($this);
                       }
                     ?>
                     <li class="active"><a href="<?=Url::to(['site/aloqa'])?>" class="nav-link">Aloqa</a></li>
+
                   </ul>
                 </div>
               </nav>
