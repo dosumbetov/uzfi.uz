@@ -117,7 +117,10 @@ AppAsset::register($this);
                   <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
                 </div>
               </div>
-
+                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
+                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_DROPDOWN,
+                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_LARGE
+                ]); ?>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61d6cfd2bafec0244d1266bf66bf312a",
+    "content-hash": "968321cd421b2b8079a5908a96d3205a",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -418,6 +418,58 @@
                 "source": "https://github.com/kv4nt/yii2-owl-carousel2/tree/v1.0.3"
             },
             "time": "2021-04-12T12:08:21+00:00"
+        },
+        {
+            "name": "lajax/yii2-language-picker",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lajax/yii2-language-picker.git",
+                "reference": "350948b2ce866a6bca30b701922e6b97efad8f1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lajax/yii2-language-picker/zipball/350948b2ce866a6bca30b701922e6b97efad8f1f",
+                "reference": "350948b2ce866a6bca30b701922e6b97efad8f1f",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.11"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lajax\\languagepicker\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Lajos Molnar",
+                    "email": "lajax.m@gmail.com"
+                }
+            ],
+            "description": "Yii2 Language Picker Widget",
+            "keywords": [
+                "extension",
+                "languagepicker",
+                "multilanguage",
+                "sample",
+                "translate",
+                "widget",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/lajax/yii2-language-picker/issues",
+                "source": "https://github.com/lajax/yii2-language-picker/tree/master"
+            },
+            "time": "2018-03-25T10:14:10+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
