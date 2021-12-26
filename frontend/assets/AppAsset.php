@@ -33,12 +33,13 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         // 'http://code.jquery.com/jquery-latest.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
-         '/menu/js/bootstrap.min.js',
-        '/menu/js/jquery.sticky.js',
-        '/menu/js/main.js',
          // 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js',
+        'https://code.jquery.com/jquery-2.2.4.js',
+        // 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
+        '/menu/js/jquery.sticky.js',
+         '/menu/js/bootstrap.min.js',
+        '/menu/js/main.js',
         // 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
         // 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js',
         '/owl/dist/owl.carousel.min.js',
@@ -47,6 +48,7 @@ class AppAsset extends AssetBundle
         'https://unpkg.com/aos@2.3.1/dist/aos.js',
         '/venobox/venobox.min.js',
         '/js/vanilla-tilt.min.js',
+        
         
         
         //  '/js/waypoints.min.js',

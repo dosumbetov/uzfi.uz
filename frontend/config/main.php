@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['languagepicker'], //['log'],
+    'bootstrap' => ['log'],
     'language' => 'en',
     'modules' => [
         'admn' => [
@@ -19,13 +19,6 @@ return [
     ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        'languagepicker' => [
-            'class' => 'lajax\languagepicker\Component',
-            // List of available languages (icons only)
-            'languages' => ['en' => 'English', 'ru' => 'Русский', 'uz' => 'O\'zbek'],
-        ],
-
-
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
         ],
@@ -64,8 +57,8 @@ return [
         ],
         
         'urlManager' => [
-//            'class'=>'codemix\localeurls\UrlManager',
-//            'languages'=>['uz', 'ru', 'en'],
+           'class'=>'codemix\localeurls\UrlManager',
+           'languages'=>['uz', 'ru', 'en'],
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [

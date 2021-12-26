@@ -78,17 +78,16 @@ AppAsset::register($this);
   </style>
    
     <!-- /header -->
-    <section>
       <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
         </div>
-      </div>
-      <div class="site-mobile-menu-body">
-        <img src="../../menu/images/uzfiopacity.png" height="200px; opacity">
-      </div>
-    </div> <!-- .site-mobile-menu -->
+        <div class="site-mobile-menu-body">
+          <!-- <img src="../../menu/images/uzfiopacity.png" height="200px; opacity"> -->
+        </div>
+      </div> <!-- .site-mobile-menu -->
       
     <div class="site-navbar-wrap js-sticky-header">
       <div class="site-navbar-top">
@@ -112,14 +111,7 @@ AppAsset::register($this);
                 }
               }
                 ?>
-                  <?= MultiLanguageWidget::widget([
-                    'addCurrentLang' => true, // add current lang
-                    'calling_controller' => $this->context,
-                    'image_type'  => 'classic', // classic or rounded
-                    'link_home'   => false, // true or false
-                    'widget_type' => 'classic', // classic or selector
-                    'width'       => '28'
-                  ]); ?>
+                  
             </div>
             <div class="col-4 text-right">
               <div class="mr-auto" style="float: right;">
@@ -128,10 +120,16 @@ AppAsset::register($this);
                   <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
                 </div>
               </div>
-                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
-                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_DROPDOWN,
-                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_LARGE
+               <span class="d-none d-md-inline-block">
+                 <?= MultiLanguageWidget::widget([
+                  'addCurrentLang' => true, // add current lang
+                  'calling_controller' => $this->context,
+                  'image_type'  => 'rounded', // classic or rounded
+                  'link_home'   => false, // true or false
+                  'widget_type' => 'classic', // classic or selector
+                  'width'       => '28'
                 ]); ?>
+               </span>
             </div>
           </div>
         </div>
@@ -143,39 +141,72 @@ AppAsset::register($this);
               <a href="<?=Url::home()?>"><img src="../../menu/images/uzfi.ico" height="65px;"></a>
             </div>
             <div class="col-2 d-none d-md-inline-block" style="padding: 0px; margin: 0px; line-height: 15px !important;">
-              <span class="my-0 site-logo" style="line-height: 15px;">SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI</span>
+              <span class="my-0 site-logo" style="line-height: 15px;"><?=Yii::t('app',"SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI")?></span>
             </div>
             <div class="col-9">
               <nav class="site-navigation text-left" role="navigation">
                 <div class="container">
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                    <li class="active"><a href="<?=Url::home()?>" class="nav-link">Home</a></li>
+                    <li class="d-inline-block d-lg-none">
+                      <?= MultiLanguageWidget::widget([
+                        'addCurrentLang' => true, // add current lang
+                        'calling_controller' => $this->context,
+                        'image_type'  => 'rounded', // classic or rounded
+                        'link_home'   => false, // true or false
+                        'widget_type' => 'classic', // classic or selector
+                        'width'       => '28'
+                      ]); ?>
+                    </li>
+                    <li class="active"><a href="<?=Url::home()?>" class="nav-link"><?=Yii::t('app',"Bosh sahifa")?></a></li>
                     <?
+                    $lang = Yii::$app->language;
                       foreach ($menu as $menu) {
+                          if ($lang == 'uz') {
+                            $menu_name = $menu->name_uz;
+                          }elseif ($lang == 'en') {
+                            $menu_name = $menu->name_en;
+                          }elseif ($lang == 'ru') {
+                            $menu_name = $menu->name_ru;
+                          }
                         ?>
                           <li class="has-children">
-                            <a href="#" class="nav-link"><?=$menu->name_uz?></a>
+                            <a href="#" class="nav-link"><?=$menu_name?></a>
                               <ul class="dropdown arrow-top">
                                 <?
+                                $lang = Yii::$app->language;
                                 $menutitle = MenuTitle::find()->Where(['menu_id'=>$menu->id])->all();
                                   foreach ($menutitle as $menutitle) {
+                                    if ($lang == 'uz') {
+                                      $menu_title = $menutitle->name_uz;
+                                    }elseif ($lang == 'en') {
+                                      $menu_title = $menutitle->name_en;
+                                    }elseif ($lang == 'ru') {
+                                      $menu_title = $menutitle->name_ru;
+                                    }
                                     ?>
                                     <li class="has-children">
-                                      <a href="#"><?=$menutitle->name_uz?></a>
+                                      <a href="#"><?=$menu_title?></a>
                                       <ul class="dropdown">
                                         <?
+                                        $lang = Yii::$app->language;
                                         $menusub = MenuSub::find()->Where(['menu_title_id'=>$menutitle->id])->all();
                                           foreach ($menusub as $menusub) {
-
+                                            if ($lang == 'uz') {
+                                              $menu_sub = $menusub->name_uz;
+                                            }elseif ($lang == 'en') {
+                                              $menu_sub = $menusub->name_en;
+                                            }elseif ($lang == 'ru') {
+                                              $menu_sub = $menusub->name_ru;
+                                            }
                                             ?>
                                             <?
                                                 if ($menusub->link_type == 1) {
                                                   ?>
-                                                    <li style="display: block;min-width: 400px !important;"><a href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menusub->name_uz?></a></li>
+                                                    <li style="display: block;min-width: 400px !important;"><a href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menu_sub?></a></li>
                                                   <?
                                                 }else {
                                                   ?>
-                                                    <li><a href="<?=$menusub->link?>"><?=$menusub->name_uz?></a></li>
+                                                    <li><a href="<?=$menusub->link?>"><?=$menu_sub?></a></li>
                                                   <?
                                                 }
                                               ?>
@@ -192,7 +223,7 @@ AppAsset::register($this);
                         <?
                       }
                     ?>
-                    <li class="active"><a href="<?=Url::to(['site/aloqa'])?>" class="nav-link">Aloqa</a></li>
+                    <li class="active"><a href="<?=Url::to(['site/aloqa'])?>" class="nav-link"><?=Yii::t('app',"Aloqa")?></a></li>
 
                   </ul>
                 </div>
@@ -203,7 +234,6 @@ AppAsset::register($this);
         </div>
       </div>
     </div>
-    </section>
 
     <!-- /section -->
   <!-- ##### Hero Area Start ##### -->

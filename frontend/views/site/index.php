@@ -101,6 +101,15 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         .sticky-wrapper {
           height: 35.14px !important;
         }
+        .natija1 {
+          font-size: 25px;
+        }
+        .natija2 {
+          font-size: 20px;
+        }
+        .pop-cour .container .row .col-md-3 i{
+          font-size: 25px;
+        }
       } 
     </style>
     <div class="orqafon1 pt-5">
@@ -170,7 +179,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         font-weight: bold;
       }
       .natija1 {
-        font-size: 50px !important;
+        font-size: 35px !important;
       }
       .natija2 {
         font-size: 25px !important;

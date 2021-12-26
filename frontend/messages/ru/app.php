@@ -1,6 +1,7 @@
 <?
 	return [
 		'SAMARQAND DAVLAT UNIVERSITETINING'=>'САМАРКАНДСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ',
+		"SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI"=>'УЗБЕКИСТАН-ФИНЛЯНДИЯ ПЕДАГОГИЧЕСКИЙ ИНСТИТУТ САМАРКАНДСКОГО ГОСУДАРСТВЕННОГО УНИВЕРСИТЕТА',
 		"O'ZBEKISTON - FINLANDIYA"=>'УЗБЕКИСТАН-ФИНЛЯНДИЯ',
 		'PEDAGOGIKA INSTITUTI'=>'ПЕДАГОГИЧЕСКИЙ ИНСТИТУТ',
 		'Aloqa'=>'Контакт',
