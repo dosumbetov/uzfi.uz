@@ -76,6 +76,81 @@ AppAsset::register($this);
 
 
   </style>
+  <div class="s-man">
+  <div class="s-man-hat">
+    <div class="s-man-hat-top"></div>
+    <div class="s-man-hat-bottom"></div>
+  </div>
+  <div class="s-man-head">
+    <div class="s-man-eye">
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+    </div>
+    <div class="s-man-eye">
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+      <div class="s-man-eye-pins"></div>
+    </div>
+    <div class="s-man-nose"></div>
+    <div class="s-man-mouth"></div>
+  </div>
+  <div class="s-man-scarf"></div>
+  <div class="s-man-arm-left">
+    <div class="s-man-arm-left-finger"></div>
+    <div class="s-man-arm-left-finger"></div>
+  </div>
+  <div class="s-man-arm-right">
+    <div class="s-man-arm-right-finger"></div>
+    <div class="s-man-arm-right-finger"></div>
+  </div>
+  <div class="s-man-body">
+    <div class="s-man-button"></div>
+    <div class="s-man-button"></div>
+    <div class="s-man-button"></div>
+  </div>
+</div>
+
+<div class="s-f-w">
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+  <div class="s-flake"></div>
+</div>
    
     <!-- /header -->
       <div class="site-mobile-menu site-navbar-target">
