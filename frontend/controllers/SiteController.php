@@ -349,6 +349,7 @@ class SiteController extends Controller
 
      public function actionSearch() 
     {
+      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
         $search = trim(Yii::$app->request->get('search'));
         $searchtype = Pages::find()->all();
       if ($search == null) {
@@ -359,7 +360,7 @@ class SiteController extends Controller
       $query = Pages::find()->Where(['like', 'name_uz', $search])->orWhere(['like', 'name_ru', $search])->orWhere(['like', 'name_en', $search]);
       $pages = new Pagination(['totalCount' => $query->count(), 'pageSize'=>8, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
       $model = $query->offset($pages->offset)->limit($pages->limit)->all();
-      return $this->render('search', compact('model', 'pages', 'search', 'searchtype'));
+      return $this->render('search', compact('model', 'pages', 'search', 'searchtype', 'menu_sub'));
 
     }
 

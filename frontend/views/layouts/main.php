@@ -76,81 +76,7 @@ AppAsset::register($this);
 
 
   </style>
-  <div class="s-man">
-  <div class="s-man-hat">
-    <div class="s-man-hat-top"></div>
-    <div class="s-man-hat-bottom"></div>
-  </div>
-  <div class="s-man-head">
-    <div class="s-man-eye">
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-    </div>
-    <div class="s-man-eye">
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-      <div class="s-man-eye-pins"></div>
-    </div>
-    <div class="s-man-nose"></div>
-    <div class="s-man-mouth"></div>
-  </div>
-  <div class="s-man-scarf"></div>
-  <div class="s-man-arm-left">
-    <div class="s-man-arm-left-finger"></div>
-    <div class="s-man-arm-left-finger"></div>
-  </div>
-  <div class="s-man-arm-right">
-    <div class="s-man-arm-right-finger"></div>
-    <div class="s-man-arm-right-finger"></div>
-  </div>
-  <div class="s-man-body">
-    <div class="s-man-button"></div>
-    <div class="s-man-button"></div>
-    <div class="s-man-button"></div>
-  </div>
-</div>
-
-<div class="s-f-w">
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-  <div class="s-flake"></div>
-</div>
+ 
    
     <!-- /header -->
       <div class="site-mobile-menu site-navbar-target">
@@ -168,7 +94,7 @@ AppAsset::register($this);
       <div class="site-navbar-top">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-8">
+            <div class="col-6">
                <?
               foreach ($emblems as $emblems) {
                 if ($emblems->link_type == 1) {
@@ -188,13 +114,15 @@ AppAsset::register($this);
                 ?>
                   
             </div>
-            <div class="col-4 text-right">
+            <div class="col-6 text-right">
               <div class="mr-auto" style="float: right;">
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
 
                   <a href="#" class="site-menu-toggle js-menu-toggle text-white text-right"><span class="icon-menu h3"></span></a>
                 </div>
+
               </div>
+              
                <span class="d-none d-md-inline-block">
                  <?= MultiLanguageWidget::widget([
                   'addCurrentLang' => true, // add current lang
@@ -205,6 +133,10 @@ AppAsset::register($this);
                   'width'       => '28'
                 ]); ?>
                </span>
+               <form method="get" class="form-inline" action="<?=Url::to(['site/search'])?>">
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
             </div>
           </div>
         </div>

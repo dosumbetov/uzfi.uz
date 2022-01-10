@@ -123,3 +123,7 @@ function movesnow() {
 
   setTimeout("movesnow()", 30)
 };
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
