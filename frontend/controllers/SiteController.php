@@ -360,7 +360,7 @@ class SiteController extends Controller
       $query = Pages::find()->Where(['like', 'name_uz', $search])->orWhere(['like', 'name_ru', $search])->orWhere(['like', 'name_en', $search]);
       $pages = new Pagination(['totalCount' => $query->count(), 'pageSize'=>8, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
       $model = $query->offset($pages->offset)->limit($pages->limit)->all();
-      return $this->render('search', compact('model', 'pages', 'search', 'searchtype', 'menu_sub'));
+      return $this->render('search', compact('model', 'pages', 'search', 'searchtype'));
 
     }
 
