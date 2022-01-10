@@ -131,7 +131,7 @@ $lang = Yii::$app->language;
 					}
 				?>
 				</div>
-				<h3 style="text-align: center; text-transform: uppercase;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h3>
+				<h3 style="text-align: center; text-transform: uppercase; margin-top: 20px;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h3>
 				<hr style="margin: 0px; margin-bottom: 20px;">
 				<p><?=$com_kafedra ? $cmcom_kafedra_content : ''?></p>
 			</div>
