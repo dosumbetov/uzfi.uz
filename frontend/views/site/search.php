@@ -3,15 +3,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 $lang = Yii::$app->language;
-foreach ($menu_sub as $menu_sub_item) {
-  if ($lang == 'uz') {
-    $cmmenu_sub = $menu_sub_item->name_uz;
-  }elseif ($lang == 'en') {
-    $cmmenu_sub = $menu_sub_item->name_en;
-  }elseif ($lang == 'ru') {
-    $cmmenu_sub = $menu_sub_item->name_ru;
-  }
-}
+
 
 ?>
 <style type="text/css">

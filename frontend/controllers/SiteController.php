@@ -349,7 +349,7 @@ class SiteController extends Controller
 
      public function actionSearch() 
     {
-      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
+      // $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
         $search = trim(Yii::$app->request->get('search'));
         $searchtype = Pages::find()->all();
       if ($search == null) {
