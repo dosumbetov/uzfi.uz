@@ -133,7 +133,7 @@ AppAsset::register($this);
                   'width'       => '28'
                 ]); ?>
                </span>
-               <form method="get" class="form-inline" action="<?=Url::to(['site/search'])?>">
+               <form method="get" class="form-inline d-none d-md-inline-block" action="<?=Url::to(['site/search'])?>">
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
                 <button class="btn btn-success" type="submit">Search</button>
               </form>
@@ -141,6 +141,11 @@ AppAsset::register($this);
           </div>
         </div>
       </div>
+      <style type="text/css">
+        .form-inline {
+          float: right;
+        }
+      </style>
       <div class="site-navbar site-navbar-target d-none d-md-inline-block">
         <div class="container">
           <div class="row align-items-center">
