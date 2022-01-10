@@ -98,7 +98,7 @@ $lang = Yii::$app->language;
 				</table>
 				<h3 style="text-align: center; text-transform: uppercase;"><?=$com_kafedra ? $cmcom_kafedra_hodim : ''?></h3>
 				<hr style="margin: 0px;">
-				<div class="row mt-5">
+				<div class="row">
 				<?
 				$lang = Yii::$app->language;
 					foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
@@ -115,7 +115,7 @@ $lang = Yii::$app->language;
 						
 						if ($kafedra_oqituvchilari_item->name_uz!=$com_kafedra_item->name_uz) {
 							?>
-								<div class="col-md-6 d-flex align-items-stretch">
+								<div class="col-md-6 mt-5 d-flex align-items-stretch">
 				                   <div class="card" style="width: 100%; text-align: center;">
 									  <img src="<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="card-img-top" alt="...">
 									  <div class="card-body">
