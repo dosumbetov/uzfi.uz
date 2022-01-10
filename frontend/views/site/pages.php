@@ -31,12 +31,6 @@ if ($lang == 'uz') {
 	</div>
 </div>
 <style type="text/css">
-
-	
-
-
-
-	
 	.middle {
 		background-color: white;
 		border-radius: 10px;

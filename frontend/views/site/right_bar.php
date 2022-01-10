@@ -226,7 +226,6 @@
 }
 
 
-/*right 1*/
 .right1 ul li a{
 	display: block;
 	list-style-type: none;
@@ -315,7 +314,6 @@
 .mcd-menu1 li a:hover:before {
   content: "";
   position: absolute;
-  
   /* == */
   top: 42%;
   left: 0;
@@ -367,9 +365,5 @@
         transform: translateX(0%);
     }
 }
-
-
-
-
 </style>
 
