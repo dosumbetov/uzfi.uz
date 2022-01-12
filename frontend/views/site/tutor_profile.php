@@ -47,7 +47,7 @@ $lang = Yii::$app->language;
                 <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="img_teacher">
               <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_name : ''?></h3>
               <p style="text-align: center;"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
-              <hr style="margin: 0px; margin-bottom: 20px;">
+              <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-telegram"></i><?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
               <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
               <p><i class="fa fa-envelope"></i><?=$tutor_info ? $tutor_info_item->email : ''?></p>
@@ -56,7 +56,7 @@ $lang = Yii::$app->language;
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /><?=Yii::t('app','Shaxsiy kabinet')?></h4>
-             <hr style="margin: 0px; margin-bottom: 20px;">
+             <hr style="margin: 0px; margin-bottom: 5%;">
              <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>
@@ -131,13 +131,13 @@ $lang = Yii::$app->language;
     .middle_bar_tea {
         position: relative;
         width: 98%;
-        padding: 20px;
+        padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        margin-bottom: 30px;
-        margin-top: 35px;
+        margin-bottom: 5%;
+        margin-top: 5%;
     }
     .orqarasm {
         position: relative;
@@ -150,7 +150,7 @@ $lang = Yii::$app->language;
          box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
          border: 1px solid #F3F2F2;
         transform-style: preserve-3d;
-        margin-bottom: 40px;
+        margin-bottom: 5%;
     }
      .pro-menu{
      background: #3f78e0;

@@ -57,7 +57,7 @@ $lang = Yii::$app->language;
 			  	}
 			  ?>
 
-			  <hr style="margin: 0px; margin-bottom: 20px; margin-top: 40px;">
+			  <hr style="margin: 0px; margin-bottom: 5%; margin-top: 6%;">
 				<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
@@ -86,7 +86,7 @@ $lang = Yii::$app->language;
 				    </tr>
 				  </tbody>
 				</table>
-				<hr style="margin: 0px; margin-bottom: 20px;">
+				<hr style="margin: 0px; margin-bottom: 5%;">
 				<p style="color: black;"><?=$rektorat ? $rektorat_content : ''?></p>
 			</div>
 		</div>
@@ -121,12 +121,12 @@ $lang = Yii::$app->language;
 		position: relative;
 		display: block;
 		border-radius: 10px;
-		padding: 40px;
+		padding: 6%;
 		box-shadow: 2px 10px 15px #888888;
 		/*margin-left: -20px;*/
 		/*margin-right: 40px;*/
 		width: 99%;
-		margin-bottom: 30px;
+		margin-bottom: 5%;
 	}
 	
 	.table_first {

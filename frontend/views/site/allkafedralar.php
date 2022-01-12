@@ -56,10 +56,10 @@ foreach ($menu_sub as $menu_sub_item) {
 .middle {
 	background-color: white;
 	border-radius: 10px;
-	padding: 40px;
+	padding: 6%;
 	box-shadow: 2px 10px 15px #888888;
 	width: 99%;
-	margin-bottom: 30px;
+	margin-bottom: 5%;
 }
 	
 .mcd-menu2 {

@@ -28,14 +28,12 @@ foreach ($emblems as $emblems_item) {
 </div>
 <style type="text/css">
 	p, li, a, span, table, tr, td, th, label {
-			 font-size: 18px;
 			 color: black; 
 			 font-weight: 400;
 			line-height: 24px;
 		list-style-type: none;
 	}
 	.row .col-md-8 .middle ul li{
-         font-size: 18px;
          color: black; 
          font-weight: 400;
         line-height: 24px;
@@ -54,10 +52,10 @@ foreach ($emblems as $emblems_item) {
 	.middle {
 		background-color: white;
 		border-radius: 10px;
-		padding: 40px;
+		padding: 6%;
 		box-shadow: 2px 10px 15px #888888;
 		width: 99%;
-		margin-bottom: 30px;
+		margin-bottom: 5%;
 	}
 	
 	.table_first {

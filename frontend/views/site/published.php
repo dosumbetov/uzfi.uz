@@ -40,7 +40,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
               <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
               <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_name : ''?></h3>
               <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_lavozim : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
-              <hr style="margin: 0px; margin-bottom: 20px;">
+              <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
               <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
               <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>                  
@@ -49,7 +49,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
                      <h4 style="color: black;"><img src="../../images/icon/db2.png" alt="" /><?=Yii::t('app','Chop etilgan kitoblar')?></h4>
-           <hr style="margin: 0px; margin-bottom: 20px;">
+           <hr style="margin: 0px; margin-bottom: 5%;">
             <table class="table">
               <thead>
                 <tr>
@@ -86,7 +86,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
               </tbody>
             </table>
             <h4 style="color: black;"><img src="../../images/icon/article.ico" alt="" /><?=Yii::t('app','Maqolalar')?></h4>
-           <hr style="margin: 0px; margin-bottom: 20px;">
+           <hr style="margin: 0px; margin-bottom: 5%;">
             <table class="table">
               <thead>
                 <tr>
@@ -212,13 +212,13 @@ foreach ($teacherinfo as $teacherinfo_item) {
     .middle_bar_tea {
         position: relative;
         width: 98%;
-        padding: 20px;
+        padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        margin-bottom: 30px;
-        margin-top: 35px;
+        margin-bottom: 5%;
+        margin-top: 5%;
     }
     .orqarasm {
         position: relative;
@@ -231,7 +231,7 @@ foreach ($teacherinfo as $teacherinfo_item) {
          box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
          border: 1px solid #F3F2F2;
         transform-style: preserve-3d;
-        margin-bottom: 40px;
+        margin-bottom: 5%;
     }
     .pro-menu{
      background: #3f78e0;

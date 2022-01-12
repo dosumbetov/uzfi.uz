@@ -35,7 +35,7 @@ foreach ($maktab as $maktab_item) {
                 <img src="../<?=$maktab ? $maktab_item->img : ''?>" class="img_teacher">
               <h3 class="mt-3" style="text-align: center;"><?=$maktab ? $maktab_item->name_uz : ''?></h3>
               <p style="text-align: center;"><?=$maktab ? $maktab_item->kimga_biriktirilgan_uz : ''?></p>
-              <hr style="margin: 0px; margin-bottom: 20px;">
+              <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-phone"></i> <?=$maktab ? $maktab_item->tel : ''?></p>
               <p><i class="fa fa-fax"></i><?=$maktab ? $maktab_item->fax : ''?></p>
               <p><i class="fa fa-envelope"></i><?=$maktab ? $maktab_item->email : ''?></p>
@@ -44,7 +44,7 @@ foreach ($maktab as $maktab_item) {
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/maktab.ico" alt="" /><?=Yii::t('app',"Umumiy ma'lumot")?></h4>
-               <hr style="margin: 0px; margin-bottom: 20px;">
+               <hr style="margin: 0px; margin-bottom: 5%;">
                <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>

@@ -51,7 +51,7 @@ $lang = Yii::$app->language;
                 <img src="../<?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->img : ''?>" class="img_teacher">
                 <h2 class="mt-3" style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_name : ''?></h2>
                 <p style="text-align: center;"><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_lavozim : ''?>, <br><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_daraja : ''?></p>
-                <hr style="margin: 0px; margin-bottom: 20px;">
+                <hr style="margin: 0px; margin-bottom: 5%;">
                 <p><i class="fa fa-telegram"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->telegram : ''?></p>
                 <p><i class="fa fa-envelope"></i> <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->email : ''?></p>
                 <p><i class="fa fa-phone"></i><?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_item->tel : ''?></p>
@@ -60,7 +60,7 @@ $lang = Yii::$app->language;
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db1.png" alt="" /><?=Yii::t('app','Tarjimai hol')?></h4>
-               <hr style="margin: 0px; margin-bottom: 20px;">
+               <hr style="margin: 0px; margin-bottom: 5%;">
                <?=$kafedra_oqituvchilari ? $kafedra_oqituvchilari_content : ''?>
           </div>
         </div>
@@ -120,13 +120,13 @@ $lang = Yii::$app->language;
     .middle_bar_tea {
         position: relative;
         width: 98%;
-        padding: 20px;
+        padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border: 1px solid #F3F2F2;
-        margin-bottom: 30px;
-        margin-top: 35px;
+        margin-bottom: 5%;
+        margin-top: 5%;
     }
     .orqarasm {
         position: relative;
@@ -139,7 +139,7 @@ $lang = Yii::$app->language;
          box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
          border: 1px solid #F3F2F2;
         transform-style: preserve-3d;
-        margin-bottom: 40px;
+        margin-bottom: 6%;
     }
     .pro-menu{
      background: #3f78e0;

@@ -536,11 +536,9 @@ hr {
 }
  h1, h2 {
      font-weight:700;
-     line-height:28px;
 }
  h3, h4, h5, h6 {
      font-weight:600;
-     line-height:24px;
      /*color: white;*/
 }
  p, li, a, span, table, tr, td, th, label{
@@ -1977,4 +1975,24 @@ svg {
 }
  .backdrop{
      background-color: #ededed;
-4444444444
+}
+  @media all and (max-width: 992px) {
+        .mb-5, .my-5 {
+          margin-bottom: 1rem;
+        }
+        .mb-4, .my-4 {
+          margin-bottom: 0.5rem;
+        }
+        h1, h2 {
+          font-size: x-large;
+        }
+        h3, h4, h5, h6 {
+          font-size: larger;
+        }
+        .mt-5, .my-5 {
+          margin-bottom: 1rem;
+        }
+        .mt-4, .my-4 {
+          margin-top: 0.5rem;
+        }
+      } 

@@ -96,7 +96,7 @@
   display: block;
   /*margin-left: 20px;*/
 	border-radius: 10px;
-	padding: 20px;
+	padding: 5%;
 	box-shadow: 2px 10px 15px #888888;
 	width: 99%;
   /*margin-left: 500px;*/
@@ -137,7 +137,7 @@
 .mcd-menu li a strong {
   display: block;
   font-size: 15px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 

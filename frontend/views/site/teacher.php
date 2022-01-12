@@ -47,7 +47,7 @@ $lang = Yii::$app->language;
                 <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
               <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo : ''?></h3>
               <p style="text-align: center;"><?=$teacherinfo ? $cmteacherinfo_lavozim : ''?>, <br><?=$teacherinfo ? $cmteacherinfo_rank : ''?></p>
-              <hr style="margin: 0px; margin-bottom: 20px;">
+              <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-telegram"></i><?=$teacherinfo ? $teacherinfo_item->telegram : ''?></p>
               <p><i class="fa fa-facebook"></i> <?=$teacherinfo ? $teacherinfo_item->facebook : ''?></p>
               <p><i class="fa fa-instagram"></i><?=$teacherinfo ? $teacherinfo_item->instagram : ''?></p>
@@ -56,7 +56,7 @@ $lang = Yii::$app->language;
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
               <h4 style="color: black;"><img src="../../images/icon/db4.png" alt="" /><?=Yii::t('app','Shaxsiy kabinet')?></h4>
-             <hr style="margin: 0px; margin-bottom: 20px;">
+             <hr style="margin: 0px; margin-bottom: 5%;">
              <table class="table table-bordered mt-4" style="color: black;">
               <tbody>
                 <tr>

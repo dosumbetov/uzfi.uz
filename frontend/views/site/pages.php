@@ -24,7 +24,7 @@ if ($lang == 'uz') {
 	            </div>
 				<img src="../images/<?=$pages->img?>" width="100%" style="  display: block;
 	  			margin-left: auto;margin-right: auto;border-radius: 20px;">
-			  	<p class="mt-5 mb-5" style="font-size: 18px;"><?=$pages ? $pages_content : ''?></p>
+			  	<p class="mt-5 mb-5" style="font-size: 15px;"><?=$pages ? $pages_content : ''?></p>
 			</div>
 		</div>
 		<?=include 'right_barnew.php';?>
@@ -34,7 +34,7 @@ if ($lang == 'uz') {
 	.middle {
 		background-color: white;
 		border-radius: 10px;
-		padding: 40px;
+		padding: 6%;
 		box-shadow: 2px 10px 15px #888888;
 		/*margin-left: -20px;*/
 		/*margin-right: 40px;*/

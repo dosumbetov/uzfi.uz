@@ -26,7 +26,7 @@ $lang = Yii::$app->language;
 		<div class="col-md-8 col-12">
 			<div class="middle mb-5">
 				<h2 style="text-transform: uppercase; padding: 0px 20px; text-align: center;"><?=$cmmenu_sub?></h2>
-				<hr style="margin: 0px;margin-bottom: 20px;">
+				<hr style="margin: 0px;margin-bottom: 5%;">
 				<p><?=$institut ? $institut_content : ''?></p>
 			</div>
 		</div>
@@ -35,14 +35,12 @@ $lang = Yii::$app->language;
 </div>
 <style type="text/css">
 	p, li, a, span, table, tr, td, th, label {
-    font-size: 18px;
      color: black; 
     font-weight: 400;
     line-height: 24px;
     list-style-type: none;
 }
 .row .col-md-8 .middle ul li{
-         font-size: 18px;
          color: black; 
          font-weight: 400;
         line-height: 24px;
@@ -61,7 +59,7 @@ $lang = Yii::$app->language;
 	.middle {
 		background-color: white;
 		border-radius: 10px;
-		padding: 40px;
+		padding: 6%;
 		box-shadow: 2px 10px 15px #888888;
 		/*margin-left: -20px;*/
 		/*margin-right: 40px;*/
