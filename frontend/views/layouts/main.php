@@ -123,7 +123,7 @@ AppAsset::register($this);
 
               </div>
               
-               <span class="d-none d-md-inline-block">
+               <span class="d-none d-none d-lg-block">
                  <?= MultiLanguageWidget::widget([
                   'addCurrentLang' => true, // add current lang
                   'calling_controller' => $this->context,
@@ -133,7 +133,7 @@ AppAsset::register($this);
                   'width'       => '28'
                 ]); ?>
                </span>
-               <form method="get" class="form-inline d-none d-md-inline-block" action="<?=Url::to(['site/search'])?>">
+               <form method="get" class="form-inline d-none d-none d-lg-block" action="<?=Url::to(['site/search'])?>">
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
                 <button class="btn btn-success" type="submit">Search</button>
               </form>
@@ -149,10 +149,10 @@ AppAsset::register($this);
       <div class="site-navbar site-navbar-target d-none d-md-inline-block">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-1 d-none d-md-inline-block">
+            <div class="col-1 d-none d-lg-block">
               <a href="<?=Url::home()?>"><img src="../../menu/images/uzfi.ico" height="65px;"></a>
             </div>
-            <div class="col-2 d-none d-md-inline-block" style="padding: 0px; margin: 0px; line-height: 15px !important;">
+            <div class="col-2 d-none d-lg-block" style="padding: 0px; margin: 0px; line-height: 15px !important;">
               <span class="my-0 site-logo" style="line-height: 15px;"><?=Yii::t('app',"SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI")?></span>
             </div>
             <div class="col-9">
