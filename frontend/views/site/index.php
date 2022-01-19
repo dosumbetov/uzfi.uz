@@ -17,13 +17,13 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/menu/images/sli1.jpg" class="d-block w-100" alt="...">
+          <img src="/menu/images/sli1.jpg" class="d-block w-100 rasm" alt="...">
         </div>
        <?
         foreach ($slider as $slide) {
           ?>
              <div class="carousel-item">
-                <img src="<?=$slide->slider_img?>" class="d-block w-100" alt="...">
+                <img src="<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
               </div>
           <?
         }
@@ -46,6 +46,13 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         justify-content: center;
         align-items: center;
       }*/
+      .rasm {
+        /*position: relative;*/
+        height: 100vh;
+        width: 100vh;
+            object-fit: cover;
+        background-position: center;
+      }
       .sect-title {
         text-align: center;
       }
@@ -111,8 +118,13 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           font-size: 25px;
         }
       } 
+     /* .tel-versiya {
+        position: 
+        width: 100vh;
+        height: 100vh;
+      }*/
     </style>
-    <div class="orqafon1" style="padding-top: 5%;">
+    <div class="orqafon1 tel-versiya" style="padding-top: 5%;">
       <div class="container" style="padding-bottom: 5%;">
           <section class="sect-title" data-aos="fade-up" style="margin-bottom: 6.7%;">
             <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
@@ -504,7 +516,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                                         <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<?=$video_gallery_key->link?>"></a>
                                         <!-- Post Content -->
                                         <div class="post-content">
-                                            <a href="#" class="post-cata">Sports</a>
+                                            <a href="#" class="post-cata"><?=$video_gallery_key->type_uz?></a>
                                             <a href="" class="post-title"><?=$video_gallery_key->name_uz?></a>
                                         </div>
 
@@ -574,6 +586,8 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     padding: 15px 20px;
     border-left: 4px solid transparent; }
     #boxscroll .nav-link.active {
+      display: inline-block;
+      
       background-color: #4d5051;
       border-left-color: #0d0dfd; }
 
@@ -623,7 +637,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       color: #ffffff;
       margin-bottom: 5px;
       display: block;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .single-blog-post .post-content .post-title {
@@ -677,7 +691,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         margin-bottom: 10px;
         display: block;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 13px;
         line-height: 1.5; }
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
           .single-blog-post.style-2 .post-content .post-title {
@@ -720,7 +734,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         .single-blog-post.style-3 .post-content .post-title {
           font-size: 14px; } }
       .single-blog-post.style-3 .post-content .post-title:hover, .single-blog-post.style-3 .post-content .post-title:hover {
-        color: #db4437; }
+        color: white; }
     .single-blog-post.style-3 .post-content .post-meta span {
       display: inline-block;
       color: #a6a6a6;
@@ -784,18 +798,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         left: 15px;
         bottom: 15px; } }
     .single-feature-post.video-post .post-content .post-title {
-      font-size: 24px;
+      font-size: 20px;
       display: block;
       color: #ffffff;
       margin-bottom: 10px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-feature-post.video-post .post-content .post-title {
-          font-size: 18px; } }
+          font-size: 15px; } }
       @media only screen and (max-width: 767px) {
         .single-feature-post.video-post .post-content .post-title {
-          font-size: 16px; } }
+          font-size: 15px; } }
       .single-feature-post.video-post .post-content .post-title:hover, .single-feature-post.video-post .post-content .post-title:focus {
-        color: #0f1112; }
+        color: white; }
     .single-feature-post.video-post .post-content .post-meta {
       position: relative;
       z-index: 1; }
