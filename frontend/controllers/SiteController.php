@@ -42,6 +42,7 @@ use backend\models\KafedraArticles;
 use backend\models\KafedraBooks;
 use backend\models\TutorInfo;
 use backend\models\MaktablarInfo;
+use backend\models\VideoGallery;
 
 /**
  * Site controller
@@ -102,6 +103,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $video_gallery = VideoGallery::find()->orderBy(['id'=>SORT_DESC])->all();
         $news = Pages::find()->Where(['page_menu_sub_id'=>3])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $event = Pages::find()->Where(['page_menu_sub_id'=>4])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $slider = Slider::find()->orderBy(['id'=>SORT_DESC])->limit(4)->all();
@@ -115,6 +117,7 @@ class SiteController extends Controller
             'news' => $news,
             'event' => $event,
             'supporters' => $supporters,
+            'video_gallery'=>$video_gallery,
         ]);
     }
      public function actionAloqa()

@@ -31,6 +31,8 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="../../images/uzfi.ico" type="image/x-icon">
+     <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
    <!--  <link rel="stylesheet" href="../newasset/css/plugins.css">
     <link rel="stylesheet" href="owl/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/docs/assets/owlcarousel/assets/owl.theme.default.min.css">

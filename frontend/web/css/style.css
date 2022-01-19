@@ -1472,18 +1472,17 @@ hr {
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 
- .orqafon {
-        top: 0px;
-          display: flex;
-          background-color: #f6fbff;
+.orqafon {
+      top: 0px;
+      display: flex;
+      background-color: white;
 
-      }
-     .orqafon1 {
-        top: 0px;
-          display: flex;
-          background-color: #fbfafa;
-
-      }
+}
+.orqafon1 {
+  top: 0px;
+  display: flex;
+  background-color: #fbfafa;
+}
 .block_havola .box {
     position: relative;
     width: 100%;

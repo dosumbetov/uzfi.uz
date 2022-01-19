@@ -127,3 +127,7 @@ setInterval(function(){
 // $('#myModal').on('shown.bs.modal', function () {
 //   $('#myInput').trigger('focus')
 // })
+
+  $(document).ready(function() {
+    $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"grey",boxzoom:true}); // First scrollable DIV
+  });

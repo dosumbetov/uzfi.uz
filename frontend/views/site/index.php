@@ -112,9 +112,9 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         }
       } 
     </style>
-    <div class="orqafon1 pt-5">
-      <div class="container" style="padding-bottom: 7.5%;">
-          <section class="sect-title mb-5" data-aos="fade-up">
+    <div class="orqafon1" style="padding-top: 5%;">
+      <div class="container" style="padding-bottom: 5%;">
+          <section class="sect-title" data-aos="fade-up" style="margin-bottom: 6.7%;">
             <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
             <span class="qwert"><?=Yii::t('app','Tezkor ilovalar')?></span>
             <span class="qwert"><?=Yii::t('app','Tezkor ilovalar')?></span>
@@ -481,27 +481,354 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
 
    
  <!-- video -->
-     <section class="orqafon1">
+     <section class="orqafon" style="padding-top: 3%; padding-bottom: 1%;">
        <div class="container">
-         <section class="sect-title mb-5" data-aos="fade-up" style="padding-bottom: 30px;">
-          <!-- <h2 style="text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h2> -->
-          <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
-          <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
-        </section>
-              <!-- <a href="https://www.youtube.com/watch?v=jaTQAQLgxJM" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
-             
-              <div class="row videonew">
-                 <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=fLeJJPxua3E"></a>
-              <!-- <a href="#inline-content" class="venobox play-btn mb-4" data-vbtype="inline" data-autoplay="true"></a> -->
-                    <img src="../../images/videorasm.jpg">
-              </div>
+           <section class="sect-title mb-5" data-aos="fade-up" style="padding-bottom: 5px;">
+            <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
+            <span class="qwert"><?=Yii::t('app',"Video Lavha")?></span>
+          </section>
+          <section class="hero--area section-padding-80 mb-3">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="tab-content">
+                          <?
+                            $i=1;
+                            foreach ($video_gallery as $video_gallery_key) {
+                              ?>
+                                  <div class="tab-pane fade <?if($i==1){?> show active<?$i=2;}?>" id="post-<?=$video_gallery_key->id?>" role="tabpanel" aria-labelledby="post-<?=$video_gallery_key->id?>-tab">
+                                <!-- Single Feature Post -->
+                                    <div class="single-feature-post video-post bg-img" style="background-image: url(<?=$video_gallery_key->img?>);">
+                                        <!-- Play Button -->
+                                     
+                                        <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<?=$video_gallery_key->link?>"></a>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="#" class="post-cata">Sports</a>
+                                            <a href="" class="post-title"><?=$video_gallery_key->name_uz?></a>
+                                        </div>
+
+                                        <!-- Video Duration -->
+                                        <span class="video-duration"><?=$video_gallery_key->video_duration?></span>
+                                    </div>
+                                  </div>
+                              <?
+                            }
+                          ?>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <ul class="nav" id="boxscroll" role="tablist">
+                          <?
+                            $i=1;
+                            foreach ($video_gallery as $video_gallery_key) {
+                              ?>
+                                <li class="nav-item">
+                                    <a class="nav-link<?if($i==1){?> active<?$i=2;}?>" id="post-<?=$video_gallery_key->id?>-tab" data-toggle="pill" href="#post-<?=$video_gallery_key->id?>" role="tab" aria-controls="post-<?=$video_gallery_key->id?>" aria-selected="true">
+                                        <!-- Single Blog Post -->
+                                        <div class="single-blog-post style-2 d-flex align-items-center">
+                                            <div class="post-thumbnail">
+                                                <img src="<?=$video_gallery_key->img?>" alt="">
+                                            </div>
+                                            <div class="post-content">
+                                                <h6 class="post-title"><?=$video_gallery_key->name_uz?></h6>
+                                                <div class="post-meta d-flex justify-content-between">
+                                                    <?=$video_gallery_key->type_uz?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                              <?
+                            }
+                          ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </section>    
        </div>
-       <!--  <div id="inline-content" style="display:none; margin-bottom: 30px;">
-            <video controls width="100%" height="100%">
-              <source src="../images/best.mp4" type="video/mp4">
-            </video>
-        </div> -->
      </section>
+     
+
+    <style type="text/css">
+      #boxscroll {
+  position: relative;
+  z-index: 1;
+  background-color: #393c3d;
+  width: 100%;
+  height: 500px;
+  overflow: auto; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #boxscroll {
+      height: 400px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #boxscroll {
+      height: 350px; } }
+  @media only screen and (max-width: 767px) {
+    #boxscroll {
+      height: 300px; } }
+  #boxscroll .nav-link {
+    padding: 0;
+    padding: 15px 20px;
+    border-left: 4px solid transparent; }
+    #boxscroll .nav-link.active {
+      background-color: #4d5051;
+      border-left-color: #0d0dfd; }
+
+
+.single-blog-post {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px; }
+  .single-blog-post:last-child {
+    margin-bottom: 0; }
+  .single-blog-post .post-thumbnail {
+    position: relative;
+    z-index: 1;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    max-width: 100px;
+    width: 100px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-blog-post .post-thumbnail {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+        max-width: 80px;
+        width: 80px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-blog-post .post-thumbnail {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+        max-width: 80px;
+        width: 80px; } }
+    @media only screen and (max-width: 767px) {
+      .single-blog-post .post-thumbnail {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+        max-width: 80px;
+        width: 80px; } }
+    .single-blog-post .post-thumbnail img {
+      width: 100%; }
+  .single-blog-post .post-content {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px; }
+    .single-blog-post .post-content .post-title {
+      color: #ffffff;
+      margin-bottom: 5px;
+      display: block;
+      font-size: 16px;
+      font-weight: 700; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .single-blog-post .post-content .post-title {
+          font-size: 14px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-blog-post .post-content .post-title {
+          font-size: 13px; } }
+      @media only screen and (max-width: 767px) {
+        .single-blog-post .post-content .post-title {
+          font-size: 13px; } }
+      .single-blog-post .post-content .post-title:hover, .single-blog-post .post-content .post-title:hover {
+        color: #db4437; }
+    .single-blog-post .post-content .post-meta a {
+      display: inline-block;
+      color: #595959;
+      font-size: 12px; }
+      .single-blog-post .post-content .post-meta a:hover, .single-blog-post .post-content .post-meta a:hover {
+        color: #ffffff; }
+  .single-blog-post.style-2 {
+    margin-bottom: 0; }
+    .single-blog-post.style-2 .post-thumbnail {
+      position: relative;
+      z-index: 1;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 110px;
+      flex: 0 0 110px;
+      max-width: 110px;
+      width: 110px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-blog-post.style-2 .post-thumbnail {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+          max-width: 80px;
+          width: 80px; } }
+      @media only screen and (max-width: 767px) {
+        .single-blog-post.style-2 .post-thumbnail {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+          max-width: 80px;
+          width: 80px; } }
+      .single-blog-post.style-2 .post-thumbnail img {
+        width: 100%; }
+    .single-blog-post.style-2 .post-content {
+      position: relative;
+      z-index: 1;
+      padding-left: 20px; }
+      .single-blog-post.style-2 .post-content .post-title {
+        color: #ffffff;
+        margin-bottom: 10px;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .single-blog-post.style-2 .post-content .post-title {
+            font-size: 14px; } }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .single-blog-post.style-2 .post-content .post-title {
+            font-size: 13px; } }
+        @media only screen and (max-width: 767px) {
+          .single-blog-post.style-2 .post-content .post-title {
+            font-size: 13px; } }
+      .single-blog-post.style-2 .post-content .post-meta span {
+        display: inline-block;
+        color: #a6a6a6;
+        font-size: 12px; }
+  .single-blog-post.style-3 {
+    margin-bottom: 0; }
+    .single-blog-post.style-3 .post-thumbnail {
+      position: relative;
+      z-index: 1;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+      flex: 0 0 140px;
+      max-width: 140px;
+      width: 140px; }
+      @media only screen and (max-width: 767px) {
+        .single-blog-post.style-3 .post-thumbnail {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+          max-width: 100px;
+          width: 100px; } }
+    .single-blog-post.style-3 .post-content .post-title {
+      color: #ffffff;
+      margin-bottom: 15px;
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5; }
+      @media only screen and (max-width: 767px) {
+        .single-blog-post.style-3 .post-content .post-title {
+          font-size: 14px; } }
+      .single-blog-post.style-3 .post-content .post-title:hover, .single-blog-post.style-3 .post-content .post-title:hover {
+        color: #db4437; }
+    .single-blog-post.style-3 .post-content .post-meta span {
+      display: inline-block;
+      color: #a6a6a6;
+      font-size: 12px; }
+
+.single-feature-post.video-post {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 500px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .single-feature-post.video-post {
+      height: 400px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-feature-post.video-post {
+      height: 350px; } }
+  @media only screen and (max-width: 767px) {
+    .single-feature-post.video-post {
+      height: 320px; } }
+  .single-feature-post.video-post::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.01) 90%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.01) 90%, rgba(0, 0, 0, 0) 100%); }
+  .single-feature-post.video-post .play-btn {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    /*background-color: #db4437;*/
+    border-radius: 50%;
+    color: #ffffff;
+    line-height: 60px;
+    text-align: center;
+    padding: 0 0 0 3px;
+    z-index: 99; }
+    @media only screen and (max-width: 767px) {
+      .single-feature-post.video-post .play-btn {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px; } }
+  .single-feature-post.video-post .post-content {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 59;
+    width: 80%; }
+    @media only screen and (max-width: 767px) {
+      .single-feature-post.video-post .post-content {
+        left: 15px;
+        bottom: 15px; } }
+    .single-feature-post.video-post .post-content .post-title {
+      font-size: 24px;
+      display: block;
+      color: #ffffff;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-feature-post.video-post .post-content .post-title {
+          font-size: 18px; } }
+      @media only screen and (max-width: 767px) {
+        .single-feature-post.video-post .post-content .post-title {
+          font-size: 16px; } }
+      .single-feature-post.video-post .post-content .post-title:hover, .single-feature-post.video-post .post-content .post-title:focus {
+        color: #0f1112; }
+    .single-feature-post.video-post .post-content .post-meta {
+      position: relative;
+      z-index: 1; }
+      .single-feature-post.video-post .post-content .post-meta a {
+        display: inline-block;
+        margin-right: 30px;
+        color: #ffffff; }
+        .single-feature-post.video-post .post-content .post-meta a:hover, .single-feature-post.video-post .post-content .post-meta a:focus {
+          color: #0d0dfd; }
+  .single-feature-post.video-post .video-duration {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: #0f1112;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+    z-index: 79; }
+
+
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.bg-transparent {
+  background-color: transparent !important; }
+
+
+    </style>
    
    
 
