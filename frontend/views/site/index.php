@@ -1,4 +1,4 @@
-  <?php
+<?php
 
 use yii\bootstrap4\Carousel;
 use yii\helpers\Url;
@@ -116,6 +116,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         }
         .pop-cour .container .row .col-md-3 i{
           font-size: 25px;
+        }
+        .vbox-overlay {
+          position: relative;
+          width: 100vh;
+          width: 100vh;
+          background-position: center;
+        }
+        .rasm {
+          height: 40vh;
+        /*width: 10vh;*/
+            object-fit: cover;
+        background-position: center;
         }
       } 
      /* .tel-versiya {

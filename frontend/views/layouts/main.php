@@ -96,7 +96,7 @@ AppAsset::register($this);
       <div class="site-navbar-top">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-7">
                <?
               foreach ($emblems as $emblems) {
                 if ($emblems->link_type == 1) {
@@ -116,7 +116,7 @@ AppAsset::register($this);
                 ?>
                   
             </div>
-            <div class="col-6 text-right">
+            <div class="col-5 text-right">
               <div class="mr-auto" style="float: right;">
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
 
