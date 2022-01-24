@@ -41,6 +41,7 @@
                             ['label' => 'Menu Title', 'icon' => 'file-code-o', 'url' => ['/menu-title'],],
                             ['label' => 'Menu Sub', 'icon' => 'file-code-o', 'url' => ['/menu-sub'],],
                             ['label' => 'Yangiliklar va Elonlar', 'icon' => 'file-code-o', 'url' => ['/pages'],],
+                             ['label' => 'Video gallery', 'icon' => 'file-code-o', 'url' => ['/video-gallery'],],
                             ['label' => 'Slider', 'icon' => 'file-code-o', 'url' => ['/slider'],],
                             ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
                             ['label' => 'Rektorat', 'icon' => 'file-code-o', 'url' => ['/rektorat'],],
