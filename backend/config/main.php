@@ -80,7 +80,7 @@ return [
         'allowActions' => [
             'site/login',
             'admin/*',
-             '*',
+             // '*',
             // ../
         ]
     ],
