@@ -1491,6 +1491,7 @@ hr {
     background-color: #fff;
     border-radius: 20px;
     transform-style: preserve-3d;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.1) 0px 30px 60px -30px;
 }
 .block_havola .box::before {
     content: "UZaFI";
@@ -1510,7 +1511,9 @@ hr {
 .block_havola .box:hover::before,
 .block_havola .box:hover::after {
     opacity: 0.04;
+
 }
+  
 .block_havola .box .name {
     position: absolute;
     font-size: 120%;  
