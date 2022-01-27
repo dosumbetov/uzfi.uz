@@ -114,8 +114,15 @@ AppAsset::register($this);
                 }
               }
                 ?>
-                  
+                <a target="_blank" style="margin-right: 10px;" class="emb" href="https://biz.mail.ru/login/uzfi.uz">
+                  <i class="fa fa-envelope"></i>
+                </a>
             </div>
+            <style type="text/css">
+              .emb .fa-envelope{
+                font-size: 21px;
+              }
+            </style>
             <div class="col-5 text-right">
               <div class="mr-auto" style="float: right;">
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto">
