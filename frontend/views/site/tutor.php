@@ -1,7 +1,11 @@
 <?
 use yii\helpers\Url;
 $lang = Yii::$app->language;
-
+foreach ($menu_sub as $menu_sub) {
+	# code...
+}
+$this->title = $menu_sub->name_uz;
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container mt-4">
 		<div class="middle">

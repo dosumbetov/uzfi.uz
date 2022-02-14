@@ -149,20 +149,23 @@ class SiteController extends Controller
     }
      public function actionTutor($id)
     {
-      // $tutor_info = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->all();
+      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
       $query = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC]);
       $tutor_info_number = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>6, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
       $tutor_info = $query->offset($tutor_info_number->offset)->limit($tutor_info_number->limit)->all();
         return $this->render('tutor', [
           'tutor_info'=>$tutor_info,
           'tutor_info_number'=>$tutor_info_number,
+          'menu_sub'=>$menu_sub,
         ]);
     }
      public function actionTutor_profile($id)
     {
+      $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
       $tutor_info = TutorInfo::find()->Where(['id'=>$id])->all();
         return $this->render('tutor_profile', [
           'tutor_info'=>$tutor_info,
+          'menu_sub'=>$menu_sub,
         ]);
     }
      public function actionTutor_vazifa($id)

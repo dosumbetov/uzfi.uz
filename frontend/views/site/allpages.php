@@ -13,6 +13,7 @@ foreach ($menu_sub as $menu_sub_item) {
   }
 }
 $this->title = "pages";
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <style type="text/css">
   .head-text {
