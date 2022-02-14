@@ -1,3 +1,11 @@
+<?php
+
+/* @var $this yii\web\View */
+
+use yii\helpers\Html;
+
+$this->title = 'About';
+?>
       <div id="contact" class="contact-area">
       <div class="contact-inner area-padding">
         <div class="contact-overly"></div>

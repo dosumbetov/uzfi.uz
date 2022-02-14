@@ -10,7 +10,7 @@ foreach ($menu_sub as $menu_sub_item) {
       $cmmenu_sub_item = $menu_sub_item->name_ru;
     }
 }
-
+$this->title = 'Kafedralar';
 ?>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">

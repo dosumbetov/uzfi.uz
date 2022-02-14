@@ -62,7 +62,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '/' => 'site/index',
+                // '/' => 'site/index',
+                // 'News' => 'site/allpages',
                 // '<controller:\w+>/<action:\w+>/'=>'<controller>/<action>',
             ],
         ],

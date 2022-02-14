@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use yii\web\UploadedFile;
-
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Slider */
 /* @var $form yii\widgets\ActiveForm */

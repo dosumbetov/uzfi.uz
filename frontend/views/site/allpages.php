@@ -12,7 +12,7 @@ foreach ($menu_sub as $menu_sub_item) {
     $cmmenu_sub = $menu_sub_item->name_ru;
   }
 }
-
+$this->title = "pages";
 ?>
 <style type="text/css">
   .head-text {

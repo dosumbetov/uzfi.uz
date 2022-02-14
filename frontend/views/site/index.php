@@ -229,7 +229,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
              </div>
              <div class="col-md-3">
                 <i class="fas fa-users"></i>
-                <p class="natija1 counter">3169</p>
+                <p class="natija1 counter">3814</p>
                  <p class="natija2"><?=Yii::t('app','Talabalar')?></p>
              </div>
              <div class="col-md-3">
