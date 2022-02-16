@@ -10,9 +10,7 @@ foreach ($maktab as $maktab_item) {
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                          <ul>
                             <li><a href="<?=Url::to(['site/maktab', 'id'=>$maktab_item->id])?>" class="pro-act"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
                             <li><a href="<?=Url::to(['site/maktab_profile', 'id'=>$maktab_item->id])?>">Maktab tarixi</a></li>
