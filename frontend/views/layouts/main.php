@@ -142,10 +142,7 @@ AppAsset::register($this);
                     'width'       => '28'
                   ]); ?>
                  </span>
-                 <form method="get" class="form-inline d-none d-none d-lg-block" action="<?=Url::to(['site/search'])?>">
-                  <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
-                  <button class="btn btn-success" type="submit">Search</button>
-                </form>
+                
               </div>
             </div>
           </div>
