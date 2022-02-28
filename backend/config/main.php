@@ -23,7 +23,7 @@ return [
         ],
         'request' => [
             'csrfParam' => '_csrf-backend',
-            'baseUrl'=>'/admin',
+            'baseUrl'=>'admin.uzfi.uz',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
