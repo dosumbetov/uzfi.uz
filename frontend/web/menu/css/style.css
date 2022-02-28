@@ -61,7 +61,7 @@ a {
 
 .site-navbar {
   margin-bottom: 0px;
-  /*background-color: white;*/
+  background-color: rgba(105,105,105, 0.3);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%; }
   .site-navbar .site-logo {

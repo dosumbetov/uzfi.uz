@@ -220,7 +220,7 @@ AppAsset::register($this);
                                               <?
                                                   if ($menusub->link_type == 1) {
                                                     ?>
-                                                      <li style="display: block;min-width: 400px !important;"><a href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menu_sub?></a></li>
+                                                      <li style="display: block;min-width:250px !important;"><a href="<?=Url::to(["site/".$menusub->link, 'id'=>$menusub->id])?>"><?=$menu_sub?></a></li>
                                                     <?
                                                   }else {
                                                     ?>
