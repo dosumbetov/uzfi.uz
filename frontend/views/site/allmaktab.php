@@ -10,7 +10,7 @@ $lang = Yii::$app->language;
 			<?
 				foreach ($maktablar_info as $maktablar_info_item) {
 					?>
-						<div class="col-md-4 d-flex align-items-stretch">
+						<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
 			               <div class="card mb-5" style="width: 100%; text-align: center;">
 							  <img src="<?=$maktablar_info ? $maktablar_info_item->img : ''?>" class="card-img-top" alt="...">
 							  <div class="card-body">

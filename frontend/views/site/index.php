@@ -132,9 +132,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         .block_havola .box .name {
           font-size: 15px;
         }
-        .more-services .card-body {
-          padding: 5px;
-        }
+       
       } 
      /* .tel-versiya {
         position: 

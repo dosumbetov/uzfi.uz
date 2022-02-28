@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					        $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_ru;
 					      }
 						?>
-							<div class="col-md-4 d-flex align-items-stretch">
+							<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
 				               <div class="card mb-5" style="width: 100%; text-align: center;">
 								  <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">

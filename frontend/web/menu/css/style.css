@@ -26,10 +26,10 @@ p {
   color: #b3b3b3;
   font-weight: 300; }
 
-/*h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-*/
+/*h1, h2, h3, h4, h5, h6,*/
+/*.h1, .h2, .h3, .h4, .h5, .h6 {*/
+  /*font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }*/
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -45,7 +45,7 @@ a {
   background-repeat: no-repeat; }*/
 
 .site-navbar-wrap {
-  /*position: absolute;*/
+  position: absolute;
   z-index: 99;
   width: 100%;
   left: 0; }
@@ -53,12 +53,11 @@ a {
     color: #fff !important; }
   .site-navbar-wrap .site-navbar-top {
     font-size: 0.8rem;
-    color: white !important }
+    color: white !important; }
 
 .site-navbar-top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
-  background-color: #0d6efd;
-}
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #0d6efd; }
 
 .site-navbar {
   margin-bottom: 0px;
@@ -73,7 +72,8 @@ a {
     .site-navbar .site-logo {
       font-weight: 400;
       color: black !important;
-      font-size:10px;
+      font-size: 10px;
+      /*font-weight: bold;*/
       text-transform: uppercase; }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
@@ -87,13 +87,13 @@ a {
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 0px 10px;
         color: #343f52 !important;
+        font-size: 15px;
         font-weight: 600;
-        font-size: 18px !important;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a.active {
           color: #343f52 !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: blue !important; }
+          color: blue!important; }
       .site-navbar .site-navigation .site-menu > li:last-child {
         padding-right: 0; }
         .site-navbar .site-navigation .site-menu > li:last-child > a {
@@ -106,7 +106,7 @@ a {
         .site-navbar .site-navigation .site-menu .has-children > a:before {
           position: absolute;
           content: "\e313";
-          font-size: 16px;
+          font-size: 15px;
           top: 50%;
           right: 0;
           -webkit-transform: translateY(-50%);
@@ -152,34 +152,32 @@ a {
           -webkit-transition: 0s all;
           -o-transition: 0s all;
           transition: 0s all;
-          font-weight: 600;
           color: #343f52 !important; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown a.active {
-            color: #007bff !important; }
+            color: #007bff; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown .active > a {
           color: #fff !important; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
           padding: 0;
           margin: 0;
-          min-width: 250px; }
+          min-width: 200px; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li:first-child > a {
             border-bottom: 1px solid #EEE;
             border-top-left-radius: 4px;
             border-top-right-radius: 4px; }
-          .site-navbar .site-navigation .site-menu .has-children .dropdown > li:last-child > a {
-            border-bottom: 1px solid #EEE;
+          .site-navbar .site-navigation .site-menu .has-children .dropdown > li:last-child > a {+
+             border-bottom: 1px solid #EEE;
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a {
-            border-bottom: 1px solid #EEE;
+             border-bottom: 1px solid #EEE;
             padding: 9px 20px;
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
               background: #ebeef0;
-              color: #212529 !important; 
-              border-bottom: 1px solid blue;
-            }
+              color: #212529 !important;
+              border-bottom: 1px solid blue; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -208,7 +206,7 @@ a {
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: white;
+  background: #fff;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -333,13 +331,12 @@ a {
               border-bottom: 1px solid #EEE;
               display: block; }
               .site-mobile-menu .site-nav-wrap > li > ul > li > ul > li > a {
-
                 font-size: 16px;
                 padding-left: 60px; }
 
 .sticky-wrapper {
-  /*position: absolute;*/
-  /*float: right;*/
+  position: absolute;
+  float: right;
   z-index: 100;
   width: 100%; }
   .sticky-wrapper + .site-blocks-cover {
@@ -350,13 +347,12 @@ a {
     transition: .3s all ease; }
     .sticky-wrapper .site-navbar ul li.active a {
       color: #343f52 !important; }
-     .sticky-wrapper.is-sticky .icon-menu {
-        color: white !important;
-      }
+    .sticky-wrapper.is-sticky .icon-menu {
+      color: white !important;
+    }
   .sticky-wrapper.is-sticky .site-navbar {
     background-color: white; 
-   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li {
       display: inline-block;
       padding: 10px 5px; }
@@ -368,7 +364,7 @@ a {
         padding-right: 20px; }
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 10px;
-        color: #343f52;
+        color: #343f52 !important;
         font-size: 15px; }
         .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li > a:hover {
           color: #343f52 !important; }
@@ -376,4 +372,3 @@ a {
           color: #343f52 !important; }
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li.active a {
         color: #343f52; }
-  

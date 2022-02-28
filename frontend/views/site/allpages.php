@@ -113,7 +113,7 @@ $this->params['breadcrumbs'][] = $this->title;
             $cmnew = $new->name_ru;
           }
             ?>
-                <div class="col-md-4 d-flex align-items-stretch mb-5">
+                <div class="col-md-6 mb-5 col-lg-4 d-flex align-items-stretch mb-5">
                     <div class="new_date">
                       <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
                       <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
