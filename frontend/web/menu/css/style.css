@@ -61,7 +61,7 @@ a {
 
 .site-navbar {
   margin-bottom: 0px;
-  background-color: white;
+  /*background-color: white;*/
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%; }
   .site-navbar .site-logo {
@@ -70,8 +70,8 @@ a {
     /*top: -7px;*/
     position: relative; }
     .site-navbar .site-logo {
-      font-weight: 400;
-      color: black !important;
+      font-weight: 600;
+      color: white !important;
       font-size: 10px;
       /*font-weight: bold;*/
       text-transform: uppercase; }
@@ -86,7 +86,7 @@ a {
       padding: 10px 5px; }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 0px 10px;
-        color: #343f52 !important;
+        color: white !important;
         font-size: 15px;
         font-weight: 600;
         text-decoration: none !important; }
@@ -346,9 +346,12 @@ a {
     -o-transition: .3s all ease;
     transition: .3s all ease; }
     .sticky-wrapper .site-navbar ul li.active a {
-      color: #343f52 !important; }
+      color: white !important; }
     .sticky-wrapper.is-sticky .icon-menu {
       color: white !important;
+    }
+    .sticky-wrapper.is-sticky .site-navbar .site-logo {
+      color: black !important;
     }
   .sticky-wrapper.is-sticky .site-navbar {
     background-color: white; 
@@ -364,11 +367,11 @@ a {
         padding-right: 20px; }
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 10px;
-        color: #343f52 !important;
+        color: black !important;
         font-size: 15px; }
         .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #343f52 !important; }
+          color: black !important; }
         .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li > a.active {
-          color: #343f52 !important; }
+          color: black !important; }
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li.active a {
-        color: #343f52; }
+        color: black; }
