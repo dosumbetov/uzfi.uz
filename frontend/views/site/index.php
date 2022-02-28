@@ -50,7 +50,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         /*position: relative;*/
         height: 100vh;
         width: 100vh;
-            object-fit: cover;
+        object-fit: cover;
         background-position: center;
       }
       .sect-title {
@@ -129,6 +129,12 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
             object-fit: cover;
         background-position: center;
         }
+        .block_havola .box .name {
+          font-size: 15px;
+        }
+        .more-services .card-body {
+          padding: 5px;
+        }
       } 
      /* .tel-versiya {
         position: 
@@ -170,7 +176,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                         }
                       ?>
                       <div class="circle"></div>
-                      <img src="../<?=$tezkor_havola->img?>" height="<?=$tezkor_havola->height?>px;" class="product">
+                      <img src="../<?=$tezkor_havola->img?>" class="product">
                   </div>
                 </div>
               </div>
@@ -390,7 +396,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                 $news_name = $new->name_ru;
               }
               ?>
-                  <div class="col-md-4 d-flex align-items-stretch mb-4">
+                  <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                       <div class="new_date">
                         <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
                         <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
@@ -482,7 +488,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
               $event_name = $events->name_ru;
             }
             ?>
-                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="new_date">
                       <i class="fa fa-calendar"><?=$event ? $events->date : ''?></i>
                       <div><i class="fa fa-eye"><?=$event ? $events->views : ''?></i></div>
