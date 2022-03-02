@@ -47,7 +47,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         align-items: center;
       }*/
       .rasm {
-        /*position: relative;*/
+        position: relative;
         height: 100vh;
         width: 100vh;
         object-fit: cover;
@@ -124,10 +124,10 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           background-position: center;
         }
         .rasm {
-          height: 40vh;
-        /*width: 10vh;*/
+          height: 100vh;
+        width: 100vh;
             object-fit: cover;
-        background-position: center;
+        background-position: center;*/
         }
         .block_havola .box .name {
           font-size: 15px;
