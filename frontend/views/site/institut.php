@@ -21,6 +21,14 @@ $lang = Yii::$app->language;
 	}
 
 ?>
+<div class="topfon">asd</div>
+<style type="text/css">
+	.topfon {
+		min-height: 192px;
+		width: 100%;
+		background-color: #2db6fa;
+	}
+</style>
 <div class="container mt-4">
 	<div class="row" style="padding: 15px 0px;">
 		<div class="col-md-8 col-12">

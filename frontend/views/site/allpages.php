@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\bootstrap4\Breadcrumbs;
 
 /* @var $this yii\web\View */
 $lang = Yii::$app->language;
@@ -12,9 +13,64 @@ foreach ($menu_sub as $menu_sub_item) {
     $cmmenu_sub = $menu_sub_item->name_ru;
   }
 }
-$this->title = "pages";
+$this->title = $cmmenu_sub;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    // ['label' => 'Tutorlar', 'url' => ['site/tutor', 'id' => 13]],
+                    $this->title,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <style type="text/css">
   .head-text {
     background: rgba(204, 204, 204, 0.5);

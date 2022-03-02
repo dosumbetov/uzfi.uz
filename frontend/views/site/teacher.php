@@ -1,6 +1,7 @@
  <?
 use yii\helpers\Url;
-
+use yii\bootstrap4\Breadcrumbs;
+use backend\models\MenuSub;
 $lang = Yii::$app->language;
   foreach ($teacherinfo as $teacherinfo_item) {
      if ($lang == 'uz') {
@@ -20,10 +21,78 @@ $lang = Yii::$app->language;
       $cmteacherinfo_address = $teacherinfo_item->address_ru;
     }
   }
- ?>
 
+  $lang = Yii::$app->language;
+$menu_sub = MenuSub::find()->Where(['id'=>$teacherinfo_item->staff_id])->all();
+foreach ($menu_sub as $menu_sub_item) {
+    if ($lang == 'uz') {
+      $cmmenu_sub_item = $menu_sub_item->name_uz;
+    }elseif ($lang == 'en') {
+      $cmmenu_sub_item = $menu_sub_item->name_en;
+    }elseif ($lang == 'ru') {
+      $cmmenu_sub_item = $menu_sub_item->name_ru;
+    }
+}
+
+$this->title = $cmmenu_sub_item;
+ ?>
+ <div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    ['label' => "sad", 'url' => ['site/rektorat', 'id' => $teacherinfo_item->id]],
+                    $this->title,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 120px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <section class="orqarasm">
-    <img src="../../images/pro-bg.jpg" width="100%;">
+    <!-- <img src="../../images/pro-bg.jpg" width="100%;"> -->
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
@@ -83,7 +152,6 @@ $lang = Yii::$app->language;
         </div>
     </div>
 </div>
-
 
 <style type="text/css">
     table, tr, td, th {

@@ -23,7 +23,7 @@ $lang = Yii::$app->language;
  <div class="heros">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
           <?
             echo Breadcrumbs::widget([
                 'links' => [
@@ -60,7 +60,7 @@ $lang = Yii::$app->language;
         width: 100%;
         background: url("../../images/jpa.jpg");
         position: relative;
-        padding: 120px 0 0 0;
+        padding: 150px 0 0 0;
       }
        .heros:after {
         content: "";

@@ -68,7 +68,7 @@ $this->title = "Tutorlar profile";
         width: 100%;
         background: url("../../images/jpa.jpg");
         position: relative;
-        padding: 120px 0 0 0;
+        padding: 150px 0 0 0;
       }
        .heros:after {
         content: "";
