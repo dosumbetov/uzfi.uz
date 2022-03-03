@@ -1,6 +1,9 @@
  <?
 use yii\helpers\Url;
 $lang = Yii::$app->language;
+use yii\bootstrap4\Breadcrumbs;
+use backend\models\MenuSub; 
+
 foreach ($teacherinfo as $teacherinfo_item) {
   if ($lang == 'uz') {
       $teacherinfo_name = $teacherinfo_item->name_uz;
@@ -13,10 +16,79 @@ foreach ($teacherinfo as $teacherinfo_item) {
       $teacherinfo_lavozim = $teacherinfo_item->lavozim_ru;
     }
 }
- ?>
+foreach ($fakultet_staff as $fakultet_staff_key) {
+  # code...
+}
+  $lang = Yii::$app->language;
+$menu_sub = MenuSub::find()->Where(['id'=>$fakultet_staff_key->staff_menu_sub_id])->all();
+foreach ($menu_sub as $menu_sub_item) {
+    if ($lang == 'uz') {
+      $cmmenu_sub_item = $menu_sub_item->name_uz;
+    }elseif ($lang == 'en') {
+      $cmmenu_sub_item = $menu_sub_item->name_en;
+    }elseif ($lang == 'ru') {
+      $cmmenu_sub_item = $menu_sub_item->name_ru;
+    }
+}
 
+$this->title = $cmmenu_sub_item;
+ ?>
+<div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+           <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    ['label' => $this->title, 'url' => ['site/rektorat', 'id' => $menu_sub_item->id]],
+                    $teacherinfo_name,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <section class="orqarasm">
-    <img src="../../images/pro-bg.jpg" width="100%;">
         <div class="pro-menu">
             <div class="container">
                 <div class="row">

@@ -21,9 +21,11 @@ $lang = Yii::$app->language;
       $cmteacherinfo_address = $teacherinfo_item->address_ru;
     }
   }
-
+foreach ($fakultet_staff as $fakultet_staff_key) {
+  # code...
+}
   $lang = Yii::$app->language;
-$menu_sub = MenuSub::find()->Where(['id'=>$teacherinfo_item->staff_id])->all();
+$menu_sub = MenuSub::find()->Where(['id'=>$fakultet_staff_key->staff_menu_sub_id])->all();
 foreach ($menu_sub as $menu_sub_item) {
     if ($lang == 'uz') {
       $cmmenu_sub_item = $menu_sub_item->name_uz;
@@ -43,8 +45,8 @@ $this->title = $cmmenu_sub_item;
          <?
             echo Breadcrumbs::widget([
                 'links' => [
-                    ['label' => "sad", 'url' => ['site/rektorat', 'id' => $teacherinfo_item->id]],
-                    $this->title,
+                    ['label' => $this->title, 'url' => ['site/rektorat', 'id' => $menu_sub_item->id]],
+                    $cmteacherinfo,
                 ],
             ]); 
           ?>

@@ -238,13 +238,16 @@ class SiteController extends Controller
     }
      public function actionDbprofile($id)
     {
+      $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
        $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
         return $this->render('dbprofile',[
           'teacherinfo'=>$teacherinfo,  
+          'fakultet_staff'=>$fakultet_staff,
         ]);
     }
     public function actionPublished($id)
     {
+      $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
        $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
        $books = Books::find()->Where(['book_fak_staff_id'=>$id])->all();
        $articles = Articles::find()->Where(['art_fak_staf_id'=>$id])->all();
@@ -252,6 +255,7 @@ class SiteController extends Controller
           'teacherinfo'=>$teacherinfo,
           'books'=>$books,
           'articles'=>$articles,
+          'fakultet_staff'=>$fakultet_staff,
         ]);
     }
     public function actionFakultetlar($id)
@@ -396,10 +400,12 @@ class SiteController extends Controller
      public function actionTeacher($id)
     {
         $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
+         // $rektorat = Rektorat::find()->Where(['id'=>$id])->all();
         $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
         return $this->render('teacher',[
             'teacherinfo'=>$teacherinfo,
             'fakultet_staff'=>$fakultet_staff,
+            'rektorat'=>$rektorat,
         ]);
     }
     // public function actionTchprofile($id)
