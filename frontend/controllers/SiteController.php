@@ -405,7 +405,6 @@ class SiteController extends Controller
         return $this->render('teacher',[
             'teacherinfo'=>$teacherinfo,
             'fakultet_staff'=>$fakultet_staff,
-            'rektorat'=>$rektorat,
         ]);
     }
     // public function actionTchprofile($id)
