@@ -171,16 +171,16 @@ $this->params['breadcrumbs'][] = $this->title;
 							if ($lang == 'uz') {
 						      $fakultet_staff_name = $fakultet_staff_item->staff_name_uz;
 						      $fakultet_staff_rank = $fakultet_staff_item->staff_rank_uz;
-						    }elseif ($lang == 'en') {
+						    }elseif ($lang == 'ru') {
 						    	$fakultet_staff_name = $fakultet_staff_item->staff_name_ru;
 						    	$fakultet_staff_rank = $fakultet_staff_item->staff_rank_ru;
-						    }elseif ($lang == 'ru') {
+						    }elseif ($lang == 'en') {
 						    	$fakultet_staff_name = $fakultet_staff_item->staff_name_en;
 						    	$fakultet_staff_rank = $fakultet_staff_item->staff_rank_en;
 						    }
 							if ($fakultet_staff_item->staff_name_uz!=$fakultet_item->name_uz) {
 								?>
-									<div class="col-md-4 d-flex align-items-stretch">
+									<div class="col-md-6 d-flex align-items-stretch">
 					                   <div class="card mb-5" style="width: 100%; text-align: center;">
 										  <img src="<?=$fakultet_staff ? $fakultet_staff_item->staff_img : ''?>" class="card-img-top" alt="...">
 										  <div class="card-body">
