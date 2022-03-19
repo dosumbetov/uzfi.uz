@@ -50,7 +50,7 @@
 		"Tug'ilgan sanasi"=>'Дата рождения',
 		'Aloqa'=>'Контакт',
 		'Bosh sahifa'=>'Главная',
-		'Tyutorlar'=>'Репетиторы',
+		'Tyutorlar'=>'Тьюторы',
 		'Tyutorlar vazifasi'=>'Функции наставников',
 		'Kun tartibi'=>'Повседневные дела',
 		'Biriktirilgan talabalari'=>'Прикрепленные студенты',
