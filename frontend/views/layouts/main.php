@@ -21,6 +21,7 @@ $emblems = Emblems::find()->all();
 // use yii\helpers\Html;
 
 $menu = Menu::find()->all();
+$menufooter = Menu::find()->all();
 
 AppAsset::register($this);
 ?>
@@ -262,46 +263,94 @@ AppAsset::register($this);
     <!--END HEADER SECTION-->
 <?=$content?>
  <!-- FOOTER -->
+
+
+ <div class="container">
+    
+</div>
+
+<style type="text/css">
+  .card-header {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+    color: white;
+    padding: 0.3rem 1.25rem;
+  }
+  .card {
+    border: 0px;
+    background-color: #002147;
+  }
+  .card-body{
+    padding: 0px;
+    color: white;
+  }
+  .card-title {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .card-body ul li {
+    list-style-type: none;
+  }
+    .accordion .card-header:after {
+    font-family: 'FontAwesome';  
+    content: "\f068";
+    float: right; 
+    font-size: 12px;
+    color: white;
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067"; 
+}
+</style>
     <section class="wed-hom-footer">
         <div class="container">
             <div class="row wed-foot-link">
-                <div class="col-md-3 foot-tc-mar-t-o">
-                    <h4>Institut</h4>
-                    <ul style="margin-left: -38px;">
-                        <li><a href="">Direktor tabrigi</a></li>
-                        <li><a href="">Institut nizomi</a></li>
-                        <li><a href="">Me'yoriy hujjatlar</a></li>
-                        <li><a href="">Umumiy ma'lumot</a></li>
-                        <li><a href="">Onlayn murojaat</a></li>
-                        <li><a href="">Qayta aloqa</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4>Tuzilma</h4>
-                    <ul style="margin-left: -38px;">
-                        <li><a href="">Rahbariyat</a></li>
-                        <li><a href="">Kafedralar</a></li>
-                        <li><a href="">Markaz va bo'limlar</a></li>
-                    </ul>
-                </div>
-                 <div class="col-md-3">
-                    <h4>Faoliyat</h4>
-                    <ul style="margin-left: -38px;">
-                        <li><a href="">O'quv faoliyati</a></li>
-                        <li><a href="">Ilmiy faoliyat</a></li>
-                        <li><a href="">Ijtimoiy faoliyat</a></li>
-                        <li><a href="">Xalqaro faoliyat</a></li>
-                    </ul>
-                </div>
-                 <div class="col-md-3">
-                    <h4>Yangiliklar</h4>
-                    <ul style="margin-left: -38px;">
-                        <li><a href="">E'lonlar</a></li>
-                        <li><a href="">Tadbirlar</a></li>
-                        <li><a href="">Bizning yutuqlar</a></li>
-                        <li><a href="">Fotogalereya</a></li>
-                    </ul>
-                </div>
+               <?
+                foreach ($menufooter as $menufooter) {
+                  ?>
+                     <div class="col-md-3 foot-tc-mar-t-o">
+                      <h4><?=$menufooter->name_uz?></h4>
+                      <div id="accordion" class="accordion">
+                        <div class="card mb-0">
+                        <?
+                          $menutitlefooter = MenuTitle::find()->Where(['menu_id'=>$menufooter->id])->all();
+                          foreach ($menutitlefooter as $menutitlefooter) {
+                            ?>
+                              <div class="card-header collapsed" data-toggle="collapse" href="#collapse<?=$menutitlefooter->id?>">
+                                <a class="card-title">
+                                    <?=$menutitlefooter->name_uz?>
+                                </a>
+                              </div>
+                              <div id="collapse<?=$menutitlefooter->id?>" class="card-body collapse" data-parent="#accordion" >
+                                  <ul>
+                                    <?
+                                      $menusubfooter = MenuSub::find()->Where(['menu_title_id'=>$menutitlefooter->id])->all();
+                                      foreach ($menusubfooter as $menusubfooter) {
+                                        if ($menusubfooter->link_type == 1) {
+                                          ?>
+                                            <li><a href="<?=Url::to(["site/".$menusubfooter->link, 'id'=>$menusubfooter->id])?>"><?=$menusubfooter->name_uz?></a></li>
+                                          <?
+                                        }else{
+                                          ?>
+                                            <li><a href="<?=$menusubfooter->link?>"><?=$menusubfooter->name_uz?></a></li>
+                                          <?
+                                        }
+                                        
+                                      }
+                                    ?>
+                                  </ul>
+                              </div>
+                            <?
+                          }
+                        ?>
+                        </div>
+                      </div>
+                    </div>
+                  <?
+                }
+               ?>
+              
             </div>
             <div class="row wed-foot-link-1">
                 <div class="col-md-3 foot-tc-mar-t-o">
