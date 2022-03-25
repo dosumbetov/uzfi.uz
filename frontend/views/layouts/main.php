@@ -276,7 +276,7 @@ AppAsset::register($this);
     color: white;
     padding: 0.3rem 1.25rem;
   }
-  .card {
+  .wed-hom-footer .container .wed-foot-link .col-md-3 .accordion .card {
     border: 0px;
     background-color: #002147;
   }
