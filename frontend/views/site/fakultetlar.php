@@ -197,7 +197,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					?>
 			</div>
 			<hr style="margin: 0px;">
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $cmmenu_sub : ''?> <?=Yii::t('app', 'Fakulteti haqida')?></h3>
+			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $cmmenu_sub : ''?> <?=Yii::t('app', 'haqida')?></h3>
  			<hr style="margin: 0px;">
  			<p class="mt-5"><?=$fakultet ? $fakultet_content : ''?></p>
 			</div>

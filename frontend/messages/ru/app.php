@@ -18,7 +18,7 @@
 		'Ilmiy faoliyat'=>'Научная деятельность',
 		'Tarjimai hol'=>'Биография Хол',
 		'Fax'=>'Факс',
-		'Fakulteti haqida'=>'О факультете',
+		'haqida'=>'o',
 		'Tezkor ilovalar'=>'Быстрые приложения',
 		"Asosiy ko'rsatkichlar"=>'Ключевые показатели',
 		'Fakultetlar'=>'Факультеты',
@@ -54,6 +54,7 @@
 		'Tyutorlar vazifasi'=>'Функции наставников',
 		'Kun tartibi'=>'Повседневные дела',
 		'Biriktirilgan talabalari'=>'Прикрепленные студенты',
+		"Samarqand sh., Spitamen shoh ko‘chasi, 166-uy"=>"Самарканд, пр. Спитамена 166",
 	]
 	
 ?>

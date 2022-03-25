@@ -266,10 +266,10 @@ AppAsset::register($this);
         <div class="container">
             <div class="row wed-foot-link">
                 <div class="col-md-3 foot-tc-mar-t-o">
-                    <h4>Universitet</h4>
+                    <h4>Institut</h4>
                     <ul style="margin-left: -38px;">
-                        <li><a href="">Rektor tabrigi</a></li>
-                        <li><a href="">Universitet nizomi</a></li>
+                        <li><a href="">Direktor tabrigi</a></li>
+                        <li><a href="">Institut nizomi</a></li>
                         <li><a href="">Me'yoriy hujjatlar</a></li>
                         <li><a href="">Umumiy ma'lumot</a></li>
                         <li><a href="">Onlayn murojaat</a></li>
@@ -279,8 +279,7 @@ AppAsset::register($this);
                 <div class="col-md-3">
                     <h4>Tuzilma</h4>
                     <ul style="margin-left: -38px;">
-                        <li><a href="">Rektorat</a></li>
-                        <li><a href="">Kengashlar</a></li>
+                        <li><a href="">Rahbariyat</a></li>
                         <li><a href="">Kafedralar</a></li>
                         <li><a href="">Markaz va bo'limlar</a></li>
                     </ul>
@@ -300,16 +299,16 @@ AppAsset::register($this);
                         <li><a href="">E'lonlar</a></li>
                         <li><a href="">Tadbirlar</a></li>
                         <li><a href="">Bizning yutuqlar</a></li>
-                        <li><a href="">fotogalereya</a></li>
+                        <li><a href="">Fotogalereya</a></li>
                     </ul>
                 </div>
             </div>
             <div class="row wed-foot-link-1">
                 <div class="col-md-3 foot-tc-mar-t-o">
                     <h4><?=Yii::t('app','Manzil')?></h4>
-                    <p>Manzil: Samarqand sh., Spitamen shoh ko‘chasi, 166-uy</p>
-                    <p>Phone: <a href="#!">(66) 222-37-54</a></p>
-                    <p>Email: <a href="#!">uzfi@.com</a></p>
+                    <p><?=Yii::t('app','Manzil')?>: Samarqand sh., Spitamen shoh ko‘chasi, 166-uy</p>
+                    <p>Phone: <a href="#!">(66) 222-69-27</a></p>
+                    <p>Email: <a href="#!">devonxona@uzfi.uz</a></p>
                 </div>
                 <div class="col-md-6">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.0442617391855!2d66.92115311473631!3d39.67121890856542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d192d50c43d2d%3A0xb165c3020cfe3714!2sSamDU%20O&#39;zbekiston-Finlandiya%20Pedagogika%20instituti!5e0!3m2!1sen!2s!4v1635831688417!5m2!1sen!2s" width="80%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

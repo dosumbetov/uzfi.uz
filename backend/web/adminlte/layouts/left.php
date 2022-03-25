@@ -45,6 +45,9 @@
                             ['label' => 'Slider', 'icon' => 'file-code-o', 'url' => ['/slider'],],
                             ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
                             ['label' => 'Rektorat', 'icon' => 'file-code-o', 'url' => ['/rektorat'],],
+                            ['label' => 'Direktor tabrigi', 'icon' => 'file-code-o', 'url' => ['/direktor-slider'],],
+                            ['label' => 'Tezkor havolalar', 'icon' => 'file-code-o', 'url' => ['/tezkor-havolalar'],],
+                             ['label' => 'Foydali saytlar', 'icon' => 'file-code-o', 'url' => ['/supporters'],],
                             ['label' => 'Tutorlar', 'icon' => 'file-code-o', 'url' => ['/tutor-info'],],
                              ['label' => 'Maktablar', 'icon' => 'file-code-o', 'url' => ['/maktablar-info'],],
                        
