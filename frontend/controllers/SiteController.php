@@ -151,7 +151,7 @@ class SiteController extends Controller
     {
       $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
       $query = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC]);
-      $tutor_info_number = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>6, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
+      $tutor_info_number = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>20, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
       $tutor_info = $query->offset($tutor_info_number->offset)->limit($tutor_info_number->limit)->all();
         return $this->render('tutor', [
           'tutor_info'=>$tutor_info,

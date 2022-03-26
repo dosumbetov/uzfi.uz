@@ -284,7 +284,7 @@ AppAsset::register($this);
     padding: 0px;
     color: white;
   }
-  .card-title {
+  .wed-hom-footer .container .wed-foot-link .col-md-3 .accordion .card .card-header .card-title {
     margin: 0px !important;
     padding: 0px !important;
   }

@@ -16,9 +16,9 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/menu/images/rasmslider.jpg" class="d-block w-100 rasm" alt="...">
-        </div>
+          <div class="carousel-item active">
+            <img src="/menu/images/rasmslider.jpg" class="d-block w-100 rasm" alt="...">
+          </div>
        <?
         foreach ($slider as $slide) {
           ?>
