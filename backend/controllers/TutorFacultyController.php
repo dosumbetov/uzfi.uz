@@ -1,18 +1,17 @@
 <?php
 
 namespace backend\controllers;
-use Yii;
-use backend\models\TutorInfo;
-use backend\models\TutorInfoSearch;
+
+use backend\models\TutorFaculty;
+use backend\models\TutorFacultySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
- * TutorInfoController implements the CRUD actions for TutorInfo model.
+ * TutorFacultyController implements the CRUD actions for TutorFaculty model.
  */
-class TutorInfoController extends Controller
+class TutorFacultyController extends Controller
 {
     /**
      * @inheritDoc
@@ -33,12 +32,12 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Lists all TutorInfo models.
+     * Lists all TutorFaculty models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new TutorInfoSearch();
+        $searchModel = new TutorFacultySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +47,7 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Displays a single TutorInfo model.
+     * Displays a single TutorFaculty model.
      * @param int $id ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,25 +60,20 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Creates a new TutorInfo model.
+     * Creates a new TutorFaculty model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new TutorInfo();
-        $dir_sl_img_name = uniqid();
-        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/img';
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->img =UploadedFile::getInstance($model, 'img');
-            if(!empty($model->img))
-            {
-                $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
-                $model->img = $dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension;
-                $model->save();
-            }
+        $model = new TutorFaculty();
 
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        } else {
+            $model->loadDefaultValues();
         }
 
         return $this->render('create', [
@@ -88,7 +82,7 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Updates an existing TutorInfo model.
+     * Updates an existing TutorFaculty model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return mixed
@@ -108,7 +102,7 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Deletes an existing TutorInfo model.
+     * Deletes an existing TutorFaculty model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return mixed
@@ -122,15 +116,15 @@ class TutorInfoController extends Controller
     }
 
     /**
-     * Finds the TutorInfo model based on its primary key value.
+     * Finds the TutorFaculty model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return TutorInfo the loaded model
+     * @return TutorFaculty the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = TutorInfo::findOne($id)) !== null) {
+        if (($model = TutorFaculty::findOne($id)) !== null) {
             return $model;
         }
 

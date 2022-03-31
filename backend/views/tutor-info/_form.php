@@ -9,6 +9,8 @@ use mihaildev\ckeditor\CKEditor;
 use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
 use backend\models\MenuSub;
+use backend\models\TutorFaculty;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TutorInfo */
@@ -116,6 +118,12 @@ use backend\models\MenuSub;
         ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'),
         [
             'prompt' => "Menu Subni tanlang",
+        ]); ?>
+
+        <?= $form->field($model, 'tutor_faculty_id')->dropDownList(
+        ArrayHelper::map(TutorFaculty::find()->all(), 'id', 'faculty_name_uz'),
+        [
+            'prompt' => "Facultetni tanlang",
         ]); ?>
 
     <div class="form-group">

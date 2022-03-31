@@ -63,6 +63,8 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'tutor_menu_sub_id') ?>
 
+    <?php // echo $form->field($model, 'tutor_faculty_id') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>

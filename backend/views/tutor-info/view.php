@@ -53,6 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'birik_talaba_royxati_ru:ntext',
             'birik_talaba_royxati_en:ntext',
             'tutor_menu_sub_id',
+            'tutor_faculty_id',
         ],
     ]) ?>
 

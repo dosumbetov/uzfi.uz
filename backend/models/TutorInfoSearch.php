@@ -17,7 +17,7 @@ class TutorInfoSearch extends TutorInfo
     public function rules()
     {
         return [
-            [['id', 'tutor_menu_sub_id'], 'integer'],
+            [['id', 'tutor_menu_sub_id', 'tutor_faculty_id'], 'integer'],
             [['name_uz', 'name_ru', 'name_en', 'biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en', 'tel', 'telegram', 'email', 'manzil_uz', 'manzil_ru', 'manzil_en', 'img', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en'], 'safe'],
         ];
     }
@@ -60,6 +60,7 @@ class TutorInfoSearch extends TutorInfo
         $query->andFilterWhere([
             'id' => $this->id,
             'tutor_menu_sub_id' => $this->tutor_menu_sub_id,
+            'tutor_faculty_id' => $this->tutor_faculty_id,
         ]);
 
         $query->andFilterWhere(['like', 'name_uz', $this->name_uz])
