@@ -125,7 +125,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   <img src="../<?=$tutor_info_faculty2 ? $tutor_info_faculty2_item->img : ''?>" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title"><?=$tutor_info_faculty2 ? $tutor_info_faculty2_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty2 ? $tutor_info_faculty1_biriktirilgan : ''?></p>
+                    <p class="card-text"><?=$tutor_info_faculty2 ? $tutor_info_faculty2_biriktirilgan : ''?></p>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty2_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
                   </div>
@@ -157,7 +157,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   <img src="../<?=$tutor_info_faculty3 ? $tutor_info_faculty3_item->img : ''?>" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title"><?=$tutor_info_faculty3 ? $tutor_info_faculty3_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty3 ? $tutor_info_faculty1_biriktirilgan : ''?></p>
+                    <p class="card-text"><?=$tutor_info_faculty3 ? $tutor_info_faculty3_biriktirilgan : ''?></p>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty3_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
                   </div>
@@ -189,7 +189,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   <img src="../<?=$tutor_info_faculty4 ? $tutor_info_faculty4_item->img : ''?>" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title"><?=$tutor_info_faculty4 ? $tutor_info_faculty4_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty4 ? $tutor_info_faculty1_biriktirilgan : ''?></p>
+                    <p class="card-text"><?=$tutor_info_faculty4 ? $tutor_info_faculty4_biriktirilgan : ''?></p>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty4_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
                   </div>
@@ -221,7 +221,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   <img src="../<?=$tutor_info_faculty5 ? $tutor_info_faculty5_item->img : ''?>" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title"><?=$tutor_info_faculty5 ? $tutor_info_faculty5_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty5 ? $tutor_info_faculty1_biriktirilgan : ''?></p>
+                    <p class="card-text"><?=$tutor_info_faculty5 ? $tutor_info_faculty5_biriktirilgan : ''?></p>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty5_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
                   </div>
