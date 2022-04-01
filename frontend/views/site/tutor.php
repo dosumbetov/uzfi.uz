@@ -66,13 +66,44 @@ $this->params['breadcrumbs'][] = $this->title;
           background-position: center;
           z-index: 10;
         }
-  }
-  }
+.container .middle .row .col-md-6 .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+ /*  background-clip: border-box; 
+   border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 0.25rem;
+}
+  
+  .container .middle .row .col-md-6 .card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+/*     flex-direction: column; 
+     min-width: 0; 
+     word-wrap: break-word;*/ 
+    background-color: #f4f4f5;
+   /*  background-clip: border-box; 
+     border: 1px solid rgba(0, 0, 0, 0.125); 
+     border-radius: 0.25rem; 
+     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; */
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+}
+
+  .container .middle .row .col-md-6 .card .card-body{
+    background: #f4f4f5;
   }
  </style>
 <div class="container mt-4">
 		<div class="middle">
-			<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Pedagogkika fakulteti</h3>
+			<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Pedagogkika fakulteti')?></h3>
 			<div class="row">
 				<?
 					$lang = Yii::$app->language;
@@ -89,7 +120,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					      }
 						?>
 							<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-				               <div class="card mb-5" style="width: 100%; text-align: center;">
+				        <div class="card mb-5" style="width: 100%; text-align: center;">
 								  <img src="../<?=$tutor_info_faculty1 ? $tutor_info_faculty1_item->img : ''?>" class="card-img-top" alt="...">
 								  <div class="card-body">
 								    <h5 class="card-title"><?=$tutor_info_faculty1 ? $tutor_info_faculty1_name : ''?></h5>
@@ -98,13 +129,13 @@ $this->params['breadcrumbs'][] = $this->title;
 								    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty1_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
 								  </div>
 								</div>
-				            </div>
+				      </div>
 						<?
 					}
 				?>
 			</div>
 
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Aniq tabiiy fanlar va jismoniy madaniyat fakulteti</h3>
+      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Aniq tabiiy fanlar va jismoniy madaniyat fakulteti')?></h3>
       <div class="row">
         <?
           $lang = Yii::$app->language;
@@ -136,7 +167,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
       </div>
 
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Xorijiy tillar va gumanitar fanlar fakulteti</h3>
+      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Xorijiy tillar va gumanitar fanlar fakulteti')?></h3>
       <div class="row">
         <?
           $lang = Yii::$app->language;
@@ -168,7 +199,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
       </div>
 
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Maktabgacha ta'lim fakulteti</h3>
+      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app',"Maktabgacha ta'lim fakulteti")?></h3>
       <div class="row">
         <?
           $lang = Yii::$app->language;
@@ -200,7 +231,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
       </div>
 
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;">San'atshunoslik fakulteti</h3>
+      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app',"San'atshunoslik fakulteti")?></h3>
       <div class="row">
         <?
           $lang = Yii::$app->language;

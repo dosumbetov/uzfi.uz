@@ -55,6 +55,11 @@
 		'Kun tartibi'=>'Повседневные дела',
 		'Biriktirilgan talabalari'=>'Прикрепленные студенты',
 		"Samarqand sh., Spitamen shoh ko‘chasi, 166-uy"=>"Самарканд, пр. Спитамена 166",
+		"Pedagogkika fakulteti"=>"Факультет педагогики",
+		"Aniq tabiiy fanlar va jismoniy madaniyat fakulteti"=>"Факультет естественных наук и физической культуры",
+		"Xorijiy tillar va gumanitar fanlar fakulteti"=>"Факультет иностранных языков и гуманитарных наук",
+		"Maktabgacha ta'lim fakulteti"=>"Факультет дошкольного образования",
+		"San'atshunoslik fakulteti"=>"Факультет искусств",
 	]
 	
 ?>

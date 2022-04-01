@@ -560,7 +560,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                                                 <img src="<?=$video_gallery_key->img?>" alt="">
                                             </div>
                                             <div class="post-content">
-                                                <h6 class="post-title"><?=$video_gallery_key->name_uz?></h6>
+                                                <span class="post-title"><?=yii\helpers\StringHelper::truncate($video_gallery ? $video_gallery_key->name_uz : '', 45, '...')?></span>
                                                 <div class="post-meta d-flex justify-content-between">
                                                     <?=$video_gallery_key->type_uz?>
                                                 </div>
@@ -653,17 +653,17 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       color: #ffffff;
       margin-bottom: 5px;
       display: block;
-      font-size: 15px;
+      /*font-size: 15px;*/
       font-weight: 700; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .single-blog-post .post-content .post-title {
-          font-size: 14px; } }
+          font-size: 12px; } }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-blog-post .post-content .post-title {
-          font-size: 13px; } }
+          font-size: 10px; } }
       @media only screen and (max-width: 767px) {
         .single-blog-post .post-content .post-title {
-          font-size: 13px; } }
+          font-size: 10px; } }
       .single-blog-post .post-content .post-title:hover, .single-blog-post .post-content .post-title:hover {
         color: #db4437; }
     .single-blog-post .post-content .post-meta a {

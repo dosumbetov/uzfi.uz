@@ -11,11 +11,11 @@ $lang = Yii::$app->language;
       }elseif ($lang == 'en') {
         $tutor_info_name = $tutor_info_item->name_en;
         $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_en;
-        $tutor_info_vazifa = $tutor_info_item->tutor_duty_uz;
+        $tutor_info_vazifa = $tutor_info_item->tutor_duty_en;
       }elseif ($lang == 'ru') {
         $tutor_info_name = $tutor_info_item->name_ru;
         $tutor_info_biriktirilgan = $tutor_info_item->biriktirilgan_ru;
-        $tutor_info_vazifa = $tutor_info_item->tutor_duty_uz;
+        $tutor_info_vazifa = $tutor_info_item->tutor_duty_ru;
       }
   }
   $this->title = "Tutorlar profile";
