@@ -16,7 +16,7 @@
 		'Qabul vaqti'=>'Время приема',
 		"Umumiy ma'lumot"=>"Общая информация",
 		'Ilmiy faoliyat'=>'Научная деятельность',
-		'Tarjimai hol'=>'Биография Хол',
+		'Tarjimai hol'=>'Автобиография',
 		'Fax'=>'Факс',
 		'haqida'=>'o',
 		'Tezkor ilovalar'=>'Быстрые приложения',
