@@ -135,7 +135,7 @@ $lang = Yii::$app->language;
         list-style-type: disc !important;
     }
       ul li a {
-      font-size: 18px;
+      /*font-size: 18px;*/
     }
     .left_bar_tea p i {
         margin-right: 20px;
