@@ -1475,13 +1475,16 @@ hr {
 .orqafon {
       top: 0px;
       display: flex;
-      background-color: white;
+      /*background-color: white;*/
+  background-image: linear-gradient(90deg, rgba(88, 121, 182, .05) 0%, rgba(85, 136, 205, .05) 100%);
+      
 
 }
 .orqafon1 {
   top: 0px;
   display: flex;
-  background-color: #fbfafa;
+  /*background-color: #fbfafa;*/
+  background-color: rgba(243, 246, 254, 1);
 }
 .block_havola .box {
     position: relative;

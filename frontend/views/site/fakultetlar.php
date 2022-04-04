@@ -104,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<h4 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub : ''?></h4>
 			<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-  			<h4 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_name : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_faculty : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_rank : ''?></i></h4>
+  			<h6 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_name : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_faculty : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_rank : ''?></i></h6>
   			<?
 				foreach ($fakultet_staff as $fakultet_staff_item) {
 					if ($fakultet_staff_item->staff_name_uz==$fakultet_item->name_uz) {
