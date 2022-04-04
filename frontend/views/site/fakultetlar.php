@@ -101,7 +101,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-			<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub : ''?></h3>
+			<h4 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub : ''?></h4>
 			<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
   			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
   			<h4 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_name : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_faculty : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_rank : ''?></i></h4>
@@ -161,7 +161,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				}
 			</style>
 			<hr style="margin: 0px;">
-			<h3 style="text-align: center;color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $cmmenu_sub : ''?> <?=$fakultet ? $cdfakultet_staff : ''?></h3>
+			<h4 style="text-align: center;color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $cmmenu_sub : ''?> <?=$fakultet ? $cdfakultet_staff : ''?></h4>
 			<hr style="margin: 0px;">
 			<div class="row mb-5 mt-5">
 				
@@ -197,7 +197,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					?>
 			</div>
 			<hr style="margin: 0px;">
-			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $cmmenu_sub : ''?> <?=Yii::t('app', 'haqida')?></h3>
+			<h4 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$menu_sub ? $cmmenu_sub : ''?></h4>
  			<hr style="margin: 0px;">
  			<p class="mt-5"><?=$fakultet ? $fakultet_content : ''?></p>
 			</div>
