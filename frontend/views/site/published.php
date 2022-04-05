@@ -110,7 +110,7 @@ $this->title = $cmmenu_sub_item;
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
               <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_name : ''?></h3>
+              <h5 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_name : ''?></h5>
               <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_lavozim : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
               <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
@@ -273,11 +273,13 @@ $this->title = $cmmenu_sub_item;
         border-image: none;
         z-index: 2; 
     }
-    .left_bar_tea {
+   .left_bar_tea {
         width: 98%;
-        background-color: #fff;
+        /*background-color: #fff;*/
+        background-color: #f4f4f5;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
         border: 1px solid #F3F2F2;
         max-height: 100% !important;
     }

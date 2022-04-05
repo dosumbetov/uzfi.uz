@@ -161,11 +161,13 @@ $lang = Yii::$app->language;
         border-image: none;
         z-index: 2; 
     }
-   .left_bar_tea {
+  .left_bar_tea {
         width: 98%;
-        background-color: #fff;
+        /*background-color: #fff;*/
+        background-color: #f4f4f5;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
         border: 1px solid #F3F2F2;
         max-height: 100% !important;
     }

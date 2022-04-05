@@ -101,10 +101,10 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-			<h4 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub : ''?></h4>
-			<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
-  			margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-  			<h6 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_name : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_faculty : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_rank : ''?></i></h6>
+				<h4 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$menu_sub ? $cmmenu_sub : ''?></h4>
+				<img src="../<?=$fakultet ? $fakultet_item->img : ''?>" style="display: block;
+  					margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
+  				<h6 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $fakultet_name : ''?><br><i style="text-transform: capitalize;"><?=$fakultet ? $fakultet_faculty : ''?></i><br><i style="text-transform: lowercase;"><?=$fakultet ? $fakultet_rank : ''?></i></h6>
   			<?
 				foreach ($fakultet_staff as $fakultet_staff_item) {
 					if ($fakultet_staff_item->staff_name_uz==$fakultet_item->name_uz) {
@@ -151,20 +151,10 @@ $this->params['breadcrumbs'][] = $this->title;
 			    </tr>
 			  </tbody>
 			</table>
-			<style type="text/css">
-				p, li, a, span, table, tr, td, th, label {
-			   		 /*font-size: 18px;*/
-			   		 color: black; 
-			   		 font-weight: 400;
-			   		line-height: 24px;
-			    	list-style-type: none;
-				}
-			</style>
 			<hr style="margin: 0px;">
 			<h4 style="text-align: center;color: black; text-transform: uppercase;" class="mt-4"><?=$fakultet ? $cmmenu_sub : ''?> <?=$fakultet ? $cdfakultet_staff : ''?></h4>
 			<hr style="margin: 0px;">
 			<div class="row mb-5 mt-5">
-				
 					<?
 					$lang = Yii::$app->language;
 						foreach ($fakultet_staff as $fakultet_staff_item) {
@@ -206,6 +196,13 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 </div>
 <style type="text/css">
+	p, li, a, span, table, tr, td, th, label {
+			   		 /*font-size: 18px;*/
+			   		 color: black; 
+			   		 font-weight: 400;
+			   		line-height: 24px;
+			    	list-style-type: none;
+				}
 	.fakultet_btn {
 		padding: 5px;
 		text-align: center;
@@ -348,6 +345,35 @@ $this->params['breadcrumbs'][] = $this->title;
 }
 
 }
-
+.container .middle .row .col-md-6 .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+ /*  background-clip: border-box; 
+   border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 0.25rem;
+}
+  
+  .container .middle .row .col-md-6 .card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+/*     flex-direction: column; 
+     min-width: 0; 
+     word-wrap: break-word;*/ 
+    background-color: #f4f4f5;
+   /*  background-clip: border-box; 
+     border: 1px solid rgba(0, 0, 0, 0.125); 
+     border-radius: 0.25rem; 
+     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; */
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+}
 </style>
 

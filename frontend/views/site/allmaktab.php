@@ -183,5 +183,39 @@ $this->params['breadcrumbs'][] = $this->title;
   background-color: #fff;
   border-color: #dee2e6;
 } 
+
+.container .middle .row .col-md-6 .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+ /*  background-clip: border-box; 
+   border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 0.25rem;
+}
+  
+  .container .middle .row .col-md-6 .card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+/*     flex-direction: column; 
+     min-width: 0; 
+     word-wrap: break-word;*/ 
+    background-color: #f4f4f5;
+   /*  background-clip: border-box; 
+     border: 1px solid rgba(0, 0, 0, 0.125); 
+     border-radius: 0.25rem; 
+     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; */
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+}
+ .container .middle .row .col-md-6 .card .card-body{
+    background: #f4f4f5;
+  }
 </style>
 
