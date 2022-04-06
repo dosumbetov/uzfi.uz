@@ -1064,19 +1064,19 @@ hr {
      float: left;
 }*/
  .wed-foot-link ul li a{
-     color: #838384;
-     font-size: 15px;
+     color: white;
+     font-size: 14px;
      transition: 0.5s;
 
 }
  .wed-foot-link ul li:hover a{
-     color: white;
+     /*color: white;*/
      font-size: 15px;
-    border-bottom: 1px solid white;
+    /*border-bottom: 1px solid white;*/
     /*transition: 1s;*/
 }
  .wed-foot-link div{
-     border-right: 1px groove #6a83a0;
+     /*border-right: 1px groove #6a83a0;*/
 }
  .wed-foot-link div:last-child{
      border-right:0px solid #dadada;

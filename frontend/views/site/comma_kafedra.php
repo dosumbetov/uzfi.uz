@@ -45,13 +45,13 @@ $lang = Yii::$app->language;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-2 text-center" style="color: black; text-transform: uppercase;"><?=$kafedralar ? $cmkafedralar : ''?></h3>
+				<h4 class="mb-2 text-center" style="color: black; text-transform: uppercase;"><?=$kafedralar ? $cmkafedralar : ''?></h4>
  				<hr style="margin: 0px; margin-bottom: 20px;">
  				<img src="../<?=$com_kafedra ? $com_kafedra_item->img : ''?>" style="display: block;
   				margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-	  			<h3 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">
+	  			<h5 style="text-align: center; color: black; text-transform: uppercase;" class="mt-4">
 	  				<?=$com_kafedra ? $cmcom_kafedra_name : ''?><br>
-	  			</h3>
+	  			</h5>
 	  			<p style="text-align: center;"><i><?=$com_kafedra ? $cmcom_kafedra_lavozim : ''?></i><br><i><?=$com_kafedra ? $cmcom_kafedra_daraja : ''?></i></p>
 	  			<?
 	  			
@@ -96,7 +96,7 @@ $lang = Yii::$app->language;
 				    </tr>
 				  </tbody>
 				</table>
-				<h3 style="text-align: center; text-transform: uppercase;"><?=$com_kafedra ? $cmcom_kafedra_hodim : ''?></h3>
+				<h4 style="text-align: center; text-transform: uppercase;"><?=$com_kafedra ? $cmcom_kafedra_hodim : ''?></h4>
 				<hr style="margin: 0px;">
 				<div class="row">
 				<?
@@ -131,7 +131,7 @@ $lang = Yii::$app->language;
 					}
 				?>
 				</div>
-				<h3 style="text-align: center; text-transform: uppercase; margin-top: 20px;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h3>
+				<h4 style="text-align: center; text-transform: uppercase; margin-top: 20px;"><?=Yii::t('app', 'kafedra tarixi haqida')?></h4>
 				<hr style="margin: 0px; margin-bottom: 20px;">
 				<p><?=$com_kafedra ? $cmcom_kafedra_content : ''?></p>
 			</div>

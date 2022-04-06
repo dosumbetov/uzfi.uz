@@ -279,6 +279,7 @@ AppAsset::register($this);
   .wed-hom-footer .container .wed-foot-link .col-md-3 .accordion .card {
     border: 0px;
     background-color: #002147;
+    border-right: 1px groove #6a83a0;
   }
   .card-body{
     padding: 0px;
@@ -288,8 +289,9 @@ AppAsset::register($this);
     margin: 0px !important;
     padding: 0px !important;
   }
-  .card-body ul li {
+  .wed-hom-footer .container .wed-foot-link .col-md-3 .accordion .card .card-body ul li {
     list-style-type: none;
+    border-bottom: 1px groove #6a83a0;
   }
     .accordion .card-header:after {
     font-family: 'FontAwesome';  
@@ -307,33 +309,57 @@ AppAsset::register($this);
         <div class="container">
             <div class="row wed-foot-link">
                <?
-                foreach ($menufooter as $menufooter) {
+                $lang = Yii::$app->language;
+                foreach ($menufooter as $menufooter_key) {
+                    if ($lang == 'uz') {
+                          $menufooter_key_all = $menufooter_key->name_uz;
+                        }elseif ($lang == 'en') {
+                          $menufooter_key_all = $menufooter_key->name_en;
+                        }elseif ($lang == 'ru') {
+                          $menufooter_key_all = $menufooter_key->name_ru;
+                        }
                   ?>
                      <div class="col-md-3 foot-tc-mar-t-o">
-                      <h4><?=$menufooter->name_uz?></h4>
+                      <h4><?=$menufooter ? $menufooter_key_all : ''?></h4>
                       <div id="accordion" class="accordion">
                         <div class="card mb-0">
                         <?
-                          $menutitlefooter = MenuTitle::find()->Where(['menu_id'=>$menufooter->id])->all();
-                          foreach ($menutitlefooter as $menutitlefooter) {
+                        $lang = Yii::$app->language;
+                          $menutitlefooter = MenuTitle::find()->Where(['menu_id'=>$menufooter_key->id])->all();
+                          foreach ($menutitlefooter as $menutitlefooter_key) {
+                            if ($lang == 'uz') {
+                                $menutitlefooter_all = $menutitlefooter_key->name_uz;
+                              }elseif ($lang == 'en') {
+                                $menutitlefooter_all = $menutitlefooter_key->name_en;
+                              }elseif ($lang == 'ru') {
+                                $menutitlefooter_all = $menutitlefooter_key->name_ru;
+                              }
                             ?>
-                              <div class="card-header collapsed" data-toggle="collapse" href="#collapse<?=$menutitlefooter->id?>">
+                              <div class="card-header collapsed" data-toggle="collapse" href="#collapse<?=$menutitlefooter_key->id?>">
                                 <a class="card-title">
-                                    <?=$menutitlefooter->name_uz?>
+                                    <?=$menutitlefooter ? $menutitlefooter_all : ''?>
                                 </a>
                               </div>
-                              <div id="collapse<?=$menutitlefooter->id?>" class="card-body collapse" data-parent="#accordion" >
+                              <div id="collapse<?=$menutitlefooter_key->id?>" class="card-body collapse" data-parent="#accordion" >
                                   <ul>
                                     <?
-                                      $menusubfooter = MenuSub::find()->Where(['menu_title_id'=>$menutitlefooter->id])->all();
-                                      foreach ($menusubfooter as $menusubfooter) {
-                                        if ($menusubfooter->link_type == 1) {
+                                    $lang = Yii::$app->language;
+                                      $menusubfooter = MenuSub::find()->Where(['menu_title_id'=>$menutitlefooter_key->id])->all();
+                                      foreach ($menusubfooter as $menusubfooter_key) {
+                                        if ($lang == 'uz') {
+                                              $menusubfooter_all = $menusubfooter_key->name_uz;
+                                            }elseif ($lang == 'en') {
+                                              $menusubfooter_all = $menusubfooter_key->name_en;
+                                            }elseif ($lang == 'ru') {
+                                              $menusubfooter_all = $menusubfooter_key->name_ru;
+                                            }
+                                        if ($menusubfooter_key->link_type == 1) {
                                           ?>
-                                            <li><a href="<?=Url::to(["site/".$menusubfooter->link, 'id'=>$menusubfooter->id])?>"><?=$menusubfooter->name_uz?></a></li>
+                                            <li><a href="<?=Url::to(["site/".$menusubfooter_key->link, 'id'=>$menusubfooter_key->id])?>"><?=$menusubfooter ? $menusubfooter_all : ''?></a></li>
                                           <?
                                         }else{
                                           ?>
-                                            <li><a href="<?=$menusubfooter->link?>"><?=$menusubfooter->name_uz?></a></li>
+                                            <li><a href="<?=$menusubfooter_key->link?>"><?=$menusubfooter ? $menusubfooter_all : ''?></a></li>
                                           <?
                                         }
                                         
