@@ -72,6 +72,9 @@ $this->params['breadcrumbs'][] = $this->title;
   }
  </style>
 <style type="text/css">
+  body {
+    background-color: #f4f4f5;
+  }
   .head-text {
     background: rgba(204, 204, 204, 0.5);
     margin-bottom: 20px;

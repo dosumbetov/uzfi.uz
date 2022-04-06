@@ -96,13 +96,17 @@ foreach ($maktab as $maktab_item) {
         border: 1px solid #F3F2F2;
         max-height: 100% !important;
     }
+      body {
+        background-color: #f4f4f5;
+    }
     .middle_bar_tea {
         position: relative;
         width: 98%;
         padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border: 1px solid #F3F2F2;
         margin-bottom: 5%;
         margin-top: 5%;

@@ -97,6 +97,9 @@ foreach ($maktab as $maktab_item) {
         /*font-size: 18px;*/
         color: black;
     } 
+    body {
+        background-color: #f4f4f5;
+    }
     .img_teacher {
         position: relative;
         width: 100%;
@@ -126,7 +129,8 @@ foreach ($maktab as $maktab_item) {
         padding: 20px;
         background-color: #fff;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border: 1px solid #F3F2F2;
         margin-bottom: 30px;
         margin-top: 35px;

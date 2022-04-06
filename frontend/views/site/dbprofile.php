@@ -135,6 +135,9 @@ $this->title = $cmmenu_sub_item;
 </div>
 
 <style type="text/css">
+  body {
+    background-color: #f4f4f5;
+  }
     p, li, a, span, table, tr, td, th, label {
          /*font-size: 18px;*/
          color: black; 
@@ -192,7 +195,8 @@ $this->title = $cmmenu_sub_item;
         padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border: 1px solid #F3F2F2;
         margin-bottom: 5%;
         margin-top: 5%;

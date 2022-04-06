@@ -27,6 +27,9 @@ foreach ($emblems as $emblems_item) {
 	</div>
 </div>
 <style type="text/css">
+	body {
+		background-color: #f4f4f5;
+	}
 	p, li, a, span, table, tr, td, th, label {
 			 color: black; 
 			 font-weight: 400;
@@ -53,7 +56,8 @@ foreach ($emblems as $emblems_item) {
 		background-color: white;
 		border-radius: 10px;
 		padding: 6%;
-		box-shadow: 2px 10px 15px #888888;
+		/*box-shadow: 2px 10px 15px #888888;*/
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		width: 99%;
 		margin-bottom: 5%;
 	}

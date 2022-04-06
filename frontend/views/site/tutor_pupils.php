@@ -37,6 +37,9 @@ $lang = Yii::$app->language;
     </div>
  </div>
  <style type="text/css">
+   body {
+      background-color: #f4f4f5;
+    }
   .breadcrumb {
     background-color: rgba(0, 0, 0, 0.5) !important;
   }
@@ -177,7 +180,8 @@ $lang = Yii::$app->language;
         padding: 5%;
         background-color: #fff;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border: 1px solid #F3F2F2;
         margin-bottom: 5%;
         margin-top: 5%;

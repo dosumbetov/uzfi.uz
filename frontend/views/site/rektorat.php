@@ -177,13 +177,17 @@ $this->params['breadcrumbs'][] = $this->title;
         line-height: 24px;
         list-style-type: disc !important;
     }
+    body {
+      background-color: #f4f4f5;
+    }
 	.middle {
 		background-color: white;
 		position: relative;
 		display: block;
 		border-radius: 10px;
 		padding: 6%;
-		box-shadow: 2px 10px 15px #888888;
+		/*box-shadow: 2px 10px 15px #888888;*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		/*margin-left: -20px;*/
 		/*margin-right: 40px;*/
 		width: 99%;
