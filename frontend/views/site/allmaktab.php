@@ -1,6 +1,5 @@
 <?
 use yii\helpers\Url;
-$lang = Yii::$app->language;
 use yii\bootstrap4\Breadcrumbs;
 $lang = Yii::$app->language;
 foreach ($menu_sub as $menu_sub_item) {
@@ -75,14 +74,25 @@ $this->params['breadcrumbs'][] = $this->title;
 			<h2 class="mb-5 text-center" style="color: black; text-transform: uppercase;">Maktablar</h2>
 			<div class="row">
 			<?
+      $lang = Yii::$app->language;
 				foreach ($maktablar_info as $maktablar_info_item) {
+          if ($lang == 'uz') {
+            $maktablar_info_item_name = $maktablar_info_item->name_uz;
+            $maktablar_info_item_attached = $maktablar_info_item->kimga_biriktirilgan_uz;
+          }elseif ($lang == 'en') {
+            $maktablar_info_item_name = $maktablar_info_item->name_en;
+            $maktablar_info_item_attached = $maktablar_info_item->kimga_biriktirilgan_en;
+          }elseif ($lang == 'ru') {
+            $maktablar_info_item_name = $maktablar_info_item->name_ru;
+            $maktablar_info_item_attached = $maktablar_info_item->kimga_biriktirilgan_ru;
+          }
 					?>
 						<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
 			               <div class="card mb-5" style="width: 100%; text-align: center;">
 							  <img src="<?=$maktablar_info ? $maktablar_info_item->img : ''?>" class="card-img-top" alt="...">
 							  <div class="card-body">
-							    <h5 class="card-title"><?=$maktablar_info ? $maktablar_info_item->name_uz : ''?></h5>
-							    <p class="card-text"><?=$maktablar_info ? $maktablar_info_item->kimga_biriktirilgan_uz : ''?></p>
+							    <h5 class="card-title"><?=$maktablar_info ? $maktablar_info_item_name : ''?></h5>
+							    <p class="card-text"><?=$maktablar_info ? $maktablar_info_item_attached : ''?></p>
 							    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 							    <a href="<?=Url::to(['site/maktab', 'id'=>$maktablar_info_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
 							  </div>

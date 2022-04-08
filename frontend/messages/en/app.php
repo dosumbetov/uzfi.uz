@@ -60,6 +60,12 @@
 		"Xorijiy tillar va gumanitar fanlar fakulteti"=>"Faculty of Foreign Languages ​​and Humanities",
 		"Maktabgacha ta'lim fakulteti"=>"Faculty of Preschool Education",
 		"San'atshunoslik fakulteti"=>"Faculty of Art",
+		'Maktab nomi'=>'A name of school',
+		"Maktab tarixi"=>'A history of school',
+		"Maktab passporti"=>'A passport of school',
+		"Maktab to'garaklari"=>'An extracurricular activities of school',
+		"Maktab o'qituvchilari"=>'A teachers of school',
+		"Maktab o'quvchilari"=>'A pupils of school',
 	]
 		
 ?>

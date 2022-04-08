@@ -1,23 +1,107 @@
  <?
 use yii\helpers\Url;
+use yii\bootstrap4\Breadcrumbs;
+use backend\models\MenuSub;
+$lang = Yii::$app->language;
 foreach ($maktab as $maktab_item) {
-    # code...
+     if ($lang == 'uz') {
+      $maktab_item_name = $maktab_item->name_uz;
+      $maktab_item_attached = $maktab_item->kimga_biriktirilgan_uz;
+      $maktab_item_history = $maktab_item->maktab_tarixi_uz;
+    }elseif ($lang == 'en') {
+      $maktab_item_name = $maktab_item->name_en;
+      $maktab_item_attached = $maktab_item->kimga_biriktirilgan_en;
+      $maktab_item_history = $maktab_item->maktab_tarixi_en;
+    }elseif ($lang == 'ru') {
+      $maktab_item_name = $maktab_item->name_ru;
+      $maktab_item_attached = $maktab_item->kimga_biriktirilgan_ru;
+      $maktab_item_history = $maktab_item->maktab_tarixi_ru;
+    }
 }
+$menu_sub = MenuSub::find()->Where(['id'=>14])->all();
+foreach ($menu_sub as $menu_sub_key) {
+   if ($lang == 'uz') {
+      $menu_sub_key_name = $menu_sub_key->name_uz;
+    }elseif ($lang == 'en') {
+      $menu_sub_key_name = $menu_sub_key->name_en;
+    }elseif ($lang == 'ru') {
+      $menu_sub_key_name = $menu_sub_key->name_ru;
+    }
+}
+$this->title = Yii::t('app',"Maktab tarixi");
  ?>
 
+ <div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    ['label' => $menu_sub_key_name, 'url' => ['site/allmaktab', 'id' => 14]],
+                    $this->title =Yii::t('app',"Maktab tarixi"),
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+   body {
+      background-color: #f4f4f5;
+    }
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
+
 <section class="orqarasm">
-    <img src="../../images/pro-bg.jpg" width="100%;">
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                          <ul>
                             <li><a href="<?=Url::to(['site/maktab', 'id'=>$maktab_item->id])?>" class="pro-act"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
-                            <li><a href="<?=Url::to(['site/maktab_profile', 'id'=>$maktab_item->id])?>">Maktab tarixi</a></li>
-                            <li><a href="<?=Url::to(['site/maktab_passpord', 'id'=>$maktab_item->id])?>">Maktab passporti</a></li>
-                            <li><a href="<?=Url::to(['site/maktab_togaraklari', 'id'=>$maktab_item->id])?>">Maktab to'garaklari</a></li>
-                            <li><a href="<?=Url::to(['site/maktab_oqituvchilari', 'id'=>$maktab_item->id])?>">Maktab o'qituvchilari</a></li>
-                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>">Maktab o'quvchilari</a></li>
+                            <li><a href="<?=Url::to(['site/maktab_profile', 'id'=>$maktab_item->id])?>"><?=Yii::t('app',"Maktab tarixi")?></a></li>
+                            <li><a href="<?=Url::to(['site/maktab_passpord', 'id'=>$maktab_item->id])?>"><?=Yii::t('app',"Maktab passporti")?></a></li>
+                            <li><a href="<?=Url::to(['site/maktab_togaraklari', 'id'=>$maktab_item->id])?>"><?=Yii::t('app',"Maktab to'garaklari")?></a></li>
+                            <li><a href="<?=Url::to(['site/maktab_oqituvchilari', 'id'=>$maktab_item->id])?>"><?=Yii::t('app',"Maktab o'qituvchilari")?></a></li>
+                             <li><a href="<?=Url::to(['site/maktab_talabalari', 'id'=>$maktab_item->id])?>"><?=Yii::t('app',"Maktab o'quvchilari")?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,8 +114,8 @@ foreach ($maktab as $maktab_item) {
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
                 <img src="../<?=$maktab ? $maktab_item->img : ''?>" class="img_teacher">
-              <h4 class="mt-3" style="text-align: center;"><?=$maktab ? $maktab_item->name_uz : ''?></h4>
-              <p style="text-align: center;"><?=$maktab ? $maktab_item->kimga_biriktirilgan_uz : ''?></p>
+              <h4 class="mt-3" style="text-align: center;"><?=$maktab ? $maktab_item_name : ''?></h4>
+              <p style="text-align: center;"><?=$maktab ? $maktab_item_attached : ''?></p>
               <hr style="margin: 0px; margin-bottom: 5%;">
               <p><i class="fa fa-phone"></i> <?=$maktab ? $maktab_item->tel : ''?></p>
               <p><i class="fa fa-fax"></i><?=$maktab ? $maktab_item->fax : ''?></p>
@@ -40,9 +124,9 @@ foreach ($maktab as $maktab_item) {
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-              <h4 style="color: black;"><img src="../../images/icon/maktab.ico" alt="" />Maktab tarixi</h4>
+              <h4 style="color: black;"><img src="../../images/icon/maktab.ico" alt="" /><?=Yii::t('app',"Maktab tarixi")?></h4>
              <hr style="margin: 0px; margin-bottom: 5%;">
-            <?=$maktab ? $maktab_item->maktab_tarixi_uz : ''?>
+            <?=$maktab ? $maktab_item_history : ''?>
           </div>
         </div>
     </div>

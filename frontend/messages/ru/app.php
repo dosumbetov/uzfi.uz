@@ -60,6 +60,12 @@
 		"Xorijiy tillar va gumanitar fanlar fakulteti"=>"Факультет иностранных языков и гуманитарных наук",
 		"Maktabgacha ta'lim fakulteti"=>"Факультет дошкольного образования",
 		"San'atshunoslik fakulteti"=>"Факультет искусств",
+		'Maktab nomi'=>'Название школы',
+		"Maktab tarixi"=>'',
+		"Maktab passporti"=>'',
+		"Maktab to'garaklari"=>'',
+		"Maktab o'qituvchilari"=>'',
+		"Maktab o'quvchilari"=>'',
 	]
 	
 ?>
