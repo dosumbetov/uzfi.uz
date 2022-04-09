@@ -1,5 +1,6 @@
  <?
 use yii\helpers\Url;
+use yii\bootstrap4\Breadcrumbs;
 $lang = Yii::$app->language;
 foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
   if ($lang == 'uz') {
@@ -18,8 +19,62 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
 }
  ?>
 
+<div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    ['label' => "sdf", 'url' => ['site/allpages', 'id' => 1]],
+                    $this->title,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <section class="orqarasm">
-    <img src="../../images/pro-bg.jpg" width="100%;">
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
@@ -175,9 +230,9 @@ foreach ($kafedra_oqituvchilari as $kafedra_oqituvchilari_item) {
     }
     .left_bar_tea {
         width: 98%;
-        background-color: #fff;
         transform-style: preserve-3d;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
+        background-color: #f4f4f5;
+        box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
         border: 1px solid #F3F2F2;
         min-height: 96% !important;
     }

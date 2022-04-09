@@ -1,5 +1,6 @@
 <?
 use yii\helpers\Url;
+use yii\bootstrap4\Breadcrumbs;
 $lang = Yii::$app->language;
 	foreach ($kafedralar as $kafedralar_item) {
 		if ($lang == 'uz') {
@@ -39,8 +40,64 @@ $lang = Yii::$app->language;
         }
 	}
 
-
+$this->title = "sad";
+$this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    ['label' => "sdf", 'url' => ['site/allpages', 'id' => 1]],
+                    $this->title,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
@@ -290,5 +347,36 @@ $lang = Yii::$app->language;
 
 }
 
+
+.container .middle .row .col-md-6 .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+ /*  background-clip: border-box; 
+   border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 0.25rem;
+}
+  
+  .container .middle .row .col-md-6 .card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+/*     flex-direction: column; 
+     min-width: 0; 
+     word-wrap: break-word;*/ 
+    background-color: #f4f4f5;
+   /*  background-clip: border-box; 
+     border: 1px solid rgba(0, 0, 0, 0.125); 
+     border-radius: 0.25rem; 
+     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; */
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+}
 
 </style>
