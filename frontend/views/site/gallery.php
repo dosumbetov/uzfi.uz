@@ -69,22 +69,17 @@ $this->title = Yii::t('app', 'Aloqa')?>;
    <div class="seccion">
     <div class="galeria">
       <ul>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal10_wfbbrk.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal9_dyhjrd.jpg"></li>
-          <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal8_xyaglw.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal7_qezqc6.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal5_i77mw0.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal4_g8t3o8.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal3_eebtfm.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal2_jlxmnm.jpg"></li>
-        <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal1_fbmz6u.jpg"></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+          <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+      
       </ul>
    </div>
   </div>
 </body>
-<footer>
- <p id="copyright">Developed by Daniel Villalba<br><a href="https://d4ni.es">www.d4ni.es</a></p>
-</footer>
+
 <style type="text/css">
 .seccion {
   width: 60%;
