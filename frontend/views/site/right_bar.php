@@ -11,15 +11,15 @@
 					<ul class="mcd-menu">
 						<h3 style="color: black; text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h3>
 						<li>
-							<a href="" class="active">
+							<a href="https://interactive.uzfi.uz/" class="active" target="_blank">
 								<i class="fa fa-file"></i>
 								<strong><?=Yii::t('app','Interaktiv xizmatlar')?></strong>
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="" target="_blank">
 								<i class="fa fa-briefcase"></i>
-								<strong><?=Yii::t('app',"bo'sh ish o'rni")?></strong>
+								<strong><?=Yii::t('app',"Tyutorlar")?></strong>
 							</a>
 						</li>
 						<li>
@@ -29,21 +29,21 @@
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="https://mt.uzfi.uz/" target="_blank">
 								<i class="fa fa-graduation-cap"></i>
 								<strong><?=Yii::t('app',"Masofaviy ta'lim")?></strong>
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="https://interactive.uzfi.uz/acceptance" target="_blank">
 								<i class="fas fa-laptop-code"></i>
 								<strong><?=Yii::t('app','virtual qabulxona')?></strong>
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="https://library.uzfi.uz/" target="_blank">
 								<i class="fas fa-book-reader"></i>
-								<strong><?=Yii::t('app','kutubxona')?></strong>
+								<strong><?=Yii::t('app','Kutubxona')?></strong>
 							</a>
 						</li>
 						

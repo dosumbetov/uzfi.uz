@@ -87,6 +87,7 @@ return [
                 'tutorschedule/<id:\w+>'=>'site/tutor_dars_jadvali',
                 'tutorofmatched/<id:\w+>'=>'site/tutor_pupils',
                 'published/<id:\w+>'=>'site/published',
+                'emblems/<id:\w+>'=>'site/emb_pages',
                 '<controller:\w+>/<action:\w+>/'=>'<controller>/<action>',
             ],
         ],

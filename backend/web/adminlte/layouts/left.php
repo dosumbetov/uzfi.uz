@@ -48,6 +48,8 @@
                             ['label' => 'Direktor tabrigi', 'icon' => 'file-code-o', 'url' => ['/direktor-slider'],],
                             ['label' => 'Tezkor havolalar', 'icon' => 'file-code-o', 'url' => ['/tezkor-havolalar'],],
                              ['label' => 'Foydali saytlar', 'icon' => 'file-code-o', 'url' => ['/supporters'],],
+                             ['label' => 'Davlat ramzlari icon', 'icon' => 'file-code-o', 'url' => ['/emblems'],],
+                             ['label' => 'Davlat ramzlari', 'icon' => 'file-code-o', 'url' => ['/emb-pages'],],
                             ['label' => 'Tutorlar', 'icon' => 'file-code-o', 'url' => ['/tutor-info'],],
                              ['label' => 'Maktablar', 'icon' => 'file-code-o', 'url' => ['/maktablar-info'],],
                        

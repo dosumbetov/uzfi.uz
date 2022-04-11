@@ -1,5 +1,7 @@
 <?
 use yii\helpers\Url;
+use yii\bootstrap4\Breadcrumbs;
+
 $lang = Yii::$app->language;
 foreach ($emblems as $emblems_item) {
 	if ($lang == 'uz') {
@@ -13,8 +15,63 @@ foreach ($emblems as $emblems_item) {
     	$cmemblems_content = $emblems_item->content_ru;
     }
 }
-
+$this->title = $cmemblems_name;
 ?>
+<div class="heros">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <?
+            echo Breadcrumbs::widget([
+                'links' => [
+                    // ['label' => 'Tutorlar', 'url' => ['site/tutor', 'id' => 13]],
+                    $this->title,
+                ],
+            ]); 
+          ?>
+        </div>
+      </div>
+    </div>
+ </div>
+ <style type="text/css">
+  .breadcrumb {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .breadcrumb .breadcrumb-item a {
+    color: white !important;
+  }
+  .breadcrumb .breadcrumb-item:hover a{
+    color: blue !important;
+  }
+  .breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: white;
+      content: "/";
+  }
+  .breadcrumb-item.active {
+      color: white;
+      opacity: 0.6;
+  }
+   .heros {
+        width: 100%;
+        background: url("../../images/jpa.jpg");
+        position: relative;
+        padding: 150px 0 0 0;
+      }
+       .heros:after {
+        content: "";
+        position: absolute;
+          /*background-color: #0e14a2;*/
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          z-index: 10;
+        }
+  }
+  }
+  }
+ </style>
 <div class="container">
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">

@@ -522,7 +522,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                         <div class="tab-content">
                           <?
                             $i=1;
+                            $lang = Yii::$app->language;
                             foreach ($video_gallery as $video_gallery_key) {
+                              if ($lang == 'uz') {
+                                $video_gallery_key_name = $video_gallery_key->name_uz;
+                                $video_gallery_key_type = $video_gallery_key->type_uz;
+                              }elseif ($lang == 'en') {
+                                $video_gallery_key_name = $video_gallery_key->name_en;
+                                $video_gallery_key_type = $video_gallery_key->type_en;
+                              }elseif ($lang == 'ru') {
+                                $video_gallery_key_name = $video_gallery_key->name_ru;
+                                $video_gallery_key_type = $video_gallery_key->type_ru;
+                              }
                               ?>
                                   <div class="tab-pane fade <?if($i==1){?> show active<?$i=2;}?>" id="post-<?=$video_gallery_key->id?>" role="tabpanel" aria-labelledby="post-<?=$video_gallery_key->id?>-tab">
                                 <!-- Single Feature Post -->
@@ -532,8 +543,8 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                                         <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<?=$video_gallery_key->link?>"></a>
                                         <!-- Post Content -->
                                         <div class="post-content">
-                                            <a href="#" class="post-cata"><?=$video_gallery_key->type_uz?></a>
-                                            <a href="" class="post-title"><?=$video_gallery_key->name_uz?></a>
+                                            <a href="#" class="post-cata"><?=$video_gallery_key_type?></a>
+                                            <a href="" class="post-title"><?=$video_gallery_key_name?></a>
                                         </div>
 
                                         <!-- Video Duration -->

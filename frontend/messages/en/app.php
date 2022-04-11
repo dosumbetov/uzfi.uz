@@ -41,11 +41,10 @@
 		'Biriktirlgan'=>'Attached',
 		"Profilga o'tish"=>'Go to profile',
 		'Interaktiv xizmatlar'=>'Interactive services',
-		"bo'sh ish o'rni"=>'vacancy',
 		"Markaz va bo'limlar"=>'Center and departments',
 		"Masofaviy ta'lim"=>'Distance learning',
 		'virtual qabulxona'=>'virtual reception',
-		'kutubxona'=>'Library',
+		'Kutubxona'=>'Library',
 		"So'ngi yangiliklar"=>'Latest news',
 		"Tug'ilgan sanasi"=>'Birth date',
 		'Aloqa'=>'Contact',
@@ -66,6 +65,7 @@
 		"Maktab to'garaklari"=>'An extracurricular activities of school',
 		"Maktab o'qituvchilari"=>'A teachers of school',
 		"Maktab o'quvchilari"=>'A pupils of school',
+		"Biriktirilgan maktablar"=>'Attached schools',
 	]
 		
 ?>
