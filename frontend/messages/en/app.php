@@ -66,6 +66,7 @@
 		"Maktab o'qituvchilari"=>'A teachers of school',
 		"Maktab o'quvchilari"=>'A pupils of school',
 		"Biriktirilgan maktablar"=>'Attached schools',
+		"Samarqand sh., Spitamen shoh ko‘chasi, 166-uy"=>"Samarkand, Spitamen Aveneu, 166",
 	]
 		
 ?>

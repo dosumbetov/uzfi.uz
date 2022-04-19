@@ -69,13 +69,13 @@ class SliderController extends Controller
     {
         $model = new Slider();
         $slider_img_name = uniqid();
-        $slider_img_path = '../../frontend/web/arguments/slider/img';
+        $slider_img_path = '../../frontend/web/arguments/slider/';
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->slider_img =UploadedFile::getInstance($model, 'slider_img');
             if(!empty($model->slider_img))
             {
                 $model->slider_img->SaveAs($slider_img_path.$slider_img_name.'.'.$model->slider_img->extension);
-                $model->slider_img = $slider_img_path.$slider_img_name.'.'.$model->slider_img->extension;
+                $model->slider_img = $slider_img_name.'.'.$model->slider_img->extension;
                 $model->save();
             }
 

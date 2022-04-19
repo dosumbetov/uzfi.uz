@@ -69,12 +69,7 @@ $this->title = Yii::t('app', 'Aloqa')?>;
    <div class="seccion">
     <div class="galeria">
       <ul>
-        <li><img src=""></li>
-        <li><img src=""></li>
-          <li><img src=""></li>
-        <li><img src=""></li>
-        <li><img src=""></li>
-      
+        <li><img src="../../images/saylov.jpg"></li>
       </ul>
    </div>
   </div>

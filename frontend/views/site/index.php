@@ -23,7 +23,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         foreach ($slider as $slide) {
           ?>
              <div class="carousel-item">
-                <img src="<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
+                <img src="arguments/slider/<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
               </div>
           <?
         }
