@@ -32,6 +32,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="google-site-verification" content="hDHi_XKyPV5AUmp0CSDZaF2heumBmu2C5FzhF2i88ZA" />
     <meta name="yandex-verification" content="c510b3bd86d9f50c" />
+    <meta name="yandex-verification" content="fcc425185c5b3821" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="../../images/uzfi.ico" type="image/x-icon">
      <link href="assets/img/favicon.png" rel="icon">
@@ -55,6 +56,24 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100">
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(88488697, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/88488697" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  
 <?php $this->beginBody() ?>
   <style type="text/css">
     .emblem a {
