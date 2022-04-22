@@ -92,7 +92,7 @@ foreach ($menu_sub as $menu_sub_item) {
 	              <i class="fa fa-calendar"><?=$pages ? $pages->date : ''?></i>
 	              <i class="fa fa-eye"><?=$pages ? $pages->views : ''?></i>
 	            </div>
-				<img src="../images/<?=$pages->img?>" width="100%" style="  display: block;
+				<img src="../../frontend/web/arguments/dr_sl_img/<?=$pages->img?>" width="100%" style="  display: block;
 	  			margin-left: auto;margin-right: auto;border-radius: 20px;">
 			  	<p class="mb-5" style="font-size: 15px;"><?=$pages ? $pages_content : ''?></p>
 			</div>

@@ -177,7 +177,7 @@ $this->params['breadcrumbs'][] = $this->title;
                       <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
                       <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("../../frontend/web/arguments/dr_sl_img/<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
                         <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $cmnew : '', 60, '...')?></a>
                       </div>

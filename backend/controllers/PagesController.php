@@ -70,13 +70,13 @@ class PagesController extends Controller
     {
         $model = new Pages();
         $dir_sl_img_name = uniqid();
-        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/img';
+        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/';
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->img =UploadedFile::getInstance($model, 'img');
             if(!empty($model->img))
             {
                 $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
-                $model->img = $dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension;
+                $model->img = $dir_sl_img_name.'.'.$model->img->extension;
                 $model->save();
             }
 

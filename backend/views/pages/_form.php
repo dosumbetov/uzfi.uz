@@ -95,7 +95,7 @@ use backend\models\MenuSub;
             ]); 
          }else{
         ?>
-            <img src="<?=$model->img; ?>" width='50%'>
+            <img src="../../frontend/web/arguments/dr_sl_img/<?=$model->img; ?>" width='50%'>
         <?
          } 
     ?>

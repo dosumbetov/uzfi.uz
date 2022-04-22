@@ -399,7 +399,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                         <i class="fa fa-calendar"><?=$news ? $new->date : ''?></i>
                         <div><i class="fa fa-eye"><?=$news ? $new->views : ''?></i></div>
                       </div>
-                      <div class="card" style='background-image: url("<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                      <div class="card" style='background-image: url("arguments/dr_sl_img/<?=$news ? $new->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
                           <a href="<?=Url::to(['site/pages', 'id'=>$new->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($news ? $news_name : '', 60, '...')?></a>
                           <!-- <div class="read-more"><a href=""><i class="icofont-arrow-right"></i>Batafsil</a></div> -->
@@ -491,7 +491,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                       <i class="fa fa-calendar"><?=$event ? $events->date : ''?></i>
                       <div><i class="fa fa-eye"><?=$event ? $events->views : ''?></i></div>
                     </div>
-                    <div class="card" style='background-image: url("<?=$event ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
+                    <div class="card" style='background-image: url("arguments/dr_sl_img/<?=$event ? $events->img : ''?>");' data-aos="fade-up" data-aos-delay="100">
                       <div class="card-body">
                         <a href="<?=Url::to(['site/pages', 'id'=>$events->id])?>" class="card-text"><?=yii\helpers\StringHelper::truncate($event ? $event_name : '', 60, '...')?></a>
                       </div>

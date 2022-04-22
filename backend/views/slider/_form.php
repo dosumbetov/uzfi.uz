@@ -21,7 +21,7 @@ use yii\helpers\Url;
             ]); 
          }else{
         ?>
-            <img src="<?=$model->slider_img; ?>" width='50%'>
+            <img src="../../frontend/web/arguments/slider/<?=$model->slider_img; ?>" width='50%'>
         <?
          } 
     ?>

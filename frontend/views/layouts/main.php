@@ -30,6 +30,8 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="google-site-verification" content="hDHi_XKyPV5AUmp0CSDZaF2heumBmu2C5FzhF2i88ZA" />
+    <meta name="yandex-verification" content="c510b3bd86d9f50c" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="../../images/uzfi.ico" type="image/x-icon">
      <link href="assets/img/favicon.png" rel="icon">

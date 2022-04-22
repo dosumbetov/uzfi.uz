@@ -55,7 +55,7 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule', 
                     'controller' => [
-                        'history',
+                        'pages',
                         'slider'
                     ]
                 ],
