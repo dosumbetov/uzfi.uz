@@ -23,7 +23,7 @@ class PagesController extends ActiveController
     	$dataProvider = new ActiveDataProvider([
     		'query'=>Pages::find(),
     		'pagination'=>[
-    			'pageSize' =>2
+    			'pageSize' =>6
     		]
     	]);
         header('Content-type: application/json', true, 200);

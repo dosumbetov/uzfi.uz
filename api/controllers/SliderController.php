@@ -23,7 +23,7 @@ class SliderController extends ActiveController
     	$dataProvider = new ActiveDataProvider([
     		'query'=>Slider::find(),
     		'pagination'=>[
-    			'pageSize' =>2
+    			'pageSize' =>5
     		]
     	]);
         header('Content-type: application/json', true, 200);
