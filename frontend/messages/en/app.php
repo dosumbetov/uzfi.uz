@@ -67,6 +67,7 @@
 		"Maktab o'quvchilari"=>'A pupils of school',
 		"Biriktirilgan maktablar"=>'Attached schools',
 		"Samarqand sh., Spitamen shoh ko‘chasi, 166-uy"=>"Samarkand, Spitamen Aveneu, 166",
+		'Bosh sahifaga qaytish'=>'Go to home',
 	]
 		
 ?>

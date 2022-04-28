@@ -67,6 +67,8 @@
 		"Maktab o'quvchilari"=>'Ученики школы',
 		"Biriktirilgan maktablar"=>'Прикрепленные школы',
 		"Samarqand sh., Spitamen shoh ko‘chasi, 166-uy"=>"г. Самарканд, ул. Спитаменшох 166",
+		'Bosh sahifaga qaytish'=>'Bернуться к главной странице',
+		
 	]
 	
 ?>
