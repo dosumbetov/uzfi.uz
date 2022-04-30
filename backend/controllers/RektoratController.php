@@ -69,17 +69,14 @@ class RektoratController extends Controller
     {
         $model = new Rektorat();
         $rek_img_name = uniqid();
-         $rek_img_name1 = uniqid();
-          $rek_img_name2 = uniqid();
-           $rek_img_name3 = uniqid();
-        $rek_img_path = '../../frontend/web/arguments/rek_img/img';
+        $rek_img_path = '../../frontend/web/arguments/rek_img/';
         if ($model->load(Yii::$app->request->post())) {
             
             $model->img =UploadedFile::getInstance($model, 'img');
             if(!empty($model->img))
             {
                 $model->img->SaveAs($rek_img_path.$rek_img_name.'.'.$model->img->extension);
-                $model->img = $rek_img_path.$rek_img_name.'.'.$model->img->extension;
+                $model->img = $rek_img_name.'.'.$model->img->extension;
                 $model->save();
             }
             return $this->redirect(['view', 'id' => $model->id]);

@@ -98,7 +98,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<div class="col-md-8 col-12">
 			<div class="middle">
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_name?></h3>
-				<img src="../<?=$rektorat ? $rektorat_item->img : ''?>" style="display: block;
+				<img src="../../frontend/web/arguments/rek_img/<?=$rektorat ? $rektorat_item->img : ''?>" style="display: block;
 			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
 			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat ? $rektorat_name : ''?><br><span style="font-size: 18px;"><i><?=$rektorat ? $rektorat_lavozim : ''?></i></span></h4>
 			  <?

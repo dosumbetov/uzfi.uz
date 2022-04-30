@@ -56,7 +56,8 @@ return [
                     'class' => 'yii\rest\UrlRule', 
                     'controller' => [
                         'pages',
-                        'slider'
+                        'slider',
+                        'rektorat'
                     ]
                 ],
             ],
