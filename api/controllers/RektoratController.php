@@ -21,7 +21,7 @@ class RektoratController extends ActiveController
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>[5,7,9]]),
+    		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>5]),
     		'pagination'=>[
     			'pageSize' =>3
     		]
