@@ -3,27 +3,27 @@ namespace api\controllers;
 
 use yii\rest\ActiveController;
 use yii\helpers\ArrayHelper;
-use backend\models\Pages;
+use backend\models\Rektorat;
 use yii\data\ActiveDataProvider;
 
-class PagesController extends ActiveController
+class RektoratController extends ActiveController
 {
-    public $modelClass = 'backend\models\Pages';
+    public $modelClass = 'backend\models\Rektorat';
 
-    public function actions()
+     public function actions()   
     {
     	$actions = parent::actions();
     	unset($actions['index']);
-    	return $actions;
+    	return $actions;   
     }
 
     public function actionIndex()
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Pages::find()->orderBy(['id'=>SORT_DESC]),
+    		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>[5,7,9]]),
     		'pagination'=>[
-    			'pageSize' =>6
+    			'pageSize' =>3
     		]
     	]);
         header('Content-type: application/json', true, 200);

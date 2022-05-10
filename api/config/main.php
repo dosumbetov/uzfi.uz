@@ -57,7 +57,9 @@ return [
                     'controller' => [
                         'pages',
                         'slider',
-                        'rektorat'
+                        'rektorat',
+                        'news',
+                        'events'
                     ]
                 ],
             ],

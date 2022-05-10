@@ -82,7 +82,7 @@ use backend\models\MenuSub;
             ]); 
          }else{
         ?>
-            <img src="<?=$model->img; ?>" width='50%'>
+            <img src="../../frontend/web/arguments/rek_img/<?=$model->img; ?>" width='50%'>
         <?
          } 
     ?>
