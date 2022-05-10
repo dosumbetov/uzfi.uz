@@ -21,7 +21,7 @@ class PagesController extends ActiveController
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Pages::find(),
+    		'query'=>Pages::find()->orderBy(['id'=>SORT_DESC]),
     		'pagination'=>[
     			'pageSize' =>6
     		]
