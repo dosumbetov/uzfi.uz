@@ -10,7 +10,7 @@ class RektoratController extends ActiveController
 {
     public $modelClass = 'backend\models\Rektorat';
 
-     public function actions()   
+    public function actions()   
     {
     	$actions = parent::actions();
     	unset($actions['index']);
@@ -23,7 +23,7 @@ class RektoratController extends ActiveController
     	$dataProvider = new ActiveDataProvider([
     		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>5]),
     		'pagination'=>[
-    			'pageSize' =>3
+    			'pageSize' =>1
     		]
     	]);
         header('Content-type: application/json', true, 200);
