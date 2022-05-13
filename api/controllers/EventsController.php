@@ -6,7 +6,7 @@ use yii\helpers\ArrayHelper;
 use backend\models\Pages;
 use yii\data\ActiveDataProvider;
 
-class PagesController extends ActiveController
+class EventsController extends ActiveController
 {
     public $modelClass = 'backend\models\Pages';
 
@@ -21,7 +21,7 @@ class PagesController extends ActiveController
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Pages::find()->orderBy(['id'=>SORT_DESC]),
+    		'query'=>Pages::find()->Where(['page_menu_sub_id'=>4])->orderBy(['id'=>SORT_DESC]),
     		'pagination'=>[
     			'pageSize' =>6
     		]
