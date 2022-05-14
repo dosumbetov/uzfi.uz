@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<?
-namespace api\controllers;
-
-use yii\rest\ActiveController;
-use yii\helpers\ArrayHelper;
-use backend\models\Rektorat;
-use yii\data\ActiveDataProvider;
-
-class RektoratController extends ActiveController
-{
-    public $modelClass = 'backend\models\Rektorat';
-}
-
-
-=======
 <?
 namespace api\controllers;
 
@@ -49,6 +33,3 @@ class RektoratController extends ActiveController
     	return $dataProvider;
     }
 }
-
-
->>>>>>> cb46d8056e2e32dcdd1db28dd2a73d1ece97a48a
