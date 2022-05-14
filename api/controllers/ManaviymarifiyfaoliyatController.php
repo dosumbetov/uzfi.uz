@@ -6,7 +6,7 @@ use yii\helpers\ArrayHelper;
 use backend\models\Rektorat;
 use yii\data\ActiveDataProvider;
 
-class RektoratController extends ActiveController
+class ManaviymarifiyfaoliyatController extends ActiveController
 {
     public $modelClass = 'backend\models\Rektorat';
 
@@ -21,9 +21,9 @@ class RektoratController extends ActiveController
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>[5,7,9,48]]),
+    		'query'=>Rektorat::find()->Where(['rek_menu_sub_id'=>[30,39,40,41]]),
     		'pagination'=>[
-    			'pageSize' =>4
+    			'pageSize' =>10
     		]
     	]);
         header('Content-type: application/json', true, 200);

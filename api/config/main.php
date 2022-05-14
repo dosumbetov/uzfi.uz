@@ -59,7 +59,10 @@ return [
                         'slider',
                         'rektorat',
                         'news',
-                        'events'
+                        'events',
+                        'markazlarbolimlar',
+                        'rektoratboshqabolimlar',
+                        'manaviymarifiyfaoliyat'
                     ]
                 ],
             ],
