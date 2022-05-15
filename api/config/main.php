@@ -62,7 +62,9 @@ return [
                         'events',
                         'markazlarbolimlar',
                         'rektoratboshqabolimlar',
-                        'manaviymarifiyfaoliyat'
+                        'manaviymarifiyfaoliyat',
+                        'institut',
+                        'fakultet'
                     ]
                 ],
             ],
