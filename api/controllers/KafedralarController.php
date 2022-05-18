@@ -3,12 +3,12 @@ namespace api\controllers;
 
 use yii\rest\ActiveController;
 use yii\helpers\ArrayHelper;
-use backend\models\Kafedralar;
+use backend\models\CommonKafedra;
 use yii\data\ActiveDataProvider;
 
 class KafedralarController extends ActiveController
 {
-    public $modelClass = 'backend\models\Kafedralar';
+    public $modelClass = 'backend\models\CommonKafedra';
 
     public function actions()
     {
@@ -21,7 +21,7 @@ class KafedralarController extends ActiveController
     {
 
     	$dataProvider = new ActiveDataProvider([
-    		'query'=>Kafedralar::find(),
+    		'query'=>CommonKafedra::find(),
     	]);
         header('Content-type: application/json', true, 200);
         // echo json_encode([
