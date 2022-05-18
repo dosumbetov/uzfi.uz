@@ -64,7 +64,8 @@ return [
                         'rektoratboshqabolimlar',
                         'manaviymarifiyfaoliyat',
                         'institut',
-                        'fakultet'
+                        'fakultet',
+                        'kafedralar'
                     ]
                 ],
             ],
