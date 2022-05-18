@@ -65,7 +65,8 @@ return [
                         'manaviymarifiyfaoliyat',
                         'institut',
                         'fakultet',
-                        'kafedralar'
+                        'kafedralar',
+                        'teacher'
                     ]
                 ],
             ],
