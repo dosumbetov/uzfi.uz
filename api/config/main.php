@@ -66,7 +66,8 @@ return [
                         'institut',
                         'fakultet',
                         'kafedralar',
-                        'teacher'
+                        'teacher',
+                        'maktablar'
                     ]
                 ],
             ],
