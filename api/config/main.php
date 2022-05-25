@@ -67,7 +67,9 @@ return [
                         'fakultet',
                         'kafedralar',
                         'teacher',
-                        'maktablar'
+                        'maktablar',
+                        'facultyorder',
+                        'tutor'
                     ]
                 ],
             ],
