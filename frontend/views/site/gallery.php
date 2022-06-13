@@ -147,3 +147,40 @@ $this->title = Yii::t('app', 'Aloqa')?>;
   float: right;
 }
 </style>
+
+
+<h3>Форма ввода данных</h3>
+<p id="pgh">Text message</p>
+<input type="checkbox" class="chb7" id="chb1" onclick="func1();"/>Birinchi 
+<input type="checkbox" class="chb8" id="chb2" onclick="func2();"/>ikkinchi 
+<input type="checkbox" class="chb9" id="chb3" onclick="func3();"/>uchunchi 
+<script type="text/javascript">
+  function func1(){
+    var chb = document.getElementsByClassName('chb7');
+
+    if (chb[0].checked) {
+      document.getElementById('pgh').style.color = '#F00'
+      document.getElementById('chb2').checked = false;
+      document.getElementById('chb3').checked = false;
+    }
+  }
+  function func2(){
+    var chb = document.getElementsByClassName('chb8');
+
+    if (chb[0].checked) {
+      document.getElementById('pgh').style.color = '#F00'
+      document.getElementById('chb1').checked = false;
+      document.getElementById('chb3').checked = false;
+    }
+  }
+  function func3(){
+    var chb = document.getElementsByClassName('chb9');
+
+    if (chb[0].checked) {
+      document.getElementById('pgh').style.color = '#F00'
+      document.getElementById('chb1').checked = false;
+      document.getElementById('chb2').checked = false;
+    }
+  }
+
+</script>

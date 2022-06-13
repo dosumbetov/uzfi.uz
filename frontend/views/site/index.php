@@ -18,12 +18,18 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/menu/images/rasmslider.jpg" class="d-block w-100 rasm" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="text-align: left;">
+                <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-outline-primary" style="font-size: 25px;">Virtual tour</a>
+            </div>
           </div>
        <?
         foreach ($slider as $slide) {
           ?>
              <div class="carousel-item">
                 <img src="arguments/slider/<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
+                <div class="carousel-caption d-none d-md-block" style="text-align: left;">
+                    <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-outline-primary" style="font-size: 25px;">Virtual tour</a>
+                </div>
               </div>
           <?
         }
