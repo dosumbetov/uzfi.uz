@@ -636,7 +636,7 @@ AppAsset::register($this);
     </div>
 <script>
   function ready() {
-    alert("Bizning institutning web sahifasida Virtual Tour xizmati yo'lga qo'yildi");
+    alert("Bizning institutning rasmiy mobil ilovasi ishga tushdi");
   }
   document.addEventListener("DOMContentLoaded", ready);
 </script>

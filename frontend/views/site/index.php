@@ -916,7 +916,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
 
 
         <!-- Screenshot Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5 orqafon1">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
@@ -980,14 +980,6 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     margin-left: 25%;
   }
 </style>
-
-
-
-
-
-
-
-
 
 
 
