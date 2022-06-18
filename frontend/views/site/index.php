@@ -905,6 +905,92 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     </section>
     <!-- End Sponsors Section -->
 
+
+  <link href="../and/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+
+    <!-- Template Stylesheet -->
+    <link href="../and/css/style.css" rel="stylesheet">
+
+
+
+        <!-- Screenshot Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="mb-4 text-center">Sharof Rashidov nomidagi Samarqand davlat universitetining O'zbekiston-Finlandiya pedagogika institutining rasmiy mobil ilovasi</h4>
+                       <div class="row g-4">
+                            <div class="col-sm-6 col-6 wow fadeIn mb-4" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+                                   <div class="qr">
+                                     <img src="../images/qr.png">
+                                   </div>
+                                <a href="https://play.google.com/store/apps/details?id=uzfi.uz" class="d-flex bg-primary-gradient rounded py-2 px-2">
+                                    <i class="fa fa-apple fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3" style="margin-left: 5%;">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">App Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-6 wow fadeIn mb-4" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeIn;">
+                                   <div class="qr">
+                                     <img src="../images/qr.png">
+                                   </div>
+                                <a href="https://play.google.com/store/apps/details?id=uzfi.uz" class="d-flex bg-secondary-gradient rounded py-2 px-2">
+                                    <i class="fa fa-android fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3" style="margin-left: 5%;">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">Play Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="owl-carousel screenshot-carousel">
+                            <!-- <img class="img-fluid" src="img/screenshot-1.png" alt=""> -->
+                            <img class="img-fluid" src="and/img/imhg.png" alt="">
+                            <img class="img-fluid" src="and/img/Screenshot_1655377225.png" alt="">
+                            <img class="img-fluid" src="and/img/Screenshot_1655380187.png" alt="">
+                            <img class="img-fluid" src="and/img/Screenshot_1655380237.png" alt="">
+                            <img class="img-fluid" src="and/img/Screenshot_1655380246.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Screenshot End -->
+        <!-- Screenshot End -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../and/lib/wow/wow.min.js"></script>
+    <script src="../and/lib/counterup/counterup.min.js"></script>
+    <script src="../and/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../and/js/main.js"></script>
+
+
+<style type="text/css">
+  .qr img {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 25%;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
   <!-- <div id="preloader"></div> -->
   <style type="text/css">
     .direktor_slider p span>span {
@@ -915,3 +1001,5 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       font-family: Arial, Helvetica, sans-serif;
     }
   </style>
+
+
