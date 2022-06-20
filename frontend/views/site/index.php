@@ -44,6 +44,8 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+
     <style type="text/css">
       /*section {
         background-color: grey;

@@ -197,7 +197,7 @@ AppAsset::register($this);
                           'width'       => '28'
                         ]); ?>
                       </li>
-                      <li class="active"><a href="<?=Url::home()?>" class="nav-link"><?=Yii::t('app',"Bosh sahifa")?></a></li>
+                  <!--     <li class="active"><a href="<?=Url::home()?>" class="nav-link"><?=Yii::t('app',"Bosh sahifa")?></a></li> -->
                       <?
                       $lang = Yii::$app->language;
                         foreach ($menu as $menu) {
