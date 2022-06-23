@@ -17,7 +17,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       </ol>
       <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/menu/images/slider9.jpg" class="d-block w-100 rasm" alt="...">
+            <img src="/menu/images/slidernewq.jpg" class="d-block w-100 rasm" alt="...">
             <div class="carousel-caption d-none d-md-block" style="text-align: right;">
                 <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-primary" style="font-size: 25px;">Virtual tour</a>
             </div>
