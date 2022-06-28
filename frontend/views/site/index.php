@@ -46,6 +46,334 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
     </div>
 
 
+
+     <div class="orqafon1 tel-versiya" style="padding-top: 5%;">
+      <div class="container" style="padding-bottom: 5%;">
+          <section class="sect-title" data-aos="fade-up" style="margin-bottom: 6.7%;">
+            <span class="qwert"><?=Yii::t('app','Qabul 2022')?></span>
+            <span class="qwert"><?=Yii::t('app','Qabul 2022')?></span>
+          </section>
+        <section class="hero--area section-padding-80 mb-3">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <img src="images/callcenter.jpg" style="width: 100%;">
+                         <div class="charts">
+                            <div class="chart">
+                              <svg class="center-abs" width="100" height="100">
+                                <circle class="outer" cx='50' cy='50' r='45'></circle>
+                              </svg>
+                              <div class="circle1 center-abs"></div>
+                              <span class="text center-abs" id="days"></span>
+                              <h3>Days</h3>
+                            </div>
+
+                            <div class="chart">
+                              <svg class="center-abs" width="100" height="100">
+                                <circle class="outer" cx='50' cy='50' r='45'></circle>
+                              </svg>
+                              <div class="circle1 center-abs"></div>
+                              <span class="text center-abs" id="hours"></span>
+                              <h3>Hours</h3>
+                            </div>
+
+                            <div class="chart">
+                              <svg class="center-abs" width="100" height="100">
+                                <circle class="outer" cx='50' cy='50' r='45'></circle>
+                              </svg>
+                              <div class="circle1 center-abs"></div>
+                              <span class="text center-abs" id="minutes"></span>
+                              <h3>Minutes</h3>
+                            </div>
+
+                            <div class="chart">
+                              <svg class="center-abs" width="100" height="100">
+                                <circle class="outer" cx='50' cy='50' r='45'></circle>
+                              </svg>
+                              <div class="circle1 center-abs"></div>
+                              <span class="text center-abs" id="seconds"></span>
+                              <h3>Seconds</h3>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6" style="padding: 20px;">
+                      <h3>Mas'ul kotib: +99866 222-37-61</h3>
+                      <h3>Call center</h3>
+                      <div class="row">
+                        <div class="col-md-6 col-6">
+                          +998 95 410-80-11
+                        </div>
+                         <div class="col-md-6 col-6">
+                          +998 95 410-80-12
+                        </div>
+                         <div class="col-md-6 col-6">
+                          +998 95 410-80-13
+                        </div>
+                         <div class="col-md-6 col-6">
+                          +998 95 410-80-14
+                        </div>  
+                      </div>
+                    <p><hr style="height:1px;border-width:0;color:lightgrey;background-color:lightgrey"></p> 
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/56" class="qabul_button">
+                              <span style="color:#000000">Call-markaz</span>
+                            </a>
+                        </p>  
+                      </div>
+                      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                       <p>
+                            <a href="https://uzfi.uz/uz/page/57" class="qabul_button">
+                              <span style="color:#000000">Qabul nizomi</span>
+                            </a>
+                        </p>  
+                      </div>
+                       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/60" class="qabul_button">
+                              <span style="color:#000000">Imtihon fanlar ro'yxati</span>
+                            </a>
+                        </p>  
+                      </div>
+                      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/59" class="qabul_button">
+                              <span style="color:#000000">Hujjatlar to'plami</span>
+                            </a>
+                        </p>  
+                      </div>
+                       <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/64" class="qabul_button">
+                              <span style="color:#000000">O'tish ballari</span>
+                            </a>
+                        </p>  
+                      </div>
+                         <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/58" class="qabul_button">
+                              <span style="color:#000000">Qabul kvotasi</span>
+                            </a>
+                        </p>  
+                      </div>
+                      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/73" class="qabul_button">
+                              <span style="color:#000000">Eslatma</span>
+                            </a>
+                        </p>  
+                      </div>
+                      <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/74" class="qabul_button">
+                              <span style="color:#000000">Imtiyozlar</span>
+                            </a>
+                        </p>  
+                      </div>
+                      <div class="col-md-12 col-lg-12 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://uzfi.uz/uz/page/62" class="qabul_button">
+                              <span style="color:#000000">Qabul komissiyasi joylashuv o'rni</span>
+                            </a>
+                        </p>  
+                      </div>
+                       <div class="col-md-12 col-lg-12 d-flex align-items-stretch mb-2">
+                        <p>
+                            <a href="https://dtm.uz/info/textbooks" target="_blank" class="qabul_button">
+                              <span style="color:#000000">Tavsiya etilgan darsliklar</span>
+                            </a>
+                        </p>  
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+               
+          </section>    
+      </div>
+    </div>
+
+
+<style type="text/css">
+  .qabul_button {
+    width: 300px;
+    height: 50px;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    border: 0;
+    letter-spacing: 3px;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: -6px 0px 0px 0px #0d6efd;
+  }
+svg {
+     margin-left: 0px !important; 
+}
+.center-abs {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+}
+
+.charts {
+  display: flex;
+}
+.chart {
+  position: relative;
+  width: 25%;
+  height: 260px;
+}
+
+.chart h3 {
+  color: #fff;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 90px;
+  text-align: center;;
+  width: 100%;
+  /*text-shadow: 1px 1px 10px #000;*/
+}
+
+.chart svg {
+  z-index: 2;
+}
+
+
+.circle1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 1;
+  border: 10px #baeaff solid;
+}
+.text {
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 700;
+  color: #0096da;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #0096da;
+  stroke-width: 10;
+  stroke-dasharray: 289;
+  transform: rotate(270deg) translate(-100px, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  // Set the date we're counting down to
+var countDownDate = new Date("July 20, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  effectCircle(days, hours, minutes, seconds);
+
+}, 1000);
+
+effectCircle = function(d, h, m, s){
+  const max_sec = 60;
+  const max_min = 60;
+  const max_hour = 24;
+  const max_day = 30;
+
+  const strokeDashoffset = 289;
+
+  var chart = document.getElementsByClassName('chart');
+
+  var valPerDay = strokeDashoffset / max_day;
+  var size = strokeDashoffset - (valPerDay * d);
+  chart[0].style.strokeDashoffset = size;
+
+
+   var valPerHour = strokeDashoffset / max_hour;
+  var size = strokeDashoffset - (valPerHour * h);
+  chart[1].style.strokeDashoffset = size;
+
+   var valPerMin = strokeDashoffset / max_min;
+  var size = strokeDashoffset - (valPerMin * m);
+  chart[2].style.strokeDashoffset = size;
+
+   var valPerSecond = strokeDashoffset / max_sec;
+  var size = strokeDashoffset - (valPerSecond * s);
+  chart[3].style.strokeDashoffset = size;
+
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <style type="text/css">
       /*section {
         background-color: grey;
