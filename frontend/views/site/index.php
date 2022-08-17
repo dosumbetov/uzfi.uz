@@ -47,7 +47,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
 
 
 
-     <div class="orqafon1 tel-versiya" style="padding-top: 5%;">
+<!--      <div class="orqafon1 tel-versiya" style="padding-top: 5%;">
       <div class="container" style="padding-bottom: 5%;">
           <section class="sect-title" data-aos="fade-up" style="margin-bottom: 6.7%;">
             <span class="qwert"><?=Yii::t('app','Qabul 2022')?></span>
@@ -193,7 +193,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
                
           </section>    
       </div>
-    </div>
+    </div> -->
 
 
 <style type="text/css">
