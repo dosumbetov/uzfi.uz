@@ -17,7 +17,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
       </ol>
       <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/menu/images/imageslider.jpg" class="d-block w-100 rasm" alt="...">
+            <img src="/menu/images/6318364f38630.jpg" class="d-block w-100 rasm" alt="...">
             <div class="carousel-caption d-none d-md-block" style="text-align: right;">
                 <a target="_blank" href="https://youtu.be/o7GWdWJI0kk" class="btn btn-primary" style="font-size: 25px;">Conference Live</a>
             </div>
