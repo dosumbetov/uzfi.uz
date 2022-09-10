@@ -19,7 +19,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
           <div class="carousel-item active">
             <img src="/menu/images/imageslider.jpg" class="d-block w-100 rasm" alt="...">
             <div class="carousel-caption d-none d-md-block" style="text-align: right;">
-                <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-primary" style="font-size: 25px;">Virtual tour</a>
+                <a target="_blank" href="https://youtu.be/Ga7TJMT9G3E" class="btn btn-primary" style="font-size: 25px;">Conference Live</a>
             </div>
           </div>
        <?
@@ -28,7 +28,7 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
              <div class="carousel-item">
                 <img src="arguments/slider/<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
                 <div class="carousel-caption d-none d-md-block" style="text-align: right;">
-                    <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-primary" style="font-size: 25px;">Virtual tour</a>
+                    <a target="_blank" href="https://youtu.be/Ga7TJMT9G3E" class="btn btn-primary" style="font-size: 25px;">Conference Live</a>
                 </div>
               </div>
           <?
@@ -1323,5 +1323,16 @@ effectCircle = function(d, h, m, s){
       font-family: Arial, Helvetica, sans-serif;
     }
   </style>
+
+  <script type="text/javascript">
+    $(function){
+      $(.carousel).carousel({
+        interval:2000,
+        pause: false,
+        wrap: false,
+        keyboard: true
+      })
+    }
+  </script>
 
 
