@@ -26,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            // 'id',
             'name_uz',
-            'name_ru',
-            'name_en',
-            'img',
+            // 'name_ru',
+            // 'name_en',
+            // 'img',
             //'lavozim_uz',
             //'lavozim_ru',
             //'lavozim_en',
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'kafedra_hodim_uz',
             //'kafedra_hodim_ru',
             //'kafedra_hodim_en',
-            //'content_uz:ntext',
+            'content_uz:ntext',
             //'content_ru:ntext',
             //'content_en:ntext',
             //'qabul_uz',
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'tel',
             //'email_uz:email',
             //'telegram',
-            //'kafedra_id',
+            'kafedra_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

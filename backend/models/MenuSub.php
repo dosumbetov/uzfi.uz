@@ -57,6 +57,7 @@ class MenuSub extends \yii\db\ActiveRecord
         ];
     }
 
+
     /**
      * Gets query for [[Fakultets]].
      *
@@ -65,6 +66,11 @@ class MenuSub extends \yii\db\ActiveRecord
     public function getFakultets()
     {
         return $this->hasMany(Fakultet::className(), ['menu_sub_id' => 'id']);
+    }
+
+      public function getInstituts()
+    {
+        return $this->hasMany(Institut::className(), ['ins_menu_sub_id' => 'id']);
     }
 
     /**

@@ -181,7 +181,7 @@ AppAsset::register($this);
                 <a href="<?=Url::home()?>"><img src="../../menu/images/uzfi.ico" height="65px;"></a>
               </div>
               <div class="col-2 d-none d-lg-block" style="padding: 0px; margin: 0px; line-height: 15px !important;">
-                <span class="my-0 site-logo"><?=Yii::t('app',"SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI")?></span>
+                <span class="my-0 site-logo"><?=Yii::t('app',"O'ZBEKISTON - FINLANDIYA PEDAGOGIKA INSTITUTI")?></span>
               </div>
               <div class="col-9">
                 <nav class="site-navigation text-left" role="navigation">

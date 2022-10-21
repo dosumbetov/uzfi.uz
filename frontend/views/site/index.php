@@ -1250,7 +1250,7 @@ effectCircle = function(d, h, m, s){
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
-                        <h4 class="mb-4 text-center">Sharof Rashidov nomidagi Samarqand davlat universitetining O'zbekiston-Finlandiya pedagogika institutining rasmiy mobil ilovasi</h4>
+                        <h4 class="mb-4 text-center">O'zbekiston-Finlandiya pedagogika institutining rasmiy mobil ilovasi</h4>
                        <div class="row g-4">
                             <div class="col-sm-6 col-6 wow fadeIn mb-4" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                                    <div class="qr">
