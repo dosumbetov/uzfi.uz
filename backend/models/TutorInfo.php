@@ -71,7 +71,7 @@ class TutorInfo extends \yii\db\ActiveRecord
             'name_uz' => 'Name Uz',
             'name_ru' => 'Name Ru',
             'name_en' => 'Name En',
-            'biriktirilgan_uz' => 'Biriktirilgan Uz',
+            'biriktirilgan_uz' => 'Biriktirilgan guruhlar',
             'biriktirilgan_ru' => 'Biriktirilgan Ru',
             'biriktirilgan_en' => 'Biriktirilgan En',
             'tel' => 'Tel',
@@ -91,7 +91,7 @@ class TutorInfo extends \yii\db\ActiveRecord
             'birik_talaba_royxati_ru' => 'Birik Talaba Royxati Ru',
             'birik_talaba_royxati_en' => 'Birik Talaba Royxati En',
             'tutor_menu_sub_id' => 'Tutor Menu Sub ID',
-            'tutor_faculty_id' => 'Tutor Faculty ID',
+            'tutor_faculty_id' => 'Fakultetlar',
         ];
     }
 

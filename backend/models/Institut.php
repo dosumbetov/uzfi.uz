@@ -48,7 +48,7 @@ class Institut extends \yii\db\ActiveRecord
             'content_uz' => 'Content Uz',
             'content_ru' => 'Content Ru',
             'content_en' => 'Content En',
-            'ins_menu_sub_id' => 'Ins Menu Sub ID',
+            'ins_menu_sub_id' => 'Menu Sub',
         ];
     }
 

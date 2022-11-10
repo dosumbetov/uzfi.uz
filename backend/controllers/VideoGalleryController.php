@@ -41,9 +41,25 @@ class VideoGalleryController extends Controller
         $searchModel = new VideoGallerySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
+        $model = new VideoGallery();
+            $dir_sl_img_name = uniqid();
+            $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/';
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                $model->img =UploadedFile::getInstance($model, 'img');
+                if(!empty($model->img))
+                {
+                    $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
+                    $model->img = $dir_sl_img_name.'.'.$model->img->extension;
+                    $model->save();
+                }
+
+                return $this->redirect(['index', 'id' => $model->id]);
+            }
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model'=>$model,
         ]);
     }
 

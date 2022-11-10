@@ -60,7 +60,7 @@ class Pages extends \yii\db\ActiveRecord
             'content_uz' => 'Content Uz',
             'content_ru' => 'Content Ru',
             'content_en' => 'Content En',
-            'page_menu_sub_id' => 'Page Menu Sub ID',
+            'page_menu_sub_id' => 'News or Announcement',
             'img' => 'Img',
         ];
     }

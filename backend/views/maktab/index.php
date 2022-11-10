@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             // 'id',
+            'allmk_id',
             'ishkunlari_uz',
             'ishkunlari_ru',
             'ishkunlari_en',
@@ -41,7 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
             //'content_uz:ntext',
             //'content_ru:ntext',
             //'content_en:ntext',
-            //'allmk_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\models\MenuSub;
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;    
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\PagesSearch */
@@ -10,9 +13,8 @@ use yii\grid\GridView;
 $this->title = 'Pages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pages-index">
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Create Pages', ['create'], ['class' => 'btn btn-success']) ?>
@@ -28,15 +30,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'name_uz',
-            'name_ru',
-            'name_en',
+            // 'name_ru',
+            // 'name_en',
             'date',
             //'views',
             //'content_uz:ntext',
             //'content_ru:ntext',
             //'content_en:ntext',
-            //'page_menu_sub_id',
-            //'img',
+             [
+                'attribute'=>'page_menu_sub_id',
+                'value'=>'pageMenuSub.name_uz',
+                'filter'=>Html::activeDropDownList($searchModel, 'page_menu_sub_id', ArrayHelper::map(MenuSub::find()->Where(['id'=>[3,4]])->all(), 'id', 'name_uz'), ['class'=>'form-control', 'prompt'=>'yangilik turini tanlang']),
+            ],
+            // 'pageMenuSub.name_uz',
+            'img',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

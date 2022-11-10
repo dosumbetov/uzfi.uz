@@ -81,8 +81,7 @@ $this->title = Yii::t('app', 'Aloqa')?>;
                 <div class="single-icon">
                   <i class="fa fa-mobile"></i>
                   <p>
-                    Call: +1 5589 55488 55<br>
-                    <span>Monday-Friday (9am-5pm)</span>
+                    Call: (66) 222-69-27<br>
                   </p>
                 </div>
               </div>
@@ -93,8 +92,8 @@ $this->title = Yii::t('app', 'Aloqa')?>;
                 <div class="single-icon">
                   <i class="fa fa-envelope-o"></i>
                   <p>
-                    Email: info@example.com<br>
-                    <span>Web: www.example.com</span>
+                    Email: devonxona@uzfi.uz<br>
+                    <span>Web: uzfi.uz</span>
                   </p>
                 </div>
               </div>
@@ -105,8 +104,7 @@ $this->title = Yii::t('app', 'Aloqa')?>;
                 <div class="single-icon">
                   <i class="fa fa-map-marker"></i>
                   <p>
-                    Location: A108 Adam Street<br>
-                    <span>NY 535022, USA</span>
+                    Manzil: Samarqand sh., <br>Spitamen shoh ko‘chasi, <br>166-uy<br>
                   </p>
                 </div>
               </div>

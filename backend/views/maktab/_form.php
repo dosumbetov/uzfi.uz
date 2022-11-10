@@ -15,7 +15,8 @@ use backend\models\TezHavola;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="maktab-form">
+
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <?php $form = ActiveForm::begin(); ?>
 

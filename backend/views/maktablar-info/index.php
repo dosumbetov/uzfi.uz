@@ -10,9 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Maktablar Infos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="maktablar-info-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <p>
         <?= Html::a('Create Maktablar Info', ['create'], ['class' => 'btn btn-success']) ?>
@@ -28,19 +26,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'name_uz',
-            'name_ru',
-            'name_en',
+            // 'name_ru',
+            // 'name_en',
             // 'img',
-            //'kimga_biriktirilgan_uz:ntext',
+            'kimga_biriktirilgan_uz:ntext',
             //'kimga_biriktirilgan_ru:ntext',
             //'kimga_biriktirilgan_en:ntext',
             //'tel',
             //'email:email',
             //'fax',
-            //'manzil_uz:ntext',
+            'manzil_uz:ntext',
             //'manzil_ru:ntext',
             //'manzil_en:ntext',
-            //'sektor_uz',
+            'sektor_uz',
             //'sektor_ru',
             //'sektor_en',
             //'maktab_tarixi_uz:ntext',

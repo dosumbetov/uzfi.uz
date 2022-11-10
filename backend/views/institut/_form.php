@@ -15,7 +15,7 @@ use backend\models\MenuSub;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="institut-form">
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <?php $form = ActiveForm::begin(); ?>
 

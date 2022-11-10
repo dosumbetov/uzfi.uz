@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\models\MenuSub;
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;  
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\InstitutSearch */
@@ -10,9 +13,7 @@ use yii\grid\GridView;
 $this->title = 'Instituts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="institut-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <p>
         <?= Html::a('Create Institut', ['create'], ['class' => 'btn btn-success']) ?>
@@ -27,14 +28,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             // 'id',
-            'content_uz:ntext',
+           
             // 'content_ru:ntext',
             // 'content_en:ntext',
-            'ins_menu_sub_id',
+            // 'insMenuSub.name_uz',
+
+             [
+                'attribute'=>'ins_menu_sub_id',
+                'value'=>'insMenuSub.name_uz',
+                'filter'=>Html::activeDropDownList($searchModel, 'ins_menu_sub_id', ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'), ['class'=>'form-control', 'prompt'=>'Menu Subni tanlang']),
+            ],
+             'content_uz:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
 
 </div>

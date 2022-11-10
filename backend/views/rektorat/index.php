@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\models\MenuSub;
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;  
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\RektoratSearch */
@@ -28,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'name_uz',
-            'name_ru',
-            'name_en',
+            // 'name_ru',
+            // 'name_en',
             'lavozim_uz',
             //'lavozim_ru',
             //'lavozim_en',
@@ -41,13 +44,18 @@ $this->params['breadcrumbs'][] = $this->title;
             //'fax',
             //'email:email',
             //'telegram',
-            //'manzil_uz',
+            'manzil_uz',
             //'manzil_ru',
             //'manzil_en',
             //'content_uz:ntext',
             //'content_ru:ntext',
             //'content_en:ntext',
-            //'rek_menu_sub_id',
+            'rek_menu_sub_id',
+             [
+                'attribute'=>'rek_menu_sub_id',
+                'value'=>'rekMenuSub.name_uz',
+                'filter'=>Html::activeDropDownList($searchModel, 'rek_menu_sub_id', ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'), ['class'=>'form-control', 'prompt'=>'Menu Subni tanlang']),
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

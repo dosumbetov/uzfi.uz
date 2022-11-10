@@ -270,17 +270,6 @@ svg {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 </style>
 
 
@@ -293,7 +282,7 @@ svg {
 
 
 
-
+<!-- 
 
 <script type="text/javascript">
   // Set the date we're counting down to
@@ -353,7 +342,7 @@ effectCircle = function(d, h, m, s){
 
 
 }
-</script>
+</script> -->
 
 
 

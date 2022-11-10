@@ -10,30 +10,33 @@ use yii\grid\GridView;
 $this->title = 'Menus';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="menu-index">
+<div class="row">
+    <div class="col-md-8">
+        <div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Menu', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+            <?= GridView::widget([
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+                    // 'id',
+                    'name_uz',
+                    'name_ru',
+                    'name_en',
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'name_uz',
-            'name_ru',
-            'name_en',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+                    ['class' => 'yii\grid\ActionColumn'],
+                ],
+            ]); ?>
 
 
+        </div>
+    </div>
+    <div class="col-md-4">
+            <?= $this->render('_form', [
+                'model' => $model,
+            ]) ?>
+    </div>
 </div>

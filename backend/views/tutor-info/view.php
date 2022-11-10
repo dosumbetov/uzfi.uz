@@ -11,9 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Tutor Infos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="tutor-info-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -52,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'birik_talaba_royxati_uz:ntext',
             'birik_talaba_royxati_ru:ntext',
             'birik_talaba_royxati_en:ntext',
-            'tutor_menu_sub_id',
-            'tutor_faculty_id',
+            'tutorMenuSub.name_uz',
+            'tutorFaculty.faculty_name_uz',
         ],
     ]) ?>
 

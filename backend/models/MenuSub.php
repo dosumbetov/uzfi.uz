@@ -51,9 +51,9 @@ class MenuSub extends \yii\db\ActiveRecord
             'name_uz' => 'Name Uz',
             'name_ru' => 'Name Ru',
             'name_en' => 'Name En',
-            'menu_title_id' => 'Menu Title ID',
-            'link' => 'Link',
-            'link_type' => 'Link Type',
+            'menu_title_id' => 'Menu Title name',
+            'link' => 'Pages',
+            'link_type' => 'Link turi',
         ];
     }
 

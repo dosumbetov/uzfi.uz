@@ -60,7 +60,7 @@ class MenuTitle extends \yii\db\ActiveRecord
      */
     public function getMenu()
     {
-        return $this->hasOne(Menu::className(), ['id' => 'menu_id']);
+        return $this->hasOne(Menu1::className(), ['id' => 'menu_id']);
     }
 
     /**
