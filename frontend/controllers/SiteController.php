@@ -16,7 +16,6 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Slider;
-use backend\models\DirektorSlider;
 use backend\models\TezHavola;
 use backend\models\TezkorHavolalar;
 use backend\models\Teacher;
@@ -108,12 +107,10 @@ class SiteController extends Controller
         $news = Pages::find()->Where(['page_menu_sub_id'=>3])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $event = Pages::find()->Where(['page_menu_sub_id'=>4])->orderBy(['id'=>SORT_DESC])->limit(3)->all();
         $slider = Slider::find()->orderBy(['id'=>SORT_DESC])->limit(4)->all();
-        $dr_slider_img = DirektorSlider::find()->all();
         $tezkor_havolalar = TezkorHavolalar::find()->Where(['tez_men__sub_id'=>[13, 14, 15, 16, 17, 18]])->orderBy(['id'=>SORT_DESC])->limit(9)->all();
         $supporters = Supporters::find()->orderBy(['id'=>SORT_DESC])->limit(8)->all();
         return $this->render('index',[
             'slider'=>$slider,
-            'dr_slider_img'=>$dr_slider_img,
             'tezkor_havolalar'=> $tezkor_havolalar,
             'news' => $news,
             'event' => $event,

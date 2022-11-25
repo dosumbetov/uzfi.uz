@@ -759,33 +759,7 @@ effectCircle = function(d, h, m, s){
        <div class="container">
           <div style="margin-top: 40px; margin-bottom: 20px;">
                <div class="row">
-                   <?
-                    $lang = Yii::$app->language;
-                    foreach ($dr_slider_img as $dr_slider) {
-                       if ($lang == 'uz') {
-                          $dr_slider_img_name = $dr_slider->name_uz;
-                          $dr_slider_img_content = $dr_slider->content_uz;
-                          $dr_slider_img_field = $dr_slider->field_uz;
-                        }elseif ($lang == 'en') {
-                          $dr_slider_img_name = $dr_slider->name_en;
-                          $dr_slider_img_content = $dr_slider->content_en;
-                          $dr_slider_img_field = $dr_slider->field_en;
-                        }elseif ($lang == 'ru') {
-                          $dr_slider_img_name = $dr_slider->name_ru;
-                          $dr_slider_img_content = $dr_slider->content_ru;
-                          $dr_slider_img_field = $dr_slider->field_ru;
-                        }
-                        ?>
-                            <div class="col-md-8 direktor_slider">
-                          <?=$dr_slider_img ? $dr_slider_img_content : ''?>
-                           <p style="font-size: 18px; color: white; float: right; font-weight: bold; margin-top: 20px;"><?=$dr_slider_img ? $dr_slider_img_name : ''?> <br><span style="font-size: 16px; color: white; float: right; font-weight: bold;"><?=$dr_slider_img ? $dr_slider_img_field : ''?></span></p>
-                           </div>
-                           <div class="col-md-4">
-                                <img src="<?=$dr_slider_img ? $dr_slider->img : ''?>" style="border-radius: 50%;" height="200px;" width ="200px;">
-                           </div>
-                        <?
-                    }
-                   ?>
+                   
                </div>
           </div>
        </div>
