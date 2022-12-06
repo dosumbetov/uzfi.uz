@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Rektorat */
+/* @var $model backend\models\Ilimiyishlar */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Rektorats', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Ilimiyishlars', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -31,27 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'name_uz',
             'name_ru',
             'name_en',
-            'lavozim_uz',
-            'lavozim_ru',
-            'lavozim_en',
-            'qabul_vaqti_uz',
-            'qabul_vaqti_ru',
-            'qabul_vaqti_en',
-            'tel',
-            'fax',
-            'email:email',
-            'telegram',
-            'manzil_uz',
-            'manzil_ru',
-            'manzil_en',
-            'vazifasi_uz:ntext',
-            'vazifasi_ru:ntext',
-            'vazifasi_en:ntext',
-            'rek_menu_sub_id',
-            'tarjimaiyhol_uz:ntext',
-            'tarjimaiyhol_ru:ntext',
-            'tarjimaiyhol_en:ntext',
-            'image.img',
+            'published_place_uz',
+            'published_place_ru',
+            'published_place_en',
+            'date',
+            'ilimiyishlarRek.name_uz',
+            'ilimiyishlarTuri.name',
         ],
     ]) ?>
 

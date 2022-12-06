@@ -29,8 +29,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'lavozim_en') ?>
 
-    <?php // echo $form->field($model, 'img') ?>
-
     <?php // echo $form->field($model, 'qabul_vaqti_uz') ?>
 
     <?php // echo $form->field($model, 'qabul_vaqti_ru') ?>
@@ -51,13 +49,21 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'manzil_en') ?>
 
-    <?php // echo $form->field($model, 'content_uz') ?>
+    <?php // echo $form->field($model, 'vazifasi_uz') ?>
 
-    <?php // echo $form->field($model, 'content_ru') ?>
+    <?php // echo $form->field($model, 'vazifasi_ru') ?>
 
-    <?php // echo $form->field($model, 'content_en') ?>
+    <?php // echo $form->field($model, 'vazifasi_en') ?>
 
     <?php // echo $form->field($model, 'rek_menu_sub_id') ?>
+
+    <?php // echo $form->field($model, 'tarjimaiyhol_uz') ?>
+
+    <?php // echo $form->field($model, 'tarjimaiyhol_ru') ?>
+
+    <?php // echo $form->field($model, 'tarjimaiyhol_en') ?>
+
+    <?php // echo $form->field($model, 'image_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

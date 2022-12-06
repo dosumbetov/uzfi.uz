@@ -1,6 +1,7 @@
 <?
 use yii\helpers\Url;
 use yii\bootstrap4\Breadcrumbs;
+use backend\models\Images;
 $lang = Yii::$app->language;
 	foreach ($menu_sub as $menu_sub_item) {
 	  if ($lang == 'uz') {
@@ -11,27 +12,31 @@ $lang = Yii::$app->language;
         $menu_sub_name = $menu_sub_item->name_ru;
       }
 	}
-	foreach ($rektorat as $rektorat_item) {
-	  if ($lang == 'uz') {
-        $rektorat_name = $rektorat_item->name_uz;
-        $rektorat_lavozim = $rektorat_item->lavozim_uz;
-        $rektorat_qabulvaqti = $rektorat_item->qabul_vaqti_uz;
-        $rektorat_manzil = $rektorat_item->manzil_uz;
-        $rektorat_content = $rektorat_item->content_uz;
-      }elseif ($lang == 'en') {
-        $rektorat_name = $rektorat_item->name_en;
-        $rektorat_lavozim = $rektorat_item->lavozim_en;
-        $rektorat_qabulvaqti = $rektorat_item->qabul_vaqti_en;
-        $rektorat_manzil = $rektorat_item->manzil_en;
-        $rektorat_content = $rektorat_item->content_en;
-      }elseif ($lang == 'ru') {
-        $rektorat_name = $rektorat_item->name_ru;
-        $rektorat_lavozim = $rektorat_item->lavozim_ru;
-        $rektorat_qabulvaqti = $rektorat_item->qabul_vaqti_ru;
-        $rektorat_manzil = $rektorat_item->manzil_ru;
-        $rektorat_content = $rektorat_item->content_ru;
-      }
-	}
+	foreach ($rektorats as $rektorat) {
+  if ($lang == 'uz') {
+      $rektorat_name = $rektorat->name_uz;
+      $rektorat_lavozim = $rektorat->lavozim_uz;
+      $rektorat_qabul = $rektorat->qabul_vaqti_uz;
+      $rektorat_manzil = $rektorat->manzil_uz;
+      $rektorat_vazifa = $rektorat->vazifasi_uz;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_uz;
+    }elseif ($lang == 'en') {
+      $rektorat_name = $rektorat->name_en;
+      $rektorat_lavozim = $rektorat->lavozim_en;
+      $rektorat_qabul = $rektorat->qabul_vaqti_en;
+      $rektorat_manzil = $rektorat->manzil_en;
+      $rektorat_vazifa = $rektorat->vazifasi_en;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_en;
+    }elseif ($lang == 'ru') {
+      $rektorat_name = $rektorat->name_ru;
+      $rektorat_lavozim = $rektorat->lavozim_ru;
+      $rektorat_qabul = $rektorat->qabul_vaqti_ru;
+      $rektorat_manzil = $rektorat->manzil_ru;
+      $rektorat_vazifa = $rektorat->vazifasi_ru;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_ru;
+    }
+  
+}
 
     $this->title = $menu_sub_name;
 $this->params['breadcrumbs'][] = $this->title;
@@ -98,48 +103,52 @@ $this->params['breadcrumbs'][] = $this->title;
 		<div class="col-md-8 col-12">
 			<div class="middle">
 				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_name?></h3>
-				<img src="../../frontend/web/arguments/rek_img/<?=$rektorat ? $rektorat_item->img : ''?>" style="display: block;
-			  margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorat ? $rektorat_name : ''?><br><span style="font-size: 18px;"><i><?=$rektorat ? $rektorat_lavozim : ''?></i></span></h4>
-			  <?
-			  	foreach ($fakultet_staff as $fakultet_staff_item) {
-			  		?>
-			  		<div class="profile">
-			  			<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>">
-					        <span></span>
-					        <span></span>
-					        <span></span>
-					        <span></span>
-					        <?=Yii::t('app',"Profilga o'tish")?>
-					    </a>
-			  		</div>
-			  		<!-- 	<a href="<?=Url::to(['site/teacher', 'id'=>$fakultet_staff_item->id])?>"><?=Yii::t('app',"Profilga o'tish")?></a> -->
-			  		<?
-			  	}
-			  ?>
+        <?
+          $idimg = $rektorat->image_id;
+          $image = Images::find()->Where(['id'=>$idimg])->all();
+          foreach ($image as $key) {
+            ?>
+            <img src="/frontend/web/arguments/rek_img/<?=$key->img?>" style="display: block;
+              margin-left: auto;margin-right: auto;border-radius: 20px; width: 100%;">
+            <?
+          }
+        ?>
+				
+			  <h4 style="text-align: center;" class="mt-4"><?=$rektorats ? $rektorat_name : ''?><br><span style="font-size: 18px;"><i><?=$rektorat ? $rektorat_lavozim : ''?></i></span></h4>
+
+
+        <div class="profile">
+          <a href="<?=Url::to(['site/teacher', 'id'=>$rektorat->id])?>">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <?=Yii::t('app',"Profilga o'tish")?>
+          </a>
+        </div>
 
 			  <hr style="margin: 0px; margin-bottom: 5%; margin-top: 6%;">
 				<table class="table table-bordered mt-4" style="color: black;">
 				  <tbody>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app', 'Qabul vaqti')?></th>
-				      <td><?=$rektorat ? $rektorat_qabulvaqti : ''?></td>
+				      <td><?=$rektorats ? $rektorat_qabul : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app','Tel')?>:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat_item->tel : ''?></td>
+				      <td colspan="2"><?=$rektorats ? $rektorat->tel : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app', 'Fax')?>:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat_item->fax : ''?></td>
+				      <td colspan="2"><?=$rektorats ? $rektorat->fax : ''?></td>
 				    </tr>
 				    <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app', 'E-mail')?>:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat_item->email : ''?></td>
+				      <td colspan="2"><?=$rektorats ? $rektorat->email : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app','Telegram')?>:</th>
-				      <td colspan="2"><?=$rektorat ? $rektorat_item->telegram : ''?></td>
+				      <td colspan="2"><?=$rektorat ? $rektorat->telegram : ''?></td>
 				    </tr>
 				     <tr>
 				      <th scope="row" class="table_first"><?=Yii::t('app','Manzil')?>:</th>
@@ -148,28 +157,16 @@ $this->params['breadcrumbs'][] = $this->title;
 				  </tbody>
 				</table>
 				<hr style="margin: 0px; margin-bottom: 5%;">
-				<p style="color: black;"><?=$rektorat ? $rektorat_content : ''?></p>
+        <h3 class="text-center">Vazifalari</h3>
+        <div class="text-justify"><?=$rektorat ? $rektorat_vazifa : ''?></div>
+				
 			</div>
 		</div>
 		<?=include 'right_bar.php';?>
 	</div>
 </div>
 <style type="text/css">
- li, a, span, table, tr, td, th, label {
-   		 /*font-size: 18px;*/
-   		 color: black; 
-   		 font-weight: 400;
-   		line-height: 24px;
-    	/*list-style-type: circle !important;*/
-	}
-	/*.row .col-md-8 .middle ul li{
-		float: left;
-   		 font-size: 18px;
-   		 color: black; 
-   		 font-weight: 400;
-   		line-height: 24px;
-    	list-style-type: disc !important;
-	}*/
+
 		.row .col-md-8 .middle ul li{
          /*font-size: 18px;*/
          color: black; 
@@ -186,10 +183,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		display: block;
 		border-radius: 10px;
 		padding: 6%;
-		/*box-shadow: 2px 10px 15px #888888;*/
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-		/*margin-left: -20px;*/
-		/*margin-right: 40px;*/
 		width: 99%;
 		margin-bottom: 5%;
 	}
@@ -281,7 +275,11 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 }
 
-
+ .middle span,p,th,div{
+      color: black;
+      font-family: "Times New Roman", Times, serif !important;
+      font-size: 16px !important;
+    }
 .profile a span:nth-child(4){
     bottom: -100%;
     left: 0;

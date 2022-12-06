@@ -35,7 +35,7 @@ class MenuTitle extends \yii\db\ActiveRecord
             [['name_uz', 'name_ru', 'name_en', 'menu_id'], 'required'],
             [['menu_id'], 'integer'],
             [['name_uz', 'name_ru', 'name_en'], 'string', 'max' => 255],
-            [['menu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu::className(), 'targetAttribute' => ['menu_id' => 'id']],
+            [['menu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu1::className(), 'targetAttribute' => ['menu_id' => 'id']],
         ];
     }
 
@@ -73,3 +73,7 @@ class MenuTitle extends \yii\db\ActiveRecord
         return $this->hasMany(MenuSub::className(), ['menu_title_id' => 'id']);
     }
 }
+
+
+
+

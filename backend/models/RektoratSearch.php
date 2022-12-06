@@ -17,8 +17,8 @@ class RektoratSearch extends Rektorat
     public function rules()
     {
         return [
-            [['id', 'rek_menu_sub_id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'lavozim_uz', 'lavozim_ru', 'lavozim_en', 'img', 'qabul_vaqti_uz', 'qabul_vaqti_ru', 'qabul_vaqti_en', 'tel', 'fax', 'email', 'telegram', 'manzil_uz', 'manzil_ru', 'manzil_en', 'content_uz', 'content_ru', 'content_en'], 'safe'],
+            [['id', 'rek_menu_sub_id', 'image_id'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en', 'lavozim_uz', 'lavozim_ru', 'lavozim_en', 'qabul_vaqti_uz', 'qabul_vaqti_ru', 'qabul_vaqti_en', 'tel', 'fax', 'email', 'telegram', 'manzil_uz', 'manzil_ru', 'manzil_en', 'vazifasi_uz', 'vazifasi_ru', 'vazifasi_en', 'tarjimaiyhol_uz', 'tarjimaiyhol_ru', 'tarjimaiyhol_en'], 'safe'],
         ];
     }
 
@@ -60,6 +60,7 @@ class RektoratSearch extends Rektorat
         $query->andFilterWhere([
             'id' => $this->id,
             'rek_menu_sub_id' => $this->rek_menu_sub_id,
+            'image_id' => $this->image_id,
         ]);
 
         $query->andFilterWhere(['like', 'name_uz', $this->name_uz])
@@ -68,7 +69,6 @@ class RektoratSearch extends Rektorat
             ->andFilterWhere(['like', 'lavozim_uz', $this->lavozim_uz])
             ->andFilterWhere(['like', 'lavozim_ru', $this->lavozim_ru])
             ->andFilterWhere(['like', 'lavozim_en', $this->lavozim_en])
-            ->andFilterWhere(['like', 'img', $this->img])
             ->andFilterWhere(['like', 'qabul_vaqti_uz', $this->qabul_vaqti_uz])
             ->andFilterWhere(['like', 'qabul_vaqti_ru', $this->qabul_vaqti_ru])
             ->andFilterWhere(['like', 'qabul_vaqti_en', $this->qabul_vaqti_en])
@@ -79,9 +79,12 @@ class RektoratSearch extends Rektorat
             ->andFilterWhere(['like', 'manzil_uz', $this->manzil_uz])
             ->andFilterWhere(['like', 'manzil_ru', $this->manzil_ru])
             ->andFilterWhere(['like', 'manzil_en', $this->manzil_en])
-            ->andFilterWhere(['like', 'content_uz', $this->content_uz])
-            ->andFilterWhere(['like', 'content_ru', $this->content_ru])
-            ->andFilterWhere(['like', 'content_en', $this->content_en]);
+            ->andFilterWhere(['like', 'vazifasi_uz', $this->vazifasi_uz])
+            ->andFilterWhere(['like', 'vazifasi_ru', $this->vazifasi_ru])
+            ->andFilterWhere(['like', 'vazifasi_en', $this->vazifasi_en])
+            ->andFilterWhere(['like', 'tarjimaiyhol_uz', $this->tarjimaiyhol_uz])
+            ->andFilterWhere(['like', 'tarjimaiyhol_ru', $this->tarjimaiyhol_ru])
+            ->andFilterWhere(['like', 'tarjimaiyhol_en', $this->tarjimaiyhol_en]);
 
         return $dataProvider;
     }

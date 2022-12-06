@@ -15,8 +15,15 @@ use Yii;
  * @property string $link
  * @property int $link_type
  *
+ * @property FakultetStaff[] $fakultetStaff
  * @property Fakultet[] $fakultets
+ * @property Institut[] $instituts
+ * @property Kafedralar[] $kafedralars
  * @property MenuTitle $menuTitle
+ * @property Pages[] $pages
+ * @property Rektorat[] $rektorats
+ * @property TezkorHavolalar[] $tezkorHavolalars
+ * @property TutorInfo[] $tutorInfos
  */
 class MenuSub extends \yii\db\ActiveRecord
 {
@@ -51,12 +58,21 @@ class MenuSub extends \yii\db\ActiveRecord
             'name_uz' => 'Name Uz',
             'name_ru' => 'Name Ru',
             'name_en' => 'Name En',
-            'menu_title_id' => 'Menu Title name',
-            'link' => 'Pages',
-            'link_type' => 'Link turi',
+            'menu_title_id' => 'Menu Title ID',
+            'link' => 'Link',
+            'link_type' => 'Link Type',
         ];
     }
 
+    /**
+     * Gets query for [[FakultetStaff]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getFakultetStaff()
+    {
+        return $this->hasMany(FakultetStaff::className(), ['staff_menu_sub_id' => 'id']);
+    }
 
     /**
      * Gets query for [[Fakultets]].
@@ -68,9 +84,24 @@ class MenuSub extends \yii\db\ActiveRecord
         return $this->hasMany(Fakultet::className(), ['menu_sub_id' => 'id']);
     }
 
-      public function getInstituts()
+    /**
+     * Gets query for [[Instituts]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getInstituts()
     {
         return $this->hasMany(Institut::className(), ['ins_menu_sub_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[Kafedralars]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getKafedralars()
+    {
+        return $this->hasMany(Kafedralar::className(), ['kafedra_menu_sub_id' => 'id']);
     }
 
     /**
@@ -81,5 +112,45 @@ class MenuSub extends \yii\db\ActiveRecord
     public function getMenuTitle()
     {
         return $this->hasOne(MenuTitle::className(), ['id' => 'menu_title_id']);
+    }
+
+    /**
+     * Gets query for [[Pages]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPages()
+    {
+        return $this->hasMany(Pages::className(), ['page_menu_sub_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[Rektorats]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRektorats()
+    {
+        return $this->hasMany(Rektorat::className(), ['rek_menu_sub_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[TezkorHavolalars]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTezkorHavolalars()
+    {
+        return $this->hasMany(TezkorHavolalar::className(), ['tez_men__sub_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[TutorInfos]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTutorInfos()
+    {
+        return $this->hasMany(TutorInfo::className(), ['tutor_menu_sub_id' => 'id']);
     }
 }

@@ -1,17 +1,17 @@
 <?php
 
 namespace backend\controllers;
-
-use backend\models\Rektorat;
-use backend\models\RektoratSearch;
+use Yii;
+use backend\models\Images;
+use backend\models\ImagesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
- * RektoratController implements the CRUD actions for Rektorat model.
+ * ImagesController implements the CRUD actions for Images model.
  */
-class RektoratController extends Controller
+class ImagesController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,22 +32,38 @@ class RektoratController extends Controller
     }
 
     /**
-     * Lists all Rektorat models.
+     * Lists all Images models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RektoratSearch();
+        $searchModel = new ImagesSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+
+        $model = new Images();
+        $dir_sl_img_name = uniqid();
+        $dir_sl_img_path = '../../frontend/web/arguments/rek_img/';
+        if ($model->load(Yii::$app->request->post())) {
+            $model->img =UploadedFile::getInstance($model, 'img');
+            if(!empty($model->img))
+            {
+                $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
+                $model->img = $dir_sl_img_name.'.'.$model->img->extension;
+                $model->save();
+            }
+
+            return $this->redirect(['index', 'id' => $model->id]);
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model'=>$model,
         ]);
     }
 
     /**
-     * Displays a single Rektorat model.
+     * Displays a single Images model.
      * @param int $id ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,29 +76,34 @@ class RektoratController extends Controller
     }
 
     /**
-     * Creates a new Rektorat model.
+     * Creates a new Images model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        $model = new Rektorat();
+    // public function actionCreate()
+    // {
+    //     $model = new Images();
+    //     $dir_sl_img_name = uniqid();
+    //     $dir_sl_img_path = '../../frontend/web/arguments/rek_img/img_';
+    //     if ($model->load(Yii::$app->request->post())) {
+    //         $model->img =UploadedFile::getInstance($model, 'img');
+    //         if(!empty($model->img))
+    //         {
+    //             $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
+    //             $model->img = $dir_sl_img_name.'.'.$model->img->extension;
+    //             $model->save();
+    //         }
 
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
-        } else {
-            $model->loadDefaultValues();
-        }
+    //         return $this->redirect(['view', 'id' => $model->id]);
+    //     }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
+    //     return $this->render('create', [
+    //         'model' => $model,
+    //     ]);
+    // }
 
     /**
-     * Updates an existing Rektorat model.
+     * Updates an existing Images model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return mixed
@@ -102,7 +123,7 @@ class RektoratController extends Controller
     }
 
     /**
-     * Deletes an existing Rektorat model.
+     * Deletes an existing Images model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return mixed
@@ -116,22 +137,23 @@ class RektoratController extends Controller
     }
 
     /**
-     * Finds the Rektorat model based on its primary key value.
+     * Finds the Images model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Rektorat the loaded model
+     * @return Images the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Rektorat::findOne($id)) !== null) {
+        if (($model = Images::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-     public function actionDownload($filename) {
+
+    public function actionDownload($filename) {
         $path = '../../frontend/web/arguments/rek_img/'.$filename;
         if (file_exists($path)) {
             return Yii::$app->response->sendFile($path);

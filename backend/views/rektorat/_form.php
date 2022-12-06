@@ -1,3 +1,4 @@
+
 <?php
 
 use yii\helpers\Html;
@@ -9,20 +10,27 @@ use mihaildev\ckeditor\CKEditor;
 use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
 use backend\models\MenuSub;
+use backend\models\Images;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Rektorat */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="rektorat-form">
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <?php $form = ActiveForm::begin(); ?>
 
      <?
             $content1 = 
             $form->field($model, 'name_uz')->textInput(['maxlength' => true]).
-            $form->field($model, 'content_uz')->widget(CKEditor::className(),[
+             $form->field($model, 'lavozim_uz')->textInput(['maxlength' => true]).
+              $form->field($model, 'qabul_vaqti_uz')->textInput(['maxlength' => true]).
+              $form->field($model, 'manzil_uz')->textInput(['maxlength' => true]).
+            $form->field($model, 'tarjimaiyhol_uz')->widget(CKEditor::className(),[
+                'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
+            ]).
+             $form->field($model, 'vazifasi_uz')->widget(CKEditor::className(),[
                 'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
             ]);
         ?>
@@ -30,7 +38,13 @@ use backend\models\MenuSub;
         <?
             $content2 = 
             $form->field($model, 'name_ru')->textInput(['maxlength' => true]).
-            $form->field($model, 'content_ru')->widget(CKEditor::className(),[
+            $form->field($model, 'lavozim_ru')->textInput(['maxlength' => true]).
+            $form->field($model, 'qabul_vaqti_ru')->textInput(['maxlength' => true]).
+            $form->field($model, 'manzil_ru')->textInput(['maxlength' => true]).
+            $form->field($model, 'tarjimaiyhol_ru')->widget(CKEditor::className(),[
+                'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
+            ]).
+             $form->field($model, 'vazifasi_ru')->widget(CKEditor::className(),[
                 'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
             ]);
         ?>
@@ -38,7 +52,13 @@ use backend\models\MenuSub;
         <?
             $content3 = 
             $form->field($model, 'name_en')->textInput(['maxlength' => true]).
-            $form->field($model, 'content_en')->widget(CKEditor::className(),[
+            $form->field($model, 'lavozim_en')->textInput(['maxlength' => true]).
+            $form->field($model, 'qabul_vaqti_en')->textInput(['maxlength' => true]).
+            $form->field($model, 'manzil_en')->textInput(['maxlength' => true]).
+            $form->field($model, 'tarjimaiyhol_en')->widget(CKEditor::className(),[
+                'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
+            ]).
+              $form->field($model, 'vazifasi_en')->widget(CKEditor::className(),[
                 'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
             ]);
         ?>
@@ -69,29 +89,7 @@ use backend\models\MenuSub;
         ?>
 
 
-    <?= $form->field($model, 'lavozim_uz')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'lavozim_ru')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'lavozim_en')->textInput(['maxlength' => true]) ?>
-
-    <?
-        if ($model->img == null) {
-             echo $form->field($model, 'img')->widget(FileInput::classname(), [
-            'options' => ['accept' => 'image/*'],
-            ]); 
-         }else{
-        ?>
-            <img src="../../frontend/web/arguments/rek_img/<?=$model->img; ?>" width='50%'>
-        <?
-         } 
-    ?>
-
-    <?= $form->field($model, 'qabul_vaqti_uz')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'qabul_vaqti_ru')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'qabul_vaqti_en')->textInput(['maxlength' => true]) ?>
+    
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
 
@@ -101,17 +99,18 @@ use backend\models\MenuSub;
 
     <?= $form->field($model, 'telegram')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'manzil_uz')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'manzil_ru')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'manzil_en')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'rek_menu_sub_id')->dropDownList(
         ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'),
         [
             'prompt' => "Menu Subni tanlang",
         ]); ?>
+
+
+     <?= $form->field($model, 'image_id')->dropDownList(
+        ArrayHelper::map(Images::find()->all(), 'id', 'img'),
+        [
+            'prompt' => "Rasmni tanlang",
+        ]); ?> 
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
@@ -120,3 +119,26 @@ use backend\models\MenuSub;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <img src="/frontend/web/arguments/rek_img/avatar.jpg" class="img-thumbnail" alt="..." id="my_image">
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js">   
+</script>  
+<script>  
+    $(document).ready(function(){
+    $("#rektorat-image_id").change(function(){
+        var selectedCountry = $(this).children("option:selected").text();
+        // alert("You have selected the country - " + selectedCountry);
+        $("#my_image").attr("src", '/frontend/web/arguments/rek_img/'+selectedCountry);
+    });
+}); 
+</script>  

@@ -44,13 +44,24 @@
                              ['label' => 'Video gallery', 'icon' => 'file-code-o', 'url' => ['/video-gallery'],],
                             ['label' => 'Slider', 'icon' => 'file-code-o', 'url' => ['/slider'],],
                             ['label' => 'Institut', 'icon' => 'file-code-o', 'url' => ['/institut'],],
-                            ['label' => 'Rektorat', 'icon' => 'file-code-o', 'url' => ['/rektorat'],],
                             ['label' => 'Tezkor havolalar', 'icon' => 'file-code-o', 'url' => ['/tezkor-havolalar'],],
                              ['label' => 'Foydali saytlar', 'icon' => 'file-code-o', 'url' => ['/supporters'],],
                              ['label' => 'Davlat ramzlari icon', 'icon' => 'file-code-o', 'url' => ['/emblems'],],
                              ['label' => 'Davlat ramzlari', 'icon' => 'file-code-o', 'url' => ['/emb-pages'],],
                             ['label' => 'Tutorlar', 'icon' => 'file-code-o', 'url' => ['/tutor-info'],],
                              ['label' => 'Maktablar', 'icon' => 'file-code-o', 'url' => ['/maktablar-info'],],
+
+                              [
+                                'label' => 'Bolim xodimlari',
+                                'icon' => 'circle-o',
+                                'url' => '#',
+                                'items' => [
+                                    ['label' => 'Rasmlar', 'icon' => 'circle-o', 'url' => ['/images'],],
+                                    ['label' => 'Bolim xodimlari', 'icon' => 'circle-o', 'url' => ['/rektorat'],],
+                                    ['label' => "Ilmiy ish turi", 'icon' => 'circle-o', 'url' => ['/ilmiyishturi'],],
+                                    ['label' => "Ilmiy ishlar", 'icon' => 'circle-o', 'url' => ['/ilimiyishlar'],],
+                                ],
+                            ], 
                        
                             [
                                 'label' => 'Fakultetlar',

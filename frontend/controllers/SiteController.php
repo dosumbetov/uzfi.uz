@@ -43,6 +43,7 @@ use backend\models\TutorInfo;
 use backend\models\MaktablarInfo;
 use backend\models\VideoGallery;
 use backend\models\TutorFaculty;
+use backend\models\Ilimiyishlar;
 
 /**
  * Site controller
@@ -248,28 +249,7 @@ class SiteController extends Controller
           'articles'=>$articles,
         ]);
     }
-     public function actionDbprofile($id)
-    {
-      $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
-       $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
-        return $this->render('dbprofile',[
-          'teacherinfo'=>$teacherinfo,  
-          'fakultet_staff'=>$fakultet_staff,
-        ]);
-    }
-    public function actionPublished($id)
-    {
-      $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
-       $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
-       $books = Books::find()->Where(['book_fak_staff_id'=>$id])->all();
-       $articles = Articles::find()->Where(['art_fak_staf_id'=>$id])->all();
-        return $this->render('published', [
-          'teacherinfo'=>$teacherinfo,
-          'books'=>$books,
-          'articles'=>$articles,
-          'fakultet_staff'=>$fakultet_staff,
-        ]);
-    }
+     
     public function actionFakultetlar($id)
     {
         $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
@@ -386,18 +366,7 @@ class SiteController extends Controller
 
     }
 
-     public function actionRektorat($id)
-    {
-        $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
-        $rektorat = Rektorat::find()->Where(['rek_menu_sub_id'=>$id])->all();
-        $fakultet_staff = FakultetStaff::find()->Where(['staff_menu_sub_id'=>$id])->all();
-        return $this->render('rektorat',[
-          'menu_sub'=>$menu_sub,
-          'rektorat'=>$rektorat,
-          'fakultet_staff'=>$fakultet_staff,
-        ]);
-        
-    }
+     
      public function actionPages($id)
     {
         $id = Yii::$app->request->get('id');
@@ -409,24 +378,43 @@ class SiteController extends Controller
         ]);
         
     }
+    public function actionRektorat($id)
+    {
+        $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
+        $rektorats = Rektorat::find()->Where(['rek_menu_sub_id'=>$id])->all();
+        return $this->render('rektorat',[
+          'menu_sub'=>$menu_sub,
+          'rektorats'=>$rektorats,
+        ]);
+        
+    }
      public function actionTeacher($id)
     {
-        $fakultet_staff = FakultetStaff::find()->Where(['id'=>$id])->all();
-         // $rektorat = Rektorat::find()->Where(['id'=>$id])->all();
-        $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
+      $rektorats = Rektorat::find()->Where(['id'=>$id])->all();
         return $this->render('teacher',[
-            'teacherinfo'=>$teacherinfo,
-            'fakultet_staff'=>$fakultet_staff,
+          'rektorats'=>$rektorats,
+
         ]);
     }
-    // public function actionTchprofile($id)
-    // {
-    //     $teacherinfo = Teacher::find()->Where(['staff_id'=>$id])->all();
-    //     return $this->render('tchprofile',[
-    //         'teacherinfo'=>$teacherinfo,
-    //     ]);
-        
-    // }
+
+    public function actionDbprofile($id)
+    {
+       $rektorats = Rektorat::find()->Where(['id'=>$id])->all();
+        return $this->render('dbprofile',[
+          'rektorats'=>$rektorats,  
+        ]);
+    }
+    public function actionPublished($id)
+    {
+      $rektorats = Rektorat::find()->Where(['id'=>$id])->all();
+      $kitoblar = Ilimiyishlar::find()->Where(['id'=>1])->all();
+      $maqollar = Ilimiyishlar::find()->Where(['id'=>2])->all();
+      return $this->render('published', [
+        'rektorats'=>$rektorats,
+        'kitoblar'=>$kitoblar,
+        'maqollar'=>$maqollar,
+      ]);
+    }
 
     /**
      * Logs in a user.

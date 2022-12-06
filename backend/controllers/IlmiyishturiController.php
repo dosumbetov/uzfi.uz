@@ -2,16 +2,16 @@
 
 namespace backend\controllers;
 
-use backend\models\Rektorat;
-use backend\models\RektoratSearch;
+use backend\models\Ilmiyishturi;
+use backend\models\IlmiyishturiSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RektoratController implements the CRUD actions for Rektorat model.
+ * IlmiyishturiController implements the CRUD actions for Ilmiyishturi model.
  */
-class RektoratController extends Controller
+class IlmiyishturiController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,22 +32,33 @@ class RektoratController extends Controller
     }
 
     /**
-     * Lists all Rektorat models.
+     * Lists all Ilmiyishturi models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RektoratSearch();
+        $searchModel = new IlmiyishturiSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+
+         $model = new Ilmiyishturi();
+
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['index', 'id' => $model->id]);
+            }
+        } else {
+            $model->loadDefaultValues();
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model' => $model,
         ]);
     }
 
     /**
-     * Displays a single Rektorat model.
+     * Displays a single Ilmiyishturi model.
      * @param int $id ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,29 +71,29 @@ class RektoratController extends Controller
     }
 
     /**
-     * Creates a new Rektorat model.
+     * Creates a new Ilmiyishturi model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        $model = new Rektorat();
+    // public function actionCreate()
+    // {
+    //     $model = new Ilmiyishturi();
 
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
-        } else {
-            $model->loadDefaultValues();
-        }
+    //     if ($this->request->isPost) {
+    //         if ($model->load($this->request->post()) && $model->save()) {
+    //             return $this->redirect(['view', 'id' => $model->id]);
+    //         }
+    //     } else {
+    //         $model->loadDefaultValues();
+    //     }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
+    //     return $this->render('create', [
+    //         'model' => $model,
+    //     ]);
+    // }
 
     /**
-     * Updates an existing Rektorat model.
+     * Updates an existing Ilmiyishturi model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return mixed
@@ -102,7 +113,7 @@ class RektoratController extends Controller
     }
 
     /**
-     * Deletes an existing Rektorat model.
+     * Deletes an existing Ilmiyishturi model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return mixed
@@ -116,25 +127,18 @@ class RektoratController extends Controller
     }
 
     /**
-     * Finds the Rektorat model based on its primary key value.
+     * Finds the Ilmiyishturi model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Rektorat the loaded model
+     * @return Ilmiyishturi the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Rektorat::findOne($id)) !== null) {
+        if (($model = Ilmiyishturi::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-     public function actionDownload($filename) {
-        $path = '../../frontend/web/arguments/rek_img/'.$filename;
-        if (file_exists($path)) {
-            return Yii::$app->response->sendFile($path);
-        }
     }
 }

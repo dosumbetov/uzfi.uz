@@ -1,26 +1,37 @@
  <?
 use yii\helpers\Url;
-$lang = Yii::$app->language;
 use yii\bootstrap4\Breadcrumbs;
-use backend\models\MenuSub; 
+use backend\models\MenuSub;
+use backend\models\Images;
+$lang = Yii::$app->language;
 
-foreach ($teacherinfo as $teacherinfo_item) {
+foreach ($rektorats as $rektorat) {
   if ($lang == 'uz') {
-      $teacherinfo_name = $teacherinfo_item->name_uz;
-      $teacherinfo_lavozim = $teacherinfo_item->lavozim_uz;
+      $rektorat_name = $rektorat->name_uz;
+      $rektorat_lavozim = $rektorat->lavozim_uz;
+      $rektorat_qabul = $rektorat->qabul_vaqti_uz;
+      $rektorat_manzil = $rektorat->manzil_uz;
+      $rektorat_vazifa = $rektorat->vazifasi_uz;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_uz;
     }elseif ($lang == 'en') {
-      $teacherinfo_name = $teacherinfo_item->name_en;
-      $teacherinfo_lavozim = $teacherinfo_item->lavozim_en;
+      $rektorat_name = $rektorat->name_en;
+      $rektorat_lavozim = $rektorat->lavozim_en;
+      $rektorat_qabul = $rektorat->qabul_vaqti_en;
+      $rektorat_manzil = $rektorat->manzil_en;
+      $rektorat_vazifa = $rektorat->vazifasi_en;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_en;
     }elseif ($lang == 'ru') {
-      $teacherinfo_name = $teacherinfo_item->name_ru;
-      $teacherinfo_lavozim = $teacherinfo_item->lavozim_ru;
+      $rektorat_name = $rektorat->name_ru;
+      $rektorat_lavozim = $rektorat->lavozim_ru;
+      $rektorat_qabul = $rektorat->qabul_vaqti_ru;
+      $rektorat_manzil = $rektorat->manzil_ru;
+      $rektorat_vazifa = $rektorat->vazifasi_ru;
+      $rektorat_tarjimaihol = $rektorat->tarjimaiyhol_ru;
     }
+  
 }
-foreach ($fakultet_staff as $fakultet_staff_key) {
-  # code...
-}
-  $lang = Yii::$app->language;
-$menu_sub = MenuSub::find()->Where(['id'=>$fakultet_staff_key->staff_menu_sub_id])->all();
+
+$menu_sub = MenuSub::find()->Where(['id'=>$rektorat->rek_menu_sub_id])->all();
 foreach ($menu_sub as $menu_sub_item) {
     if ($lang == 'uz') {
       $cmmenu_sub_item = $menu_sub_item->name_uz;
@@ -31,17 +42,23 @@ foreach ($menu_sub as $menu_sub_item) {
     }
 }
 
-$this->title = $cmmenu_sub_item;
+  $idimg = $rektorat->image_id;
+  $image = Images::find()->Where(['id'=>$idimg])->all();
+  foreach ($image as $key) {
+   
+  }
+
+$this->title = 'profile'
  ?>
-<div class="heros">
+ <div class="heros">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-           <?
+         <?
             echo Breadcrumbs::widget([
                 'links' => [
-                    ['label' => $this->title, 'url' => ['site/rektorat', 'id' => $menu_sub_item->id]],
-                    $teacherinfo_name,
+                    ['label' => $cmmenu_sub_item, 'url' => ['site/rektorat', 'id' => $rektorat->rek_menu_sub_id]],
+                    $this->title,
                 ],
             ]); 
           ?>
@@ -73,7 +90,7 @@ $this->title = $cmmenu_sub_item;
         width: 100%;
         background: url("../../images/jpa.jpg");
         position: relative;
-        padding: 150px 0 0 0;
+        padding: 120px 0 0 0;
       }
        .heros:after {
         content: "";
@@ -89,6 +106,7 @@ $this->title = $cmmenu_sub_item;
   }
  </style>
 <section class="orqarasm">
+    <!-- <img src="../../images/pro-bg.jpg" width="100%;"> -->
         <div class="pro-menu">
             <div class="container">
                 <div class="row">
@@ -96,9 +114,9 @@ $this->title = $cmmenu_sub_item;
                     </div>
                     <div class="col-md-10">
                         <ul>
-                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
-                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
-                            <li><a href="<?=Url::to(['site/published', 'id'=>$teacherinfo ? $teacherinfo_item->staff_id : ''])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
+                             <li><a href="<?=Url::to(['site/teacher', 'id'=>$rektorat->id])?>" class="pro-act"><?=Yii::t('app','Shaxsiy kabinet')?></a></li>
+                            <li><a href="<?=Url::to(['site/dbprofile', 'id'=>$rektorat->id])?>"><?=Yii::t('app',"Umumiy ma'lumot")?></a></li>
+                            <li><a href="<?=Url::to(['site/published', 'id'=>$rektorat->id])?>"><?=Yii::t('app','Ilmiy faoliyat')?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,19 +127,19 @@ $this->title = $cmmenu_sub_item;
     <div class="row">
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
-              <img src="../<?=$teacherinfo ? $teacherinfo_item->img : ''?>" class="img_teacher">
-              <h5 class="mt-3" style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_name : ''?></h5>
-              <p style="text-align: center;"><?=$teacherinfo_item ? $teacherinfo_lavozim : ''?>, <br><?=$teacherinfo_item ? $teacherinfo_item->rank_uz : ''?></p>
+                <img src="/frontend/web/arguments/rek_img/<?=$key->img?>" class="img_teacher">
+              <h5 class="mt-3" style="text-align: center;"><?=$rektorat ? $rektorat_name : ''?></h5>
+              <p style="text-align: center; font-style: italic;"> <?=$rektorat ? $rektorat_lavozim : ''?></p>
               <hr style="margin: 0px; margin-bottom: 5%;">
-              <p><i class="fa fa-telegram"></i><?=$teacherinfo_item ? $teacherinfo_item->telegram : ''?></p>
-              <p><i class="fa fa-facebook"></i> <?=$teacherinfo_item ? $teacherinfo_item->facebook : ''?></p>
-              <p><i class="fa fa-instagram"></i><?=$teacherinfo_item ? $teacherinfo_item->instagram : ''?></p>                  
+              <p><i class="fa fa-telegram"> <?=$rektorat ? $rektorat->telegram : ''?></i></p>
+              <p><i class="fa fa-facebook"> <?=$rektorat ? $rektorat->fax : ''?></i></p>
+              <p><i class="fa fa-envelope"> <?=$rektorat ? $rektorat->email : ''?></i></p>
             </div>
         </div>
         <div class="col-md-9 col-12">
           <div class="middle_bar_tea">
-                     <h4 style="color: black;"><img src="../../images/icon/db2.png" alt="" /><?=Yii::t('app','Chop etilgan kitoblar')?></h4>
-           <hr style="margin: 0px; margin-bottom: 5%;">
+              <h4 style="color: black;"><img src="../../images/icon/db2.png" alt="" /><?=Yii::t('app','Chop etilgan kitoblar')?></h4>
+           <hr style="margin: 0px; margin-bottom: 2% !important;">
             <table class="table">
               <thead>
                 <tr>
@@ -132,33 +150,36 @@ $this->title = $cmmenu_sub_item;
                 </tr>
               </thead>
               <tbody>
-                <?
-                $lang = Yii::$app->language;
-                  foreach ($books as $books_item) {
-                     if ($lang == 'uz') {
-                        $books_name = $books_item->name_uz;
-                        $books_chopetilgan = $books_item->chop_etilgan_joy_uz;
+                 
+                  <?
+                    foreach ($kitoblar as $kitob) {
+                      $i=1;
+                      if ($lang == 'uz') {
+                        $kitob_nomi = $kitob->name_uz;
+                        $kitob_publish = $kitob->published_place_uz;
                       }elseif ($lang == 'en') {
-                        $books_name = $books_item->name_en;
-                        $books_chopetilgan = $books_item->chop_etilgan_joy_en;
+                        $kitob_nomi = $kitob->name_en;
+                        $kitob_publish = $kitob->published_place_en;
                       }elseif ($lang == 'ru') {
-                        $books_name = $books_item->name_ru;
-                        $books_chopetilgan = $books_item->chop_etilgan_joy_ru;
+                        $kitob_nomi = $kitob->name_ru;
+                        $kitob_publish = $kitob->published_place_ru;
                       }
-                    ?>
-                      <tr>
-                        <th scope="row"><?=$books_item ? $books_item->number : ''?></th>
-                        <td><?=$books_item ? $books_name : ''?></td>
-                        <td><?=$books_item ? $books_chopetilgan : ''?></td>
-                        <td><?=$books_item ? $books_item->date : ''?></td>
-                      </tr>
-                    <?
-                  }
-                ?>
+                      ?>
+                        <tr>
+                          <th scope="row"><?=$i;?></th>
+                          <td><?=$kitoblar ? $kitob_nomi : ''?></td>
+                          <td><?=$kitoblar ? $kitob_publish : ''?></td>
+                          <td><?=$kitoblar ? $kitob->date : ''?></td>
+                        </tr> 
+                      <?
+                      $i=$i+1;
+                    }
+                  ?>
+               
               </tbody>
             </table>
             <h4 style="color: black;"><img src="../../images/icon/article.ico" alt="" /><?=Yii::t('app','Maqolalar')?></h4>
-           <hr style="margin: 0px; margin-bottom: 5%;">
+           <hr style="margin: 0px; margin-bottom: 2%!important;">
             <table class="table">
               <thead>
                 <tr>
@@ -169,67 +190,35 @@ $this->title = $cmmenu_sub_item;
                 </tr>
               </thead>
               <tbody>
-                <?
-                $lang = Yii::$app->language;
-                  foreach ($articles as $articles_item) {
-                     if ($lang == 'uz') {
-                        $articles_name = $articles_item->name_uz;
-                        $articles_art_degree = $articles_item->article_degree_uz;
-                      }elseif ($lang == 'en') {
-                        $articles_name = $articles_item->name_en;
-                        $articles_art_degree = $articles_item->article_degree_en;
-                      }elseif ($lang == 'ru') {
-                        $articles_name = $articles_item->name_ru;
-                        $articles_art_degree = $articles_item->article_degree_ru;
+               
+                    <?
+                      foreach ($maqollar as $maqola) {
+                        $i=1;
+                        if ($lang == 'uz') {
+                          $maqola_nomi = $maqola->name_uz;
+                          $maqola_publish = $maqola->published_place_uz;
+                        }elseif ($lang == 'en') {
+                          $maqola_nomi = $maqola->name_en;
+                          $maqola_publish = $maqola->published_place_en;
+                        }elseif ($lang == 'ru') {
+                          $maqola_nomi = $maqola->name_ru;
+                          $maqola_publish = $maqola->published_place_ru;
+                        }
+                        ?>
+                          <tr>
+                            <th scope="row"><?=$i?></th>
+                            <td><?=$maqollar ? $maqola_nomi : ''?></td>
+                            <td><?=$maqollar ? $maqola_publish : ''?></td>
+                            <td><?=$maqollar ? $maqola->date : ''?></td>
+                          </tr> 
+
+                        <?
+                        $i=$i+1;
                       }
                     ?>
-                      <tr>
-                        <th scope="row"><?=$articles_item ? $articles_item->number : ''?></th>
-                        <td><?=$articles_item ? $articles_name : ''?></td>
-                        <td><?=$articles_item ? $articles_art_degree : ''?></td>
-                        <td><?=$articles_item ? $articles_item->date : ''?></td>
-                      </tr>
-                    <?
-                  }
-                ?>
-                
                 
               </tbody>
             </table>
-            <!-- <div class="row">
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-              <h5 style="text-align: center; margin-bottom: 40px;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>  
-              <div class="col-md-3 col-6 mt-4">
-                <section>
-                    <div class="book">
-                      <img src="../images/cover.jpg">
-                    </div>
-                  </section>
-                  <h5 style="text-align: center;" class="mt-4"><a href="">Sahifa</a></h5>
-              </div>  
-            </div> -->
           </div>
         </div>
     </div>
@@ -239,32 +228,25 @@ $this->title = $cmmenu_sub_item;
 
 
 <style type="text/css">
-   table, tr, td, th {
-      /*font-size: 18px;*/
-      color: black;
-    }
-    ul li a {
-      /*font-size: 18px;*/
-    } 
   .table thead tr th {
     font-weight: bold;
   }
+    .middle_bar_tea span,p,th,div{
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px !important;
+    }
     .left_bar_tea p i {
         margin-right: 20px;
-        /*font-size: 20px;*/
-        /*font-size: 18px;*/
         color: black;
     } 
-     .left_bar_tea p {
+    .left_bar_tea p {
         padding: 0px 20px;
-        /*font-size: 18px;*/
         color: black;
     } 
     .img_teacher {
         position: relative;
         width: 100%;
-       /* border: 2px solid #fff;
-        box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
         border: 1px solid #F3F2F2;
         box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
         border-width: 3px 3px 3px;
@@ -275,10 +257,8 @@ $this->title = $cmmenu_sub_item;
     }
    .left_bar_tea {
         width: 98%;
-        /*background-color: #fff;*/
         background-color: #f4f4f5;
         transform-style: preserve-3d;
-        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
         box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
         border: 1px solid #F3F2F2;
         max-height: 100% !important;
@@ -289,133 +269,52 @@ $this->title = $cmmenu_sub_item;
     .middle_bar_tea {
         position: relative;
         width: 98%;
-        padding: 5%;
+        padding: 20px;
         background-color: #fff;
         transform-style: preserve-3d;
-        /*box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);*/
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border: 1px solid #F3F2F2;
-        margin-bottom: 5%;
-        margin-top: 5%;
+        margin-bottom: 30px;
+        margin-top: 35px;
     }
     .orqarasm {
         position: relative;
         display: inline-block;
         background-color: #f7f8f9;
-        /*z-index: 1;*/
     }
     .ortafon {
         background-color: #fff;
          box-shadow: 0px 5px 18px -11px rgba(150, 150, 150, 0.8);
          border: 1px solid #F3F2F2;
         transform-style: preserve-3d;
-        margin-bottom: 5%;
-    }
-    .pro-menu{
+        margin-bottom: 40px;
+      }
+     .pro-menu{
      background: #3f78e0;
      box-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.08);
      position: relative;
-     /*z-index: 0;*/
-}
- .pro-menu ul{
-     margin-bottom: 0px;
-    /* margin: 0 auto;
-     */
-     display: table;
-     /*margin-left: 25px;*/
-}
- .pro-menu ul li{
-     display: inline-block;
-}
- .pro-act{
-     color: #fff !important;
-}
- .pro-menu ul li a{
-     padding: 10px 14px;
-     line-height: 40px;
-     color: #fff;
-     font-weight: 500;
-     text-decoration: none;
-     border-left: 1px solid #405d7d;
-}
- .pro-menu ul li a:hover{
-     background: #225fd0;
-     color: #fff;
-}
-section .book {
-  position: relative;
-  width: 157px;
-  height: 190px;
-  box-shadow: 20px 20px 20px rgba(0,0,0,0.2);
-  transform-style: preserve-3d;
-  transition: 0.5s;
-
-}
-section .book:hover {
-  transform: rotateY(35deg);
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.2);
-
-}
-section .book:active {
-  transform: rotateY(180deg);
-  
-}
-section .book:before {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 100%;
-  transform-origin: left;
-  background: url(../images/side.jpg);
-  background-position: center;
-  transform: rotateY(90deg);
-}
-section .book:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  background: url(../images/back.jpg);
-  background-position: center;
-  transform: rotateY(180deg) translateZ(60px);
-}
-section .book img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+    }
+    .pro-menu ul{
+         margin-bottom: 0px;
+         display: table;
+    }
+     .pro-menu ul li{
+         display: inline-block;
+    }
+     .pro-act{
+         color: #fff !important;
+    }
+     .pro-menu ul li a{
+         padding: 10px 14px;
+         line-height: 40px;
+         color: #fff;
+         font-weight: 500;
+         text-decoration: none;
+         border-left: 1px solid #405d7d;
+    }
+     .pro-menu ul li a:hover{
+         background: #225fd0;
+         color: #fff;
+    }
 </style>
-
-
- 
-  <script type="text/javascript">
-    // IMPROVED JAVASCRIPT & ADDED A FEW CHANGES
-const book = document.querySelector(".book");
-  const firstHalf = document.querySelector(".first-half");
-  const secondHalf = document.querySelector(".second-half");
-
-  book.addEventListener("click", () => {
-    book.classList.toggle("flip");
-  });
-
-  firstHalf.addEventListener("mouseenter", () => {
-    book.classList.add("rotateLeft");
-  });
-
-  firstHalf.addEventListener("mouseout", () => {
-    book.classList.remove("rotateLeft");
-  });
-
-  secondHalf.addEventListener("mouseenter", () => {
-    book.classList.add("rotateRight");
-  });
-
-  secondHalf.addEventListener("mouseout", () => {
-    book.classList.remove("rotateRight");
-  });
-  </script>
+  
