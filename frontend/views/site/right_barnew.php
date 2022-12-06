@@ -9,7 +9,7 @@
 			<div class="container right1">
 				<nav>
 					<ul class="mcd-menu1">
-						<h3 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h3>
+						<h4 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h4>
 					<?
               $lang = Yii::$app->language;
               foreach ($news as $news_item) {

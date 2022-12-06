@@ -169,7 +169,7 @@ $this->title = 'profile'
 
 <style type="text/css">
     
-    .left_bar_tea p i {
+    .left_bar_tea p i h5,h4,h3{
         margin-right: 20px;
         color: black;
     } 

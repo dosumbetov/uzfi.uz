@@ -9,7 +9,7 @@
 			<div class="container right">
 				<nav>
 					<ul class="mcd-menu">
-						<h3 style="color: black; text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h3>
+						<h4 style="color: black; text-align: center;"><?=Yii::t('app','Tezkor ilovalar')?></h4>
 						<li>
 							<a href="https://interactive.uzfi.uz/" class="active" target="_blank">
 								<i class="fa fa-file"></i>
@@ -53,7 +53,7 @@
 			<div class="container right1" style="margin-top: 30px;">
 				<nav>
 					<ul class="mcd-menu1">
-						<h3 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h3>
+						<h4 style="color: black; text-align: center;"><?=Yii::t('app',"So'ngi yangiliklar")?></h4>
 						<?
               $lang = Yii::$app->language;
 							foreach ($news as $news_item) {

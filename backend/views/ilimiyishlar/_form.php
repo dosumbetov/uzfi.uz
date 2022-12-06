@@ -48,7 +48,7 @@ use dosamigos\datepicker\DatePicker;
      <?= $form->field($model, 'ilimiyishlar_turi_id')->dropDownList(
         ArrayHelper::map(Ilmiyishturi::find()->all(), 'id', 'name'),
         [
-            'prompt' => "emblem turini tanlang",
+            'prompt' => "Ilmiy ishlar turini tanlang",
         ]); ?> 
 
 

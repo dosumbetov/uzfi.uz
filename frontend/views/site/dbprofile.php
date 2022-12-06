@@ -127,7 +127,7 @@ $this->title = 'profile'
     <div class="row">
         <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
-                <img src="/frontend/web/arguments/rek_img/img_<?=$key->img?>" class="img_teacher">
+                <img src="/frontend/web/arguments/rek_img/<?=$key->img?>" class="img_teacher">
               <h5 class="mt-3" style="text-align: center;"><?=$rektorat ? $rektorat_name : ''?></h5>
               <p style="text-align: center; font-style: italic;"> <?=$rektorat ? $rektorat_lavozim : ''?></p>
               <hr style="margin: 0px; margin-bottom: 5%;">

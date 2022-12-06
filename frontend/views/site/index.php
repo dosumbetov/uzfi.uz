@@ -16,22 +16,25 @@ $this->title = "SAMARQAND DAVLAT UNIVERSITETINING O'ZBEKISTON-FINLANDIYA PEDAGOG
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-          <div class="carousel-item active">
+          <!-- <div class="carousel-item active">
             <img src="/menu/images/imageslider.jpg" class="d-block w-100 rasm" alt="...">
             <div class="carousel-caption d-none d-md-block" style="text-align: right;">
                 <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-primary" style="font-size: 25px;">Virtual tour</a>
             </div>
-          </div>
+          </div> -->
        <?
+       $i=1;
         foreach ($slider as $slide) {
+
           ?>
-             <div class="carousel-item">
+             <div class="carousel-item<?if ($i==1) {?> active <?}else{?><?}?>">
                 <img src="arguments/slider/<?=$slide->slider_img?>" class="d-block w-100 rasm" alt="...">
                 <div class="carousel-caption d-none d-md-block" style="text-align: right;">
                     <a target="_blank" href="https://360.openconference.us/uzfi/" class="btn btn-primary" style="font-size: 25px;">Virtual tour</a>
                 </div>
               </div>
           <?
+          $i=$i+1;
         }
        ?>
       </div>
@@ -1219,7 +1222,7 @@ effectCircle = function(d, h, m, s){
                                    <div class="qr">
                                      <img src="../images/qr.png">
                                    </div>
-                                <a href="https://play.google.com/store/apps/details?id=uzfi.uz" class="d-flex bg-primary-gradient rounded py-2 px-2">
+                                <a href="https://apps.apple.com/uz/app/uzfi/id1640549802?platform=iphone" class="d-flex bg-primary-gradient rounded py-2 px-2">
                                     <i class="fa fa-apple fa-3x text-white flex-shrink-0"></i>
                                     <div class="ms-3" style="margin-left: 5%;">
                                         <p class="text-white mb-0">Available On</p>

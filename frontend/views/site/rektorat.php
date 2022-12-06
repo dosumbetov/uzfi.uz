@@ -102,7 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="row" style="padding: 30px 0px;">
 		<div class="col-md-8 col-12">
 			<div class="middle">
-				<h3 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_name?></h3>
+				<h4 class="mb-5" style="text-transform: uppercase; text-align: center;"><?=$menu_sub_name?></h4>
         <?
           $idimg = $rektorat->image_id;
           $image = Images::find()->Where(['id'=>$idimg])->all();
@@ -114,7 +114,7 @@ $this->params['breadcrumbs'][] = $this->title;
           }
         ?>
 				
-			  <h4 style="text-align: center;" class="mt-4"><?=$rektorats ? $rektorat_name : ''?><br><span style="font-size: 18px;"><i><?=$rektorat ? $rektorat_lavozim : ''?></i></span></h4>
+			  <h5 style="text-align: center;" class="mt-4"><?=$rektorats ? $rektorat_name : ''?><br><span style="font-size: 18px;"><i><?=$rektorat ? $rektorat_lavozim : ''?></i></span></h5>
 
 
         <div class="profile">
@@ -157,7 +157,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				  </tbody>
 				</table>
 				<hr style="margin: 0px; margin-bottom: 5%;">
-        <h3 class="text-center">Vazifalari</h3>
+        <h5 class="text-center">Vazifalari</h5>
         <div class="text-justify"><?=$rektorat ? $rektorat_vazifa : ''?></div>
 				
 			</div>
@@ -299,6 +299,11 @@ $this->params['breadcrumbs'][] = $this->title;
 }
 
 }
+span,p,th,div{
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px !important;
+    }
 
 
 </style>
