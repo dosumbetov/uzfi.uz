@@ -1,13 +1,12 @@
 <?php
 
 namespace backend\controllers;
-use Yii;
+
 use backend\models\TutorInfo;
 use backend\models\TutorInfoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
  * TutorInfoController implements the CRUD actions for TutorInfo model.
@@ -68,18 +67,13 @@ class TutorInfoController extends Controller
     public function actionCreate()
     {
         $model = new TutorInfo();
-        $dir_sl_img_name = uniqid();
-        $dir_sl_img_path = '../../frontend/web/arguments/dr_sl_img/img';
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->img =UploadedFile::getInstance($model, 'img');
-            if(!empty($model->img))
-            {
-                $model->img->SaveAs($dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension);
-                $model->img = $dir_sl_img_path.$dir_sl_img_name.'.'.$model->img->extension;
-                $model->save();
-            }
 
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        } else {
+            $model->loadDefaultValues();
         }
 
         return $this->render('create', [

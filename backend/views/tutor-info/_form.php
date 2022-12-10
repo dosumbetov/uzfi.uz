@@ -10,6 +10,7 @@ use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
 use backend\models\MenuSub;
 use backend\models\TutorFaculty;
+use backend\models\TutorImg;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
@@ -102,18 +103,6 @@ use yii\helpers\Url;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-     <?
-        if ($model->img == null) {
-             echo $form->field($model, 'img')->widget(FileInput::classname(), [
-            'options' => ['accept' => 'image/*'],
-            ]); 
-         }else{
-        ?>
-            <img src="<?=$model->img; ?>" width='50%'>
-        <?
-         } 
-    ?>
-
     <?= $form->field($model, 'tutor_menu_sub_id')->dropDownList(
         ArrayHelper::map(MenuSub::find()->all(), 'id', 'name_uz'),
         [
@@ -126,6 +115,12 @@ use yii\helpers\Url;
             'prompt' => "Facultetni tanlang",
         ]); ?>
 
+        <?= $form->field($model, 'tutor_img_id')->dropDownList(
+        ArrayHelper::map(TutorImg::find()->all(), 'id', 'img'),
+        [
+            'prompt' => "Rasm tanlang",
+        ]); ?>
+
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
@@ -133,3 +128,26 @@ use yii\helpers\Url;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <img src="/frontend/web/arguments/rek_img/avatar.jpg" class="img-thumbnail" alt="..." id="my_image">
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js">   
+</script>  
+<script>  
+    $(document).ready(function(){
+    $("#tutorinfo-tutor_img_id").change(function(){
+        var selectedCountry = $(this).children("option:selected").text();
+        // alert("You have selected the country - " + selectedCountry);
+        $("#my_image").attr("src", '/frontend/web/arguments/rek_img/'+selectedCountry);
+    });
+}); 
+</script>  

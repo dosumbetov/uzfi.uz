@@ -48,8 +48,18 @@
                              ['label' => 'Foydali saytlar', 'icon' => 'file-code-o', 'url' => ['/supporters'],],
                              ['label' => 'Davlat ramzlari icon', 'icon' => 'file-code-o', 'url' => ['/emblems'],],
                              ['label' => 'Davlat ramzlari', 'icon' => 'file-code-o', 'url' => ['/emb-pages'],],
-                            ['label' => 'Tutorlar', 'icon' => 'file-code-o', 'url' => ['/tutor-info'],],
                              ['label' => 'Maktablar', 'icon' => 'file-code-o', 'url' => ['/maktablar-info'],],
+
+                            [
+                                'label' => 'Tutorlar qismi',
+                                'icon' => 'circle-o',
+                                'url' => '#',
+                                'items' => [
+                                    ['label' => 'Rasmlar', 'icon' => 'circle-o', 'url' => ['/tutor-img'],],
+                                    ['label' => 'Tegishli facultetlar', 'icon' => 'circle-o', 'url' => ['/tutor-faculty'],],
+                                    ['label' => "Tutorlar ma'lumoti", 'icon' => 'circle-o', 'url' => ['/tutor-info'],],
+                                ],
+                            ], 
 
                               [
                                 'label' => 'Bolim xodimlari',

@@ -41,8 +41,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'manzil_en') ?>
 
-    <?php // echo $form->field($model, 'img') ?>
-
     <?php // echo $form->field($model, 'content_uz') ?>
 
     <?php // echo $form->field($model, 'content_ru') ?>
@@ -64,6 +62,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'tutor_menu_sub_id') ?>
 
     <?php // echo $form->field($model, 'tutor_faculty_id') ?>
+
+    <?php // echo $form->field($model, 'tutor_img_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

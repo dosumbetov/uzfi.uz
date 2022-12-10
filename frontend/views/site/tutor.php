@@ -2,6 +2,9 @@
 use yii\helpers\Url;
 use yii\bootstrap4\Breadcrumbs;
 $lang = Yii::$app->language;
+use backend\models\TutorImg;
+use backend\models\TutorInfo;
+
 foreach ($menu_sub as $menu_sub) {
 	if ($lang == 'uz') {
         $menu_sub_cm = $menu_sub->name_uz;
@@ -13,6 +16,9 @@ foreach ($menu_sub as $menu_sub) {
 }
 $this->title = $menu_sub_cm;
 $this->params['breadcrumbs'][] = $this->title;
+
+
+
 ?>
 
  <div class="heros">
@@ -106,172 +112,55 @@ $this->params['breadcrumbs'][] = $this->title;
  </style>
 <div class="container mt-4">
 		<div class="middle">
-			<h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Pedagogkika fakulteti')?></h3>
-			<div class="row">
-				<?
-					$lang = Yii::$app->language;
-					foreach ($tutor_info_faculty1 as $tutor_info_faculty1_item) {
-						if ($lang == 'uz') {
-					        $tutor_info_faculty1_name = $tutor_info_faculty1_item->name_uz;
-					        $tutor_info_faculty1_biriktirilgan = $tutor_info_faculty1_item->biriktirilgan_uz;
-					      }elseif ($lang == 'en') {
-					        $tutor_info_faculty1_name = $tutor_info_faculty1_item->name_en;
-					        $tutor_info_faculty1_biriktirilgan = $tutor_info_faculty1_item->biriktirilgan_en;
-					      }elseif ($lang == 'ru') {
-					        $tutor_info_faculty1_name = $tutor_info_faculty1_item->name_ru;
-					        $tutor_info_faculty1_biriktirilgan = $tutor_info_faculty1_item->biriktirilgan_ru;
-					      }
-						?>
-							<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-				        <div class="card mb-5" style="width: 100%; text-align: center;">
-								  <img src="../<?=$tutor_info_faculty1 ? $tutor_info_faculty1_item->img : ''?>" class="card-img-top" alt="...">
-								  <div class="card-body">
-								    <h5 class="card-title"><?=$tutor_info_faculty1 ? $tutor_info_faculty1_name : ''?></h5>
-								    <p class="card-text"><?=$tutor_info_faculty1 ? $tutor_info_faculty1_biriktirilgan : ''?></p>
-								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-								    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty1_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-								  </div>
-								</div>
-				      </div>
-						<?
-					}
-				?>
-			</div>
+      <?
+        foreach ($tutor_facs as $tutor_fac) {
+          ?>
+            <h4 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=$tutor_fac->faculty_name_uz?></h4>
+            <div class="row">
+              <?
+              $tutor_infos = TutorInfo::find()->Where(['tutor_faculty_id'=>$tutor_fac->id])->all();
+                $lang = Yii::$app->language;
+                foreach ($tutor_infos as $tutor_info) {
+                  if ($lang == 'uz') {
+                        $tutor_info_faculty1_name = $tutor_info->name_uz;
+                        $tutor_info_faculty1_biriktirilgan = $tutor_info->biriktirilgan_uz;
+                      }elseif ($lang == 'en') {
+                        $tutor_info_faculty1_name = $tutor_info->name_en;
+                        $tutor_info_faculty1_biriktirilgan = $tutor_info->biriktirilgan_en;
+                      }elseif ($lang == 'ru') {
+                        $tutor_info_faculty1_name = $tutor_info->name_ru;
+                        $tutor_info_faculty1_biriktirilgan = $tutor_info->biriktirilgan_ru;
+                      }
 
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Aniq tabiiy fanlar va jismoniy madaniyat fakulteti')?></h3>
-      <div class="row">
-        <?
-          $lang = Yii::$app->language;
-          foreach ($tutor_info_faculty2 as $tutor_info_faculty2_item) {
-            if ($lang == 'uz') {
-                  $tutor_info_faculty2_name = $tutor_info_faculty2_item->name_uz;
-                  $tutor_info_faculty2_biriktirilgan = $tutor_info_faculty2_item->biriktirilgan_uz;
-                }elseif ($lang == 'en') {
-                  $tutor_info_faculty2_name = $tutor_info_faculty2_item->name_en;
-                  $tutor_info_faculty2_biriktirilgan = $tutor_info_faculty2_item->biriktirilgan_en;
-                }elseif ($lang == 'ru') {
-                  $tutor_info_faculty2_name = $tutor_info_faculty2_item->name_ru;
-                  $tutor_info_faculty2_biriktirilgan = $tutor_info_faculty2_item->biriktirilgan_ru;
-                }
-            ?>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                       <div class="card mb-5" style="width: 100%; text-align: center;">
-                  <img src="../<?=$tutor_info_faculty2 ? $tutor_info_faculty2_item->img : ''?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"><?=$tutor_info_faculty2 ? $tutor_info_faculty2_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty2 ? $tutor_info_faculty2_biriktirilgan : ''?></p>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty2_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-                  </div>
-                </div>
+
+                  ?>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                      <div class="card mb-5" style="width: 100%; text-align: center;">
+                        <?
+                          $idimg = $tutor_info->tutor_img_id;
+                          $images = TutorImg::find()->Where(['id'=>$idimg])->all();
+                          foreach ($images as $image) {
+                            ?>
+                              <img src="/frontend/web/arguments/rek_img/<?=$image->img?>" class="card-img-top" alt="...">
+                            <?
+                          }
+                        ?>
+                        <div class="card-body">
+                          <h5 class="card-title"><?=$tutor_infos ? $tutor_info_faculty1_name : ''?></h5>
+                          <p class="card-text"><?=$tutor_infos ? $tutor_info_faculty1_biriktirilgan : ''?></p>
+                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                          <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
+                        </div>
+                      </div>
                     </div>
-            <?
-          }
-        ?>
-      </div>
-
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app','Xorijiy tillar va gumanitar fanlar fakulteti')?></h3>
-      <div class="row">
-        <?
-          $lang = Yii::$app->language;
-          foreach ($tutor_info_faculty3 as $tutor_info_faculty3_item) {
-            if ($lang == 'uz') {
-                  $tutor_info_faculty3_name = $tutor_info_faculty3_item->name_uz;
-                  $tutor_info_faculty3_biriktirilgan = $tutor_info_faculty3_item->biriktirilgan_uz;
-                }elseif ($lang == 'en') {
-                  $tutor_info_faculty3_name = $tutor_info_faculty3_item->name_en;
-                  $tutor_info_faculty3_biriktirilgan = $tutor_info_faculty3_item->biriktirilgan_en;
-                }elseif ($lang == 'ru') {
-                  $tutor_info_faculty3_name = $tutor_info_faculty3_item->name_ru;
-                  $tutor_info_faculty3_biriktirilgan = $tutor_info_faculty3_item->biriktirilgan_ru;
+                  <?
                 }
-            ?>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                       <div class="card mb-5" style="width: 100%; text-align: center;">
-                  <img src="../<?=$tutor_info_faculty3 ? $tutor_info_faculty3_item->img : ''?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"><?=$tutor_info_faculty3 ? $tutor_info_faculty3_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty3 ? $tutor_info_faculty3_biriktirilgan : ''?></p>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty3_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-                  </div>
-                </div>
-                    </div>
-            <?
-          }
-        ?>
-      </div>
-
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app',"Maktabgacha ta'lim fakulteti")?></h3>
-      <div class="row">
-        <?
-          $lang = Yii::$app->language;
-          foreach ($tutor_info_faculty4 as $tutor_info_faculty4_item) {
-            if ($lang == 'uz') {
-                  $tutor_info_faculty4_name = $tutor_info_faculty4_item->name_uz;
-                  $tutor_info_faculty4_biriktirilgan = $tutor_info_faculty4_item->biriktirilgan_uz;
-                }elseif ($lang == 'en') {
-                  $tutor_info_faculty4_name = $tutor_info_faculty4_item->name_en;
-                  $tutor_info_faculty4_biriktirilgan = $tutor_info_faculty4_item->biriktirilgan_en;
-                }elseif ($lang == 'ru') {
-                  $tutor_info_faculty4_name = $tutor_info_faculty4_item->name_ru;
-                  $tutor_info_faculty4_biriktirilgan = $tutor_info_faculty4_item->biriktirilgan_ru;
-                }
-            ?>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                       <div class="card mb-5" style="width: 100%; text-align: center;">
-                  <img src="../<?=$tutor_info_faculty4 ? $tutor_info_faculty4_item->img : ''?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"><?=$tutor_info_faculty4 ? $tutor_info_faculty4_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty4 ? $tutor_info_faculty4_biriktirilgan : ''?></p>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty4_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-                  </div>
-                </div>
-                    </div>
-            <?
-          }
-        ?>
-      </div>
-
-      <h3 class="mb-5 text-center" style="color: black; text-transform: uppercase;"><?=Yii::t('app',"San'atshunoslik fakulteti")?></h3>
-      <div class="row">
-        <?
-          $lang = Yii::$app->language;
-          foreach ($tutor_info_faculty5 as $tutor_info_faculty5_item) {
-            if ($lang == 'uz') {
-                  $tutor_info_faculty5_name = $tutor_info_faculty5_item->name_uz;
-                  $tutor_info_faculty5_biriktirilgan = $tutor_info_faculty5_item->biriktirilgan_uz;
-                }elseif ($lang == 'en') {
-                  $tutor_info_faculty5_name = $tutor_info_faculty5_item->name_en;
-                  $tutor_info_faculty5_biriktirilgan = $tutor_info_faculty5_item->biriktirilgan_en;
-                }elseif ($lang == 'ru') {
-                  $tutor_info_faculty5_name = $tutor_info_faculty5_item->name_ru;
-                  $tutor_info_faculty5_biriktirilgan = $tutor_info_faculty5_item->biriktirilgan_ru;
-                }
-            ?>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                       <div class="card mb-5" style="width: 100%; text-align: center;">
-                  <img src="../<?=$tutor_info_faculty5 ? $tutor_info_faculty5_item->img : ''?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"><?=$tutor_info_faculty5 ? $tutor_info_faculty5_name : ''?></h5>
-                    <p class="card-text"><?=$tutor_info_faculty5 ? $tutor_info_faculty5_biriktirilgan : ''?></p>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <a href="<?=Url::to(['site/tutor_profile', 'id'=>$tutor_info_faculty5_item->id])?>" class="btn btn-sm btn-primary rounded-pill btnmak"><?=Yii::t('app', 'Batafsil')?></a>
-                  </div>
-                </div>
-                    </div>
-            <?
-          }
-        ?>
-      </div>
-
-
-
-
-
-
-
+              ?>
+            </div>
+          <?
+        }
+      ?>
+			
 
 		</div>
 </div>

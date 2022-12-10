@@ -1,6 +1,7 @@
  <?
 use yii\helpers\Url;
 use yii\bootstrap4\Breadcrumbs;
+use backend\models\TutorImg;
 
 $lang = Yii::$app->language;
   foreach ($tutor_info as $tutor_info_item) {
@@ -98,15 +99,26 @@ $lang = Yii::$app->language;
 </section>
 <div class="container ortafon">
     <div class="row">
-             <div class="col-md-3 col-12 mb-4">
+          <div class="col-md-3 col-12 mb-4">
             <div class="left_bar_tea">
-                <img src="../<?=$tutor_info ? $tutor_info_item->img : ''?>" class="img_teacher">
-              <h3 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_name : ''?></h3>
-              <p style="text-align: center;"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
-              <hr style="margin: 0px; margin-bottom: 5%;">
-              <p><i class="fa fa-telegram"></i><?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
-              <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
-              <p><i class="fa fa-envelope"></i><?=$tutor_info ? $tutor_info_item->email : ''?></p>
+                <?
+                  $idimg = $tutor_info_item->tutor_img_id;
+                  $images = TutorImg::find()->Where(['id'=>$idimg])->all();
+                  foreach ($images as $image) {
+                    ?>
+                      <img src="/frontend/web/arguments/rek_img/<?=$image->img?>" class="img_teacher">
+                    <?
+                  }
+                ?>
+              <h5 class="mt-3" style="text-align: center;"><?=$tutor_info ? $tutor_info_name : ''?></h5>
+              
+              <div style="padding: 10px;">
+                <p style="text-align: center;"><?=$tutor_info ? $tutor_info_biriktirilgan : ''?></p>
+              <hr style="margin: 0px; margin-bottom: 5% !important;">
+                <p><i class="fa fa-telegram"></i> <?=$tutor_info ? $tutor_info_item->telegram : ''?></p>
+                <p><i class="fa fa-phone"></i> <?=$tutor_info ? $tutor_info_item->tel : ''?></p>
+                <p><i class="fa fa-envelope"></i> <?=$tutor_info ? $tutor_info_item->email : ''?></p>
+              </div>
             </div>
         </div>
         <div class="col-md-9 col-12">
@@ -201,27 +213,13 @@ $lang = Yii::$app->language;
 
 
 <style type="text/css">
-    table, tr, td, th {
-      /*font-size: 18px;*/
-      color: black;
-    }
-    ul li a {
-      /*font-size: 18px;*/
-    }
-    h5 {
-      color: black;
-    }
-    .left_bar_tea p i {
-        margin-right: 20px;
-        /*font-size: 20px;*/
-        /*font-size: 18px;*/
+    .middle_bar_tea span, .left_bar_tea p {
         color: black;
-    } 
-    .left_bar_tea p {
-        padding: 0px 20px;
-        color: black;
-        /*font-size: 18px;*/
-    } 
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 16px !important;
+        font-weight: 400;
+        line-height: 24px;
+    }
     .img_teacher {
         position: relative;
         width: 100%;

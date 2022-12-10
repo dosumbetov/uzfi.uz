@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\TutorFaculty */
+/* @var $model backend\models\TutorImg */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tutor Faculties', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Tutor Imgs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -28,9 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'faculty_name_uz',
-            'faculty_name_ru',
-            'faculty_name_en',
+            'img',
         ],
     ]) ?>
 

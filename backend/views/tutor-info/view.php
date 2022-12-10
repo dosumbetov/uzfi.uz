@@ -40,7 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'manzil_uz:ntext',
             'manzil_ru:ntext',
             'manzil_en:ntext',
-            'img',
             'content_uz:ntext',
             'content_ru:ntext',
             'content_en:ntext',
@@ -52,6 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'birik_talaba_royxati_en:ntext',
             'tutorMenuSub.name_uz',
             'tutorFaculty.faculty_name_uz',
+            'tutorImg.img',
+
         ],
     ]) ?>
 

@@ -10,9 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Tutor Faculties', 'url' => ['index
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="tutor-faculty-update">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+<div style="background-color: white; padding: 20px; border-radius: 10px 10px 0 0; border-top: 5px solid rgb(183 202 205);">
 
     <?= $this->render('_form', [
         'model' => $model,

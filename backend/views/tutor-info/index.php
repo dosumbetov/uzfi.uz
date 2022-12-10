@@ -4,7 +4,8 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use backend\models\TutorFaculty;
 use yii\helpers\Url;
-use yii\helpers\ArrayHelper;  
+use yii\helpers\ArrayHelper; 
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\TutorInfoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -26,7 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            // 'id',
             'name_uz',
             // 'name_ru',
             // 'name_en',
@@ -39,7 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
             //'manzil_uz:ntext',
             //'manzil_ru:ntext',
             //'manzil_en:ntext',
-            'img',
             //'content_uz:ntext',
             //'content_ru:ntext',
             //'content_en:ntext',
@@ -49,12 +48,14 @@ $this->params['breadcrumbs'][] = $this->title;
             //'birik_talaba_royxati_uz:ntext',
             //'birik_talaba_royxati_ru:ntext',
             //'birik_talaba_royxati_en:ntext',
-            // 'tutorMenuSub.name_uz',
+            //'tutor_menu_sub_id',
+            // 'tutorFaculty.faculty_name_uz',
             [
                 'attribute'=>'tutor_faculty_id',
                 'value'=>'tutorFaculty.faculty_name_uz',
-                'filter'=>Html::activeDropDownList($searchModel, 'tutor_faculty_id', ArrayHelper::map(TutorFaculty::find()->all(), 'id', 'faculty_name_uz'), ['class'=>'form-control', 'prompt'=>'FAcultyni tanlang']),
+                'filter'=>Html::activeDropDownList($searchModel, 'tutor_faculty_id', ArrayHelper::map(TutorFaculty::find()->all(), 'id', 'faculty_name_uz'), ['class'=>'form-control', 'prompt'=>'Tegishli facultetni tanlang']),
             ],
+            'tutorImg.img',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

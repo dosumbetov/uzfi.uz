@@ -153,22 +153,11 @@ class SiteController extends Controller
      public function actionTutor($id)
     {
       $menu_sub = MenuSub::find()->Where(['id'=>$id])->all();
+      $tutor_facs = TutorFaculty::find()->all();
       $tutor_info = TutorInfo::find()->Where(['tutor_menu_sub_id'=>$id])->orderBy(['id'=>SORT_DESC])->all();
-      $tutor_info_faculty1 = TutorInfo::find()->Where(['tutor_faculty_id'=>1])->orderBy(['id'=>SORT_DESC])->all();
-      $tutor_info_faculty2 = TutorInfo::find()->Where(['tutor_faculty_id'=>2])->orderBy(['id'=>SORT_DESC])->all();
-      $tutor_info_faculty3 = TutorInfo::find()->Where(['tutor_faculty_id'=>3])->orderBy(['id'=>SORT_DESC])->all();
-      $tutor_info_faculty4 = TutorInfo::find()->Where(['tutor_faculty_id'=>4])->orderBy(['id'=>SORT_DESC])->all();
-      $tutor_info_faculty5 = TutorInfo::find()->Where(['tutor_faculty_id'=>5])->orderBy(['id'=>SORT_DESC])->all();
-      // $tutor_info_number = new Pagination(['totalCount'=>$query->count(), 'pageSize'=>20, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
-      // $tutor_info = $query->offset($tutor_info_number->offset)->limit($tutor_info_number->limit)->all();
         return $this->render('tutor', [
           'tutor_info'=>$tutor_info,
-          // 'tutor_info_number'=>$tutor_info_number,
-          'tutor_info_faculty1'=>$tutor_info_faculty1,
-          'tutor_info_faculty2'=>$tutor_info_faculty2,
-          'tutor_info_faculty3'=>$tutor_info_faculty3,
-          'tutor_info_faculty4'=>$tutor_info_faculty4,
-          'tutor_info_faculty5'=>$tutor_info_faculty5,
+          'tutor_facs'=>$tutor_facs,
           'menu_sub'=>$menu_sub,
         ]);
     }

@@ -17,8 +17,8 @@ class TutorInfoSearch extends TutorInfo
     public function rules()
     {
         return [
-            [['id', 'tutor_menu_sub_id', 'tutor_faculty_id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en', 'tel', 'telegram', 'email', 'manzil_uz', 'manzil_ru', 'manzil_en', 'img', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en'], 'safe'],
+            [['id', 'tutor_menu_sub_id', 'tutor_faculty_id', 'tutor_img_id'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en', 'biriktirilgan_uz', 'biriktirilgan_ru', 'biriktirilgan_en', 'tel', 'telegram', 'email', 'manzil_uz', 'manzil_ru', 'manzil_en', 'content_uz', 'content_ru', 'content_en', 'tutor_duty_uz', 'tutor_duty_ru', 'tutor_duty_en', 'birik_talaba_royxati_uz', 'birik_talaba_royxati_ru', 'birik_talaba_royxati_en'], 'safe'],
         ];
     }
 
@@ -61,6 +61,7 @@ class TutorInfoSearch extends TutorInfo
             'id' => $this->id,
             'tutor_menu_sub_id' => $this->tutor_menu_sub_id,
             'tutor_faculty_id' => $this->tutor_faculty_id,
+            'tutor_img_id' => $this->tutor_img_id,
         ]);
 
         $query->andFilterWhere(['like', 'name_uz', $this->name_uz])
@@ -75,7 +76,6 @@ class TutorInfoSearch extends TutorInfo
             ->andFilterWhere(['like', 'manzil_uz', $this->manzil_uz])
             ->andFilterWhere(['like', 'manzil_ru', $this->manzil_ru])
             ->andFilterWhere(['like', 'manzil_en', $this->manzil_en])
-            ->andFilterWhere(['like', 'img', $this->img])
             ->andFilterWhere(['like', 'content_uz', $this->content_uz])
             ->andFilterWhere(['like', 'content_ru', $this->content_ru])
             ->andFilterWhere(['like', 'content_en', $this->content_en])
